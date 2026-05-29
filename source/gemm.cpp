@@ -33,10 +33,11 @@ void gemm2(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 		loadTileAFromDRAM(A_BUF, A_TILE, tileA);
 		for(int tileB = 0; tileB < NUM_OF_TILES/2; tileB++) {
 #pragma HLS DATAFLOW
+			const int real_tileB = tileB*2;
 			fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES];
 //#pragma HLS ARRAY_PARTITION variable=C_TILE type=cyclic
-			loadTileBFromDRAM(B_BUF, B_TILE, tileB*2);
-			loadTileBFromDRAM(B_BUF, B_TILE2, tileB*2+1);
+			loadTileBFromDRAM(B_BUF, B_TILE, real_tileB);
+			loadTileBFromDRAM(B_BUF, B_TILE2, real_tileB+1);
 
 			matMulTile(A_TILE, B_TILE, C_TILE);
 			//storeTileToDRAM(C_TILE, C_DRAM, tileA, tileB);
@@ -44,18 +45,9 @@ void gemm2(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 			fm_t C_TILE2[I/NUM_OF_TILES][J/NUM_OF_TILES];
 			matMulTile(A_TILE, B_TILE2, C_TILE2);
 			//storeTileToDRAM(C_TILE2, C_DRAM, tileA, tileB);
-			store_C_tile_even:
-			for(int i = 0; i < I/NUM_OF_TILES; i++) {
-				for(int j = 0; j < J/NUM_OF_TILES; j++) {
-					C_BUF[i+tileA*I/NUM_OF_TILES][j+tileB*2*J/NUM_OF_TILES] = C_TILE[i][j];
-				}
-			}
-			store_C_tile_odd:
-			for(int i = 0; i < I/NUM_OF_TILES; i++) {
-				for(int j = 0; j < J/NUM_OF_TILES; j++) {
-					C_BUF[i+tileA*I/NUM_OF_TILES][j+(tileB*2+1)*J/NUM_OF_TILES] = C_TILE2[i][j];
-				}
-			}
+
+			storeTileToDRAM(C_TILE, C_BUF, tileA, real_tileB);
+			storeTileToDRAM(C_TILE2, C_BUF, tileA, real_tileB+1);
 		}
 	}
 	storeOutputToDRAM(C_BUF, C_DRAM);

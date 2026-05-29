@@ -1,6 +1,7 @@
 #include "constants.h"
 
 void loadInputsFromDRAM(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t A_BUF[I][K], fm_t B_BUF[K][J]) {
+	#pragma HLS INLINE off
 	load_A:
 	for(int i = 0; i < I; i++) {
 		for(int k = 0; k < K; k++) {
@@ -16,6 +17,7 @@ void loadInputsFromDRAM(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t A_BUF[I][K], 
 }
 
 void storeOutputToDRAM(fm_t C_BUF[I][J], fm_t C_DRAM[I][J]) {
+	#pragma HLS INLINE off
 	store_C:
 	for(int i = 0; i < I; i++) {
 		for(int j = 0; j < J; j++) {

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Fri May 29 17:52:57 2026
+    * Date:           Fri May 29 17:54:57 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)
@@ -19,38 +19,40 @@
     |                                Modules                               |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |           |         |            |            |     |
     |                                & Loops                               |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |     FF     |     LUT    | URAM|
     +----------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+------------+-----+
-    |+ gemm2                                                               |  Timing|  -0.00|   104917|  3.497e+05|         -|   104918|     -|        no|  197 (31%)|  8 (~0%)|  10595 (2%)|   9683 (4%)|    -|
-    | o load_A                                                             |       -|   2.43|      640|  2.133e+03|        20|        -|    32|        no|          -|        -|           -|           -|    -|
-    |  o VITIS_LOOP_6_1                                                    |       -|   2.43|       16|     53.328|         1|        -|    16|        no|          -|        -|           -|           -|    -|
-    | o load_B                                                             |       -|   2.43|     4128|  1.376e+04|       258|        -|    16|        no|          -|        -|           -|           -|    -|
-    |  o VITIS_LOOP_12_2                                                   |       -|   2.43|      256|    853.248|         4|        -|    64|        no|          -|        -|           -|           -|    -|
+    |+ gemm2                                                               |  Timing|  -0.00|   103895|  3.463e+05|         -|   103896|     -|        no|  197 (31%)|  8 (~0%)|  10547 (2%)|   9817 (4%)|    -|
+    | + loadInputsFromDRAM                                                 |  Timing|  -0.00|     3887|  1.296e+04|         -|     3887|     -|        no|          -|        -|  2811 (~0%)|  1024 (~0%)|    -|
+    |  o load_A                                                            |       -|   2.43|      640|  2.133e+03|        20|        -|    32|        no|          -|        -|           -|           -|    -|
+    |   o VITIS_LOOP_7_1                                                   |       -|   2.43|       16|     53.328|         1|        -|    16|        no|          -|        -|           -|           -|    -|
+    |  o load_B                                                            |       -|   2.43|     3104|  1.035e+04|       194|        -|    16|        no|          -|        -|           -|           -|    -|
+    |   o VITIS_LOOP_13_2                                                  |       -|   2.43|      192|    639.936|         3|        -|    64|        no|          -|        -|           -|           -|    -|
+    | + storeOutputToDRAM                                                  |  Timing|  -0.00|     6277|  2.092e+04|         -|     6277|     -|        no|          -|        -|   618 (~0%)|  1082 (~0%)|    -|
+    |  o store_C                                                           |       -|   2.43|     6208|  2.069e+04|       194|        -|    32|        no|          -|        -|           -|           -|    -|
+    |   o VITIS_LOOP_23_1                                                  |       -|   2.43|      192|    639.936|         3|        -|    64|        no|          -|        -|           -|           -|    -|
     | o loop_for_tile_a                                                    |       -|   2.43|    93726|  3.124e+05|     46863|        -|     2|        no|          -|        -|           -|           -|    -|
-    |  + gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1                         |       -|   0.01|      132|    439.956|         -|      132|     -|        no|          -|        -|   229 (~0%)|   215 (~0%)|    -|
+    |  + loadTileAFromDRAM                                                 |       -|   0.01|      132|    439.956|         -|      132|     -|        no|          -|        -|   229 (~0%)|   215 (~0%)|    -|
     |   o load_tile_A_VITIS_LOOP_7_1                                       |       -|   2.43|      130|    433.290|         4|        1|   128|       yes|          -|        -|           -|           -|    -|
     |  o VITIS_LOOP_34_1                                                   |       -|   2.43|    46728|  1.557e+05|     46728|        -|     1|        no|          -|        -|           -|           -|    -|
     |   + dataflow_in_loop_VITIS_LOOP_34_1*                                |       -|   0.06|    46726|  1.557e+05|         -|    42018|     -|  dataflow|    11 (1%)|  8 (~0%)|  1227 (~0%)|  1437 (~0%)|    -|
-    |    + loadTileBFromDRAM143                                            |       -|   1.19|     1569|  5.229e+03|         -|     1569|     -|        no|          -|        -|    76 (~0%)|   127 (~0%)|    -|
+    |    + loadTileBFromDRAM146                                            |       -|   1.19|     1569|  5.229e+03|         -|     1569|     -|        no|          -|        -|    76 (~0%)|   127 (~0%)|    -|
     |     o load_tile_B                                                    |       -|   2.43|     1568|  5.226e+03|        98|        -|    16|        no|          -|        -|           -|           -|    -|
-    |      o VITIS_LOOP_18_1                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
-    |    + loadTileBFromDRAM_1255                                          |       -|   1.19|     1569|  5.229e+03|         -|     1569|     -|        no|          -|        -|    76 (~0%)|   127 (~0%)|    -|
+    |      o VITIS_LOOP_19_1                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
+    |    + loadTileBFromDRAM_1258                                          |       -|   1.19|     1569|  5.229e+03|         -|     1569|     -|        no|          -|        -|    76 (~0%)|   127 (~0%)|    -|
     |     o load_tile_B                                                    |       -|   2.43|     1568|  5.226e+03|        98|        -|    16|        no|          -|        -|           -|           -|    -|
-    |      o VITIS_LOOP_18_1                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
-    |    + matMulTile62                                                    |       -|   0.06|    42017|  1.400e+05|         -|    42017|     -|        no|          -|  4 (~0%)|   382 (~0%)|   380 (~0%)|    -|
+    |      o VITIS_LOOP_19_1                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
+    |    + matMulTile65                                                    |       -|   0.06|    42017|  1.400e+05|         -|    42017|     -|        no|          -|  4 (~0%)|   382 (~0%)|   380 (~0%)|    -|
     |     o mat_mul_i                                                      |       -|   2.43|    42016|  1.400e+05|      2626|        -|    16|        no|          -|        -|           -|           -|    -|
     |      o mat_mul_j                                                     |       -|   2.43|     2624|  8.746e+03|        82|        -|    32|        no|          -|        -|           -|           -|    -|
     |       o mat_mul_k                                                    |       -|   2.43|       80|    266.640|         5|        -|    16|        no|          -|        -|           -|           -|    -|
-    |    + matMulTile_274                                                  |       -|   0.06|    42017|  1.400e+05|         -|    42017|     -|        no|          -|  4 (~0%)|   382 (~0%)|   380 (~0%)|    -|
+    |    + matMulTile_277                                                  |       -|   0.06|    42017|  1.400e+05|         -|    42017|     -|        no|          -|  4 (~0%)|   382 (~0%)|   380 (~0%)|    -|
     |     o mat_mul_i                                                      |       -|   2.43|    42016|  1.400e+05|      2626|        -|    16|        no|          -|        -|           -|           -|    -|
     |      o mat_mul_j                                                     |       -|   2.43|     2624|  8.746e+03|        82|        -|    32|        no|          -|        -|           -|           -|    -|
     |       o mat_mul_k                                                    |       -|   2.43|       80|    266.640|         5|        -|    16|        no|          -|        -|           -|           -|    -|
     |    + entry_proc                                                      |       -|   1.21|        0|      0.000|         -|        0|     -|        no|          -|        -|     2 (~0%)|    20 (~0%)|    -|
-    |    + dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86  |       -|   0.42|     3138|  1.046e+04|         -|     3138|     -|        no|          -|        -|   154 (~0%)|   246 (~0%)|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc89  |       -|   0.42|     3138|  1.046e+04|         -|     3138|     -|        no|          -|        -|   154 (~0%)|   246 (~0%)|    -|
     |     o store_C_tile_even                                              |       -|   2.43|     1568|  5.226e+03|        98|        -|    16|        no|          -|        -|           -|           -|    -|
     |      o VITIS_LOOP_49_2                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
     |     o store_C_tile_odd                                               |       -|   2.43|     1568|  5.226e+03|        98|        -|    16|        no|          -|        -|           -|           -|    -|
     |      o VITIS_LOOP_55_3                                               |       -|   2.43|       96|    319.968|         3|        -|    32|        no|          -|        -|           -|           -|    -|
-    | o store_C                                                            |       -|   2.43|     6208|  2.069e+04|       194|        -|    32|        no|          -|        -|           -|           -|    -|
-    |  o VITIS_LOOP_21_1                                                   |       -|   2.43|      192|    639.936|         3|        -|    64|        no|          -|        -|           -|           -|    -|
     +----------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+---------+------------+------------+-----+
 
 
@@ -139,7 +141,7 @@
 | HW Interface | Direction | Length | Width | Loop   | Loop Location       |
 +--------------+-----------+--------+-------+--------+---------------------+
 | m_axi_gmem   | write     | 128    | 512   |        |                     |
-| m_axi_gmem0  | read      | 32     | 512   | load_A | source/dram.hpp:5:2 |
+| m_axi_gmem0  | read      | 32     | 512   | load_A | source/dram.hpp:6:2 |
 | m_axi_gmem1  | read      | 64     | 512   |        |                     |
 +--------------+-----------+--------+-------+--------+---------------------+
 
@@ -147,13 +149,13 @@
 +--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 | HW Interface | Variable | Access Location       | Direction | Burst Status | Length | Loop            | Loop Location         | Resolution | Problem                                                                                                  |
 +--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | C_DRAM   | source/dram.hpp:22:17 | write     | Widened      | 128    | VITIS_LOOP_21_1 | source/dram.hpp:21:20 |            |                                                                                                          |
-| m_axi_gmem   | C_DRAM   | source/dram.hpp:22:17 | write     | Inferred     | 2048   | store_C         | source/dram.hpp:20:2  |            |                                                                                                          |
-| m_axi_gmem0  | A_DRAM   | source/dram.hpp:5:2   | read      | Widen Fail   |        | load_A          | source/dram.hpp:5:2   | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
-| m_axi_gmem0  | A_DRAM   | source/dram.hpp:7:16  | read      | Widened      | 32     | VITIS_LOOP_6_1  | source/dram.hpp:6:19  |            |                                                                                                          |
-| m_axi_gmem0  | A_DRAM   | source/dram.hpp:7:16  | read      | Inferred     | 512    | load_A          | source/dram.hpp:5:2   |            |                                                                                                          |
-| m_axi_gmem1  | B_DRAM   | source/dram.hpp:13:16 | read      | Widened      | 64     | VITIS_LOOP_12_2 | source/dram.hpp:12:20 |            |                                                                                                          |
-| m_axi_gmem1  | B_DRAM   | source/dram.hpp:13:16 | read      | Inferred     | 1024   | load_B          | source/dram.hpp:11:2  |            |                                                                                                          |
+| m_axi_gmem   | C_DRAM   | source/dram.hpp:24:17 | write     | Widened      | 128    | VITIS_LOOP_23_1 | source/dram.hpp:23:20 |            |                                                                                                          |
+| m_axi_gmem   | C_DRAM   | source/dram.hpp:24:17 | write     | Inferred     | 2048   | store_C         | source/dram.hpp:22:2  |            |                                                                                                          |
+| m_axi_gmem0  | A_DRAM   | source/dram.hpp:6:2   | read      | Widen Fail   |        | load_A          | source/dram.hpp:6:2   | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem0  | A_DRAM   | source/dram.hpp:8:16  | read      | Widened      | 32     | VITIS_LOOP_7_1  | source/dram.hpp:7:19  |            |                                                                                                          |
+| m_axi_gmem0  | A_DRAM   | source/dram.hpp:8:16  | read      | Inferred     | 512    | load_A          | source/dram.hpp:6:2   |            |                                                                                                          |
+| m_axi_gmem1  | B_DRAM   | source/dram.hpp:14:16 | read      | Widened      | 64     | VITIS_LOOP_13_2 | source/dram.hpp:13:20 |            |                                                                                                          |
+| m_axi_gmem1  | B_DRAM   | source/dram.hpp:14:16 | read      | Inferred     | 1024   | load_B          | source/dram.hpp:12:2  |            |                                                                                                          |
 +--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -165,86 +167,88 @@
 | Name                                                               | DSP | Pragma | Variable   | Op  | Impl   | Latency |
 +--------------------------------------------------------------------+-----+--------+------------+-----+--------+---------+
 | + gemm2                                                            | 8   |        |            |     |        |         |
-|   add_ln5_fu_538_p2                                                |     |        | add_ln5    | add | fabric | 0       |
-|   add_ln6_fu_564_p2                                                |     |        | add_ln6    | add | fabric | 0       |
-|   add_ln11_fu_644_p2                                               |     |        | add_ln11   | add | fabric | 0       |
-|   add_ln12_fu_661_p2                                               |     |        | add_ln12   | add | fabric | 0       |
-|   add_ln31_fu_734_p2                                               |     |        | add_ln31   | add | fabric | 0       |
-|   add_ln20_fu_790_p2                                               |     |        | add_ln20   | add | fabric | 0       |
-|   add_ln21_fu_814_p2                                               |     |        | add_ln21   | add | fabric | 0       |
-|  + gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1                       | 0   |        |            |     |        |         |
-|    add_ln6_fu_148_p2                                               |     |        | add_ln6    | add | fabric | 0       |
+|   add_ln31_fu_226_p2                                               |     |        | add_ln31   | add | fabric | 0       |
+|  + loadInputsFromDRAM                                              | 0   |        |            |     |        |         |
+|    add_ln6_fu_295_p2                                               |     |        | add_ln6    | add | fabric | 0       |
+|    add_ln7_fu_321_p2                                               |     |        | add_ln7    | add | fabric | 0       |
+|    add_ln12_fu_401_p2                                              |     |        | add_ln12   | add | fabric | 0       |
+|    add_ln13_fu_413_p2                                              |     |        | add_ln13   | add | fabric | 0       |
+|  + loadTileAFromDRAM                                               | 0   |        |            |     |        |         |
 |    add_ln6_1_fu_160_p2                                             |     |        | add_ln6_1  | add | fabric | 0       |
-|    empty_45_fu_194_p2                                              |     |        | empty_45   | add | fabric | 0       |
-|    add_ln7_fu_210_p2                                               |     |        | add_ln7    | add | fabric | 0       |
+|    add_ln6_fu_172_p2                                               |     |        | add_ln6    | add | fabric | 0       |
+|    empty_46_fu_206_p2                                              |     |        | empty_46   | add | fabric | 0       |
+|    add_ln7_fu_222_p2                                               |     |        | add_ln7    | add | fabric | 0       |
 |  + dataflow_in_loop_VITIS_LOOP_34_1                                | 8   |        |            |     |        |         |
-|   + loadTileBFromDRAM143                                           | 0   |        |            |     |        |         |
-|     add_ln17_fu_124_p2                                             |     |        | add_ln17   | add | fabric | 0       |
-|     add_ln18_fu_158_p2                                             |     |        | add_ln18   | add | fabric | 0       |
-|     add_ln19_fu_168_p2                                             |     |        | add_ln19   | add | fabric | 0       |
-|   + loadTileBFromDRAM_1255                                         | 0   |        |            |     |        |         |
-|     add_ln17_fu_126_p2                                             |     |        | add_ln17   | add | fabric | 0       |
-|     add_ln18_fu_160_p2                                             |     |        | add_ln18   | add | fabric | 0       |
-|     add_ln19_fu_170_p2                                             |     |        | add_ln19   | add | fabric | 0       |
-|   + matMulTile62                                                   | 4   |        |            |     |        |         |
+|   + loadTileBFromDRAM146                                           | 0   |        |            |     |        |         |
+|     add_ln18_fu_124_p2                                             |     |        | add_ln18   | add | fabric | 0       |
+|     add_ln19_fu_158_p2                                             |     |        | add_ln19   | add | fabric | 0       |
+|     add_ln20_fu_168_p2                                             |     |        | add_ln20   | add | fabric | 0       |
+|   + loadTileBFromDRAM_1258                                         | 0   |        |            |     |        |         |
+|     add_ln18_fu_126_p2                                             |     |        | add_ln18   | add | fabric | 0       |
+|     add_ln19_fu_160_p2                                             |     |        | add_ln19   | add | fabric | 0       |
+|     add_ln20_fu_170_p2                                             |     |        | add_ln20   | add | fabric | 0       |
+|   + matMulTile65                                                   | 4   |        |            |     |        |         |
 |     add_ln8_fu_193_p2                                              |     |        | add_ln8    | add | fabric | 0       |
 |     add_ln10_fu_213_p2                                             |     |        | add_ln10   | add | fabric | 0       |
 |     add_ln16_fu_227_p2                                             |     |        | add_ln16   | add | fabric | 0       |
 |     add_ln13_fu_247_p2                                             |     |        | add_ln13   | add | fabric | 0       |
 |     add_ln14_1_fu_288_p2                                           |     |        | add_ln14_1 | add | fabric | 0       |
-|     mul_32s_32s_56_2_1_U14                                         | 4   |        | mul_ln14   | mul | auto   | 1       |
+|     mul_32s_32s_56_2_1_U22                                         | 4   |        | mul_ln14   | mul | auto   | 1       |
 |     add_ln14_fu_329_p2                                             |     |        | add_ln14   | add | fabric | 0       |
-|   + matMulTile_274                                                 | 4   |        |            |     |        |         |
+|   + matMulTile_277                                                 | 4   |        |            |     |        |         |
 |     add_ln8_fu_201_p2                                              |     |        | add_ln8    | add | fabric | 0       |
 |     add_ln10_fu_221_p2                                             |     |        | add_ln10   | add | fabric | 0       |
 |     add_ln16_fu_235_p2                                             |     |        | add_ln16   | add | fabric | 0       |
 |     add_ln13_fu_255_p2                                             |     |        | add_ln13   | add | fabric | 0       |
 |     add_ln14_2_fu_296_p2                                           |     |        | add_ln14_2 | add | fabric | 0       |
-|     mul_32s_32s_56_2_1_U21                                         | 4   |        | mul_ln14   | mul | auto   | 1       |
+|     mul_32s_32s_56_2_1_U29                                         | 4   |        | mul_ln14   | mul | auto   | 1       |
 |     add_ln14_fu_337_p2                                             |     |        | add_ln14   | add | fabric | 0       |
-|   + dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86 | 0   |        |            |     |        |         |
+|   + dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc89 | 0   |        |            |     |        |         |
 |     add_ln48_fu_196_p2                                             |     |        | add_ln48   | add | fabric | 0       |
 |     add_ln49_fu_221_p2                                             |     |        | add_ln49   | add | fabric | 0       |
 |     add_ln50_fu_231_p2                                             |     |        | add_ln50   | add | fabric | 0       |
 |     add_ln54_fu_260_p2                                             |     |        | add_ln54   | add | fabric | 0       |
 |     add_ln55_fu_280_p2                                             |     |        | add_ln55   | add | fabric | 0       |
 |     add_ln56_fu_294_p2                                             |     |        | add_ln56   | add | fabric | 0       |
+|  + storeOutputToDRAM                                               | 0   |        |            |     |        |         |
+|    add_ln22_fu_236_p2                                              |     |        | add_ln22   | add | fabric | 0       |
+|    add_ln23_fu_260_p2                                              |     |        | add_ln23   | add | fabric | 0       |
 +--------------------------------------------------------------------+-----+--------+------------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-------------------------------------+-----------------+-------------+------+------+--------+----------------+--------+---------+------------------+
-| Name                                | Usage           | Type        | BRAM | URAM | Pragma | Variable       | Impl   | Latency | Bitwidth, Depth, |
-|                                     |                 |             |      |      |        |                |        |         | Banks            |
-+-------------------------------------+-----------------+-------------+------+------+--------+----------------+--------+---------+------------------+
-| + gemm2                             |                 |             | 197  | 0    |        |                |        |         |                  |
-|   control_s_axi_U                   | interface       | s_axilite   |      |      |        |                |        |         |                  |
-|   gmem_m_axi_U                      | interface       | m_axi       | 58   |      |        |                |        |         |                  |
-|   gmem0_m_axi_U                     | interface       | m_axi       | 58   |      |        |                |        |         |                  |
-|   gmem1_m_axi_U                     | interface       | m_axi       | 58   |      |        |                |        |         |                  |
-|   A_BUF_U                           | ram_1p array    |             | 1    |      |        | A_BUF          | auto   | 1       | 32, 256, 1       |
-|   A_BUF_2_U                         | ram_1p array    |             | 1    |      |        | A_BUF_2        | auto   | 1       | 32, 256, 1       |
-|   B_BUF_U                           | ram_1p array    |             | 1    |      |        | B_BUF          | auto   | 1       | 32, 512, 1       |
-|   B_BUF_1_U                         | ram_s2p array   |             | 1    |      |        | B_BUF_1        | auto   | 1       | 32, 512, 1       |
-|   C_BUF_U                           | ram_1p array    |             | 1    |      |        | C_BUF          | auto   | 1       | 32, 512, 1       |
-|   C_BUF_1_U                         | ram_1p array    |             | 1    |      |        | C_BUF_1        | auto   | 1       | 32, 512, 1       |
-|   C_BUF_2_U                         | ram_1p array    |             | 1    |      |        | C_BUF_2        | auto   | 1       | 32, 512, 1       |
-|   C_BUF_3_U                         | ram_1p array    |             | 1    |      |        | C_BUF_3        | auto   | 1       | 32, 512, 1       |
-|   A_TILE_U                          | ram_s2p array   |             | 2    |      |        | A_TILE         | auto   | 1       | 32, 128, 1       |
-|   A_TILE_1_U                        | ram_s2p array   |             | 2    |      |        | A_TILE_1       | auto   | 1       | 32, 128, 1       |
-|  + dataflow_in_loop_VITIS_LOOP_34_1 |                 |             | 11   | 0    |        |                |        |         |                  |
-|    tileA_assign_c_U                 | fifo channel    | scalar prop | 1    |      |        | tileA_assign_c | memory | 0       | 1, 4, 1          |
-|    B_BUF_U                          | ram_1p channel  | pipo        | 1    |      |        | B_BUF          | auto   | 1       | 32, 512, 1       |
-|    B_BUF_1_U                        | ram_s2p channel | pipo        | 1    |      |        | B_BUF_1        | auto   | 1       | 32, 512, 1       |
-|    B_TILE_1_U                       | ram_1p channel  | pipo        | 1    |      |        | B_TILE_1       | auto   | 1       | 32, 256, 2       |
-|    B_TILE_U                         | ram_1p channel  | pipo        | 1    |      |        | B_TILE         | auto   | 1       | 32, 256, 2       |
-|    B_TILE2_1_U                      | ram_1p channel  | pipo        | 1    |      |        | B_TILE2_1      | auto   | 1       | 32, 256, 2       |
-|    B_TILE2_U                        | ram_1p channel  | pipo        | 1    |      |        | B_TILE2        | auto   | 1       | 32, 256, 2       |
-|    C_TILE_U                         | ram_1p channel  | pipo        | 2    |      |        | C_TILE         | auto   | 1       | 32, 512, 2       |
-|    C_TILE2_U                        | ram_1p channel  | pipo        | 2    |      |        | C_TILE2        | auto   | 1       | 32, 512, 2       |
-+-------------------------------------+-----------------+-------------+------+------+--------+----------------+--------+---------+------------------+
++-------------------------------------+-----------------+-------------+------+------+--------+-----------+--------+---------+------------------+
+| Name                                | Usage           | Type        | BRAM | URAM | Pragma | Variable  | Impl   | Latency | Bitwidth, Depth, |
+|                                     |                 |             |      |      |        |           |        |         | Banks            |
++-------------------------------------+-----------------+-------------+------+------+--------+-----------+--------+---------+------------------+
+| + gemm2                             |                 |             | 197  | 0    |        |           |        |         |                  |
+|   control_s_axi_U                   | interface       | s_axilite   |      |      |        |           |        |         |                  |
+|   gmem_m_axi_U                      | interface       | m_axi       | 58   |      |        |           |        |         |                  |
+|   gmem0_m_axi_U                     | interface       | m_axi       | 58   |      |        |           |        |         |                  |
+|   gmem1_m_axi_U                     | interface       | m_axi       | 58   |      |        |           |        |         |                  |
+|   A_BUF_U                           | ram_1p array    |             | 2    |      |        | A_BUF     | auto   | 1       | 32, 256, 1       |
+|   A_BUF_1_U                         | ram_1p array    |             | 2    |      |        | A_BUF_1   | auto   | 1       | 32, 256, 1       |
+|   B_BUF_U                           | ram_1p array    |             | 2    |      |        | B_BUF     | auto   | 1       | 32, 512, 1       |
+|   B_BUF_1_U                         | ram_s2p array   |             | 2    |      |        | B_BUF_1   | auto   | 1       | 32, 512, 1       |
+|   C_BUF_U                           | ram_1p array    |             | 2    |      |        | C_BUF     | auto   | 1       | 32, 512, 1       |
+|   C_BUF_1_U                         | ram_1p array    |             | 2    |      |        | C_BUF_1   | auto   | 1       | 32, 512, 1       |
+|   C_BUF_2_U                         | ram_1p array    |             | 2    |      |        | C_BUF_2   | auto   | 1       | 32, 512, 1       |
+|   C_BUF_3_U                         | ram_1p array    |             | 2    |      |        | C_BUF_3   | auto   | 1       | 32, 512, 1       |
+|   A_TILE_U                          | ram_s2p array   |             | 2    |      |        | A_TILE    | auto   | 1       | 32, 128, 1       |
+|   A_TILE_1_U                        | ram_s2p array   |             | 2    |      |        | A_TILE_1  | auto   | 1       | 32, 128, 1       |
+|  + dataflow_in_loop_VITIS_LOOP_34_1 |                 |             | 11   | 0    |        |           |        |         |                  |
+|    tileA_c_U                        | fifo channel    | scalar prop | 1    |      |        | tileA_c   | memory | 0       | 1, 4, 1          |
+|    B_BUF_U                          | ram_1p channel  | pipo        | 1    |      |        | B_BUF     | auto   | 1       | 32, 512, 1       |
+|    B_BUF_1_U                        | ram_s2p channel | pipo        | 1    |      |        | B_BUF_1   | auto   | 1       | 32, 512, 1       |
+|    B_TILE_1_U                       | ram_1p channel  | pipo        | 1    |      |        | B_TILE_1  | auto   | 1       | 32, 256, 2       |
+|    B_TILE_U                         | ram_1p channel  | pipo        | 1    |      |        | B_TILE    | auto   | 1       | 32, 256, 2       |
+|    B_TILE2_1_U                      | ram_1p channel  | pipo        | 1    |      |        | B_TILE2_1 | auto   | 1       | 32, 256, 2       |
+|    B_TILE2_U                        | ram_1p channel  | pipo        | 1    |      |        | B_TILE2   | auto   | 1       | 32, 256, 2       |
+|    C_TILE_U                         | ram_1p channel  | pipo        | 2    |      |        | C_TILE    | auto   | 1       | 32, 512, 2       |
+|    C_TILE2_U                        | ram_1p channel  | pipo        | 2    |      |        | C_TILE2   | auto   | 1       | 32, 512, 2       |
++-------------------------------------+-----------------+-------------+------+------+--------+-----------+--------+---------+------------------+
 
 
 ================================================================
@@ -258,20 +262,24 @@
 +----------+---------+-----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
-+-----------------+--------------------------------------------+----------------------------------------------+
-| Type            | Options                                    | Location                                     |
-+-----------------+--------------------------------------------+----------------------------------------------+
-| interface       | m_axi port=A_DRAM bundle=gmem0             | source/gemm.cpp:10 in gemm2, A_DRAM          |
-| interface       | m_axi port=B_DRAM bundle=gmem1             | source/gemm.cpp:11 in gemm2, B_DRAM          |
-| array_partition | variable=A_BUF dim=2 type=cyclic factor=2  | source/gemm.cpp:14 in gemm2, A_BUF           |
-| array_partition | variable=B_BUF dim=2 type=block factor=2   | source/gemm.cpp:16 in gemm2, B_BUF           |
-| array_partition | variable=C_BUF dim=1 block factor=2        | source/gemm.cpp:18 in gemm2, C_BUF           |
-| array_partition | variable=C_BUF dim=2 block factor=2        | source/gemm.cpp:19 in gemm2, C_BUF           |
-| array_partition | variable=A_TILE dim=2 type=cyclic factor=2 | source/gemm.cpp:22 in gemm2, A_TILE          |
-| array_partition | variable=B_TILE dim=1 type=cyclic factor=2 | source/gemm.cpp:24 in gemm2, B_TILE          |
-| array_partition | variable=B_TILE2 dim=1 cyclic factor=2     | source/gemm.cpp:26 in gemm2, B_TILE2         |
-| inline          |                                            | source/load_tiles.hpp:4 in loadtileafromdram |
-| pipeline        | II=1                                       | source/load_tiles.hpp:8 in loadtileafromdram |
-+-----------------+--------------------------------------------+----------------------------------------------+
++-----------------+--------------------------------------------+-----------------------------------------------+
+| Type            | Options                                    | Location                                      |
++-----------------+--------------------------------------------+-----------------------------------------------+
+| inline          | off                                        | source/dram.hpp:4 in loadinputsfromdram       |
+| inline          | off                                        | source/dram.hpp:20 in storeoutputtodram       |
+| interface       | m_axi port=A_DRAM bundle=gmem0             | source/gemm.cpp:10 in gemm2, A_DRAM           |
+| interface       | m_axi port=B_DRAM bundle=gmem1             | source/gemm.cpp:11 in gemm2, B_DRAM           |
+| array_partition | variable=A_BUF dim=2 type=cyclic factor=2  | source/gemm.cpp:14 in gemm2, A_BUF            |
+| array_partition | variable=B_BUF dim=2 type=block factor=2   | source/gemm.cpp:16 in gemm2, B_BUF            |
+| array_partition | variable=C_BUF dim=1 block factor=2        | source/gemm.cpp:18 in gemm2, C_BUF            |
+| array_partition | variable=C_BUF dim=2 block factor=2        | source/gemm.cpp:19 in gemm2, C_BUF            |
+| array_partition | variable=A_TILE dim=2 type=cyclic factor=2 | source/gemm.cpp:22 in gemm2, A_TILE           |
+| array_partition | variable=B_TILE dim=1 type=cyclic factor=2 | source/gemm.cpp:24 in gemm2, B_TILE           |
+| array_partition | variable=B_TILE2 dim=1 cyclic factor=2     | source/gemm.cpp:26 in gemm2, B_TILE2          |
+| inline          | off                                        | source/load_tiles.hpp:4 in loadtileafromdram  |
+| pipeline        | II=1                                       | source/load_tiles.hpp:8 in loadtileafromdram  |
+| inline          | off                                        | source/load_tiles.hpp:16 in loadtilebfromdram |
+| inline          | off                                        | source/load_tiles.hpp:26 in storetiletodram   |
++-----------------+--------------------------------------------+-----------------------------------------------+
 
 

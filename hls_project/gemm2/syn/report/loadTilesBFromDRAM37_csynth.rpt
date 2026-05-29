@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadTilesBFromDRAM26'
+== Vitis HLS Report for 'loadTilesBFromDRAM37'
 ================================================================
-* Date:           Fri May 29 18:38:35 2026
+* Date:           Fri May 29 19:00:31 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -39,7 +39,7 @@
         |          Instance         |         Module         |   min   |   max   |    min   |    max   |  min |  max |   Type  |
         +---------------------------+------------------------+---------+---------+----------+----------+------+------+---------+
         |loadTileBFromDRAM612_U0    |loadTileBFromDRAM612    |     1569|     1569|  5.229 us|  5.229 us|  1569|  1569|       no|
-        |loadTileBFromDRAM_3711_U0  |loadTileBFromDRAM_3711  |     1569|     1569|  5.229 us|  5.229 us|  1569|  1569|       no|
+        |loadTileBFromDRAM_2711_U0  |loadTileBFromDRAM_2711  |     1569|     1569|  5.229 us|  5.229 us|  1569|  1569|       no|
         +---------------------------+------------------------+---------+---------+----------+----------+------+------+---------+
 
         * Loop: 
@@ -75,7 +75,7 @@
     |          Instance         |         Module         | BRAM_18K| DSP| FF | LUT | URAM|
     +---------------------------+------------------------+---------+----+----+-----+-----+
     |loadTileBFromDRAM612_U0    |loadTileBFromDRAM612    |        0|   0|  73|  128|    0|
-    |loadTileBFromDRAM_3711_U0  |loadTileBFromDRAM_3711  |        0|   0|  73|  128|    0|
+    |loadTileBFromDRAM_2711_U0  |loadTileBFromDRAM_2711  |        0|   0|  73|  128|    0|
     +---------------------------+------------------------+---------+----+----+-----+-----+
     |Total                      |                        |        0|   0| 146|  256|    0|
     +---------------------------+------------------------+---------+----+----+-----+-----+
@@ -98,9 +98,9 @@
     |ap_sync_done                                |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                               |       and|   0|  0|   2|           1|           1|
     |loadTileBFromDRAM612_U0_ap_start            |       and|   0|  0|   2|           1|           1|
-    |loadTileBFromDRAM_3711_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |loadTileBFromDRAM_2711_U0_ap_start          |       and|   0|  0|   2|           1|           1|
     |ap_sync_loadTileBFromDRAM612_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loadTileBFromDRAM_3711_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loadTileBFromDRAM_2711_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
     +--------------------------------------------+----------+----+---+----+------------+------------+
     |Total                                       |          |   0|  0|  16|           8|           8|
     +--------------------------------------------+----------+----+---+----+------------+------------+
@@ -110,7 +110,7 @@
     |                      Name                      | LUT| Input Size| Bits| Total Bits|
     +------------------------------------------------+----+-----------+-----+-----------+
     |ap_sync_reg_loadTileBFromDRAM612_U0_ap_ready    |   9|          2|    1|          2|
-    |ap_sync_reg_loadTileBFromDRAM_3711_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_loadTileBFromDRAM_2711_U0_ap_ready  |   9|          2|    1|          2|
     +------------------------------------------------+----+-----------+-----+-----------+
     |Total                                           |  18|          4|    2|          4|
     +------------------------------------------------+----+-----------+-----+-----------+
@@ -120,7 +120,7 @@
     |                      Name                      | FF| LUT| Bits| Const Bits|
     +------------------------------------------------+---+----+-----+-----------+
     |ap_sync_reg_loadTileBFromDRAM612_U0_ap_ready    |  1|   0|    1|          0|
-    |ap_sync_reg_loadTileBFromDRAM_3711_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_loadTileBFromDRAM_2711_U0_ap_ready  |  1|   0|    1|          0|
     +------------------------------------------------+---+----+-----+-----------+
     |Total                                           |  2|   0|    2|          0|
     +------------------------------------------------+---+----+-----+-----------+
@@ -174,16 +174,16 @@
 |B_TILES_1_d1        |  out|   32|   ap_memory|             B_TILES_1|         array|
 |B_TILES_1_q1        |   in|   32|   ap_memory|             B_TILES_1|         array|
 |B_TILES_1_we1       |  out|    1|   ap_memory|             B_TILES_1|         array|
-|ap_clk              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_rst              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|B_TILES_0_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|B_TILES_0_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_start            |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_done             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|B_TILES_1_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|B_TILES_1_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_ready            |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_idle             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
-|ap_continue         |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_clk              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|B_TILES_0_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|B_TILES_0_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|B_TILES_1_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|B_TILES_1_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
+|ap_continue         |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM37|  return value|
 +--------------------+-----+-----+------------+----------------------+--------------+
 

@@ -12,14 +12,21 @@ void loadTileAFromDRAM(fm_t A_DRAM[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], int ti
 	}
 }
 
-void loadTileBFromDRAM(fm_t B_DRAM[K][J], fm_t B_TILE[K][J/NUM_OF_TILES], int tileB) {
+void loadTileBFromDRAM(fm_t B_DRAM[K][J/NUM_OF_TILES], fm_t B_TILE[K][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
 	load_tile_B:
 	for(int k = 0; k < K; k++) {
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-			B_TILE[k][j] = B_DRAM[k][j+tileB*J/NUM_OF_TILES];
+			B_TILE[k][j] = B_DRAM[k][j];
 		}
 	}
+}
+
+void loadTilesBFromDRAM(fm_t B_DRAM[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t B_TILES[NUM_OF_TILES][K][J/NUM_OF_TILES]) {
+    #pragma HLS INLINE off
+	#pragma HLS DATAFLOW
+	loadTileBFromDRAM(B_DRAM[0], B_TILES[0]);
+	loadTileBFromDRAM(B_DRAM[1], B_TILES[1]);
 }
 
 void storeTileToDRAM(fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I][J], int tileA, int tileB) {

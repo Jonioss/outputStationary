@@ -1,5 +1,5 @@
 #include "constants.h"
-#include "usefulFunctions.h"
+#include "usefulFunctions.hpp"
 
 using namespace std;
 

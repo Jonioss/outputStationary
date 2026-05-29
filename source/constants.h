@@ -1,8 +1,5 @@
 #include <ap_fixed.h>
-
-#define I 100
-#define J 200
-#define K 150
+#include "host_visible.h"
 
 #define NUM_OF_TILES 2
 

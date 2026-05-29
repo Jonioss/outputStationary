@@ -1,0 +1,38 @@
+# 1. Ignore everything inside the hls_project directory
+hls_project/*
+
+# 2. Un-ignore the gemm2 directory so Git can look inside it
+!hls_project/gemm2/
+# Ignore all contents of gemm2 by default
+hls_project/gemm2/*
+
+# 3. Un-ignore the specific file at the gemm2 root
+!hls_project/gemm2/gemm2.log
+
+# 4. Un-ignore the syn/report path
+!hls_project/gemm2/syn/
+hls_project/gemm2/syn/*
+!hls_project/gemm2/syn/report/
+hls_project/gemm2/syn/report/*
+
+# Un-ignore the specific files in syn/report
+!hls_project/gemm2/syn/report/*.rpt
+
+# 5. Un-ignore the sim/report path
+!hls_project/gemm2/sim/
+hls_project/gemm2/sim/*
+!hls_project/gemm2/sim/report/
+hls_project/gemm2/sim/report/*
+
+# Un-ignore the specific file in sim/report
+!hls_project/gemm2/sim/report/gemm_cosim.rpt
+
+vitis_hls.log
+
+_x*
+build_dir*
+gemm_host.exe
+v++_gemm*.log
+xcd.log
+.ipcache
+*.exe

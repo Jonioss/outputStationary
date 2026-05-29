@@ -2,10 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "host_visible.h"
 
-#define I 100
-#define J 200
-#define K 150
 
 float A[I][K];
 float B[K][J];

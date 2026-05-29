@@ -3,13 +3,7 @@
 # Create a project
 open_project -reset hls_project
 # Add design files
-add_files source/A.bin
-add_files source/B.bin
-add_files source/C.bin
-add_files source/constants.h
 add_files source/gemm.cpp
-add_files source/usefulFunctions.cpp
-add_files source/usefulFunctions.h
 add_files -tb source/tb_gemm.cpp -cflags "-Wno-unknown-pragmas"
 
 # Set the top-level function

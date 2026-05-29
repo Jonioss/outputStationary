@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gemm2'
 ================================================================
-* Date:           Fri May 29 19:00:31 2026
+* Date:           Fri May 29 19:23:25 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,9 +38,9 @@
         |                                      |                           |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
         |               Instance               |           Module          |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +--------------------------------------+---------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |grp_loadInputsFromDRAM_fu_112         |loadInputsFromDRAM         |     3951|     3951|  13.169 us|  13.169 us|   3951|   3951|       no|
-        |grp_dataflow_parent_loop_proc_fu_125  |dataflow_parent_loop_proc  |    87180|    87180|   0.291 ms|   0.291 ms|  87180|  87180|       no|
-        |grp_storeOutputToDRAM_fu_136          |storeOutputToDRAM          |     6409|     6409|  21.361 us|  21.361 us|   6409|   6409|       no|
+        |grp_loadInputsFromDRAM_fu_120         |loadInputsFromDRAM         |     3951|     3951|  13.169 us|  13.169 us|   3951|   3951|       no|
+        |grp_dataflow_parent_loop_proc_fu_133  |dataflow_parent_loop_proc  |    87180|    87180|   0.291 ms|   0.291 ms|  87180|  87180|       no|
+        |grp_storeOutputToDRAM_fu_144          |storeOutputToDRAM          |     6409|     6409|  21.361 us|  21.361 us|   6409|   6409|       no|
         +--------------------------------------+---------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
@@ -58,12 +58,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|       6|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |      187|     8|   10553|    9799|    0|
-|Memory           |        8|     -|       0|       0|    0|
+|Instance         |      191|     8|   10553|    9831|    0|
+|Memory           |        8|     -|       0|       0|    -|
 |Multiplexer      |        -|     -|       -|     383|    -|
 |Register         |        -|     -|     208|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |      195|     8|   10761|   10188|    0|
+|Total            |      199|     8|   10761|   10220|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -76,33 +76,33 @@
     |               Instance               |           Module          | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +--------------------------------------+---------------------------+---------+----+------+------+-----+
     |control_s_axi_U                       |control_s_axi              |        0|   0|   246|   424|    0|
-    |grp_dataflow_parent_loop_proc_fu_125  |dataflow_parent_loop_proc  |       13|   8|  1661|  2024|    0|
+    |grp_dataflow_parent_loop_proc_fu_133  |dataflow_parent_loop_proc  |       17|   8|  1661|  2056|    0|
     |gmem0_m_axi_U                         |gmem0_m_axi                |       58|   0|  1733|  1699|    0|
     |gmem1_m_axi_U                         |gmem1_m_axi                |       58|   0|  1733|  1699|    0|
     |gmem_m_axi_U                          |gmem_m_axi                 |       58|   0|  1733|  1699|    0|
-    |grp_loadInputsFromDRAM_fu_112         |loadInputsFromDRAM         |        0|   0|  2823|  1088|    0|
-    |grp_storeOutputToDRAM_fu_136          |storeOutputToDRAM          |        0|   0|   624|  1166|    0|
+    |grp_loadInputsFromDRAM_fu_120         |loadInputsFromDRAM         |        0|   0|  2823|  1088|    0|
+    |grp_storeOutputToDRAM_fu_144          |storeOutputToDRAM          |        0|   0|   624|  1166|    0|
     +--------------------------------------+---------------------------+---------+----+------+------+-----+
-    |Total                                 |                           |      187|   8| 10553|  9799|    0|
+    |Total                                 |                           |      191|   8| 10553|  9831|    0|
     +--------------------------------------+---------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
 
     * Memory: 
-    +-----------+---------------------+---------+---+----+-----+------+-----+------+-------------+
-    |   Memory  |        Module       | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +-----------+---------------------+---------+---+----+-----+------+-----+------+-------------+
-    |A_BUF_U    |A_BUF_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
-    |B_BUF_U    |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    |B_BUF_1_U  |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    |C_BUF_U    |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    |C_BUF_1_U  |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    |C_BUF_2_U  |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    |C_BUF_3_U  |B_BUF_RAM_AUTO_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
-    +-----------+---------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total      |                     |        8|  0|   0|    0|  3584|  224|     7|       114688|
-    +-----------+---------------------+---------+---+----+-----+------+-----+------+-------------+
+    +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory  |          Module          | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |A_BUF_U    |A_BUF_RAM_1WNR_BRAM_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    |B_BUF_U    |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |B_BUF_1_U  |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |C_BUF_U    |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |C_BUF_1_U  |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |C_BUF_2_U  |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    |C_BUF_3_U  |B_BUF_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|   512|   32|     1|        16384|
+    +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total      |                          |        8|  0|   0|    0|  3584|  224|     7|       114688|
+    +-----------+--------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -112,8 +112,8 @@
     |                     Variable Name                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-------------------------------------------------------+----------+----+---+----+------------+------------+
     |ap_block_state1                                        |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_dataflow_parent_loop_proc_fu_125_ap_done   |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_dataflow_parent_loop_proc_fu_125_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc_fu_133_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_dataflow_parent_loop_proc_fu_133_ap_ready  |        or|   0|  0|   2|           1|           1|
     +-------------------------------------------------------+----------+----+---+----+------------+------------+
     |Total                                                  |          |   0|  0|   6|           3|           3|
     +-------------------------------------------------------+----------+----+---+----+------------+------------+
@@ -161,19 +161,19 @@
     +-----------------------------------------------------------+----+----+-----+-----------+
     |                            Name                           | FF | LUT| Bits| Const Bits|
     +-----------------------------------------------------------+----+----+-----+-----------+
-    |A_DRAM_read_reg_157                                        |  64|   0|   64|          0|
-    |B_DRAM_read_reg_152                                        |  64|   0|   64|          0|
-    |C_DRAM_read_reg_147                                        |  64|   0|   64|          0|
+    |A_DRAM_read_reg_165                                        |  64|   0|   64|          0|
+    |B_DRAM_read_reg_160                                        |  64|   0|   64|          0|
+    |C_DRAM_read_reg_155                                        |  64|   0|   64|          0|
     |ap_CS_fsm                                                  |   7|   0|    7|          0|
     |ap_done_reg                                                |   1|   0|    1|          0|
     |ap_rst_n_inv                                               |   1|   0|    1|          0|
     |ap_rst_reg_1                                               |   1|   0|    1|          0|
     |ap_rst_reg_2                                               |   1|   0|    1|          0|
-    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_125_ap_done   |   1|   0|    1|          0|
-    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_125_ap_ready  |   1|   0|    1|          0|
-    |grp_dataflow_parent_loop_proc_fu_125_ap_start_reg          |   1|   0|    1|          0|
-    |grp_loadInputsFromDRAM_fu_112_ap_start_reg                 |   1|   0|    1|          0|
-    |grp_storeOutputToDRAM_fu_136_ap_start_reg                  |   1|   0|    1|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_133_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_133_ap_ready  |   1|   0|    1|          0|
+    |grp_dataflow_parent_loop_proc_fu_133_ap_start_reg          |   1|   0|    1|          0|
+    |grp_loadInputsFromDRAM_fu_120_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_storeOutputToDRAM_fu_144_ap_start_reg                  |   1|   0|    1|          0|
     +-----------------------------------------------------------+----+----+-----+-----------+
     |Total                                                      | 208|   0|  208|          0|
     +-----------------------------------------------------------+----+----+-----+-----------+

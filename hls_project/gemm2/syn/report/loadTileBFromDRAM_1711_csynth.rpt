@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadTileBFromDRAM_2711'
+== Vitis HLS Report for 'loadTileBFromDRAM_1711'
 ================================================================
-* Date:           Fri May 29 19:00:31 2026
+* Date:           Fri May 29 19:23:24 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -86,11 +86,11 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln18_fu_93_p2    |         +|   0|  0|  12|           5|           1|
-    |add_ln19_fu_113_p2   |         +|   0|  0|  13|           6|           1|
-    |add_ln20_fu_123_p2   |         +|   0|  0|  16|           9|           9|
-    |icmp_ln18_fu_87_p2   |      icmp|   0|  0|  13|           5|           6|
-    |icmp_ln19_fu_107_p2  |      icmp|   0|  0|  14|           6|           7|
+    |add_ln18_fu_101_p2   |         +|   0|  0|  12|           5|           1|
+    |add_ln19_fu_121_p2   |         +|   0|  0|  13|           6|           1|
+    |add_ln20_fu_131_p2   |         +|   0|  0|  16|           9|           9|
+    |icmp_ln18_fu_95_p2   |      icmp|   0|  0|  13|           5|           6|
+    |icmp_ln19_fu_115_p2  |      icmp|   0|  0|  14|           6|           7|
     |ap_block_state1      |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  70|          32|          25|
@@ -102,8 +102,8 @@
     +-----------+----+-----------+-----+-----------+
     |ap_NS_fsm  |  31|          6|    1|          6|
     |ap_done    |   9|          2|    1|          2|
-    |j_reg_64   |   9|          2|    6|         12|
-    |k_fu_34    |   9|          2|    5|         10|
+    |j_reg_72   |   9|          2|    6|         12|
+    |k_fu_42    |   9|          2|    5|         10|
     +-----------+----+-----------+-----+-----------+
     |Total      |  58|         12|   13|         30|
     +-----------+----+-----------+-----+-----------+
@@ -112,15 +112,15 @@
     +---------------------+----+----+-----+-----------+
     |         Name        | FF | LUT| Bits| Const Bits|
     +---------------------+----+----+-----+-----------+
-    |B_DRAM_load_reg_175  |  32|   0|   32|          0|
-    |add_ln18_reg_147     |   5|   0|    5|          0|
-    |add_ln19_reg_160     |   6|   0|    6|          0|
+    |B_DRAM_load_reg_183  |  32|   0|   32|          0|
+    |add_ln18_reg_155     |   5|   0|    5|          0|
+    |add_ln19_reg_168     |   6|   0|    6|          0|
     |ap_CS_fsm            |   5|   0|    5|          0|
     |ap_done_reg          |   1|   0|    1|          0|
-    |j_reg_64             |   6|   0|    6|          0|
-    |k_fu_34              |   5|   0|    5|          0|
-    |tmp_reg_152          |   4|   0|    9|          5|
-    |zext_ln20_2_reg_165  |   9|   0|   64|         55|
+    |j_reg_72             |   6|   0|    6|          0|
+    |k_fu_42              |   5|   0|    5|          0|
+    |tmp_reg_160          |   4|   0|    9|          5|
+    |zext_ln20_2_reg_173  |   9|   0|   64|         55|
     +---------------------+----+----+-----+-----------+
     |Total                |  73|   0|  133|         60|
     +---------------------+----+----+-----+-----------+
@@ -134,13 +134,13 @@
 +-----------------+-----+-----+------------+------------------------+--------------+
 |    RTL Ports    | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
 +-----------------+-----+-----+------------+------------------------+--------------+
-|ap_clk           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_rst           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_start         |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_done          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_continue      |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_idle          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
-|ap_ready         |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.2711|  return value|
+|ap_clk           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_continue      |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM.1711|  return value|
 |B_DRAM_address0  |  out|    9|   ap_memory|                  B_DRAM|         array|
 |B_DRAM_ce0       |  out|    1|   ap_memory|                  B_DRAM|         array|
 |B_DRAM_q0        |   in|   32|   ap_memory|                  B_DRAM|         array|

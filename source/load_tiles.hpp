@@ -29,12 +29,12 @@ void loadTilesBFromDRAM(const fm_t B_DRAM[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t
 	loadTileBFromDRAM(B_DRAM[1], B_TILES[1]);
 }
 
-void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I][J],const  int tileA,const  int tileB) {
+void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
 	store_C_tile:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-			C_DRAM[i+tileA*I/NUM_OF_TILES][j+tileB*J/NUM_OF_TILES] = C_TILE[i][j];
+			C_DRAM[i][j] = C_TILE[i][j];
 		}
 	}
 }

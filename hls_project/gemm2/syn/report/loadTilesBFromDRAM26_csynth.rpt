@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'loadTilesBFromDRAM26'
+================================================================
+* Date:           Fri May 29 18:38:35 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_project
+* Solution:       gemm2 (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.013 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline |
+    |   min   |   max   |    min   |    max   |  min |  max |   Type   |
+    +---------+---------+----------+----------+------+------+----------+
+    |     1569|     1569|  5.229 us|  5.229 us|  1570|  1570|  dataflow|
+    +---------+---------+----------+----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+------------------------+---------+---------+----------+----------+------+------+---------+
+        |                           |                        |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+        |          Instance         |         Module         |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+        +---------------------------+------------------------+---------+---------+----------+----------+------+------+---------+
+        |loadTileBFromDRAM612_U0    |loadTileBFromDRAM612    |     1569|     1569|  5.229 us|  5.229 us|  1569|  1569|       no|
+        |loadTileBFromDRAM_3711_U0  |loadTileBFromDRAM_3711  |     1569|     1569|  5.229 us|  5.229 us|  1569|  1569|       no|
+        +---------------------------+------------------------+---------+---------+----------+----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      16|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     146|     256|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      18|    -|
+|Register         |        -|     -|       2|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     148|     290|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+------------------------+---------+----+----+-----+-----+
+    |          Instance         |         Module         | BRAM_18K| DSP| FF | LUT | URAM|
+    +---------------------------+------------------------+---------+----+----+-----+-----+
+    |loadTileBFromDRAM612_U0    |loadTileBFromDRAM612    |        0|   0|  73|  128|    0|
+    |loadTileBFromDRAM_3711_U0  |loadTileBFromDRAM_3711  |        0|   0|  73|  128|    0|
+    +---------------------------+------------------------+---------+----+----+-----+-----+
+    |Total                      |                        |        0|   0| 146|  256|    0|
+    +---------------------------+------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                               |       and|   0|  0|   2|           1|           1|
+    |loadTileBFromDRAM612_U0_ap_start            |       and|   0|  0|   2|           1|           1|
+    |loadTileBFromDRAM_3711_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_loadTileBFromDRAM612_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loadTileBFromDRAM_3711_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                       |          |   0|  0|  16|           8|           8|
+    +--------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_loadTileBFromDRAM612_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_loadTileBFromDRAM_3711_U0_ap_ready  |   9|          2|    1|          2|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           |  18|          4|    2|          4|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_loadTileBFromDRAM612_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_loadTileBFromDRAM_3711_U0_ap_ready  |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           |  2|   0|    2|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------+-----+-----+------------+----------------------+--------------+
+|B_DRAM_0_address0   |  out|    9|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_ce0        |  out|    1|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_d0         |  out|   32|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_q0         |   in|   32|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_we0        |  out|    1|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_address1   |  out|    9|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_ce1        |  out|    1|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_d1         |  out|   32|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_q1         |   in|   32|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_0_we1        |  out|    1|   ap_memory|              B_DRAM_0|         array|
+|B_DRAM_1_address0   |  out|    9|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_ce0        |  out|    1|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_d0         |  out|   32|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_q0         |   in|   32|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_we0        |  out|    1|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_address1   |  out|    9|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_ce1        |  out|    1|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_d1         |  out|   32|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_q1         |   in|   32|   ap_memory|              B_DRAM_1|         array|
+|B_DRAM_1_we1        |  out|    1|   ap_memory|              B_DRAM_1|         array|
+|B_TILES_0_address0  |  out|    9|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_ce0       |  out|    1|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_d0        |  out|   32|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_q0        |   in|   32|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_we0       |  out|    1|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_address1  |  out|    9|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_ce1       |  out|    1|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_d1        |  out|   32|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_q1        |   in|   32|   ap_memory|             B_TILES_0|         array|
+|B_TILES_0_we1       |  out|    1|   ap_memory|             B_TILES_0|         array|
+|B_TILES_1_address0  |  out|    9|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_ce0       |  out|    1|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_d0        |  out|   32|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_q0        |   in|   32|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_we0       |  out|    1|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_address1  |  out|    9|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_ce1       |  out|    1|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_d1        |  out|   32|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_q1        |   in|   32|   ap_memory|             B_TILES_1|         array|
+|B_TILES_1_we1       |  out|    1|   ap_memory|             B_TILES_1|         array|
+|ap_clk              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|B_TILES_0_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|B_TILES_0_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|B_TILES_1_full_n    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|B_TILES_1_write     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
+|ap_continue         |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM26|  return value|
++--------------------+-----+-----+------------+----------------------+--------------+
+

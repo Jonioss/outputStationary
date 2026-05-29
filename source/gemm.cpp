@@ -13,8 +13,9 @@ void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 	fm_t A_BUF[I][K];
 	fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=1 type=complete
-	fm_t C_BUF[I][J];
-
+	fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
+	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=1 type=complete
+	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=2 type=complete
 	fm_t A_TILE[I/NUM_OF_TILES][K];
 	fm_t B_TILES[NUM_OF_TILES][K][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=B_TILES dim=1 type=complete
@@ -37,8 +38,8 @@ void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 			matMulTile(A_TILE, B_TILES[1], C_TILES[1]);
 			//storeTileToDRAM(C_TILE2, C_DRAM, tileA, tileB);
 
-			storeTileToDRAM(C_TILES[0], C_BUF, tileA, real_tileB);
-			storeTileToDRAM(C_TILES[1], C_BUF, tileA, real_tileB+1);
+			storeTileToDRAM(C_TILES[0], C_BUF[tileA][0]);
+			storeTileToDRAM(C_TILES[1], C_BUF[tileA][1]);
 		}
 	}
 	storeOutputToDRAM(C_BUF, C_DRAM);

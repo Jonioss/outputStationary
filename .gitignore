@@ -25,7 +25,7 @@ hls_project/gemm2/sim/*
 hls_project/gemm2/sim/report/*
 
 # Un-ignore the specific file in sim/report
-!hls_project/gemm2/sim/report/gemm_cosim.rpt
+!hls_project/gemm2/sim/report/gemm2_cosim.rpt
 
 vitis_hls.log
 

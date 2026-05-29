@@ -1,0 +1,254 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_29_1'
+================================================================
+* Date:           Fri May 29 18:38:35 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_project
+* Solution:       gemm2 (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.365 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    45158|    45158|  0.151 ms|  0.151 ms|  42018|  42018|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |                                                                |                                                             |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+        |                            Instance                            |                            Module                           |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |loadTilesBFromDRAM26_U0                                         |loadTilesBFromDRAM26                                         |     1569|     1569|  5.229 us|  5.229 us|   1570|   1570|  dataflow|
+        |matMulTile35_U0                                                 |matMulTile35                                                 |    42017|    42017|  0.140 ms|  0.140 ms|  42017|  42017|        no|
+        |matMulTile_147_U0                                               |matMulTile_147                                               |    42017|    42017|  0.140 ms|  0.140 ms|  42017|  42017|        no|
+        |entry_proc_U0                                                   |entry_proc                                                   |        0|        0|      0 ns|      0 ns|      0|      0|        no|
+        |dataflow_in_loop_VITIS_LOOP_29_1_Block_newFuncRoot19_proc58_U0  |dataflow_in_loop_VITIS_LOOP_29_1_Block_newFuncRoot19_proc58  |     1570|     1570|  5.233 us|  5.233 us|   1570|   1570|        no|
+        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+----------+----------+-------+-------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      32|    -|
+|FIFO             |        1|     -|     147|      41|    -|
+|Instance         |        -|     8|    1062|    1334|    -|
+|Memory           |        8|     -|       0|       0|    0|
+|Multiplexer      |        -|     -|       -|      54|    -|
+|Register         |        -|     -|       6|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        9|     8|    1215|    1461|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        1|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
+    |                            Instance                            |                            Module                           | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
+    |dataflow_in_loop_VITIS_LOOP_29_1_Block_newFuncRoot19_proc58_U0  |dataflow_in_loop_VITIS_LOOP_29_1_Block_newFuncRoot19_proc58  |        0|   0|  150|  360|    0|
+    |entry_proc_U0                                                   |entry_proc                                                   |        0|   0|    2|   20|    0|
+    |loadTilesBFromDRAM26_U0                                         |loadTilesBFromDRAM26                                         |        0|   0|  148|  290|    0|
+    |matMulTile35_U0                                                 |matMulTile35                                                 |        0|   4|  381|  332|    0|
+    |matMulTile_147_U0                                               |matMulTile_147                                               |        0|   4|  381|  332|    0|
+    +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                           |                                                             |        0|   8| 1062| 1334|    0|
+    +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |    Memory   |                         Module                         | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |C_TILES_U    |dataflow_in_loop_VITIS_LOOP_29_1_C_TILES_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    |C_TILES_1_U  |dataflow_in_loop_VITIS_LOOP_29_1_C_TILES_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    |B_TILES_U    |dataflow_in_loop_VITIS_LOOP_29_1_C_TILES_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    |B_TILES_1_U  |dataflow_in_loop_VITIS_LOOP_29_1_C_TILES_RAM_AUTO_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
+    +-------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total        |                                                        |        8|  0|   0|    0|  2048|  128|     4|        65536|
+    +-------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |    Name   | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |tileA_c_U  |        1|  147|   0|    -|     4|    1|        4|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+    |Total      |        1|  147|   0|    0|     4|    1|        4|
+    +-----------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                              Variable Name                              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_B_TILES                                                  |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_B_TILES_1                                                |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                                  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                                            |       and|   0|  0|   2|           1|           1|
+    |dataflow_in_loop_VITIS_LOOP_29_1_Block_newFuncRoot19_proc58_U0_ap_start  |       and|   0|  0|   2|           1|           1|
+    |entry_proc_U0_ap_start                                                   |       and|   0|  0|   2|           1|           1|
+    |loadTilesBFromDRAM26_U0_ap_continue                                      |       and|   0|  0|   2|           1|           1|
+    |loadTilesBFromDRAM26_U0_ap_start                                         |       and|   0|  0|   2|           1|           1|
+    |matMulTile35_U0_ap_start                                                 |       and|   0|  0|   2|           1|           1|
+    |matMulTile_147_U0_ap_start                                               |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_B_TILES                                            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_B_TILES_1                                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_entry_proc_U0_ap_ready                                           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loadTilesBFromDRAM26_U0_ap_ready                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile35_U0_ap_ready                                         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile_147_U0_ap_ready                                       |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                    |          |   0|  0|  32|          16|          16|
+    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_B_TILES             |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_B_TILES_1           |   9|          2|    1|          2|
+    |ap_sync_reg_entry_proc_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_loadTilesBFromDRAM26_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_matMulTile35_U0_ap_ready          |   9|          2|    1|          2|
+    |ap_sync_reg_matMulTile_147_U0_ap_ready        |   9|          2|    1|          2|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  54|         12|    6|         12|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_B_TILES             |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_B_TILES_1           |  1|   0|    1|          0|
+    |ap_sync_reg_entry_proc_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_loadTilesBFromDRAM26_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile35_U0_ap_ready          |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile_147_U0_ap_ready        |  1|   0|    1|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  6|   0|    6|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|ap_continue       |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_29_1|  return value|
+|B_BUF_address0    |  out|    9|   ap_memory|                             B_BUF|         array|
+|B_BUF_ce0         |  out|    1|   ap_memory|                             B_BUF|         array|
+|B_BUF_d0          |  out|   32|   ap_memory|                             B_BUF|         array|
+|B_BUF_q0          |   in|   32|   ap_memory|                             B_BUF|         array|
+|B_BUF_we0         |  out|    1|   ap_memory|                             B_BUF|         array|
+|B_BUF_address1    |  out|    9|   ap_memory|                             B_BUF|         array|
+|B_BUF_ce1         |  out|    1|   ap_memory|                             B_BUF|         array|
+|B_BUF_d1          |  out|   32|   ap_memory|                             B_BUF|         array|
+|B_BUF_q1          |   in|   32|   ap_memory|                             B_BUF|         array|
+|B_BUF_we1         |  out|    1|   ap_memory|                             B_BUF|         array|
+|B_BUF_1_address0  |  out|    9|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_ce0       |  out|    1|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_d0        |  out|   32|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_q0        |   in|   32|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_we0       |  out|    1|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_address1  |  out|    9|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_ce1       |  out|    1|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_d1        |  out|   32|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_q1        |   in|   32|   ap_memory|                           B_BUF_1|         array|
+|B_BUF_1_we1       |  out|    1|   ap_memory|                           B_BUF_1|         array|
+|A_TILE_address0   |  out|    8|   ap_memory|                            A_TILE|         array|
+|A_TILE_ce0        |  out|    1|   ap_memory|                            A_TILE|         array|
+|A_TILE_d0         |  out|   32|   ap_memory|                            A_TILE|         array|
+|A_TILE_q0         |   in|   32|   ap_memory|                            A_TILE|         array|
+|A_TILE_we0        |  out|    1|   ap_memory|                            A_TILE|         array|
+|A_TILE_address1   |  out|    8|   ap_memory|                            A_TILE|         array|
+|A_TILE_ce1        |  out|    1|   ap_memory|                            A_TILE|         array|
+|A_TILE_d1         |  out|   32|   ap_memory|                            A_TILE|         array|
+|A_TILE_q1         |   in|   32|   ap_memory|                            A_TILE|         array|
+|A_TILE_we1        |  out|    1|   ap_memory|                            A_TILE|         array|
+|tileA             |   in|    1|     ap_none|                             tileA|        scalar|
+|tileA_ap_vld      |   in|    1|     ap_none|                             tileA|        scalar|
+|C_BUF_2_address0  |  out|    9|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_ce0       |  out|    1|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_d0        |  out|   32|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_q0        |   in|   32|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_we0       |  out|    1|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_address1  |  out|    9|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_ce1       |  out|    1|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_d1        |  out|   32|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_q1        |   in|   32|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_2_we1       |  out|    1|   ap_memory|                           C_BUF_2|         array|
+|C_BUF_3_address0  |  out|    9|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_ce0       |  out|    1|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_d0        |  out|   32|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_q0        |   in|   32|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_we0       |  out|    1|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_address1  |  out|    9|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_ce1       |  out|    1|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_d1        |  out|   32|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_q1        |   in|   32|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_3_we1       |  out|    1|   ap_memory|                           C_BUF_3|         array|
+|C_BUF_address0    |  out|    9|   ap_memory|                             C_BUF|         array|
+|C_BUF_ce0         |  out|    1|   ap_memory|                             C_BUF|         array|
+|C_BUF_d0          |  out|   32|   ap_memory|                             C_BUF|         array|
+|C_BUF_q0          |   in|   32|   ap_memory|                             C_BUF|         array|
+|C_BUF_we0         |  out|    1|   ap_memory|                             C_BUF|         array|
+|C_BUF_address1    |  out|    9|   ap_memory|                             C_BUF|         array|
+|C_BUF_ce1         |  out|    1|   ap_memory|                             C_BUF|         array|
+|C_BUF_d1          |  out|   32|   ap_memory|                             C_BUF|         array|
+|C_BUF_q1          |   in|   32|   ap_memory|                             C_BUF|         array|
+|C_BUF_we1         |  out|    1|   ap_memory|                             C_BUF|         array|
+|C_BUF_1_address0  |  out|    9|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_ce0       |  out|    1|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_d0        |  out|   32|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_q0        |   in|   32|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_we0       |  out|    1|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_address1  |  out|    9|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_ce1       |  out|    1|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_d1        |  out|   32|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_q1        |   in|   32|   ap_memory|                           C_BUF_1|         array|
+|C_BUF_1_we1       |  out|    1|   ap_memory|                           C_BUF_1|         array|
++------------------+-----+-----+------------+----------------------------------+--------------+
+

@@ -27,12 +27,12 @@ void zeroCTile(fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
 	}
 }
 
-void matMulTiles(const fm_t A[I/NUM_OF_TILES][K], fm_t B[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t C[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES]) {
+void matMulTiles(const fm_t A[NUM_OF_TILES][I/NUM_OF_TILES][K], fm_t B[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t C[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES]) {
 	#pragma HLS INLINE off
 	#pragma HLS DATAFLOW
 	for(int t=0; t<NUM_OF_TILES; t++){
 		#pragma HLS UNROLL
-		matMulTile(A, B[t], C[t]);
+		matMulTile(A[t], B[t], C[t]);
 	}
 }
 

@@ -1,13 +1,17 @@
 #include "constants.h"
 
-void loadTileAFromDRAM(const fm_t A_DRAM[I][K], fm_t A_TILE[I/NUM_OF_TILES][K],const int tileA) {
+void loadTileAFromDRAM(const fm_t A_DRAM[I][K], fm_t A_TILE[NUM_OF_TILES][I/NUM_OF_TILES][K], const int tileA) {
     #pragma HLS INLINE off
 	load_tile_A:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
 #pragma HLS UNROLL factor=NUM_OF_TILES
 #pragma HLS PIPELINE II=1
-			A_TILE[i][k] = A_DRAM[i+tileA*I/NUM_OF_TILES][k];
+			const int temp = A_DRAM[i+tileA*I/NUM_OF_TILES][k];
+			for(int t=0; t<NUM_OF_TILES; t++){
+				#pragma HLS UNROLL
+				A_TILE[t][i][k] = temp;
+			}
 		}
 	}
 }

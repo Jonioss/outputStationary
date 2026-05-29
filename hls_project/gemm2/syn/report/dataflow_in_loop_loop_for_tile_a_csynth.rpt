@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_loop_for_tile_a'
 ================================================================
-* Date:           Fri May 29 19:23:24 2026
+* Date:           Fri May 29 19:57:52 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -57,14 +57,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      50|    -|
+|Expression       |        -|     -|       0|      58|    -|
 |FIFO             |        1|     -|     147|      41|    -|
-|Instance         |        -|     8|    1458|    1853|    -|
-|Memory           |       16|     -|       0|       0|    -|
-|Multiplexer      |        -|     -|       -|      81|    -|
-|Register         |        -|     -|       9|       -|    -|
+|Instance         |        -|     8|    1476|    1977|    -|
+|Memory           |       12|     -|       0|       0|    -|
+|Multiplexer      |        -|     -|       -|      99|    -|
+|Register         |        -|     -|      11|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       17|     8|    1614|    2025|    0|
+|Total            |       13|     8|    1634|    2175|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -77,11 +77,11 @@
     |                            Instance                            |                            Module                           | BRAM_18K| DSP|  FF | LUT | URAM|
     +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
     |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc58_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc58  |        0|   0|  301|  583|    0|
-    |loadTileAFromDRAM26_U0                                          |loadTileAFromDRAM26                                          |        0|   0|  243|  248|    0|
+    |loadTileAFromDRAM26_U0                                          |loadTileAFromDRAM26                                          |        0|   0|  261|  372|    0|
     |loadTilesBFromDRAM37_U0                                         |loadTilesBFromDRAM37                                         |        0|   0|  148|  290|    0|
     |matMulTiles4_U0                                                 |matMulTiles4                                                 |        0|   8|  766|  732|    0|
     +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                           |                                                             |        0|   8| 1458| 1853|    0|
+    |Total                                                           |                                                             |        0|   8| 1476| 1977|    0|
     +----------------------------------------------------------------+-------------------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
@@ -91,14 +91,16 @@
     +-------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
     |    Memory   |                            Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +-------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |A_TILE_U     |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        4|  0|   0|    0|   128|   32|     1|         4096|
-    |A_TILE_1_U   |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        4|  0|   0|    0|   128|   32|     1|         4096|
+    |A_TILE_U     |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        1|  0|   0|    0|   128|   32|     1|         4096|
+    |A_TILE_1_U   |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        1|  0|   0|    0|   128|   32|     1|         4096|
+    |A_TILE_2_U   |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        1|  0|   0|    0|   128|   32|     1|         4096|
+    |A_TILE_3_U   |dataflow_in_loop_loop_for_tile_a_A_TILE_RAM_1WNR_BRAM_1R1W   |        1|  0|   0|    0|   128|   32|     1|         4096|
     |C_TILES_U    |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
     |C_TILES_1_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
     |B_TILES_U    |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
     |B_TILES_1_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        2|  0|   0|    0|   512|   32|     1|        16384|
     +-------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total        |                                                             |       16|  0|   0|    0|  2304|  192|     6|        73728|
+    |Total        |                                                             |       12|  0|   0|    0|  2560|  256|     8|        81920|
     +-------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
@@ -116,6 +118,8 @@
     +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |ap_channel_done_A_TILE                                                   |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_A_TILE_1                                                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_A_TILE_2                                                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_A_TILE_3                                                 |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_B_TILES                                                  |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_B_TILES_1                                                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_C_TILES                                                  |       and|   0|  0|   2|           1|           1|
@@ -132,6 +136,8 @@
     |matMulTiles4_U0_ap_start                                                 |       and|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_A_TILE                                             |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_A_TILE_1                                           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_A_TILE_2                                           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_A_TILE_3                                           |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_B_TILES                                            |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_B_TILES_1                                          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_C_TILES                                            |        or|   0|  0|   2|           1|           1|
@@ -140,7 +146,7 @@
     |ap_sync_loadTileAFromDRAM26_U0_ap_ready                                  |        or|   0|  0|   2|           1|           1|
     |ap_sync_loadTilesBFromDRAM37_U0_ap_ready                                 |        or|   0|  0|   2|           1|           1|
     +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                                    |          |   0|  0|  50|          25|          25|
+    |Total                                                                    |          |   0|  0|  58|          29|          29|
     +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -149,6 +155,8 @@
     +----------------------------------------------+----+-----------+-----+-----------+
     |ap_sync_reg_channel_write_A_TILE              |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_A_TILE_1            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_A_TILE_2            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_A_TILE_3            |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_B_TILES             |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_B_TILES_1           |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_C_TILES             |   9|          2|    1|          2|
@@ -157,7 +165,7 @@
     |ap_sync_reg_loadTileAFromDRAM26_U0_ap_ready   |   9|          2|    1|          2|
     |ap_sync_reg_loadTilesBFromDRAM37_U0_ap_ready  |   9|          2|    1|          2|
     +----------------------------------------------+----+-----------+-----+-----------+
-    |Total                                         |  81|         18|    9|         18|
+    |Total                                         |  99|         22|   11|         22|
     +----------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -166,6 +174,8 @@
     +----------------------------------------------+---+----+-----+-----------+
     |ap_sync_reg_channel_write_A_TILE              |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_A_TILE_1            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_A_TILE_2            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_A_TILE_3            |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_B_TILES             |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_B_TILES_1           |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_C_TILES             |  1|   0|    1|          0|
@@ -174,7 +184,7 @@
     |ap_sync_reg_loadTileAFromDRAM26_U0_ap_ready   |  1|   0|    1|          0|
     |ap_sync_reg_loadTilesBFromDRAM37_U0_ap_ready  |  1|   0|    1|          0|
     +----------------------------------------------+---+----+-----+-----------+
-    |Total                                         |  9|   0|    9|          0|
+    |Total                                         | 11|   0|   11|          0|
     +----------------------------------------------+---+----+-----+-----------+
 
 

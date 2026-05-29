@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1'
+== Vitis HLS Report for 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1'
 ================================================================
-* Date:           Fri May 29 17:40:19 2026
+* Date:           Fri May 29 17:50:26 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -37,12 +37,12 @@
         N/A
 
         * Loop: 
-        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |                               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |           Loop Name           |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- load_tile_A_VITIS_LOOP_63_1  |      130|      130|         4|          1|          1|   128|       yes|
-        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |           Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- load_tile_A_VITIS_LOOP_7_1  |      130|      130|         4|          1|          1|   128|       yes|
+        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -82,20 +82,20 @@
     N/A
 
     * Expression: 
-    +-------------------------+----------+----+---+----+------------+------------+
-    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-------------------------+----------+----+---+----+------------+------------+
-    |add_ln62_1_fu_148_p2     |         +|   0|  0|  15|           8|           1|
-    |add_ln62_fu_160_p2       |         +|   0|  0|  12|           5|           1|
-    |add_ln63_fu_210_p2       |         +|   0|  0|  12|           5|           2|
-    |empty_45_fu_194_p2       |         +|   0|  0|  12|           5|           5|
-    |icmp_ln62_fu_142_p2      |      icmp|   0|  0|  16|           8|           9|
-    |select_ln62_1_fu_182_p3  |    select|   0|  0|   5|           1|           5|
-    |select_ln62_fu_174_p3    |    select|   0|  0|   5|           1|           1|
-    |ap_enable_pp0            |       xor|   0|  0|   2|           1|           2|
-    +-------------------------+----------+----+---+----+------------+------------+
-    |Total                    |          |   0|  0|  79|          34|          26|
-    +-------------------------+----------+----+---+----+------------+------------+
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln6_1_fu_160_p2     |         +|   0|  0|  12|           5|           1|
+    |add_ln6_fu_148_p2       |         +|   0|  0|  15|           8|           1|
+    |add_ln7_fu_210_p2       |         +|   0|  0|  12|           5|           2|
+    |empty_45_fu_194_p2      |         +|   0|  0|  12|           5|           5|
+    |icmp_ln6_fu_142_p2      |      icmp|   0|  0|  16|           8|           9|
+    |select_ln6_1_fu_182_p3  |    select|   0|  0|   5|           1|           5|
+    |select_ln6_fu_174_p3    |    select|   0|  0|   5|           1|           1|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0|  79|          34|          26|
+    +------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +--------------------------------------+----+-----------+-----+-----------+
@@ -131,9 +131,9 @@
     |i_2_fu_58                         |   5|   0|    5|          0|
     |indvar_flatten_fu_62              |   8|   0|    8|          0|
     |k_2_fu_54                         |   5|   0|    5|          0|
-    |lshr_ln2_reg_290                  |   3|   0|    3|          0|
+    |lshr_ln7_1_reg_290                |   3|   0|    3|          0|
     |empty_reg_280                     |  64|  32|    4|          0|
-    |lshr_ln2_reg_290                  |  64|  32|    3|          0|
+    |lshr_ln7_1_reg_290                |  64|  32|    3|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 229|  64|  108|          0|
     +----------------------------------+----+----+-----+-----------+
@@ -144,29 +144,29 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+--------------------------------------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
-+-------------------+-----+-----+------------+--------------------------------------------+--------------+
-|ap_clk             |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|ap_start           |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|tmp_11             |   in|    5|     ap_none|                                      tmp_11|        scalar|
-|A_BUF_address0     |  out|    8|   ap_memory|                                       A_BUF|         array|
-|A_BUF_ce0          |  out|    1|   ap_memory|                                       A_BUF|         array|
-|A_BUF_q0           |   in|   32|   ap_memory|                                       A_BUF|         array|
-|A_BUF_2_address0   |  out|    8|   ap_memory|                                     A_BUF_2|         array|
-|A_BUF_2_ce0        |  out|    1|   ap_memory|                                     A_BUF_2|         array|
-|A_BUF_2_q0         |   in|   32|   ap_memory|                                     A_BUF_2|         array|
-|A_TILE_address0    |  out|    7|   ap_memory|                                      A_TILE|         array|
-|A_TILE_ce0         |  out|    1|   ap_memory|                                      A_TILE|         array|
-|A_TILE_we0         |  out|    1|   ap_memory|                                      A_TILE|         array|
-|A_TILE_d0          |  out|   32|   ap_memory|                                      A_TILE|         array|
-|A_TILE_1_address0  |  out|    7|   ap_memory|                                    A_TILE_1|         array|
-|A_TILE_1_ce0       |  out|    1|   ap_memory|                                    A_TILE_1|         array|
-|A_TILE_1_we0       |  out|    1|   ap_memory|                                    A_TILE_1|         array|
-|A_TILE_1_d0        |  out|   32|   ap_memory|                                    A_TILE_1|         array|
-+-------------------+-----+-----+------------+--------------------------------------------+--------------+
++-------------------+-----+-----+------------+-------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++-------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1|  return value|
+|tmp_11             |   in|    5|     ap_none|                                     tmp_11|        scalar|
+|A_BUF_address0     |  out|    8|   ap_memory|                                      A_BUF|         array|
+|A_BUF_ce0          |  out|    1|   ap_memory|                                      A_BUF|         array|
+|A_BUF_q0           |   in|   32|   ap_memory|                                      A_BUF|         array|
+|A_BUF_2_address0   |  out|    8|   ap_memory|                                    A_BUF_2|         array|
+|A_BUF_2_ce0        |  out|    1|   ap_memory|                                    A_BUF_2|         array|
+|A_BUF_2_q0         |   in|   32|   ap_memory|                                    A_BUF_2|         array|
+|A_TILE_address0    |  out|    7|   ap_memory|                                     A_TILE|         array|
+|A_TILE_ce0         |  out|    1|   ap_memory|                                     A_TILE|         array|
+|A_TILE_we0         |  out|    1|   ap_memory|                                     A_TILE|         array|
+|A_TILE_d0          |  out|   32|   ap_memory|                                     A_TILE|         array|
+|A_TILE_1_address0  |  out|    7|   ap_memory|                                   A_TILE_1|         array|
+|A_TILE_1_ce0       |  out|    1|   ap_memory|                                   A_TILE_1|         array|
+|A_TILE_1_we0       |  out|    1|   ap_memory|                                   A_TILE_1|         array|
+|A_TILE_1_d0        |  out|   32|   ap_memory|                                   A_TILE_1|         array|
++-------------------+-----+-----+------------+-------------------------------------------+--------------+
 

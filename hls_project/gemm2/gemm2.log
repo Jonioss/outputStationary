@@ -32,23 +32,23 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.64 seconds. CPU system time: 0.56 seconds. Elapsed time: 4.6 seconds; current allocated memory: 0.250 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.1 seconds. CPU system time: 0.39 seconds. Elapsed time: 3.5 seconds; current allocated memory: 0.250 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 240.781 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 240.781 MB.
 INFO: [HLS 200-10] Analyzing design file 'source/gemm.cpp' ... 
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:46:22)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:46:29)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:46:37)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:47:22)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:47:29)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:47:38)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:49:15)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:49:23)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:53:15)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:53:23)
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/gemm.cpp:43:9)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:38:22)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:38:29)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:38:37)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:39:22)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:39:29)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:39:38)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:41:15)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:41:23)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:45:15)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:45:23)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/gemm.cpp:35:9)
 WARNING: [HLS 200-471] Dataflow form checks found 11 issue(s) in file source/gemm.cpp
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.69 seconds. CPU system time: 0.62 seconds. Elapsed time: 5.42 seconds; current allocated memory: 243.324 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.31 seconds. CPU system time: 0.48 seconds. Elapsed time: 3.8 seconds; current allocated memory: 243.309 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
 INFO: [HLS 200-1995] There were 1,337 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 418 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
@@ -65,221 +65,221 @@ INFO: [HLS 200-1995] There were 495 instructions in the design after the 'Perfor
 INFO: [HLS 200-1995] There were 495 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 512 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 557 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-131] Inlining function 'loadTileAFromDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:41:3)
-INFO: [HLS 214-178] Inlining function 'loadInputsFromDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:16:0)
-INFO: [HLS 214-178] Inlining function 'storeOutputToDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:16:0)
-INFO: [HLS 214-248] Applying array_partition to 'A_BUF': Cyclic partitioning with factor 2 on dimension 2. (source/gemm.cpp:21:7)
-INFO: [HLS 214-248] Applying array_partition to 'B_BUF': Block partitioning with factor 2 on dimension 2. (source/gemm.cpp:23:7)
-INFO: [HLS 214-248] Applying array_partition to 'C_BUF': Block partitioning with factor 2 on dimension 1. Block partitioning with factor 2 on dimension 2. (source/gemm.cpp:25:7)
-INFO: [HLS 214-248] Applying array_partition to 'A_TILE': Cyclic partitioning with factor 2 on dimension 2. (source/gemm.cpp:29:7)
-INFO: [HLS 214-248] Applying array_partition to 'B_TILE': Cyclic partitioning with factor 2 on dimension 1. (source/gemm.cpp:31:7)
-INFO: [HLS 214-248] Applying array_partition to 'B_TILE2': Cyclic partitioning with factor 2 on dimension 1. (source/gemm.cpp:33:7)
+INFO: [HLS 214-131] Inlining function 'loadTileAFromDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:33:3)
+INFO: [HLS 214-178] Inlining function 'loadInputsFromDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:8:0)
+INFO: [HLS 214-178] Inlining function 'storeOutputToDRAM(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'gemm2(ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<32, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (source/gemm.cpp:8:0)
+INFO: [HLS 214-248] Applying array_partition to 'A_BUF': Cyclic partitioning with factor 2 on dimension 2. (source/gemm.cpp:13:7)
+INFO: [HLS 214-248] Applying array_partition to 'B_BUF': Block partitioning with factor 2 on dimension 2. (source/gemm.cpp:15:7)
+INFO: [HLS 214-248] Applying array_partition to 'C_BUF': Block partitioning with factor 2 on dimension 1. Block partitioning with factor 2 on dimension 2. (source/gemm.cpp:17:7)
+INFO: [HLS 214-248] Applying array_partition to 'A_TILE': Cyclic partitioning with factor 2 on dimension 2. (source/gemm.cpp:21:7)
+INFO: [HLS 214-248] Applying array_partition to 'B_TILE': Cyclic partitioning with factor 2 on dimension 1. (source/gemm.cpp:23:7)
+INFO: [HLS 214-248] Applying array_partition to 'B_TILE2': Cyclic partitioning with factor 2 on dimension 1. (source/gemm.cpp:25:7)
 INFO: [HLS 214-241] Aggregating maxi variable 'C_DRAM' with compact=none mode in 32-bits
 INFO: [HLS 214-241] Aggregating maxi variable 'B_DRAM' with compact=none mode in 32-bits
-INFO: [HLS 214-241] Aggregating maxi variable 'A_DRAM' with compact=none mode in 32-bits (source/gemm.cpp:16:0)
-WARNING: [HLS 214-397] Localizing array 'B_TILE_0' into loop 'VITIS_LOOP_42_1' (source/gemm.cpp:42:20) by ignoring loop-carried dependences. (source/gemm.cpp:16:0)
-WARNING: [HLS 214-397] Localizing array 'B_TILE_1' into loop 'VITIS_LOOP_42_1' (source/gemm.cpp:42:20) by ignoring loop-carried dependences. (source/gemm.cpp:16:0)
-WARNING: [HLS 214-397] Localizing array 'B_TILE2_0' into loop 'VITIS_LOOP_42_1' (source/gemm.cpp:42:20) by ignoring loop-carried dependences. (source/gemm.cpp:16:0)
-WARNING: [HLS 214-397] Localizing array 'B_TILE2_1' into loop 'VITIS_LOOP_42_1' (source/gemm.cpp:42:20) by ignoring loop-carried dependences. (source/gemm.cpp:16:0)
-WARNING: [HLS 214-414] Cannot apply interface mode 'ap_none' on function argument 'C_DRAM' since this interface mode only supports scalar types (source/gemm.cpp:16:0)
-INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 512 in loop 'load_A'(source/usefulFunctions.hpp:19:2) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/usefulFunctions.hpp:19:2)
-INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 512 has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/usefulFunctions.hpp:25:2)
-INFO: [HLS 214-115] Multiple burst writes of length 128 and bit width 512 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/usefulFunctions.hpp:34:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.99 seconds. CPU system time: 0.66 seconds. Elapsed time: 11.03 seconds; current allocated memory: 245.391 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 245.391 MB.
+INFO: [HLS 214-241] Aggregating maxi variable 'A_DRAM' with compact=none mode in 32-bits (source/gemm.cpp:8:0)
+WARNING: [HLS 214-397] Localizing array 'B_TILE_0' into loop 'VITIS_LOOP_34_1' (source/gemm.cpp:34:20) by ignoring loop-carried dependences. (source/gemm.cpp:8:0)
+WARNING: [HLS 214-397] Localizing array 'B_TILE_1' into loop 'VITIS_LOOP_34_1' (source/gemm.cpp:34:20) by ignoring loop-carried dependences. (source/gemm.cpp:8:0)
+WARNING: [HLS 214-397] Localizing array 'B_TILE2_0' into loop 'VITIS_LOOP_34_1' (source/gemm.cpp:34:20) by ignoring loop-carried dependences. (source/gemm.cpp:8:0)
+WARNING: [HLS 214-397] Localizing array 'B_TILE2_1' into loop 'VITIS_LOOP_34_1' (source/gemm.cpp:34:20) by ignoring loop-carried dependences. (source/gemm.cpp:8:0)
+WARNING: [HLS 214-414] Cannot apply interface mode 'ap_none' on function argument 'C_DRAM' since this interface mode only supports scalar types (source/gemm.cpp:8:0)
+INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 512 in loop 'load_A'(source/dram.hpp:5:2) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:5:2)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 512 has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:11:2)
+INFO: [HLS 214-115] Multiple burst writes of length 128 and bit width 512 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:20:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.04 seconds. CPU system time: 0.46 seconds. Elapsed time: 7.85 seconds; current allocated memory: 245.344 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 245.344 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 246.211 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 246.172 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 247.051 MB.
-WARNING: [XFORM 203-713] Disabling dataflow-in-loop for loop VITIS_LOOP_42_1 at source/gemm.cpp:42 in function 'gemm2': cannot recognize loop index variable. The generated RTL may not be functionally correct. Please convert it into a for loop with a fixed iteration count.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 247.008 MB.
+WARNING: [XFORM 203-713] Disabling dataflow-in-loop for loop VITIS_LOOP_34_1 at source/gemm.cpp:34 in function 'gemm2': cannot recognize loop index variable. The generated RTL may not be functionally correct. Please convert it into a for loop with a fixed iteration count.
 INFO: [HLS 200-778] Automatically marking array 'B_BUF' as shared between two reader processes.
-INFO: [HLS 200-755] Binding port 0 of memory 'B_BUF' to function 'loadTileBFromDRAM14' (source/usefulFunctions.hpp:73:20) 
-INFO: [HLS 200-755] Binding port 1 of memory 'B_BUF' to function 'loadTileBFromDRAM.125' (source/usefulFunctions.hpp:73:20) 
+INFO: [HLS 200-755] Binding port 0 of memory 'B_BUF' to function 'loadTileBFromDRAM14' (source/load_tiles.hpp:17:20) 
+INFO: [HLS 200-755] Binding port 1 of memory 'B_BUF' to function 'loadTileBFromDRAM.125' (source/load_tiles.hpp:17:20) 
 INFO: [HLS 200-778] Automatically marking array 'B_BUF.1' as shared between two reader processes.
-INFO: [HLS 200-755] Binding port 0 of memory 'B_BUF.1' to function 'loadTileBFromDRAM14' (source/usefulFunctions.hpp:73:20) 
-INFO: [HLS 200-755] Binding port 1 of memory 'B_BUF.1' to function 'loadTileBFromDRAM.125' (source/usefulFunctions.hpp:73:20) 
+INFO: [HLS 200-755] Binding port 0 of memory 'B_BUF.1' to function 'loadTileBFromDRAM14' (source/load_tiles.hpp:17:20) 
+INFO: [HLS 200-755] Binding port 1 of memory 'B_BUF.1' to function 'loadTileBFromDRAM.125' (source/load_tiles.hpp:17:20) 
 INFO: [HLS 200-778] Automatically marking array 'A_TILE' as shared between two reader processes.
-INFO: [HLS 200-755] Binding port 0 of memory 'A_TILE' to function 'matMulTile6' (source/usefulFunctions.hpp:46:4) 
-INFO: [HLS 200-755] Binding port 1 of memory 'A_TILE' to function 'matMulTile.27' (source/usefulFunctions.hpp:46:4) 
+INFO: [HLS 200-755] Binding port 0 of memory 'A_TILE' to function 'matMulTile6' (source/usefulFunctions.hpp:8:4) 
+INFO: [HLS 200-755] Binding port 1 of memory 'A_TILE' to function 'matMulTile.27' (source/usefulFunctions.hpp:8:4) 
 INFO: [HLS 200-778] Automatically marking array 'A_TILE.1' as shared between two reader processes.
-INFO: [HLS 200-755] Binding port 0 of memory 'A_TILE.1' to function 'matMulTile6' (source/usefulFunctions.hpp:46:4) 
-INFO: [HLS 200-755] Binding port 1 of memory 'A_TILE.1' to function 'matMulTile.27' (source/usefulFunctions.hpp:46:4) 
-INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_VITIS_LOOP_42_1' (source/gemm.cpp:31:9), detected/extracted 6 process function(s): 
+INFO: [HLS 200-755] Binding port 0 of memory 'A_TILE.1' to function 'matMulTile6' (source/usefulFunctions.hpp:8:4) 
+INFO: [HLS 200-755] Binding port 1 of memory 'A_TILE.1' to function 'matMulTile.27' (source/usefulFunctions.hpp:8:4) 
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_VITIS_LOOP_34_1' (source/gemm.cpp:23:9), detected/extracted 6 process function(s): 
 	 'entry_proc'
 	 'loadTileBFromDRAM14'
 	 'loadTileBFromDRAM.125'
 	 'matMulTile6'
 	 'matMulTile.27'
-	 'dataflow_in_loop_VITIS_LOOP_42_1_Loop_store_C_tile_even_proc8'.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.31 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.36 seconds; current allocated memory: 270.805 MB.
-INFO: [HLS 200-2061] Successfully converted nested loops 'load_tile_A'(source/usefulFunctions.hpp:62:2) and 'VITIS_LOOP_63_1'(source/usefulFunctions.hpp:63:20) in function 'gemm2' into perfectly nested loops.
-INFO: [XFORM 203-541] Flattening a loop nest 'load_tile_A' (source/usefulFunctions.hpp:62:2) in function 'gemm2'.
+	 'dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc8'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.27 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.31 seconds; current allocated memory: 270.758 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'load_tile_A'(source/load_tiles.hpp:6:2) and 'VITIS_LOOP_7_1'(source/load_tiles.hpp:7:19) in function 'gemm2' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'load_tile_A' (source/load_tiles.hpp:6:2) in function 'gemm2'.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 INFO: [HLS 200-634] Sharing array A_TILE among processes matMulTile62 and matMulTile.274
 INFO: [HLS 200-634] Sharing array A_TILE_1 among processes matMulTile62 and matMulTile.274
 WARNING: [HLS 200-1449] Process matMulTile62 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
 WARNING: [HLS 200-1449] Process matMulTile.274 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.26 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.15 seconds; current allocated memory: 340.680 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.25 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.29 seconds; current allocated memory: 340.613 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'gemm2' ...
 WARNING: [SYN 201-103] Legalizing function name 'loadTileBFromDRAM.1255' to 'loadTileBFromDRAM_1255'.
 WARNING: [SYN 201-103] Legalizing function name 'matMulTile.274' to 'matMulTile_274'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1' 
+INFO: [HLS 200-42] -- Implementing module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'load_tile_A_VITIS_LOOP_63_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'load_tile_A_VITIS_LOOP_63_1'
+INFO: [SCHED 204-61] Pipelining loop 'load_tile_A_VITIS_LOOP_7_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'load_tile_A_VITIS_LOOP_7_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.11 seconds; current allocated memory: 342.047 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 342.035 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.06 seconds; current allocated memory: 342.047 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 342.035 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 342.047 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 342.035 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 342.047 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 342.035 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loadTileBFromDRAM143' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 342.625 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 342.629 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 342.625 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 342.629 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loadTileBFromDRAM_1255' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 343.062 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 343.055 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 343.062 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 343.055 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matMulTile62' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 343.562 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 343.551 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 343.562 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 343.551 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matMulTile_274' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 344.191 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 344.160 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 344.191 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 344.160 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_VITIS_LOOP_42_1_Loop_store_C_tile_even_proc86' 
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 344.828 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 344.836 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 344.828 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 344.836 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_VITIS_LOOP_42_1' 
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_VITIS_LOOP_34_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 WARNING: [HLS 200-1019] Consider increasing the depth of PIPO B_TILE2_1 (from loadTileBFromDRAM_1255_U0 to matMulTile_274_U0) to 3 to improve performance and/or avoid deadlocks.
 WARNING: [HLS 200-1019] Consider increasing the depth of PIPO B_TILE2 (from loadTileBFromDRAM_1255_U0 to matMulTile_274_U0) to 3 to improve performance and/or avoid deadlocks.
-WARNING: [HLS 200-1019] Consider increasing the depth of PIPO C_TILE (from matMulTile62_U0 to dataflow_in_loop_VITIS_LOOP_42_1_Loop_store_C_tile_even_proc86_U0) to 3 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO C_TILE (from matMulTile62_U0 to dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86_U0) to 3 to improve performance and/or avoid deadlocks.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 344.828 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 344.836 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 344.828 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 344.836 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'gemm2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 347.109 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 347.117 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 347.109 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 347.117 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1' pipeline 'load_tile_A_VITIS_LOOP_63_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 347.539 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1' pipeline 'load_tile_A_VITIS_LOOP_7_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_7_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 347.535 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 348.578 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 348.559 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loadTileBFromDRAM143' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loadTileBFromDRAM143'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 349.109 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 349.090 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loadTileBFromDRAM_1255' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loadTileBFromDRAM_1255'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 350.160 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 350.156 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matMulTile62' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_56_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matMulTile62'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 351.430 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 351.410 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matMulTile_274' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_56_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matMulTile_274'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 353.082 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 353.059 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_VITIS_LOOP_42_1_Loop_store_C_tile_even_proc86' 
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_VITIS_LOOP_42_1_Loop_store_C_tile_even_proc86'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 354.688 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_VITIS_LOOP_34_1_Loop_store_C_tile_even_proc86'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 354.680 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_VITIS_LOOP_42_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_VITIS_LOOP_34_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
@@ -296,26 +296,24 @@ WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
-WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
-WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [RTGEN 206-101] RTL name 'B_BUF_1_t_address1' is changed to 'B_BUF_1_t_address1_x' due to conflict.
 WARNING: [RTGEN 206-101] RTL name 'B_BUF_1_t_ce1' is changed to 'B_BUF_1_t_ce1_x' due to conflict.
 WARNING: [RTGEN 206-101] RTL name 'B_BUF_1_t_q1' is changed to 'B_BUF_1_t_q1_x' due to conflict.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_VITIS_LOOP_42_1'.
-INFO: [HLS 200-741] Implementing PIPO gemm2_dataflow_in_loop_VITIS_LOOP_42_1_C_TILE2_RAM_AUTO_1R1W using a single memory for all blocks
-INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_42_1_C_TILE2_RAM_AUTO_1R1W_memcore' using auto RAMs.
-INFO: [HLS 200-741] Implementing PIPO gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_TILE2_RAM_AUTO_1R1W using a single memory for all blocks
-INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_TILE2_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_VITIS_LOOP_34_1'.
+INFO: [HLS 200-741] Implementing PIPO gemm2_dataflow_in_loop_VITIS_LOOP_34_1_C_TILE2_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_34_1_C_TILE2_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-741] Implementing PIPO gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_TILE2_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_TILE2_RAM_AUTO_1R1W_memcore' using auto RAMs.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
-INFO: [HLS 200-821] Implementing synchronized shared memory for gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_BUF_RAM_AUTO_1R1W
-INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_BUF_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-821] Implementing synchronized shared memory for gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_BUF_RAM_AUTO_1R1W
+INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_BUF_RAM_AUTO_1R1W_memcore' using auto RAMs.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
-INFO: [HLS 200-821] Implementing synchronized shared memory for gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_BUF_1_RAM_AUTO_1R1W
-INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_42_1_B_BUF_1_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-821] Implementing synchronized shared memory for gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_BUF_1_RAM_AUTO_1R1W
+INFO: [RTMG 210-278] Implementing memory 'gemm2_dataflow_in_loop_VITIS_LOOP_34_1_B_BUF_1_RAM_AUTO_1R1W_memcore' using auto RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'tileA_assign_c_U(gemm2_fifo_w1_d4_A)' using Vivado Default RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 357.531 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 357.434 MB.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF to 2 to improve performance, while keeping inter-iteration dependences in mind.
 WARNING: [HLS 200-1627] Consider increasing the depth of shared memory B_BUF_1 to 2 to improve performance, while keeping inter-iteration dependences in mind.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -335,15 +333,15 @@ INFO: [RTMG 210-278] Implementing memory 'gemm2_A_BUF_RAM_AUTO_1R1W' using auto 
 INFO: [RTMG 210-278] Implementing memory 'gemm2_B_BUF_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'gemm2_B_BUF_1_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'gemm2_A_TILE_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.33 seconds; current allocated memory: 363.160 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.43 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.78 seconds; current allocated memory: 369.609 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 363.109 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.34 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.37 seconds; current allocated memory: 369.609 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.66 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.16 seconds; current allocated memory: 380.383 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.49 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.51 seconds; current allocated memory: 380.324 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for gemm2.
 INFO: [VLOG 209-307] Generating Verilog RTL for gemm2.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.26 seconds. CPU system time: 1.69 seconds. Elapsed time: 26.68 seconds; current allocated memory: 140.160 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.21 seconds. CPU system time: 1.21 seconds. Elapsed time: 15.79 seconds; current allocated memory: 140.102 MB.
 INFO: [HLS 200-1510] Running: cosim_design -trace_level all -enable_dataflow_profiling 
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
@@ -353,4 +351,4 @@ INFO: [COSIM 212-12] Generating RTL test bench ...
 ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
 ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 12.58 seconds. CPU system time: 1.92 seconds. Elapsed time: 17.29 seconds; current allocated memory: 9.883 MB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 11.18 seconds. CPU system time: 1.55 seconds. Elapsed time: 12.71 seconds; current allocated memory: 9.902 MB.

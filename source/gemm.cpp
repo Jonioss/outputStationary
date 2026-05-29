@@ -1,17 +1,9 @@
 #include "constants.h"
+#include "dram.hpp"
+#include "load_tiles.hpp"
 #include "usefulFunctions.hpp"
 
 using namespace std;
-
-void gemm1(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
-	fm_t A_BUF[I][K];
-	fm_t B_BUF[K][J];
-	fm_t C_BUF[I][J] = {0};
-
-	loadInputsFromDRAM(A_DRAM, B_DRAM, A_BUF, B_BUF);
-	matMul1(A_BUF, B_BUF, C_BUF);
-	storeOutputToDRAM(C_BUF, C_DRAM);
-}
 
 void gemm2(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 

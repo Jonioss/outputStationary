@@ -32,16 +32,16 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
-+-----------------------+------------------------+----------------+---------------+---------------+---------------+---------------+
-| Function              | Location               | Compile/Link   | Unroll/Inline | Array/Struct  | Performance   | HW Transforms |
-+-----------------------+------------------------+----------------+---------------+---------------+---------------+---------------+
-| + gemm2               | gemm.cpp:16            | 1,337          | 275           | 506           | 495           | 557           |
-|    loadInputsFromDRAM | usefulFunctions.hpp:17 |   57           |               |               |               |               |
-|    loadTileAFromDRAM  | usefulFunctions.hpp:59 |   47           |               |               |               |               |
-|    loadTileBFromDRAM  | usefulFunctions.hpp:71 |   64 (2 calls) |  38 (2 calls) |  78 (2 calls) |  78 (2 calls) |               |
-|    matMulTile         | usefulFunctions.hpp:44 |  960 (2 calls) |  64 (2 calls) |  86 (2 calls) |  80 (2 calls) |               |
-|    storeOutputToDRAM  | usefulFunctions.hpp:32 |   29           |               |               |               |               |
-+-----------------------+------------------------+----------------+---------------+---------------+---------------+---------------+
++-----------------------+-----------------------+----------------+---------------+---------------+---------------+---------------+
+| Function              | Location              | Compile/Link   | Unroll/Inline | Array/Struct  | Performance   | HW Transforms |
++-----------------------+-----------------------+----------------+---------------+---------------+---------------+---------------+
+| + gemm2               | gemm.cpp:8            | 1,337          | 275           | 506           | 495           | 557           |
+|    loadInputsFromDRAM | dram.hpp:3            |   57           |               |               |               |               |
+|    loadTileAFromDRAM  | load_tiles.hpp:3      |   47           |               |               |               |               |
+|    loadTileBFromDRAM  | load_tiles.hpp:15     |   64 (2 calls) |  38 (2 calls) |  78 (2 calls) |  78 (2 calls) |               |
+|    matMulTile         | usefulFunctions.hpp:6 |  960 (2 calls) |  64 (2 calls) |  86 (2 calls) |  80 (2 calls) |               |
+|    storeOutputToDRAM  | dram.hpp:18           |   29           |               |               |               |               |
++-----------------------+-----------------------+----------------+---------------+---------------+---------------+---------------+
 
 * Design Size Message Settings
 +---------------------------------------------+--------+------------------------------------------------------------------+

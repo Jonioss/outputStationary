@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1'
 ================================================================
-* Date:           Fri May 29 17:37:38 2026
+* Date:           Fri May 29 17:40:19 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -88,7 +88,7 @@
     |add_ln62_1_fu_148_p2     |         +|   0|  0|  15|           8|           1|
     |add_ln62_fu_160_p2       |         +|   0|  0|  12|           5|           1|
     |add_ln63_fu_210_p2       |         +|   0|  0|  12|           5|           2|
-    |empty_31_fu_194_p2       |         +|   0|  0|  12|           5|           5|
+    |empty_45_fu_194_p2       |         +|   0|  0|  12|           5|           5|
     |icmp_ln62_fu_142_p2      |      icmp|   0|  0|  16|           8|           9|
     |select_ln62_1_fu_182_p3  |    select|   0|  0|   5|           1|           5|
     |select_ln62_fu_174_p3    |    select|   0|  0|   5|           1|           1|
@@ -98,20 +98,20 @@
     +-------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +---------------------------------------+----+-----------+-----+-----------+
-    |                  Name                 | LUT| Input Size| Bits| Total Bits|
-    +---------------------------------------+----+-----------+-----+-----------+
-    |ap_done_int                            |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_load                |   9|          2|    5|         10|
-    |ap_sig_allocacmp_indvar_flatten6_load  |   9|          2|    8|         16|
-    |ap_sig_allocacmp_k_load                |   9|          2|    5|         10|
-    |i_fu_58                                |   9|          2|    5|         10|
-    |indvar_flatten6_fu_62                  |   9|          2|    8|         16|
-    |k_fu_54                                |   9|          2|    5|         10|
-    +---------------------------------------+----+-----------+-----+-----------+
-    |Total                                  |  72|         16|   38|         76|
-    +---------------------------------------+----+-----------+-----+-----------+
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2_load             |   9|          2|    5|         10|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|    8|         16|
+    |ap_sig_allocacmp_k_2_load             |   9|          2|    5|         10|
+    |i_2_fu_58                             |   9|          2|    5|         10|
+    |indvar_flatten_fu_62                  |   9|          2|    8|         16|
+    |k_2_fu_54                             |   9|          2|    5|         10|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  72|         16|   38|         76|
+    +--------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------+----+----+-----+-----------+
@@ -126,14 +126,14 @@
     |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
-    |empty_31_reg_285                  |   5|   0|    5|          0|
+    |empty_45_reg_285                  |   5|   0|    5|          0|
     |empty_reg_280                     |   4|   0|    4|          0|
-    |i_fu_58                           |   5|   0|    5|          0|
-    |indvar_flatten6_fu_62             |   8|   0|    8|          0|
-    |k_fu_54                           |   5|   0|    5|          0|
-    |lshr_ln_reg_290                   |   3|   0|    3|          0|
+    |i_2_fu_58                         |   5|   0|    5|          0|
+    |indvar_flatten_fu_62              |   8|   0|    8|          0|
+    |k_2_fu_54                         |   5|   0|    5|          0|
+    |lshr_ln2_reg_290                  |   3|   0|    3|          0|
     |empty_reg_280                     |  64|  32|    4|          0|
-    |lshr_ln_reg_290                   |  64|  32|    3|          0|
+    |lshr_ln2_reg_290                  |  64|  32|    3|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 229|  64|  108|          0|
     +----------------------------------+----+----+-----+-----------+
@@ -153,7 +153,7 @@
 |ap_done            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
 |ap_idle            |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
 |ap_ready           |  out|    1|  ap_ctrl_hs|  gemm2_Pipeline_load_tile_A_VITIS_LOOP_63_1|  return value|
-|tmp_64             |   in|    5|     ap_none|                                      tmp_64|        scalar|
+|tmp_11             |   in|    5|     ap_none|                                      tmp_11|        scalar|
 |A_BUF_address0     |  out|    8|   ap_memory|                                       A_BUF|         array|
 |A_BUF_ce0          |  out|    1|   ap_memory|                                       A_BUF|         array|
 |A_BUF_q0           |   in|   32|   ap_memory|                                       A_BUF|         array|

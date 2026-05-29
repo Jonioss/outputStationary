@@ -6,44 +6,49 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 1,074        | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 1,296        | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                  |   511        | user unroll pragmas are applied                                                        |
-|               | (2) simplification          |   359        | simplification of applied user unroll pragmas                                          |
-|               | (3) inline                  |   337        | user inline pragmas are applied                                                        |
-|               | (4) simplification          |   337        | simplification of applied user inline pragmas                                          |
+|               | (1) unroll                  |   625        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |   473        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |   447        | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   447        | simplification of applied user inline pragmas                                          |
 |               |                             |              |                                                                                        |
 | Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
-|               | (1) array partition         |   490        | user array partition pragmas are applied                                               |
-|               | (2) simplification          |   443        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
-|               | (3) aggregate/disaggregate  |   446        | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           |   449        | apply array reshape pragmas                                                            |
-|               | (5) access patterns         |   488        | array access pattern optmizations                                                      |
+|               | (1) array partition         |   544        | user array partition pragmas are applied                                               |
+|               | (2) simplification          |   525        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |   528        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |   531        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   570        | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
-|               | (1) loop simplification     |   481        | loop and instruction simplification                                                    |
-|               | (2) parallelization         |   481        | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) simplification          |   481        | simplification of design after performance transformations                             |
+|               | (1) loop simplification     |   563        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   563        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) simplification          |   563        | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                |   508        | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           |   577        | high level synthesis optimizations                                                     |
+|               | (1) lowering                |   590        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   731        | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +-----------------------+------------------------+--------------+---------------+---------------+---------------+---------------+
 | Function              | Location               | Compile/Link | Unroll/Inline | Array/Struct  | Performance   | HW Transforms |
 +-----------------------+------------------------+--------------+---------------+---------------+---------------+---------------+
-| + gemm2               | gemm.cpp:8             | 1,074        | 337           | 488           | 481           | 577           |
+| + gemm2               | gemm.cpp:9             | 1,296        | 447           | 570           | 563           | 731           |
 |    loadInputsFromDRAM | dram.hpp:3             |   70         |  36           |  74           |  70           |  79           |
-|    loadTileAFromDRAM  | load_tiles.hpp:3       |  265         |  56           |  65           |  65           |               |
-|  + loadTilesBFromDRAM | load_tiles.hpp:29      |   48         |  39           |  37           |  37           |               |
-|     loadTileBFromDRAM | load_tiles.hpp:19      |   29         |  30 (2 calls) |  34 (2 calls) |  34 (2 calls) |               |
-|  + matMulTiles        | usefulFunctions.hpp:30 |  502         |  75           |  87           |  81           |               |
-|     matMulTile        | usefulFunctions.hpp:6  |  480         |  64 (2 calls) |  84 (2 calls) |  78 (2 calls) |               |
-|  + storeTilesToDRAM   | load_tiles.hpp:48      |   46         |  37           |  74 (2 calls) |  74 (2 calls) |               |
-|     storeTileToDRAM   | load_tiles.hpp:38      |   29         |  30 (2 calls) |  68 (4 calls) |  68 (4 calls) |               |
+|    loadTileAFromDRAM  | load_tiles.hpp:3       |   32         |  24           |  29           |  29           |               |
+|    loader_A_tiles     | loader.hpp:7           |  270         |  35           |  39           |  39           |               |
+|  + loadTilesBFromDRAM | load_tiles.hpp:25      |   48         |  39           |  37           |  37           |               |
+|     loadTileBFromDRAM | load_tiles.hpp:15      |   29         |  30 (2 calls) |  34 (2 calls) |  34 (2 calls) |               |
+|  + loader_B_tiles     | loader.hpp:48          |   55         |  46           |  41           |  41           |               |
+|     loader_B_tile     | loader.hpp:24          |   37         |  38 (2 calls) |  38 (2 calls) |  38 (2 calls) |               |
+|  + matMulTiles        | usefulFunctions.hpp:33 |  510         |  66           |  67           |  61           |               |
+|     matMulTile        | usefulFunctions.hpp:7  |  491         |  58 (2 calls) |  64 (2 calls) |  58 (2 calls) |               |
+|  + loader_C_tiles     | loader.hpp:57          |   55         |  36           |  35           |  35           |               |
+|     loader_C_tile     | loader.hpp:37          |   37         |  28 (2 calls) |  32 (2 calls) |  32 (2 calls) |               |
+|  + storeTilesToDRAM   | load_tiles.hpp:44      |   48         |  39           |  74 (2 calls) |  74 (2 calls) |               |
+|     storeTileToDRAM   | load_tiles.hpp:34      |   29         |  30 (2 calls) |  68 (4 calls) |  68 (4 calls) |               |
 |    storeOutputToDRAM  | dram.hpp:20            |   55         |  29           |  56           |  55           |  62           |
 +-----------------------+------------------------+--------------+---------------+---------------+---------------+---------------+
 

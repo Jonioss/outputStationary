@@ -1,5 +1,6 @@
 #include <ap_fixed.h>
 #include "host_visible.h"
+#include <hls_stream.h>
 
 #define NUM_OF_TILES 2
 

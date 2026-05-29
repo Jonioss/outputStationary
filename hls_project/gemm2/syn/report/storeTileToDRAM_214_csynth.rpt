@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadTileBFromDRAM612'
+== Vitis HLS Report for 'storeTileToDRAM_214'
 ================================================================
-* Date:           Fri May 29 19:57:51 2026
+* Date:           Fri May 29 20:42:20 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -41,8 +41,8 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- load_tile_B       |     1568|     1568|        98|          -|          -|    16|        no|
-        | + VITIS_LOOP_23_1  |       96|       96|         3|          -|          -|    32|        no|
+        |- store_C_tile      |     1568|     1568|        98|          -|          -|    16|        no|
+        | + VITIS_LOOP_38_1  |       96|       96|         3|          -|          -|    32|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -86,11 +86,11 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln22_fu_101_p2   |         +|   0|  0|  12|           5|           1|
-    |add_ln23_fu_121_p2   |         +|   0|  0|  13|           6|           1|
-    |add_ln24_fu_131_p2   |         +|   0|  0|  16|           9|           9|
-    |icmp_ln22_fu_95_p2   |      icmp|   0|  0|  13|           5|           6|
-    |icmp_ln23_fu_115_p2  |      icmp|   0|  0|  14|           6|           7|
+    |add_ln37_fu_101_p2   |         +|   0|  0|  12|           5|           1|
+    |add_ln38_fu_121_p2   |         +|   0|  0|  13|           6|           1|
+    |add_ln39_fu_131_p2   |         +|   0|  0|  16|           9|           9|
+    |icmp_ln37_fu_95_p2   |      icmp|   0|  0|  13|           5|           6|
+    |icmp_ln38_fu_115_p2  |      icmp|   0|  0|  14|           6|           7|
     |ap_block_state1      |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  70|          32|          25|
@@ -102,8 +102,8 @@
     +-----------+----+-----------+-----+-----------+
     |ap_NS_fsm  |  31|          6|    1|          6|
     |ap_done    |   9|          2|    1|          2|
+    |i_fu_42    |   9|          2|    5|         10|
     |j_reg_72   |   9|          2|    6|         12|
-    |k_fu_42    |   9|          2|    5|         10|
     +-----------+----+-----------+-----+-----------+
     |Total      |  58|         12|   13|         30|
     +-----------+----+-----------+-----+-----------+
@@ -112,15 +112,15 @@
     +---------------------+----+----+-----+-----------+
     |         Name        | FF | LUT| Bits| Const Bits|
     +---------------------+----+----+-----+-----------+
-    |B_DRAM_load_reg_183  |  32|   0|   32|          0|
-    |add_ln22_reg_155     |   5|   0|    5|          0|
-    |add_ln23_reg_168     |   6|   0|    6|          0|
+    |C_TILE_load_reg_183  |  32|   0|   32|          0|
+    |add_ln37_reg_155     |   5|   0|    5|          0|
+    |add_ln38_reg_168     |   6|   0|    6|          0|
     |ap_CS_fsm            |   5|   0|    5|          0|
     |ap_done_reg          |   1|   0|    1|          0|
+    |i_fu_42              |   5|   0|    5|          0|
     |j_reg_72             |   6|   0|    6|          0|
-    |k_fu_42              |   5|   0|    5|          0|
     |tmp_reg_160          |   4|   0|    9|          5|
-    |zext_ln24_1_reg_173  |   9|   0|   64|         55|
+    |zext_ln39_2_reg_173  |   9|   0|   64|         55|
     +---------------------+----+----+-----+-----------+
     |Total                |  73|   0|  133|         60|
     +---------------------+----+----+-----+-----------+
@@ -131,22 +131,22 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------+-----+-----+------------+----------------------+--------------+
-|    RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
-+-----------------+-----+-----+------------+----------------------+--------------+
-|ap_clk           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_rst           |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_start         |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_done          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_continue      |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_idle          |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|ap_ready         |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM612|  return value|
-|B_DRAM_address0  |  out|    9|   ap_memory|                B_DRAM|         array|
-|B_DRAM_ce0       |  out|    1|   ap_memory|                B_DRAM|         array|
-|B_DRAM_q0        |   in|   32|   ap_memory|                B_DRAM|         array|
-|B_TILE_address0  |  out|    9|   ap_memory|                B_TILE|         array|
-|B_TILE_ce0       |  out|    1|   ap_memory|                B_TILE|         array|
-|B_TILE_we0       |  out|    1|   ap_memory|                B_TILE|         array|
-|B_TILE_d0        |  out|   32|   ap_memory|                B_TILE|         array|
-+-----------------+-----+-----+------------+----------------------+--------------+
++-----------------+-----+-----+------------+---------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++-----------------+-----+-----+------------+---------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_continue      |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.214|  return value|
+|C_TILE_address0  |  out|    9|   ap_memory|               C_TILE|         array|
+|C_TILE_ce0       |  out|    1|   ap_memory|               C_TILE|         array|
+|C_TILE_q0        |   in|   32|   ap_memory|               C_TILE|         array|
+|C_DRAM_address0  |  out|    9|   ap_memory|               C_DRAM|         array|
+|C_DRAM_ce0       |  out|    1|   ap_memory|               C_DRAM|         array|
+|C_DRAM_we0       |  out|    1|   ap_memory|               C_DRAM|         array|
+|C_DRAM_d0        |  out|   32|   ap_memory|               C_DRAM|         array|
++-----------------+-----+-----+------------+---------------------+--------------+
 

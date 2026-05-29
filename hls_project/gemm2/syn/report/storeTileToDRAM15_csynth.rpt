@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'storeTileToDRAM10'
+== Vitis HLS Report for 'storeTileToDRAM15'
 ================================================================
-* Date:           Fri May 29 19:57:51 2026
+* Date:           Fri May 29 20:42:20 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -42,7 +42,7 @@
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
         |- store_C_tile      |     1568|     1568|        98|          -|          -|    16|        no|
-        | + VITIS_LOOP_42_1  |       96|       96|         3|          -|          -|    32|        no|
+        | + VITIS_LOOP_38_1  |       96|       96|         3|          -|          -|    32|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -55,14 +55,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      68|    -|
+|Expression       |        -|     -|       0|      70|    -|
 |FIFO             |        -|     -|       -|       -|    -|
 |Instance         |        -|     -|       -|       -|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|      49|    -|
-|Register         |        -|     -|      72|       -|    -|
+|Multiplexer      |        -|     -|       -|      58|    -|
+|Register         |        -|     -|      73|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|      72|     117|    0|
+|Total            |        0|     0|      73|     128|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -86,13 +86,14 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln41_fu_101_p2   |         +|   0|  0|  12|           5|           1|
-    |add_ln42_fu_121_p2   |         +|   0|  0|  13|           6|           1|
-    |add_ln43_fu_131_p2   |         +|   0|  0|  16|           9|           9|
-    |icmp_ln41_fu_95_p2   |      icmp|   0|  0|  13|           5|           6|
-    |icmp_ln42_fu_115_p2  |      icmp|   0|  0|  14|           6|           7|
+    |add_ln37_fu_101_p2   |         +|   0|  0|  12|           5|           1|
+    |add_ln38_fu_121_p2   |         +|   0|  0|  13|           6|           1|
+    |add_ln39_fu_131_p2   |         +|   0|  0|  16|           9|           9|
+    |icmp_ln37_fu_95_p2   |      icmp|   0|  0|  13|           5|           6|
+    |icmp_ln38_fu_115_p2  |      icmp|   0|  0|  14|           6|           7|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
-    |Total                |          |   0|  0|  68|          31|          24|
+    |Total                |          |   0|  0|  70|          32|          25|
     +---------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -100,10 +101,11 @@
     |    Name   | LUT| Input Size| Bits| Total Bits|
     +-----------+----+-----------+-----+-----------+
     |ap_NS_fsm  |  31|          6|    1|          6|
+    |ap_done    |   9|          2|    1|          2|
     |i_fu_42    |   9|          2|    5|         10|
     |j_reg_72   |   9|          2|    6|         12|
     +-----------+----+-----------+-----+-----------+
-    |Total      |  49|         10|   12|         28|
+    |Total      |  58|         12|   13|         30|
     +-----------+----+-----------+-----+-----------+
 
     * Register: 
@@ -111,15 +113,16 @@
     |         Name        | FF | LUT| Bits| Const Bits|
     +---------------------+----+----+-----+-----------+
     |C_TILE_load_reg_183  |  32|   0|   32|          0|
-    |add_ln41_reg_155     |   5|   0|    5|          0|
-    |add_ln42_reg_168     |   6|   0|    6|          0|
+    |add_ln37_reg_155     |   5|   0|    5|          0|
+    |add_ln38_reg_168     |   6|   0|    6|          0|
     |ap_CS_fsm            |   5|   0|    5|          0|
+    |ap_done_reg          |   1|   0|    1|          0|
     |i_fu_42              |   5|   0|    5|          0|
     |j_reg_72             |   6|   0|    6|          0|
     |tmp_reg_160          |   4|   0|    9|          5|
-    |zext_ln43_1_reg_173  |   9|   0|   64|         55|
+    |zext_ln39_1_reg_173  |   9|   0|   64|         55|
     +---------------------+----+----+-----+-----------+
-    |Total                |  72|   0|  132|         60|
+    |Total                |  73|   0|  133|         60|
     +---------------------+----+----+-----+-----------+
 
 
@@ -131,12 +134,13 @@
 +-----------------+-----+-----+------------+-------------------+--------------+
 |    RTL Ports    | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
 +-----------------+-----+-----+------------+-------------------+--------------+
-|ap_clk           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
-|ap_rst           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
-|ap_start         |   in|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
-|ap_done          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
-|ap_idle          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
-|ap_ready         |  out|    1|  ap_ctrl_hs|  storeTileToDRAM10|  return value|
+|ap_clk           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_continue      |   in|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  storeTileToDRAM15|  return value|
 |C_TILE_address0  |  out|    9|   ap_memory|             C_TILE|         array|
 |C_TILE_ce0       |  out|    1|   ap_memory|             C_TILE|         array|
 |C_TILE_q0        |   in|   32|   ap_memory|             C_TILE|         array|

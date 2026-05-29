@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'loadTileAFromDRAM26'
 ================================================================
-* Date:           Fri May 29 19:57:51 2026
+* Date:           Fri May 29 20:42:19 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  2.419 ns|     0.90 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,20 +29,20 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      132|      132|  0.440 us|  0.440 us|  132|  132|       no|
+    |      133|      133|  0.443 us|  0.443 us|  133|  133|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
-        N/A
+        +-------------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                   |                                                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                              Instance                             |                          Module                         |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1_fu_58  |loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1  |      132|      132|  0.440 us|  0.440 us|  132|  132|       no|
+        +-------------------------------------------------------------------+---------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
-        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |                              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |           Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- load_tile_A_VITIS_LOOP_7_1  |      130|      130|         4|          1|          1|   128|       yes|
-        +------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        N/A
 
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|     227|    -|
+|Expression       |        -|     -|       0|       2|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     238|     235|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|      81|    -|
-|Register         |        -|     -|     261|      64|    -|
+|Multiplexer      |        -|     -|       -|      32|    -|
+|Register         |        -|     -|       5|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|     261|     372|    0|
+|Total            |        0|     0|     243|     269|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -70,7 +70,13 @@
 
 + Detail: 
     * Instance: 
-    N/A
+    +-------------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+-----+-----+
+    |                              Instance                             |                          Module                         | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1_fu_58  |loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1  |        0|   0|  238|  235|    0|
+    +-------------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                              |                                                         |        0|   0|  238|  235|    0|
+    +-------------------------------------------------------------------+---------------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
     N/A
@@ -82,85 +88,36 @@
     N/A
 
     * Expression: 
-    +---------------------------+----------+----+---+----+------------+------------+
-    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln10_1_fu_395_p2       |         +|   0|  0|  15|           8|           1|
-    |add_ln10_2_fu_430_p2       |         +|   0|  0|  15|           8|           1|
-    |add_ln10_fu_306_p2         |         +|   0|  0|  16|           9|           9|
-    |add_ln6_1_fu_221_p2        |         +|   0|  0|  12|           5|           1|
-    |add_ln6_fu_209_p2          |         +|   0|  0|  15|           8|           1|
-    |add_ln7_fu_275_p2          |         +|   0|  0|  12|           5|           2|
-    |empty_49_fu_255_p2         |         +|   0|  0|  12|           5|           5|
-    |ap_condition_237           |       and|   0|  0|   2|           1|           1|
-    |icmp_ln10_1_fu_368_p2      |      icmp|   0|  0|  31|          24|           1|
-    |icmp_ln10_fu_348_p2        |      icmp|   0|  0|  31|          24|           1|
-    |icmp_ln6_fu_203_p2         |      icmp|   0|  0|  16|           8|           9|
-    |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
-    |or_ln7_fu_317_p2           |        or|   0|  0|   4|           4|           1|
-    |select_ln10_1_fu_406_p3    |    select|   0|  0|   8|           1|           8|
-    |select_ln10_2_fu_435_p3    |    select|   0|  0|   8|           1|           8|
-    |select_ln10_3_fu_441_p3    |    select|   0|  0|   8|           1|           8|
-    |select_ln10_fu_400_p3      |    select|   0|  0|   8|           1|           8|
-    |select_ln6_1_fu_243_p3     |    select|   0|  0|   5|           1|           5|
-    |select_ln6_fu_235_p3       |    select|   0|  0|   5|           1|           1|
-    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
-    +---------------------------+----------+----+---+----+------------+------------+
-    |Total                      |          |   0|  0| 227|         117|          74|
-    +---------------------------+----------+----+---+----+------------+------------+
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +----------------------------------------+----+-----------+-----+-----------+
-    |                  Name                  | LUT| Input Size| Bits| Total Bits|
-    +----------------------------------------+----+-----------+-----+-----------+
-    |ap_done_int                             |   9|          2|    1|          2|
-    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
-    |ap_return                               |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_load                 |   9|          2|    5|         10|
-    |ap_sig_allocacmp_indvar_flatten_i_load  |   9|          2|    8|         16|
-    |ap_sig_allocacmp_k_load                 |   9|          2|    5|         10|
-    |i_fu_86                                 |   9|          2|    5|         10|
-    |indvar_flatten_i_fu_90                  |   9|          2|    8|         16|
-    |k_fu_82                                 |   9|          2|    5|         10|
-    +----------------------------------------+----+-----------+-----+-----------+
-    |Total                                   |  81|         18|   39|         78|
-    +----------------------------------------+----+-----------+-----+-----------+
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  14|          3|    1|          3|
+    |ap_done        |   9|          2|    1|          2|
+    |tileA_c_blk_n  |   9|          2|    1|          2|
+    +---------------+----+-----------+-----+-----------+
+    |Total          |  32|          7|    3|          7|
+    +---------------+----+-----------+-----+-----------+
 
     * Register: 
-    +----------------------------------+----+----+-----+-----------+
-    |               Name               | FF | LUT| Bits| Const Bits|
-    +----------------------------------+----+----+-----+-----------+
-    |A_BUF_load_1_reg_540              |  32|   0|   32|          0|
-    |A_BUF_load_reg_523                |  32|   0|   32|          0|
-    |ap_CS_fsm                         |   1|   0|    1|          0|
-    |ap_done_reg                       |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
-    |ap_return_preg                    |   1|   0|    1|          0|
-    |empty_49_reg_497                  |   5|   0|    5|          0|
-    |empty_reg_492                     |   4|   0|    4|          0|
-    |i_fu_86                           |   5|   0|    5|          0|
-    |icmp_ln10_1_reg_552               |   1|   0|    1|          0|
-    |icmp_ln10_reg_535                 |   1|   0|    1|          0|
-    |icmp_ln6_reg_483                  |   1|   0|    1|          0|
-    |icmp_ln6_reg_483_pp0_iter1_reg    |   1|   0|    1|          0|
-    |indvar_flatten_i_fu_90            |   8|   0|    8|          0|
-    |k_fu_82                           |   5|   0|    5|          0|
-    |lshr_ln7_i_reg_508                |   3|   0|    3|          0|
-    |select_ln6_reg_487                |   5|   0|    5|          0|
-    |tileA_read_reg_479                |   1|   0|    1|          0|
-    |tileA_read_reg_479_pp0_iter1_reg  |   1|   0|    1|          0|
-    |tmp_4_i_i5_reg_545                |   8|   0|    8|          0|
-    |tmp_i_i2_reg_528                  |   8|   0|    8|          0|
-    |trunc_ln7_reg_503                 |   4|   0|    4|          0|
-    |empty_reg_492                     |  64|  32|    4|          0|
-    |lshr_ln7_i_reg_508                |  64|  32|    3|          0|
-    +----------------------------------+----+----+-----+-----------+
-    |Total                             | 261|  64|  140|          0|
-    +----------------------------------+----+----+-----+-----------+
+    +--------------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                      Name                                      | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                       |  2|   0|    2|          0|
+    |ap_done_reg                                                                     |  1|   0|    1|          0|
+    |grp_loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1_fu_58_ap_start_reg  |  1|   0|    1|          0|
+    |tmp_i_reg_78                                                                    |  1|   0|    5|          4|
+    +--------------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                           |  5|   0|    9|          4|
+    +--------------------------------------------------------------------------------+---+----+-----+-----------+
 
 
 
@@ -168,39 +125,35 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+---------------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
-+-------------------+-----+-----+------------+---------------------+--------------+
-|ap_clk             |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_start           |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_continue        |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|ap_return          |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
-|A_BUF_address0     |  out|    9|   ap_memory|                A_BUF|         array|
-|A_BUF_ce0          |  out|    1|   ap_memory|                A_BUF|         array|
-|A_BUF_q0           |   in|   32|   ap_memory|                A_BUF|         array|
-|A_BUF_address1     |  out|    9|   ap_memory|                A_BUF|         array|
-|A_BUF_ce1          |  out|    1|   ap_memory|                A_BUF|         array|
-|A_BUF_q1           |   in|   32|   ap_memory|                A_BUF|         array|
-|A_TILE_3_address0  |  out|    7|   ap_memory|             A_TILE_3|         array|
-|A_TILE_3_ce0       |  out|    1|   ap_memory|             A_TILE_3|         array|
-|A_TILE_3_we0       |  out|    1|   ap_memory|             A_TILE_3|         array|
-|A_TILE_3_d0        |  out|   32|   ap_memory|             A_TILE_3|         array|
-|A_TILE_2_address0  |  out|    7|   ap_memory|             A_TILE_2|         array|
-|A_TILE_2_ce0       |  out|    1|   ap_memory|             A_TILE_2|         array|
-|A_TILE_2_we0       |  out|    1|   ap_memory|             A_TILE_2|         array|
-|A_TILE_2_d0        |  out|   32|   ap_memory|             A_TILE_2|         array|
-|A_TILE_1_address0  |  out|    7|   ap_memory|             A_TILE_1|         array|
-|A_TILE_1_ce0       |  out|    1|   ap_memory|             A_TILE_1|         array|
-|A_TILE_1_we0       |  out|    1|   ap_memory|             A_TILE_1|         array|
-|A_TILE_1_d0        |  out|   32|   ap_memory|             A_TILE_1|         array|
-|A_TILE_address0    |  out|    7|   ap_memory|               A_TILE|         array|
-|A_TILE_ce0         |  out|    1|   ap_memory|               A_TILE|         array|
-|A_TILE_we0         |  out|    1|   ap_memory|               A_TILE|         array|
-|A_TILE_d0          |  out|   32|   ap_memory|               A_TILE|         array|
-|tileA              |   in|    1|     ap_none|                tileA|        scalar|
-+-------------------+-----+-----+------------+---------------------+--------------+
++------------------------+-----+-----+------------+---------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  loadTileAFromDRAM26|  return value|
+|A_BUF_address0          |  out|    9|   ap_memory|                A_BUF|         array|
+|A_BUF_ce0               |  out|    1|   ap_memory|                A_BUF|         array|
+|A_BUF_q0                |   in|   32|   ap_memory|                A_BUF|         array|
+|A_BUF_address1          |  out|    9|   ap_memory|                A_BUF|         array|
+|A_BUF_ce1               |  out|    1|   ap_memory|                A_BUF|         array|
+|A_BUF_q1                |   in|   32|   ap_memory|                A_BUF|         array|
+|A_TILE_1_address0       |  out|    7|   ap_memory|             A_TILE_1|         array|
+|A_TILE_1_ce0            |  out|    1|   ap_memory|             A_TILE_1|         array|
+|A_TILE_1_we0            |  out|    1|   ap_memory|             A_TILE_1|         array|
+|A_TILE_1_d0             |  out|   32|   ap_memory|             A_TILE_1|         array|
+|A_TILE_address0         |  out|    7|   ap_memory|               A_TILE|         array|
+|A_TILE_ce0              |  out|    1|   ap_memory|               A_TILE|         array|
+|A_TILE_we0              |  out|    1|   ap_memory|               A_TILE|         array|
+|A_TILE_d0               |  out|   32|   ap_memory|               A_TILE|         array|
+|tileA                   |   in|    1|     ap_none|                tileA|        scalar|
+|tileA_c_din             |  out|    1|     ap_fifo|              tileA_c|       pointer|
+|tileA_c_num_data_valid  |   in|    4|     ap_fifo|              tileA_c|       pointer|
+|tileA_c_fifo_cap        |   in|    4|     ap_fifo|              tileA_c|       pointer|
+|tileA_c_full_n          |   in|    1|     ap_fifo|              tileA_c|       pointer|
+|tileA_c_write           |  out|    1|     ap_fifo|              tileA_c|       pointer|
++------------------------+-----+-----+------------+---------------------+--------------+
 

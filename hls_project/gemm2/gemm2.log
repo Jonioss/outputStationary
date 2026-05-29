@@ -32,9 +32,9 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.95 seconds. CPU system time: 0.48 seconds. Elapsed time: 4.58 seconds; current allocated memory: 0.250 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.33 seconds. CPU system time: 0.41 seconds. Elapsed time: 3.73 seconds; current allocated memory: 0.250 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 234.840 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 240.781 MB.
 INFO: [HLS 200-10] Analyzing design file 'source/gemm.cpp' ... 
 WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:33:21)
 WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:33:28)
@@ -48,7 +48,7 @@ WARNING: [HLS 214-113] Either use an argument of the function or declare the var
 WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:41:39)
 WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:41:46)
 WARNING: [HLS 200-471] Dataflow form checks found 11 issue(s) in file source/gemm.cpp
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.96 seconds. CPU system time: 0.6 seconds. Elapsed time: 5.08 seconds; current allocated memory: 237.414 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.36 seconds. CPU system time: 0.51 seconds. Elapsed time: 3.87 seconds; current allocated memory: 243.355 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
 INFO: [HLS 200-1995] There were 1,350 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 428 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/aleftheriotis/Documents/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
@@ -77,12 +77,12 @@ WARNING: [HLS 214-414] Cannot apply interface mode 'ap_none' on function argumen
 INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 512 in loop 'load_A'(source/dram.hpp:6:2) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:6:2)
 INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 512 has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:12:2)
 INFO: [HLS 214-115] Multiple burst writes of length 128 and bit width 512 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:23:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.78 seconds. CPU system time: 0.66 seconds. Elapsed time: 9.24 seconds; current allocated memory: 239.484 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 239.484 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.18 seconds. CPU system time: 0.55 seconds. Elapsed time: 7.94 seconds; current allocated memory: 245.430 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 245.430 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 240.258 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 246.207 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 241.297 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 247.238 MB.
 WARNING: [XFORM 203-713] Disabling dataflow-in-loop for loop VITIS_LOOP_28_1 at source/gemm.cpp:28 in function 'gemm2': cannot recognize loop index variable. The generated RTL may not be functionally correct. Please convert it into a for loop with a fixed iteration count.
 INFO: [HLS 200-778] Automatically marking array 'A_TILE' as shared between two reader processes.
 INFO: [HLS 200-755] Binding port 0 of memory 'A_TILE' to function 'matMulTile3' (source/usefulFunctions.hpp:8:4) 
@@ -95,4 +95,4 @@ INFO: [HLS 200-992] Argument 'C_BUF' has write operations in process function 's
 INFO: [HLS 200-992] Argument 'C_BUF' has write operations in process function 'storeTileToDRAM.26' (source/load_tiles.hpp:25:20) (around source/gemm.cpp:41).
 ERROR: [HLS 200-1715] Encountered problem during source synthesis
 ERROR: [HLS 200-70] Pre-synthesis failed.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8.1 seconds. CPU system time: 1.28 seconds. Elapsed time: 14.73 seconds; current allocated memory: 10.586 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.85 seconds. CPU system time: 1.09 seconds. Elapsed time: 12.14 seconds; current allocated memory: 10.617 MB.

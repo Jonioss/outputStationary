@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void gemm2(fm_t A_DRAM[I][K], fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
+void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 
 #pragma HLS INTERFACE m_axi port=A_DRAM bundle=gmem0
 #pragma HLS INTERFACE m_axi port=B_DRAM bundle=gmem1

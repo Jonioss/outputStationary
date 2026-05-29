@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Fri May 29 17:50:27 2026
+    * Date:           Fri May 29 17:52:57 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)

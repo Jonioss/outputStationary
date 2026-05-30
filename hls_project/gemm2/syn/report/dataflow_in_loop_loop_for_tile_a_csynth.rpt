@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_loop_for_tile_a'
 ================================================================
-* Date:           Fri May 29 20:42:20 2026
+* Date:           Sat May 30 18:50:13 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -40,7 +40,7 @@
         +-----------------------------------------------------------------+--------------------------------------------------------------+---------+---------+-----------+-----------+-------+-------+----------+
         |loadTileAFromDRAM26_U0                                           |loadTileAFromDRAM26                                           |      133|      133|   0.443 us|   0.443 us|    133|    133|        no|
         |loadTilesBFromDRAM48_U0                                          |loadTilesBFromDRAM48                                          |     1569|     1569|   5.229 us|   5.229 us|   1570|   1570|  dataflow|
-        |loader_A_tiles3_U0                                               |loader_A_tiles3                                               |     8197|     8197|  27.321 us|  27.321 us|   8197|   8197|        no|
+        |loader_A_tiles3_U0                                               |loader_A_tiles3                                               |     8196|     8196|  27.317 us|  27.317 us|   8196|   8196|        no|
         |loader_B_tiles5_U0                                               |loader_B_tiles5                                               |     8196|     8196|  27.317 us|  27.317 us|   8197|   8197|  dataflow|
         |matMulTiles6_U0                                                  |matMulTiles6                                                  |    33825|    33825|   0.113 ms|   0.113 ms|  33826|  33826|  dataflow|
         |loader_C_tiles7_U0                                               |loader_C_tiles7                                               |      514|      514|   1.713 us|   1.713 us|    515|    515|  dataflow|
@@ -62,12 +62,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|      48|    -|
 |FIFO             |       13|     -|    1029|     287|    -|
-|Instance         |        -|     8|    1847|    3285|    -|
+|Instance         |        -|     8|    1742|    3191|    -|
 |Memory           |       10|     -|       0|       0|    -|
 |Multiplexer      |        -|     -|       -|      72|    -|
 |Register         |        -|     -|       8|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       23|     8|    2884|    3692|    0|
+|Total            |       23|     8|    2779|    3598|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -82,12 +82,12 @@
     |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot112_proc89_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot112_proc89  |        0|   0|  306|  680|    0|
     |loadTileAFromDRAM26_U0                                           |loadTileAFromDRAM26                                           |        0|   0|  243|  269|    0|
     |loadTilesBFromDRAM48_U0                                          |loadTilesBFromDRAM48                                          |        0|   0|  148|  290|    0|
-    |loader_A_tiles3_U0                                               |loader_A_tiles3                                               |        0|   0|  189|  393|    0|
+    |loader_A_tiles3_U0                                               |loader_A_tiles3                                               |        0|   0|   84|  299|    0|
     |loader_B_tiles5_U0                                               |loader_B_tiles5                                               |        0|   0|  112|  580|    0|
     |loader_C_tiles7_U0                                               |loader_C_tiles7                                               |        0|   0|  132|  414|    0|
     |matMulTiles6_U0                                                  |matMulTiles6                                                  |        0|   8|  717|  659|    0|
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                            |                                                              |        0|   8| 1847| 3285|    0|
+    |Total                                                            |                                                              |        0|   8| 1742| 3191|    0|
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 

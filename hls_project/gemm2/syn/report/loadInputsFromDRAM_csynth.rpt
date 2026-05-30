@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'loadInputsFromDRAM'
 ================================================================
-* Date:           Fri May 29 20:42:19 2026
+* Date:           Sat May 30 18:50:12 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -112,8 +112,8 @@
     |                Name               | LUT | Input Size| Bits| Total Bits|
     +-----------------------------------+-----+-----------+-----+-----------+
     |ap_NS_fsm                          |  802|        152|    1|        152|
-    |ap_phi_mux_empty_54_phi_fu_248_p4  |    9|          2|  512|       1024|
-    |empty_54_reg_245                   |    9|          2|  512|       1024|
+    |ap_phi_mux_empty_52_phi_fu_248_p4  |    9|          2|  512|       1024|
+    |empty_52_reg_245                   |    9|          2|  512|       1024|
     |gmem0_blk_n_AR                     |    9|          2|    1|          2|
     |gmem0_blk_n_R                      |    9|          2|    1|          2|
     |gmem1_blk_n_AR                     |    9|          2|    1|          2|
@@ -141,7 +141,7 @@
     |add_ln15_reg_587         |    9|   0|    9|          0|
     |add_ln6_reg_508          |    6|   0|    6|          0|
     |ap_CS_fsm                |  151|   0|  151|          0|
-    |empty_54_reg_245         |  512|   0|  512|          0|
+    |empty_52_reg_245         |  512|   0|  512|          0|
     |gmem0_addr_read_reg_525  |  512|   0|  512|          0|
     |gmem1_addr_read_reg_611  |  512|   0|  512|          0|
     |i_fu_110                 |    6|   0|    6|          0|
@@ -152,8 +152,8 @@
     |shiftreg4_reg_202        |  512|   0|  512|          0|
     |shiftreg_reg_233         |  480|   0|  480|          0|
     |t_reg_211                |    2|   0|    2|          0|
+    |tmp_6_reg_562            |    4|   0|    9|          5|
     |tmp_reg_530              |    5|   0|    9|          4|
-    |tmp_s_reg_562            |    4|   0|    9|          5|
     |trunc_ln13_reg_575       |    1|   0|    1|          0|
     |trunc_ln6_1_reg_500      |    5|   0|    5|          0|
     |trunc_ln_reg_520         |   58|   0|   58|          0|

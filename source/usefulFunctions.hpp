@@ -7,16 +7,20 @@
 void matMulTile(hls::stream<fm_t> &A_stream, hls::stream<fm_t> &B_stream, hls::stream<fm_t> &C_stream){
 	mat_mul_i:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
-		mat_mul_j:
-		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-			fm_t psum = 0;
-			mat_mul_k:
-			for(int k = 0; k < K; k++) {
+		fm_t psum[J/NUM_OF_TILES] = {0};
+		#pragma HLS ARRAY_PARTITION variable=psum type=complete dim=1
+		mat_mul_k:
+		for(int k = 0; k < K; k++) {
+			mat_mul_j:
+			const fm_t a_val = A_stream.read();
+			for(int j = 0; j < J/NUM_OF_TILES; j++) {
 				// psum += A[i][k] * B[k][j];
-				psum += A_stream.read() * B_stream.read();
+				psum[j] += a_val * B_stream.read();
 			}
-			//C[i][j] = psum;
-			C_stream.write(psum);
+		}
+		mat_mul_write:
+		for(int j = 0; j < J/NUM_OF_TILES; j++) {
+			C_stream.write(psum[j]);
 		}
 	}
 }
@@ -38,11 +42,4 @@ void matMulTiles(hls::stream<fm_t> A_streams[NUM_OF_TILES], hls::stream<fm_t> B_
 		matMulTile(A_streams[t], B_streams[t], C_streams[t]);
 	}
 }
-
-
-
-
-
-
-
 

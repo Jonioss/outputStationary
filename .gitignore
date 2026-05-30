@@ -6,6 +6,13 @@ hls_project/*
 # Ignore all contents of gemm2 by default
 hls_project/gemm2/*
 
+# unignore csim report
+!hls_project/gemm2/csim/
+hls_project/gemm2/csim/*
+!hls_project/gemm2/csim/report/
+hls_project/gemm2/csim/report/*
+!hls_project/gemm2/csim/report/gemm2_csim.log
+
 # 3. Un-ignore the specific file at the gemm2 root
 !hls_project/gemm2/gemm2.log
 

@@ -7,16 +7,14 @@
 void loader_A_tiles(const fm_t A[I/NUM_OF_TILES][K], hls::stream<fm_t> A_streams[NUM_OF_TILES]){
     #pragma HLS INLINE off
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
-		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-			for(int k = 0; k < K; k++) {
-                #pragma HLS PIPELINE II=1
-                #pragma HLS LOOP_FLATTEN
-                const fm_t temp = A[i][k];
-                for(int t=0; t<NUM_OF_TILES; t++){
-                    #pragma HLS UNROLL
-                    A_streams[t].write(temp);
-                }
-			}
+		for(int k = 0; k < K; k++) {
+            #pragma HLS PIPELINE II=1
+            #pragma HLS LOOP_FLATTEN
+            const fm_t temp = A[i][k];
+            for(int t=0; t<NUM_OF_TILES; t++){
+                #pragma HLS UNROLL
+                A_streams[t].write(temp);
+            }
 		}
 	}
 }

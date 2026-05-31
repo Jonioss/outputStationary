@@ -15,7 +15,7 @@ set_top gemm2
 open_solution -flow_target vitis -reset "gemm2"
 
 # Device Selection: vck190
-set_part {xczu7ev-ffvc1156-2-e}
+set_part {xcvc1902-vsva2197-2MP-e-S}
 
 create_clock -period 300MHz -name default
 

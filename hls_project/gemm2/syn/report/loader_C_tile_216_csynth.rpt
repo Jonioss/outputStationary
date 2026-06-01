@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_C_tile_316'
+== Vitis HLS Report for 'loader_C_tile_216'
 ================================================================
-* Date:           Sun May 31 15:46:43 2026
+* Date:           Mon Jun  1 17:49:54 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -41,7 +41,7 @@
         |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_37_1_VITIS_LOOP_38_2  |      512|      512|         1|          1|          1|   512|       yes|
+        |- VITIS_LOOP_39_1_VITIS_LOOP_40_2  |      512|      512|         1|          1|          1|   512|       yes|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -85,15 +85,15 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln37_2_fu_130_p2              |         +|   0|  0|  10|          10|           1|
-    |add_ln37_fu_154_p2                |         +|   0|  0|   5|           5|           1|
-    |add_ln38_fu_219_p2                |         +|   0|  0|   6|           6|           1|
-    |add_ln41_fu_198_p2                |         +|   0|  0|   9|           9|           9|
-    |icmp_ln37_fu_136_p2               |      icmp|   0|  0|  11|          10|          11|
-    |icmp_ln38_fu_160_p2               |      icmp|   0|  0|   7|           6|           7|
+    |add_ln39_2_fu_130_p2              |         +|   0|  0|  10|          10|           1|
+    |add_ln39_fu_154_p2                |         +|   0|  0|   5|           5|           1|
+    |add_ln40_fu_219_p2                |         +|   0|  0|   6|           6|           1|
+    |add_ln43_fu_198_p2                |         +|   0|  0|   9|           9|           9|
+    |icmp_ln39_fu_136_p2               |      icmp|   0|  0|  11|          10|          11|
+    |icmp_ln40_fu_160_p2               |      icmp|   0|  0|   7|           6|           7|
     |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
-    |select_ln37_2_fu_174_p3           |    select|   0|  0|   5|           1|           5|
-    |select_ln37_fu_166_p3             |    select|   0|  0|   6|           1|           1|
+    |select_ln39_2_fu_174_p3           |    select|   0|  0|   5|           1|           5|
+    |select_ln39_fu_166_p3             |    select|   0|  0|   6|           1|           1|
     +----------------------------------+----------+----+---+----+------------+------------+
     |Total                             |          |   0|  0|  61|          49|          37|
     +----------------------------------+----------+----+---+----+------------+------------+
@@ -136,13 +136,13 @@
 +----------------------------+-----+-----+------------+-------------------+--------------+
 |          RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
 +----------------------------+-----+-----+------------+-------------------+--------------+
-|ap_clk                      |   in|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_rst                      |   in|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_start                    |   in|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_done                     |  out|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_continue                 |   in|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_idle                     |  out|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
-|ap_ready                    |  out|    1|  ap_ctrl_hs|  loader_C_tile.316|  return value|
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  loader_C_tile.216|  return value|
 |C_streams_1_dout            |   in|   32|     ap_fifo|        C_streams_1|       pointer|
 |C_streams_1_num_data_valid  |   in|    3|     ap_fifo|        C_streams_1|       pointer|
 |C_streams_1_fifo_cap        |   in|    3|     ap_fifo|        C_streams_1|       pointer|

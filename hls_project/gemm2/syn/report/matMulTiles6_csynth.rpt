@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'matMulTiles6'
 ================================================================
-* Date:           Sun May 31 15:46:42 2026
+* Date:           Mon Jun  1 17:49:54 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -20,27 +20,27 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  3.33 ns|  2.422 ns|     0.90 ns|
+    |ap_clk  |  3.33 ns|  2.269 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+------+------+----------+
-    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
-    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
-    +---------+---------+-----------+-----------+------+------+----------+
-    |     9489|     9489|  31.627 us|  31.627 us|  9490|  9490|  dataflow|
-    +---------+---------+-----------+-----------+------+------+----------+
+    +---------+---------+----------+----------+------+------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline |
+    |   min   |   max   |    min   |    max   |  min |  max |   Type   |
+    +---------+---------+----------+----------+------+------+----------+
+    |     1553|     1553|  5.176 us|  5.176 us|  1554|  1554|  dataflow|
+    +---------+---------+----------+----------+------+------+----------+
 
     + Detail: 
         * Instance: 
-        +-------------------+----------------+---------+---------+-----------+-----------+------+------+---------+
-        |                   |                |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
-        |      Instance     |     Module     |   min   |   max   |    min    |    max    |  min |  max |   Type  |
-        +-------------------+----------------+---------+---------+-----------+-----------+------+------+---------+
-        |matMulTile_113_U0  |matMulTile_113  |     9489|     9489|  31.627 us|  31.627 us|  9489|  9489|       no|
-        |matMulTile14_U0    |matMulTile14    |     9489|     9489|  31.627 us|  31.627 us|  9489|  9489|       no|
-        +-------------------+----------------+---------+---------+-----------+-----------+------+------+---------+
+        +-------------------+----------------+---------+---------+----------+----------+------+------+---------+
+        |                   |                |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+        |      Instance     |     Module     |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+        +-------------------+----------------+---------+---------+----------+----------+------+------+---------+
+        |matMulTile13_U0    |matMulTile13    |     1553|     1553|  5.176 us|  5.176 us|  1553|  1553|       no|
+        |matMulTile_514_U0  |matMulTile_514  |     1553|     1553|  5.176 us|  5.176 us|  1553|  1553|       no|
+        +-------------------+----------------+---------+---------+----------+----------+------+------+---------+
 
         * Loop: 
         N/A
@@ -57,28 +57,28 @@
 |DSP              |        -|     -|        -|       -|    -|
 |Expression       |        -|     -|        0|      16|    -|
 |FIFO             |        -|     -|        -|       -|    -|
-|Instance         |        -|     8|     4542|    8728|    -|
+|Instance         |        -|   256|     7220|    9960|    -|
 |Memory           |        -|     -|        -|       -|    -|
 |Multiplexer      |        -|     -|        -|       6|    -|
 |Register         |        -|     -|        3|       -|    -|
 +-----------------+---------+------+---------+--------+-----+
-|Total            |        0|     8|     4545|    8750|    0|
+|Total            |        0|   256|     7223|    9982|    0|
 +-----------------+---------+------+---------+--------+-----+
 |Available        |     1934|  1968|  1799680|  899840|  463|
 +-----------------+---------+------+---------+--------+-----+
-|Utilization (%)  |        0|    ~0|       ~0|      ~0|    0|
+|Utilization (%)  |        0|    13|       ~0|       1|    0|
 +-----------------+---------+------+---------+--------+-----+
 
 + Detail: 
     * Instance: 
-    +-------------------+----------------+---------+----+------+------+-----+
-    |      Instance     |     Module     | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +-------------------+----------------+---------+----+------+------+-----+
-    |matMulTile14_U0    |matMulTile14    |        0|   4|  2271|  4364|    0|
-    |matMulTile_113_U0  |matMulTile_113  |        0|   4|  2271|  4364|    0|
-    +-------------------+----------------+---------+----+------+------+-----+
-    |Total              |                |        0|   8|  4542|  8728|    0|
-    +-------------------+----------------+---------+----+------+------+-----+
+    +-------------------+----------------+---------+-----+------+------+-----+
+    |      Instance     |     Module     | BRAM_18K| DSP |  FF  |  LUT | URAM|
+    +-------------------+----------------+---------+-----+------+------+-----+
+    |matMulTile13_U0    |matMulTile13    |        0|  128|  3610|  4980|    0|
+    |matMulTile_514_U0  |matMulTile_514  |        0|  128|  3610|  4980|    0|
+    +-------------------+----------------+---------+-----+------+------+-----+
+    |Total              |                |        0|  256|  7220|  9960|    0|
+    +-------------------+----------------+---------+-----+------+------+-----+
 
     * DSP: 
     N/A
@@ -97,10 +97,10 @@
     |ap_sync_continue                    |       and|   0|  0|   2|           1|           1|
     |ap_sync_done                        |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                       |       and|   0|  0|   2|           1|           1|
-    |matMulTile14_U0_ap_start            |       and|   0|  0|   2|           1|           1|
-    |matMulTile_113_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |ap_sync_matMulTile14_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
-    |ap_sync_matMulTile_113_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |matMulTile13_U0_ap_start            |       and|   0|  0|   2|           1|           1|
+    |matMulTile_514_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile13_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile_514_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
     +------------------------------------+----------+----+---+----+------------+------------+
     |Total                               |          |   0|  0|  16|           8|           8|
     +------------------------------------+----------+----+---+----+------------+------------+
@@ -109,8 +109,8 @@
     +----------------------------------------+----+-----------+-----+-----------+
     |                  Name                  | LUT| Input Size| Bits| Total Bits|
     +----------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_matMulTile14_U0_ap_ready    |   2|          2|    1|          2|
-    |ap_sync_reg_matMulTile_113_U0_ap_ready  |   2|          2|    1|          2|
+    |ap_sync_reg_matMulTile13_U0_ap_ready    |   2|          2|    1|          2|
+    |ap_sync_reg_matMulTile_514_U0_ap_ready  |   2|          2|    1|          2|
     |real_start                              |   2|          2|    1|          2|
     +----------------------------------------+----+-----------+-----+-----------+
     |Total                                   |   6|          6|    3|          6|
@@ -120,8 +120,8 @@
     +----------------------------------------+---+----+-----+-----------+
     |                  Name                  | FF| LUT| Bits| Const Bits|
     +----------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_matMulTile14_U0_ap_ready    |  1|   0|    1|          0|
-    |ap_sync_reg_matMulTile_113_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile13_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile_514_U0_ap_ready  |  1|   0|    1|          0|
     |start_once_reg                          |  1|   0|    1|          0|
     +----------------------------------------+---+----+-----+-----------+
     |Total                                   |  3|   0|    3|          0|
@@ -133,36 +133,222 @@
 == Interface
 ================================================================
 * Summary: 
-+---------------------+-----+-----+------------+--------------+--------------+
-|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+---------------------+-----+-----+------------+--------------+--------------+
-|ap_start             |   in|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|start_full_n         |   in|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|start_out            |  out|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|start_write          |  out|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_clk               |   in|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|ap_continue          |   in|    1|  ap_ctrl_hs|  matMulTiles6|  return value|
-|A_streams_0_dout     |   in|   32|     ap_fifo|   A_streams_0|       pointer|
-|A_streams_0_empty_n  |   in|    1|     ap_fifo|   A_streams_0|       pointer|
-|A_streams_0_read     |  out|    1|     ap_fifo|   A_streams_0|       pointer|
-|A_streams_1_dout     |   in|   32|     ap_fifo|   A_streams_1|       pointer|
-|A_streams_1_empty_n  |   in|    1|     ap_fifo|   A_streams_1|       pointer|
-|A_streams_1_read     |  out|    1|     ap_fifo|   A_streams_1|       pointer|
-|B_streams_0_dout     |   in|   32|     ap_fifo|   B_streams_0|       pointer|
-|B_streams_0_empty_n  |   in|    1|     ap_fifo|   B_streams_0|       pointer|
-|B_streams_0_read     |  out|    1|     ap_fifo|   B_streams_0|       pointer|
-|B_streams_1_dout     |   in|   32|     ap_fifo|   B_streams_1|       pointer|
-|B_streams_1_empty_n  |   in|    1|     ap_fifo|   B_streams_1|       pointer|
-|B_streams_1_read     |  out|    1|     ap_fifo|   B_streams_1|       pointer|
-|C_streams_0_din      |  out|   32|     ap_fifo|   C_streams_0|       pointer|
-|C_streams_0_full_n   |   in|    1|     ap_fifo|   C_streams_0|       pointer|
-|C_streams_0_write    |  out|    1|     ap_fifo|   C_streams_0|       pointer|
-|C_streams_1_din      |  out|   32|     ap_fifo|   C_streams_1|       pointer|
-|C_streams_1_full_n   |   in|    1|     ap_fifo|   C_streams_1|       pointer|
-|C_streams_1_write    |  out|    1|     ap_fifo|   C_streams_1|       pointer|
-+---------------------+-----+-----+------------+--------------+--------------+
++------------------------+-----+-----+------------+----------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++------------------------+-----+-----+------------+----------------+--------------+
+|ap_start                |   in|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|start_full_n            |   in|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|start_out               |  out|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|start_write             |  out|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|    matMulTiles6|  return value|
+|A_streams_0_dout        |   in|   32|     ap_fifo|     A_streams_0|       pointer|
+|A_streams_0_empty_n     |   in|    1|     ap_fifo|     A_streams_0|       pointer|
+|A_streams_0_read        |  out|    1|     ap_fifo|     A_streams_0|       pointer|
+|A_streams_1_dout        |   in|   32|     ap_fifo|     A_streams_1|       pointer|
+|A_streams_1_empty_n     |   in|    1|     ap_fifo|     A_streams_1|       pointer|
+|A_streams_1_read        |  out|    1|     ap_fifo|     A_streams_1|       pointer|
+|B_streams_0_0_dout      |   in|   32|     ap_fifo|   B_streams_0_0|       pointer|
+|B_streams_0_0_empty_n   |   in|    1|     ap_fifo|   B_streams_0_0|       pointer|
+|B_streams_0_0_read      |  out|    1|     ap_fifo|   B_streams_0_0|       pointer|
+|B_streams_0_1_dout      |   in|   32|     ap_fifo|   B_streams_0_1|       pointer|
+|B_streams_0_1_empty_n   |   in|    1|     ap_fifo|   B_streams_0_1|       pointer|
+|B_streams_0_1_read      |  out|    1|     ap_fifo|   B_streams_0_1|       pointer|
+|B_streams_0_2_dout      |   in|   32|     ap_fifo|   B_streams_0_2|       pointer|
+|B_streams_0_2_empty_n   |   in|    1|     ap_fifo|   B_streams_0_2|       pointer|
+|B_streams_0_2_read      |  out|    1|     ap_fifo|   B_streams_0_2|       pointer|
+|B_streams_0_3_dout      |   in|   32|     ap_fifo|   B_streams_0_3|       pointer|
+|B_streams_0_3_empty_n   |   in|    1|     ap_fifo|   B_streams_0_3|       pointer|
+|B_streams_0_3_read      |  out|    1|     ap_fifo|   B_streams_0_3|       pointer|
+|B_streams_0_4_dout      |   in|   32|     ap_fifo|   B_streams_0_4|       pointer|
+|B_streams_0_4_empty_n   |   in|    1|     ap_fifo|   B_streams_0_4|       pointer|
+|B_streams_0_4_read      |  out|    1|     ap_fifo|   B_streams_0_4|       pointer|
+|B_streams_0_5_dout      |   in|   32|     ap_fifo|   B_streams_0_5|       pointer|
+|B_streams_0_5_empty_n   |   in|    1|     ap_fifo|   B_streams_0_5|       pointer|
+|B_streams_0_5_read      |  out|    1|     ap_fifo|   B_streams_0_5|       pointer|
+|B_streams_0_6_dout      |   in|   32|     ap_fifo|   B_streams_0_6|       pointer|
+|B_streams_0_6_empty_n   |   in|    1|     ap_fifo|   B_streams_0_6|       pointer|
+|B_streams_0_6_read      |  out|    1|     ap_fifo|   B_streams_0_6|       pointer|
+|B_streams_0_7_dout      |   in|   32|     ap_fifo|   B_streams_0_7|       pointer|
+|B_streams_0_7_empty_n   |   in|    1|     ap_fifo|   B_streams_0_7|       pointer|
+|B_streams_0_7_read      |  out|    1|     ap_fifo|   B_streams_0_7|       pointer|
+|B_streams_0_8_dout      |   in|   32|     ap_fifo|   B_streams_0_8|       pointer|
+|B_streams_0_8_empty_n   |   in|    1|     ap_fifo|   B_streams_0_8|       pointer|
+|B_streams_0_8_read      |  out|    1|     ap_fifo|   B_streams_0_8|       pointer|
+|B_streams_0_9_dout      |   in|   32|     ap_fifo|   B_streams_0_9|       pointer|
+|B_streams_0_9_empty_n   |   in|    1|     ap_fifo|   B_streams_0_9|       pointer|
+|B_streams_0_9_read      |  out|    1|     ap_fifo|   B_streams_0_9|       pointer|
+|B_streams_0_10_dout     |   in|   32|     ap_fifo|  B_streams_0_10|       pointer|
+|B_streams_0_10_empty_n  |   in|    1|     ap_fifo|  B_streams_0_10|       pointer|
+|B_streams_0_10_read     |  out|    1|     ap_fifo|  B_streams_0_10|       pointer|
+|B_streams_0_11_dout     |   in|   32|     ap_fifo|  B_streams_0_11|       pointer|
+|B_streams_0_11_empty_n  |   in|    1|     ap_fifo|  B_streams_0_11|       pointer|
+|B_streams_0_11_read     |  out|    1|     ap_fifo|  B_streams_0_11|       pointer|
+|B_streams_0_12_dout     |   in|   32|     ap_fifo|  B_streams_0_12|       pointer|
+|B_streams_0_12_empty_n  |   in|    1|     ap_fifo|  B_streams_0_12|       pointer|
+|B_streams_0_12_read     |  out|    1|     ap_fifo|  B_streams_0_12|       pointer|
+|B_streams_0_13_dout     |   in|   32|     ap_fifo|  B_streams_0_13|       pointer|
+|B_streams_0_13_empty_n  |   in|    1|     ap_fifo|  B_streams_0_13|       pointer|
+|B_streams_0_13_read     |  out|    1|     ap_fifo|  B_streams_0_13|       pointer|
+|B_streams_0_14_dout     |   in|   32|     ap_fifo|  B_streams_0_14|       pointer|
+|B_streams_0_14_empty_n  |   in|    1|     ap_fifo|  B_streams_0_14|       pointer|
+|B_streams_0_14_read     |  out|    1|     ap_fifo|  B_streams_0_14|       pointer|
+|B_streams_0_15_dout     |   in|   32|     ap_fifo|  B_streams_0_15|       pointer|
+|B_streams_0_15_empty_n  |   in|    1|     ap_fifo|  B_streams_0_15|       pointer|
+|B_streams_0_15_read     |  out|    1|     ap_fifo|  B_streams_0_15|       pointer|
+|B_streams_0_16_dout     |   in|   32|     ap_fifo|  B_streams_0_16|       pointer|
+|B_streams_0_16_empty_n  |   in|    1|     ap_fifo|  B_streams_0_16|       pointer|
+|B_streams_0_16_read     |  out|    1|     ap_fifo|  B_streams_0_16|       pointer|
+|B_streams_0_17_dout     |   in|   32|     ap_fifo|  B_streams_0_17|       pointer|
+|B_streams_0_17_empty_n  |   in|    1|     ap_fifo|  B_streams_0_17|       pointer|
+|B_streams_0_17_read     |  out|    1|     ap_fifo|  B_streams_0_17|       pointer|
+|B_streams_0_18_dout     |   in|   32|     ap_fifo|  B_streams_0_18|       pointer|
+|B_streams_0_18_empty_n  |   in|    1|     ap_fifo|  B_streams_0_18|       pointer|
+|B_streams_0_18_read     |  out|    1|     ap_fifo|  B_streams_0_18|       pointer|
+|B_streams_0_19_dout     |   in|   32|     ap_fifo|  B_streams_0_19|       pointer|
+|B_streams_0_19_empty_n  |   in|    1|     ap_fifo|  B_streams_0_19|       pointer|
+|B_streams_0_19_read     |  out|    1|     ap_fifo|  B_streams_0_19|       pointer|
+|B_streams_0_20_dout     |   in|   32|     ap_fifo|  B_streams_0_20|       pointer|
+|B_streams_0_20_empty_n  |   in|    1|     ap_fifo|  B_streams_0_20|       pointer|
+|B_streams_0_20_read     |  out|    1|     ap_fifo|  B_streams_0_20|       pointer|
+|B_streams_0_21_dout     |   in|   32|     ap_fifo|  B_streams_0_21|       pointer|
+|B_streams_0_21_empty_n  |   in|    1|     ap_fifo|  B_streams_0_21|       pointer|
+|B_streams_0_21_read     |  out|    1|     ap_fifo|  B_streams_0_21|       pointer|
+|B_streams_0_22_dout     |   in|   32|     ap_fifo|  B_streams_0_22|       pointer|
+|B_streams_0_22_empty_n  |   in|    1|     ap_fifo|  B_streams_0_22|       pointer|
+|B_streams_0_22_read     |  out|    1|     ap_fifo|  B_streams_0_22|       pointer|
+|B_streams_0_23_dout     |   in|   32|     ap_fifo|  B_streams_0_23|       pointer|
+|B_streams_0_23_empty_n  |   in|    1|     ap_fifo|  B_streams_0_23|       pointer|
+|B_streams_0_23_read     |  out|    1|     ap_fifo|  B_streams_0_23|       pointer|
+|B_streams_0_24_dout     |   in|   32|     ap_fifo|  B_streams_0_24|       pointer|
+|B_streams_0_24_empty_n  |   in|    1|     ap_fifo|  B_streams_0_24|       pointer|
+|B_streams_0_24_read     |  out|    1|     ap_fifo|  B_streams_0_24|       pointer|
+|B_streams_0_25_dout     |   in|   32|     ap_fifo|  B_streams_0_25|       pointer|
+|B_streams_0_25_empty_n  |   in|    1|     ap_fifo|  B_streams_0_25|       pointer|
+|B_streams_0_25_read     |  out|    1|     ap_fifo|  B_streams_0_25|       pointer|
+|B_streams_0_26_dout     |   in|   32|     ap_fifo|  B_streams_0_26|       pointer|
+|B_streams_0_26_empty_n  |   in|    1|     ap_fifo|  B_streams_0_26|       pointer|
+|B_streams_0_26_read     |  out|    1|     ap_fifo|  B_streams_0_26|       pointer|
+|B_streams_0_27_dout     |   in|   32|     ap_fifo|  B_streams_0_27|       pointer|
+|B_streams_0_27_empty_n  |   in|    1|     ap_fifo|  B_streams_0_27|       pointer|
+|B_streams_0_27_read     |  out|    1|     ap_fifo|  B_streams_0_27|       pointer|
+|B_streams_0_28_dout     |   in|   32|     ap_fifo|  B_streams_0_28|       pointer|
+|B_streams_0_28_empty_n  |   in|    1|     ap_fifo|  B_streams_0_28|       pointer|
+|B_streams_0_28_read     |  out|    1|     ap_fifo|  B_streams_0_28|       pointer|
+|B_streams_0_29_dout     |   in|   32|     ap_fifo|  B_streams_0_29|       pointer|
+|B_streams_0_29_empty_n  |   in|    1|     ap_fifo|  B_streams_0_29|       pointer|
+|B_streams_0_29_read     |  out|    1|     ap_fifo|  B_streams_0_29|       pointer|
+|B_streams_0_30_dout     |   in|   32|     ap_fifo|  B_streams_0_30|       pointer|
+|B_streams_0_30_empty_n  |   in|    1|     ap_fifo|  B_streams_0_30|       pointer|
+|B_streams_0_30_read     |  out|    1|     ap_fifo|  B_streams_0_30|       pointer|
+|B_streams_0_31_dout     |   in|   32|     ap_fifo|  B_streams_0_31|       pointer|
+|B_streams_0_31_empty_n  |   in|    1|     ap_fifo|  B_streams_0_31|       pointer|
+|B_streams_0_31_read     |  out|    1|     ap_fifo|  B_streams_0_31|       pointer|
+|B_streams_1_0_dout      |   in|   32|     ap_fifo|   B_streams_1_0|       pointer|
+|B_streams_1_0_empty_n   |   in|    1|     ap_fifo|   B_streams_1_0|       pointer|
+|B_streams_1_0_read      |  out|    1|     ap_fifo|   B_streams_1_0|       pointer|
+|B_streams_1_1_dout      |   in|   32|     ap_fifo|   B_streams_1_1|       pointer|
+|B_streams_1_1_empty_n   |   in|    1|     ap_fifo|   B_streams_1_1|       pointer|
+|B_streams_1_1_read      |  out|    1|     ap_fifo|   B_streams_1_1|       pointer|
+|B_streams_1_2_dout      |   in|   32|     ap_fifo|   B_streams_1_2|       pointer|
+|B_streams_1_2_empty_n   |   in|    1|     ap_fifo|   B_streams_1_2|       pointer|
+|B_streams_1_2_read      |  out|    1|     ap_fifo|   B_streams_1_2|       pointer|
+|B_streams_1_3_dout      |   in|   32|     ap_fifo|   B_streams_1_3|       pointer|
+|B_streams_1_3_empty_n   |   in|    1|     ap_fifo|   B_streams_1_3|       pointer|
+|B_streams_1_3_read      |  out|    1|     ap_fifo|   B_streams_1_3|       pointer|
+|B_streams_1_4_dout      |   in|   32|     ap_fifo|   B_streams_1_4|       pointer|
+|B_streams_1_4_empty_n   |   in|    1|     ap_fifo|   B_streams_1_4|       pointer|
+|B_streams_1_4_read      |  out|    1|     ap_fifo|   B_streams_1_4|       pointer|
+|B_streams_1_5_dout      |   in|   32|     ap_fifo|   B_streams_1_5|       pointer|
+|B_streams_1_5_empty_n   |   in|    1|     ap_fifo|   B_streams_1_5|       pointer|
+|B_streams_1_5_read      |  out|    1|     ap_fifo|   B_streams_1_5|       pointer|
+|B_streams_1_6_dout      |   in|   32|     ap_fifo|   B_streams_1_6|       pointer|
+|B_streams_1_6_empty_n   |   in|    1|     ap_fifo|   B_streams_1_6|       pointer|
+|B_streams_1_6_read      |  out|    1|     ap_fifo|   B_streams_1_6|       pointer|
+|B_streams_1_7_dout      |   in|   32|     ap_fifo|   B_streams_1_7|       pointer|
+|B_streams_1_7_empty_n   |   in|    1|     ap_fifo|   B_streams_1_7|       pointer|
+|B_streams_1_7_read      |  out|    1|     ap_fifo|   B_streams_1_7|       pointer|
+|B_streams_1_8_dout      |   in|   32|     ap_fifo|   B_streams_1_8|       pointer|
+|B_streams_1_8_empty_n   |   in|    1|     ap_fifo|   B_streams_1_8|       pointer|
+|B_streams_1_8_read      |  out|    1|     ap_fifo|   B_streams_1_8|       pointer|
+|B_streams_1_9_dout      |   in|   32|     ap_fifo|   B_streams_1_9|       pointer|
+|B_streams_1_9_empty_n   |   in|    1|     ap_fifo|   B_streams_1_9|       pointer|
+|B_streams_1_9_read      |  out|    1|     ap_fifo|   B_streams_1_9|       pointer|
+|B_streams_1_10_dout     |   in|   32|     ap_fifo|  B_streams_1_10|       pointer|
+|B_streams_1_10_empty_n  |   in|    1|     ap_fifo|  B_streams_1_10|       pointer|
+|B_streams_1_10_read     |  out|    1|     ap_fifo|  B_streams_1_10|       pointer|
+|B_streams_1_11_dout     |   in|   32|     ap_fifo|  B_streams_1_11|       pointer|
+|B_streams_1_11_empty_n  |   in|    1|     ap_fifo|  B_streams_1_11|       pointer|
+|B_streams_1_11_read     |  out|    1|     ap_fifo|  B_streams_1_11|       pointer|
+|B_streams_1_12_dout     |   in|   32|     ap_fifo|  B_streams_1_12|       pointer|
+|B_streams_1_12_empty_n  |   in|    1|     ap_fifo|  B_streams_1_12|       pointer|
+|B_streams_1_12_read     |  out|    1|     ap_fifo|  B_streams_1_12|       pointer|
+|B_streams_1_13_dout     |   in|   32|     ap_fifo|  B_streams_1_13|       pointer|
+|B_streams_1_13_empty_n  |   in|    1|     ap_fifo|  B_streams_1_13|       pointer|
+|B_streams_1_13_read     |  out|    1|     ap_fifo|  B_streams_1_13|       pointer|
+|B_streams_1_14_dout     |   in|   32|     ap_fifo|  B_streams_1_14|       pointer|
+|B_streams_1_14_empty_n  |   in|    1|     ap_fifo|  B_streams_1_14|       pointer|
+|B_streams_1_14_read     |  out|    1|     ap_fifo|  B_streams_1_14|       pointer|
+|B_streams_1_15_dout     |   in|   32|     ap_fifo|  B_streams_1_15|       pointer|
+|B_streams_1_15_empty_n  |   in|    1|     ap_fifo|  B_streams_1_15|       pointer|
+|B_streams_1_15_read     |  out|    1|     ap_fifo|  B_streams_1_15|       pointer|
+|B_streams_1_16_dout     |   in|   32|     ap_fifo|  B_streams_1_16|       pointer|
+|B_streams_1_16_empty_n  |   in|    1|     ap_fifo|  B_streams_1_16|       pointer|
+|B_streams_1_16_read     |  out|    1|     ap_fifo|  B_streams_1_16|       pointer|
+|B_streams_1_17_dout     |   in|   32|     ap_fifo|  B_streams_1_17|       pointer|
+|B_streams_1_17_empty_n  |   in|    1|     ap_fifo|  B_streams_1_17|       pointer|
+|B_streams_1_17_read     |  out|    1|     ap_fifo|  B_streams_1_17|       pointer|
+|B_streams_1_18_dout     |   in|   32|     ap_fifo|  B_streams_1_18|       pointer|
+|B_streams_1_18_empty_n  |   in|    1|     ap_fifo|  B_streams_1_18|       pointer|
+|B_streams_1_18_read     |  out|    1|     ap_fifo|  B_streams_1_18|       pointer|
+|B_streams_1_19_dout     |   in|   32|     ap_fifo|  B_streams_1_19|       pointer|
+|B_streams_1_19_empty_n  |   in|    1|     ap_fifo|  B_streams_1_19|       pointer|
+|B_streams_1_19_read     |  out|    1|     ap_fifo|  B_streams_1_19|       pointer|
+|B_streams_1_20_dout     |   in|   32|     ap_fifo|  B_streams_1_20|       pointer|
+|B_streams_1_20_empty_n  |   in|    1|     ap_fifo|  B_streams_1_20|       pointer|
+|B_streams_1_20_read     |  out|    1|     ap_fifo|  B_streams_1_20|       pointer|
+|B_streams_1_21_dout     |   in|   32|     ap_fifo|  B_streams_1_21|       pointer|
+|B_streams_1_21_empty_n  |   in|    1|     ap_fifo|  B_streams_1_21|       pointer|
+|B_streams_1_21_read     |  out|    1|     ap_fifo|  B_streams_1_21|       pointer|
+|B_streams_1_22_dout     |   in|   32|     ap_fifo|  B_streams_1_22|       pointer|
+|B_streams_1_22_empty_n  |   in|    1|     ap_fifo|  B_streams_1_22|       pointer|
+|B_streams_1_22_read     |  out|    1|     ap_fifo|  B_streams_1_22|       pointer|
+|B_streams_1_23_dout     |   in|   32|     ap_fifo|  B_streams_1_23|       pointer|
+|B_streams_1_23_empty_n  |   in|    1|     ap_fifo|  B_streams_1_23|       pointer|
+|B_streams_1_23_read     |  out|    1|     ap_fifo|  B_streams_1_23|       pointer|
+|B_streams_1_24_dout     |   in|   32|     ap_fifo|  B_streams_1_24|       pointer|
+|B_streams_1_24_empty_n  |   in|    1|     ap_fifo|  B_streams_1_24|       pointer|
+|B_streams_1_24_read     |  out|    1|     ap_fifo|  B_streams_1_24|       pointer|
+|B_streams_1_25_dout     |   in|   32|     ap_fifo|  B_streams_1_25|       pointer|
+|B_streams_1_25_empty_n  |   in|    1|     ap_fifo|  B_streams_1_25|       pointer|
+|B_streams_1_25_read     |  out|    1|     ap_fifo|  B_streams_1_25|       pointer|
+|B_streams_1_26_dout     |   in|   32|     ap_fifo|  B_streams_1_26|       pointer|
+|B_streams_1_26_empty_n  |   in|    1|     ap_fifo|  B_streams_1_26|       pointer|
+|B_streams_1_26_read     |  out|    1|     ap_fifo|  B_streams_1_26|       pointer|
+|B_streams_1_27_dout     |   in|   32|     ap_fifo|  B_streams_1_27|       pointer|
+|B_streams_1_27_empty_n  |   in|    1|     ap_fifo|  B_streams_1_27|       pointer|
+|B_streams_1_27_read     |  out|    1|     ap_fifo|  B_streams_1_27|       pointer|
+|B_streams_1_28_dout     |   in|   32|     ap_fifo|  B_streams_1_28|       pointer|
+|B_streams_1_28_empty_n  |   in|    1|     ap_fifo|  B_streams_1_28|       pointer|
+|B_streams_1_28_read     |  out|    1|     ap_fifo|  B_streams_1_28|       pointer|
+|B_streams_1_29_dout     |   in|   32|     ap_fifo|  B_streams_1_29|       pointer|
+|B_streams_1_29_empty_n  |   in|    1|     ap_fifo|  B_streams_1_29|       pointer|
+|B_streams_1_29_read     |  out|    1|     ap_fifo|  B_streams_1_29|       pointer|
+|B_streams_1_30_dout     |   in|   32|     ap_fifo|  B_streams_1_30|       pointer|
+|B_streams_1_30_empty_n  |   in|    1|     ap_fifo|  B_streams_1_30|       pointer|
+|B_streams_1_30_read     |  out|    1|     ap_fifo|  B_streams_1_30|       pointer|
+|B_streams_1_31_dout     |   in|   32|     ap_fifo|  B_streams_1_31|       pointer|
+|B_streams_1_31_empty_n  |   in|    1|     ap_fifo|  B_streams_1_31|       pointer|
+|B_streams_1_31_read     |  out|    1|     ap_fifo|  B_streams_1_31|       pointer|
+|C_streams_0_din         |  out|   32|     ap_fifo|     C_streams_0|       pointer|
+|C_streams_0_full_n      |   in|    1|     ap_fifo|     C_streams_0|       pointer|
+|C_streams_0_write       |  out|    1|     ap_fifo|     C_streams_0|       pointer|
+|C_streams_1_din         |  out|   32|     ap_fifo|     C_streams_1|       pointer|
+|C_streams_1_full_n      |   in|    1|     ap_fifo|     C_streams_1|       pointer|
+|C_streams_1_write       |  out|    1|     ap_fifo|     C_streams_1|       pointer|
++------------------------+-----+-----+------------+----------------+--------------+
 

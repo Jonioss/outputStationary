@@ -35,7 +35,8 @@ void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 	for(int tileA = 0; tileA < NUM_OF_TILES; tileA++) {
 		#pragma HLS DATAFLOW
 		hls::stream<fm_t> A_streams[NUM_OF_TILES];
-		hls::stream<fm_t> B_streams[NUM_OF_TILES];
+		hls::stream<fm_t> B_streams[NUM_OF_TILES][J/NUM_OF_TILES];
+		#pragma HLS ARRAY_PARTITION variable=B_streams dim=2 complete
 		hls::stream<fm_t> C_streams[NUM_OF_TILES];
 		fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 		#pragma HLS ARRAY_PARTITION variable=C_TILES dim=1 type=complete

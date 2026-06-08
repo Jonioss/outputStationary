@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Tue Jun  2 18:37:22 2026
+    * Date:           Tue Jun  2 20:38:42 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)
@@ -19,16 +19,16 @@
     |                               Modules                               |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |           |             |            |     |
     |                               & Loops                               |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP    |      FF     |     LUT    | URAM|
     +---------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+------------+-----+
-    |+ gemm2                                                              |  Timing|  -0.56|    12975|  4.325e+04|         -|    12976|     -|        no|  167 (8%)|  256 (13%)|   58816 (3%)|  46401 (5%)|    -|
+    |+ gemm2                                                              |  Timing|  -0.56|    12975|  4.325e+04|         -|    12976|     -|        no|  167 (8%)|  256 (13%)|   65052 (3%)|  49273 (5%)|    -|
     | + loadInputsFromDRAM                                                |  Timing|  -0.00|     2862|  9.539e+03|         -|     2862|     -|        no|         -|          -|   1722 (~0%)|   654 (~0%)|    -|
     |  o load_A                                                           |       -|   2.43|      576|  1.920e+03|        18|        -|    32|        no|         -|          -|            -|           -|    -|
     |   o VITIS_LOOP_7_1                                                  |       -|   2.43|       16|     53.328|         1|        -|    16|        no|         -|          -|            -|           -|    -|
     |  o load_B                                                           |       -|   2.43|     2144|  7.146e+03|       134|        -|    16|        no|         -|          -|            -|           -|    -|
     |   o VITIS_LOOP_13_2                                                 |       -|   2.43|      132|    439.956|        66|        -|     2|        no|         -|          -|            -|           -|    -|
     |    o VITIS_LOOP_14_3                                                |       -|   2.43|       64|    213.312|         2|        -|    32|        no|         -|          -|            -|           -|    -|
-    | + dataflow_parent_loop_proc                                         |  Timing|  -0.56|     3700|  1.233e+04|         -|     3700|     -|        no|   70 (3%)|  256 (13%)|   45461 (2%)|  36459 (4%)|    -|
+    | + dataflow_parent_loop_proc                                         |  Timing|  -0.56|     3700|  1.233e+04|         -|     3700|     -|        no|   70 (3%)|  256 (13%)|   51697 (2%)|  39331 (4%)|    -|
     |  o loop_for_tile_a                                                  |       -|   2.43|     3699|  1.233e+04|      2641|        -|     2|        no|         -|          -|            -|           -|    -|
-    |   + dataflow_in_loop_loop_for_tile_a*                               |  Timing|  -0.56|     2638|  8.792e+03|         -|     1059|     -|  dataflow|   70 (3%)|  256 (13%)|   45400 (2%)|  36431 (4%)|    -|
+    |   + dataflow_in_loop_loop_for_tile_a*                               |  Timing|  -0.56|     2638|  8.792e+03|         -|     1059|     -|  dataflow|   70 (3%)|  256 (13%)|   51636 (2%)|  39303 (4%)|    -|
     |    + loadTileAFromDRAM46                                            |  Timing|  -0.21|      132|    439.956|         -|      132|     -|        no|         -|          -|     52 (~0%)|   105 (~0%)|    -|
     |     + loadTileAFromDRAM46_Pipeline_load_tile_A_VITIS_LOOP_7_1       |  Timing|  -0.21|      131|    436.623|         -|      131|     -|        no|         -|          -|     47 (~0%)|    97 (~0%)|    -|
     |      o load_tile_A_VITIS_LOOP_7_1                                   |       -|   2.43|      129|    429.957|         3|        1|   128|       yes|         -|          -|            -|           -|    -|
@@ -39,7 +39,7 @@
     |     + loadTileBFromDRAM_21216                                       |       -|   1.02|     1057|  3.523e+03|         -|     1057|     -|        no|         -|          -|     40 (~0%)|    53 (~0%)|    -|
     |      o load_tile_B                                                  |       -|   2.43|     1056|  3.520e+03|        66|        -|    16|        no|         -|          -|            -|           -|    -|
     |       o VITIS_LOOP_19_1                                             |       -|   2.43|       64|    213.312|         2|        -|    32|        no|         -|          -|            -|           -|    -|
-    |    + loader_A_tiles5                                                |  Timing|  -0.07|      258|    859.914|         -|      258|     -|        no|         -|          -|     24 (~0%)|   125 (~0%)|    -|
+    |    + loader_A_tiles5                                                |  Timing|  -0.07|      258|    859.914|         -|      258|     -|        no|         -|          -|     28 (~0%)|   185 (~0%)|    -|
     |     o VITIS_LOOP_9_1_VITIS_LOOP_10_2                                |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|         -|          -|            -|           -|    -|
     |    + loader_B_tiles7*                                               |       -|   0.59|      801|  2.670e+03|         -|      802|     -|  dataflow|         -|          -|   1022 (~0%)|  1002 (~0%)|    -|
     |     + loader_B_tile13                                               |       -|   0.59|      801|  2.670e+03|         -|      801|     -|        no|         -|          -|    510 (~0%)|   491 (~0%)|    -|
@@ -48,12 +48,12 @@
     |     + loader_B_tile_314                                             |       -|   0.59|      801|  2.670e+03|         -|      801|     -|        no|         -|          -|    510 (~0%)|   491 (~0%)|    -|
     |      o VITIS_LOOP_24_1                                              |       -|   2.43|      800|  2.666e+03|        50|        -|    16|        no|         -|          -|            -|           -|    -|
     |       o VITIS_LOOP_25_2                                             |       -|   2.43|       48|    159.984|         3|        -|    16|        no|         -|          -|            -|           -|    -|
-    |    + matMulTiles8*                                                  |       -|   0.25|      354|  1.180e+03|         -|      355|     -|  dataflow|         -|  256 (13%)|   28503 (1%)|  24268 (2%)|    -|
-    |     + matMulTile15                                                  |       -|   0.25|      354|  1.180e+03|         -|      354|     -|        no|         -|   128 (6%)|  14250 (~0%)|  12123 (1%)|    -|
-    |      o mat_mul_i                                                    |       -|   2.43|      353|  1.177e+03|        24|        -|    16|        no|         -|          -|            -|           -|    -|
-    |       + dataflow_in_loop_mat_mul_i19*                               |       -|   0.25|       22|     73.326|         -|       22|     -|  dataflow|         -|   128 (6%)|  14166 (~0%)|  12077 (1%)|    -|
-    |        + dataflow_in_loop_mat_mul_i_Loop_mat_mul_k_proc121          |       -|   0.25|       21|     69.993|         -|       21|     -|        no|         -|   128 (6%)|   6390 (~0%)|  6309 (~0%)|    -|
-    |         o mat_mul_k                                                 |       -|   2.43|       19|     63.327|         5|        1|    16|       yes|         -|          -|            -|           -|    -|
+    |    + matMulTiles8*                                                  |       -|   0.25|      370|  1.233e+03|         -|      371|     -|  dataflow|         -|  256 (13%)|   31645 (1%)|  25100 (2%)|    -|
+    |     + matMulTile15                                                  |       -|   0.25|      370|  1.233e+03|         -|      370|     -|        no|         -|   128 (6%)|  15821 (~0%)|  12539 (1%)|    -|
+    |      o mat_mul_i                                                    |       -|   2.43|      369|  1.230e+03|        25|        -|    16|        no|         -|          -|            -|           -|    -|
+    |       + dataflow_in_loop_mat_mul_i19*                               |       -|   0.25|       23|     76.659|         -|       23|     -|  dataflow|         -|   128 (6%)|  15737 (~0%)|  12493 (1%)|    -|
+    |        + dataflow_in_loop_mat_mul_i_Loop_mat_mul_k_proc121          |       -|   0.25|       22|     73.326|         -|       22|     -|        no|         -|   128 (6%)|   7961 (~0%)|  6725 (~0%)|    -|
+    |         o mat_mul_k                                                 |       -|   2.43|       20|     66.660|         6|        1|    16|       yes|         -|          -|            -|           -|    -|
     |        + Block_newFuncRoot_proc_proc                                |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc24                              |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc26                              |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
@@ -118,11 +118,11 @@
     |        + Block_newFuncRoot_proc_proc81                              |       -|   1.47|        0|      0.000|         -|        0|     -|        no|         -|          -|      2 (~0%)|     6 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc83                              |       -|   1.47|        0|      0.000|         -|        0|     -|        no|         -|          -|      2 (~0%)|     6 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc85                              |       -|   1.47|        0|      0.000|         -|        0|     -|        no|         -|          -|      2 (~0%)|     6 (~0%)|    -|
-    |     + matMulTile_416                                                |       -|   0.25|      354|  1.180e+03|         -|      354|     -|        no|         -|   128 (6%)|  14250 (~0%)|  12123 (1%)|    -|
-    |      o mat_mul_i                                                    |       -|   2.43|      353|  1.177e+03|        24|        -|    16|        no|         -|          -|            -|           -|    -|
-    |       + dataflow_in_loop_mat_mul_i_13220*                           |       -|   0.25|       22|     73.326|         -|       22|     -|  dataflow|         -|   128 (6%)|  14166 (~0%)|  12077 (1%)|    -|
-    |        + dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222      |       -|   0.25|       21|     69.993|         -|       21|     -|        no|         -|   128 (6%)|   6390 (~0%)|  6309 (~0%)|    -|
-    |         o mat_mul_k                                                 |       -|   2.43|       19|     63.327|         5|        1|    16|       yes|         -|          -|            -|           -|    -|
+    |     + matMulTile_416                                                |       -|   0.25|      370|  1.233e+03|         -|      370|     -|        no|         -|   128 (6%)|  15821 (~0%)|  12539 (1%)|    -|
+    |      o mat_mul_i                                                    |       -|   2.43|      369|  1.230e+03|        25|        -|    16|        no|         -|          -|            -|           -|    -|
+    |       + dataflow_in_loop_mat_mul_i_13220*                           |       -|   0.25|       23|     76.659|         -|       23|     -|  dataflow|         -|   128 (6%)|  15737 (~0%)|  12493 (1%)|    -|
+    |        + dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222      |       -|   0.25|       22|     73.326|         -|       22|     -|        no|         -|   128 (6%)|   7961 (~0%)|  6725 (~0%)|    -|
+    |         o mat_mul_k                                                 |       -|   2.43|       20|     66.660|         6|        1|    16|       yes|         -|          -|            -|           -|    -|
     |        + Block_newFuncRoot_proc_proc86                              |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc88                              |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
     |        + Block_newFuncRoot_proc_proc90                              |       -|   0.76|        0|      0.000|         -|        0|     -|        no|         -|          -|     34 (~0%)|    36 (~0%)|    -|
@@ -353,9 +353,9 @@
 |       add_ln19_fu_126_p2                                           |     |        | add_ln19    | add | fabric | 0       |
 |       add_ln20_fu_142_p2                                           |     |        | add_ln20    | add | fabric | 0       |
 |    + loader_A_tiles5                                               | 0   |        |             |     |        |         |
-|      add_ln9_1_fu_154_p2                                           |     |        | add_ln9_1   | add | fabric | 0       |
-|      add_ln9_fu_178_p2                                             |     |        | add_ln9     | add | fabric | 0       |
-|      add_ln10_fu_246_p2                                            |     |        | add_ln10    | add | fabric | 0       |
+|      add_ln9_1_fu_460_p2                                           |     |        | add_ln9_1   | add | fabric | 0       |
+|      add_ln9_fu_484_p2                                             |     |        | add_ln9     | add | fabric | 0       |
+|      add_ln10_fu_556_p2                                            |     |        | add_ln10    | add | fabric | 0       |
 |    + loader_B_tiles7                                               | 0   |        |             |     |        |         |
 |     + loader_B_tile13                                              | 0   |        |             |     |        |         |
 |       i_4_fu_769_p2                                                |     |        | i_4         | add | fabric | 0       |
@@ -367,139 +367,139 @@
 |     + matMulTile15                                                 | 128 |        |             |     |        |         |
 |      + dataflow_in_loop_mat_mul_i19                                | 128 |        |             |     |        |         |
 |       + dataflow_in_loop_mat_mul_i_Loop_mat_mul_k_proc121          | 128 |        |             |     |        |         |
-|         k_5_fu_968_p2                                              |     |        | k_5         | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U161                                    | 4   |        | mul_ln25    | mul | dsp    | 2       |
-|         add_ln25_fu_1677_p2                                        |     |        | add_ln25    | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U162                                    | 4   |        | mul_ln25_1  | mul | dsp    | 2       |
-|         add_ln25_1_fu_1700_p2                                      |     |        | add_ln25_1  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U163                                    | 4   |        | mul_ln25_2  | mul | dsp    | 2       |
-|         add_ln25_2_fu_1723_p2                                      |     |        | add_ln25_2  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U164                                    | 4   |        | mul_ln25_3  | mul | dsp    | 2       |
-|         add_ln25_3_fu_1746_p2                                      |     |        | add_ln25_3  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U165                                    | 4   |        | mul_ln25_4  | mul | dsp    | 2       |
-|         add_ln25_4_fu_1769_p2                                      |     |        | add_ln25_4  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U166                                    | 4   |        | mul_ln25_5  | mul | dsp    | 2       |
-|         add_ln25_5_fu_1792_p2                                      |     |        | add_ln25_5  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U167                                    | 4   |        | mul_ln25_6  | mul | dsp    | 2       |
-|         add_ln25_6_fu_1815_p2                                      |     |        | add_ln25_6  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U168                                    | 4   |        | mul_ln25_7  | mul | dsp    | 2       |
-|         add_ln25_7_fu_1838_p2                                      |     |        | add_ln25_7  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U169                                    | 4   |        | mul_ln25_8  | mul | dsp    | 2       |
-|         add_ln25_8_fu_1861_p2                                      |     |        | add_ln25_8  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U170                                    | 4   |        | mul_ln25_9  | mul | dsp    | 2       |
-|         add_ln25_9_fu_1884_p2                                      |     |        | add_ln25_9  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U171                                    | 4   |        | mul_ln25_10 | mul | dsp    | 2       |
-|         add_ln25_10_fu_1907_p2                                     |     |        | add_ln25_10 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U172                                    | 4   |        | mul_ln25_11 | mul | dsp    | 2       |
-|         add_ln25_11_fu_1930_p2                                     |     |        | add_ln25_11 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U173                                    | 4   |        | mul_ln25_12 | mul | dsp    | 2       |
-|         add_ln25_12_fu_1953_p2                                     |     |        | add_ln25_12 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U174                                    | 4   |        | mul_ln25_13 | mul | dsp    | 2       |
-|         add_ln25_13_fu_1976_p2                                     |     |        | add_ln25_13 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U175                                    | 4   |        | mul_ln25_14 | mul | dsp    | 2       |
-|         add_ln25_14_fu_1999_p2                                     |     |        | add_ln25_14 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U176                                    | 4   |        | mul_ln25_15 | mul | dsp    | 2       |
-|         add_ln25_15_fu_2022_p2                                     |     |        | add_ln25_15 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U177                                    | 4   |        | mul_ln25_16 | mul | dsp    | 2       |
-|         add_ln25_16_fu_2045_p2                                     |     |        | add_ln25_16 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U178                                    | 4   |        | mul_ln25_17 | mul | dsp    | 2       |
-|         add_ln25_17_fu_2068_p2                                     |     |        | add_ln25_17 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U179                                    | 4   |        | mul_ln25_18 | mul | dsp    | 2       |
-|         add_ln25_18_fu_2091_p2                                     |     |        | add_ln25_18 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U180                                    | 4   |        | mul_ln25_19 | mul | dsp    | 2       |
-|         add_ln25_19_fu_2114_p2                                     |     |        | add_ln25_19 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U181                                    | 4   |        | mul_ln25_20 | mul | dsp    | 2       |
-|         add_ln25_20_fu_2137_p2                                     |     |        | add_ln25_20 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U182                                    | 4   |        | mul_ln25_21 | mul | dsp    | 2       |
-|         add_ln25_21_fu_2160_p2                                     |     |        | add_ln25_21 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U183                                    | 4   |        | mul_ln25_22 | mul | dsp    | 2       |
-|         add_ln25_22_fu_2183_p2                                     |     |        | add_ln25_22 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U184                                    | 4   |        | mul_ln25_23 | mul | dsp    | 2       |
-|         add_ln25_23_fu_2206_p2                                     |     |        | add_ln25_23 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U185                                    | 4   |        | mul_ln25_24 | mul | dsp    | 2       |
-|         add_ln25_24_fu_2229_p2                                     |     |        | add_ln25_24 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U186                                    | 4   |        | mul_ln25_25 | mul | dsp    | 2       |
-|         add_ln25_25_fu_2252_p2                                     |     |        | add_ln25_25 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U187                                    | 4   |        | mul_ln25_26 | mul | dsp    | 2       |
-|         add_ln25_26_fu_2275_p2                                     |     |        | add_ln25_26 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U188                                    | 4   |        | mul_ln25_27 | mul | dsp    | 2       |
-|         add_ln25_27_fu_2298_p2                                     |     |        | add_ln25_27 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U189                                    | 4   |        | mul_ln25_28 | mul | dsp    | 2       |
-|         add_ln25_28_fu_2321_p2                                     |     |        | add_ln25_28 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U190                                    | 4   |        | mul_ln25_29 | mul | dsp    | 2       |
-|         add_ln25_29_fu_2344_p2                                     |     |        | add_ln25_29 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U191                                    | 4   |        | mul_ln25_30 | mul | dsp    | 2       |
-|         add_ln25_30_fu_2367_p2                                     |     |        | add_ln25_30 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U192                                    | 4   |        | mul_ln25_31 | mul | dsp    | 2       |
-|         add_ln25_31_fu_2390_p2                                     |     |        | add_ln25_31 | add | fabric | 0       |
+|         add_ln16_fu_1157_p2                                        |     |        | add_ln16    | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U191                                    | 4   |        | mul_ln23    | mul | dsp    | 2       |
+|         add_ln23_fu_1869_p2                                        |     |        | add_ln23    | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U192                                    | 4   |        | mul_ln23_1  | mul | dsp    | 2       |
+|         add_ln23_1_fu_1892_p2                                      |     |        | add_ln23_1  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U193                                    | 4   |        | mul_ln23_2  | mul | dsp    | 2       |
+|         add_ln23_2_fu_1915_p2                                      |     |        | add_ln23_2  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U194                                    | 4   |        | mul_ln23_3  | mul | dsp    | 2       |
+|         add_ln23_3_fu_1938_p2                                      |     |        | add_ln23_3  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U195                                    | 4   |        | mul_ln23_4  | mul | dsp    | 2       |
+|         add_ln23_4_fu_1961_p2                                      |     |        | add_ln23_4  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U196                                    | 4   |        | mul_ln23_5  | mul | dsp    | 2       |
+|         add_ln23_5_fu_1984_p2                                      |     |        | add_ln23_5  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U197                                    | 4   |        | mul_ln23_6  | mul | dsp    | 2       |
+|         add_ln23_6_fu_2007_p2                                      |     |        | add_ln23_6  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U198                                    | 4   |        | mul_ln23_7  | mul | dsp    | 2       |
+|         add_ln23_7_fu_2030_p2                                      |     |        | add_ln23_7  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U199                                    | 4   |        | mul_ln23_8  | mul | dsp    | 2       |
+|         add_ln23_8_fu_2053_p2                                      |     |        | add_ln23_8  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U200                                    | 4   |        | mul_ln23_9  | mul | dsp    | 2       |
+|         add_ln23_9_fu_2076_p2                                      |     |        | add_ln23_9  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U201                                    | 4   |        | mul_ln23_10 | mul | dsp    | 2       |
+|         add_ln23_10_fu_2099_p2                                     |     |        | add_ln23_10 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U202                                    | 4   |        | mul_ln23_11 | mul | dsp    | 2       |
+|         add_ln23_11_fu_2122_p2                                     |     |        | add_ln23_11 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U203                                    | 4   |        | mul_ln23_12 | mul | dsp    | 2       |
+|         add_ln23_12_fu_2145_p2                                     |     |        | add_ln23_12 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U204                                    | 4   |        | mul_ln23_13 | mul | dsp    | 2       |
+|         add_ln23_13_fu_2168_p2                                     |     |        | add_ln23_13 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U205                                    | 4   |        | mul_ln23_14 | mul | dsp    | 2       |
+|         add_ln23_14_fu_2191_p2                                     |     |        | add_ln23_14 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U206                                    | 4   |        | mul_ln23_15 | mul | dsp    | 2       |
+|         add_ln23_15_fu_2214_p2                                     |     |        | add_ln23_15 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U207                                    | 4   |        | mul_ln23_16 | mul | dsp    | 2       |
+|         add_ln23_16_fu_2237_p2                                     |     |        | add_ln23_16 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U208                                    | 4   |        | mul_ln23_17 | mul | dsp    | 2       |
+|         add_ln23_17_fu_2260_p2                                     |     |        | add_ln23_17 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U209                                    | 4   |        | mul_ln23_18 | mul | dsp    | 2       |
+|         add_ln23_18_fu_2283_p2                                     |     |        | add_ln23_18 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U210                                    | 4   |        | mul_ln23_19 | mul | dsp    | 2       |
+|         add_ln23_19_fu_2306_p2                                     |     |        | add_ln23_19 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U211                                    | 4   |        | mul_ln23_20 | mul | dsp    | 2       |
+|         add_ln23_20_fu_2329_p2                                     |     |        | add_ln23_20 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U212                                    | 4   |        | mul_ln23_21 | mul | dsp    | 2       |
+|         add_ln23_21_fu_2352_p2                                     |     |        | add_ln23_21 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U213                                    | 4   |        | mul_ln23_22 | mul | dsp    | 2       |
+|         add_ln23_22_fu_2375_p2                                     |     |        | add_ln23_22 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U214                                    | 4   |        | mul_ln23_23 | mul | dsp    | 2       |
+|         add_ln23_23_fu_2398_p2                                     |     |        | add_ln23_23 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U215                                    | 4   |        | mul_ln23_24 | mul | dsp    | 2       |
+|         add_ln23_24_fu_2421_p2                                     |     |        | add_ln23_24 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U216                                    | 4   |        | mul_ln23_25 | mul | dsp    | 2       |
+|         add_ln23_25_fu_2444_p2                                     |     |        | add_ln23_25 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U217                                    | 4   |        | mul_ln23_26 | mul | dsp    | 2       |
+|         add_ln23_26_fu_2467_p2                                     |     |        | add_ln23_26 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U218                                    | 4   |        | mul_ln23_27 | mul | dsp    | 2       |
+|         add_ln23_27_fu_2490_p2                                     |     |        | add_ln23_27 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U219                                    | 4   |        | mul_ln23_28 | mul | dsp    | 2       |
+|         add_ln23_28_fu_2513_p2                                     |     |        | add_ln23_28 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U220                                    | 4   |        | mul_ln23_29 | mul | dsp    | 2       |
+|         add_ln23_29_fu_2536_p2                                     |     |        | add_ln23_29 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U221                                    | 4   |        | mul_ln23_30 | mul | dsp    | 2       |
+|         add_ln23_30_fu_2559_p2                                     |     |        | add_ln23_30 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U222                                    | 4   |        | mul_ln23_31 | mul | dsp    | 2       |
+|         add_ln23_31_fu_2582_p2                                     |     |        | add_ln23_31 | add | fabric | 0       |
 |     + matMulTile_416                                               | 128 |        |             |     |        |         |
 |      + dataflow_in_loop_mat_mul_i_13220                            | 128 |        |             |     |        |         |
 |       + dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222      | 128 |        |             |     |        |         |
-|         k_7_fu_968_p2                                              |     |        | k_7         | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U549                                    | 4   |        | mul_ln25    | mul | dsp    | 2       |
-|         add_ln25_fu_1677_p2                                        |     |        | add_ln25    | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U550                                    | 4   |        | mul_ln25_1  | mul | dsp    | 2       |
-|         add_ln25_1_fu_1700_p2                                      |     |        | add_ln25_1  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U551                                    | 4   |        | mul_ln25_2  | mul | dsp    | 2       |
-|         add_ln25_2_fu_1723_p2                                      |     |        | add_ln25_2  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U552                                    | 4   |        | mul_ln25_3  | mul | dsp    | 2       |
-|         add_ln25_3_fu_1746_p2                                      |     |        | add_ln25_3  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U553                                    | 4   |        | mul_ln25_4  | mul | dsp    | 2       |
-|         add_ln25_4_fu_1769_p2                                      |     |        | add_ln25_4  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U554                                    | 4   |        | mul_ln25_5  | mul | dsp    | 2       |
-|         add_ln25_5_fu_1792_p2                                      |     |        | add_ln25_5  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U555                                    | 4   |        | mul_ln25_6  | mul | dsp    | 2       |
-|         add_ln25_6_fu_1815_p2                                      |     |        | add_ln25_6  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U556                                    | 4   |        | mul_ln25_7  | mul | dsp    | 2       |
-|         add_ln25_7_fu_1838_p2                                      |     |        | add_ln25_7  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U557                                    | 4   |        | mul_ln25_8  | mul | dsp    | 2       |
-|         add_ln25_8_fu_1861_p2                                      |     |        | add_ln25_8  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U558                                    | 4   |        | mul_ln25_9  | mul | dsp    | 2       |
-|         add_ln25_9_fu_1884_p2                                      |     |        | add_ln25_9  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U559                                    | 4   |        | mul_ln25_10 | mul | dsp    | 2       |
-|         add_ln25_10_fu_1907_p2                                     |     |        | add_ln25_10 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U560                                    | 4   |        | mul_ln25_11 | mul | dsp    | 2       |
-|         add_ln25_11_fu_1930_p2                                     |     |        | add_ln25_11 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U561                                    | 4   |        | mul_ln25_12 | mul | dsp    | 2       |
-|         add_ln25_12_fu_1953_p2                                     |     |        | add_ln25_12 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U562                                    | 4   |        | mul_ln25_13 | mul | dsp    | 2       |
-|         add_ln25_13_fu_1976_p2                                     |     |        | add_ln25_13 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U563                                    | 4   |        | mul_ln25_14 | mul | dsp    | 2       |
-|         add_ln25_14_fu_1999_p2                                     |     |        | add_ln25_14 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U564                                    | 4   |        | mul_ln25_15 | mul | dsp    | 2       |
-|         add_ln25_15_fu_2022_p2                                     |     |        | add_ln25_15 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U565                                    | 4   |        | mul_ln25_16 | mul | dsp    | 2       |
-|         add_ln25_16_fu_2045_p2                                     |     |        | add_ln25_16 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U566                                    | 4   |        | mul_ln25_17 | mul | dsp    | 2       |
-|         add_ln25_17_fu_2068_p2                                     |     |        | add_ln25_17 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U567                                    | 4   |        | mul_ln25_18 | mul | dsp    | 2       |
-|         add_ln25_18_fu_2091_p2                                     |     |        | add_ln25_18 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U568                                    | 4   |        | mul_ln25_19 | mul | dsp    | 2       |
-|         add_ln25_19_fu_2114_p2                                     |     |        | add_ln25_19 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U569                                    | 4   |        | mul_ln25_20 | mul | dsp    | 2       |
-|         add_ln25_20_fu_2137_p2                                     |     |        | add_ln25_20 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U570                                    | 4   |        | mul_ln25_21 | mul | dsp    | 2       |
-|         add_ln25_21_fu_2160_p2                                     |     |        | add_ln25_21 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U571                                    | 4   |        | mul_ln25_22 | mul | dsp    | 2       |
-|         add_ln25_22_fu_2183_p2                                     |     |        | add_ln25_22 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U572                                    | 4   |        | mul_ln25_23 | mul | dsp    | 2       |
-|         add_ln25_23_fu_2206_p2                                     |     |        | add_ln25_23 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U573                                    | 4   |        | mul_ln25_24 | mul | dsp    | 2       |
-|         add_ln25_24_fu_2229_p2                                     |     |        | add_ln25_24 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U574                                    | 4   |        | mul_ln25_25 | mul | dsp    | 2       |
-|         add_ln25_25_fu_2252_p2                                     |     |        | add_ln25_25 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U575                                    | 4   |        | mul_ln25_26 | mul | dsp    | 2       |
-|         add_ln25_26_fu_2275_p2                                     |     |        | add_ln25_26 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U576                                    | 4   |        | mul_ln25_27 | mul | dsp    | 2       |
-|         add_ln25_27_fu_2298_p2                                     |     |        | add_ln25_27 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U577                                    | 4   |        | mul_ln25_28 | mul | dsp    | 2       |
-|         add_ln25_28_fu_2321_p2                                     |     |        | add_ln25_28 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U578                                    | 4   |        | mul_ln25_29 | mul | dsp    | 2       |
-|         add_ln25_29_fu_2344_p2                                     |     |        | add_ln25_29 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U579                                    | 4   |        | mul_ln25_30 | mul | dsp    | 2       |
-|         add_ln25_30_fu_2367_p2                                     |     |        | add_ln25_30 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U580                                    | 4   |        | mul_ln25_31 | mul | dsp    | 2       |
-|         add_ln25_31_fu_2390_p2                                     |     |        | add_ln25_31 | add | fabric | 0       |
+|         add_ln16_fu_1157_p2                                        |     |        | add_ln16    | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U624                                    | 4   |        | mul_ln23    | mul | dsp    | 2       |
+|         add_ln23_fu_1869_p2                                        |     |        | add_ln23    | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U625                                    | 4   |        | mul_ln23_1  | mul | dsp    | 2       |
+|         add_ln23_1_fu_1892_p2                                      |     |        | add_ln23_1  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U626                                    | 4   |        | mul_ln23_2  | mul | dsp    | 2       |
+|         add_ln23_2_fu_1915_p2                                      |     |        | add_ln23_2  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U627                                    | 4   |        | mul_ln23_3  | mul | dsp    | 2       |
+|         add_ln23_3_fu_1938_p2                                      |     |        | add_ln23_3  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U628                                    | 4   |        | mul_ln23_4  | mul | dsp    | 2       |
+|         add_ln23_4_fu_1961_p2                                      |     |        | add_ln23_4  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U629                                    | 4   |        | mul_ln23_5  | mul | dsp    | 2       |
+|         add_ln23_5_fu_1984_p2                                      |     |        | add_ln23_5  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U630                                    | 4   |        | mul_ln23_6  | mul | dsp    | 2       |
+|         add_ln23_6_fu_2007_p2                                      |     |        | add_ln23_6  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U631                                    | 4   |        | mul_ln23_7  | mul | dsp    | 2       |
+|         add_ln23_7_fu_2030_p2                                      |     |        | add_ln23_7  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U632                                    | 4   |        | mul_ln23_8  | mul | dsp    | 2       |
+|         add_ln23_8_fu_2053_p2                                      |     |        | add_ln23_8  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U633                                    | 4   |        | mul_ln23_9  | mul | dsp    | 2       |
+|         add_ln23_9_fu_2076_p2                                      |     |        | add_ln23_9  | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U634                                    | 4   |        | mul_ln23_10 | mul | dsp    | 2       |
+|         add_ln23_10_fu_2099_p2                                     |     |        | add_ln23_10 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U635                                    | 4   |        | mul_ln23_11 | mul | dsp    | 2       |
+|         add_ln23_11_fu_2122_p2                                     |     |        | add_ln23_11 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U636                                    | 4   |        | mul_ln23_12 | mul | dsp    | 2       |
+|         add_ln23_12_fu_2145_p2                                     |     |        | add_ln23_12 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U637                                    | 4   |        | mul_ln23_13 | mul | dsp    | 2       |
+|         add_ln23_13_fu_2168_p2                                     |     |        | add_ln23_13 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U638                                    | 4   |        | mul_ln23_14 | mul | dsp    | 2       |
+|         add_ln23_14_fu_2191_p2                                     |     |        | add_ln23_14 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U639                                    | 4   |        | mul_ln23_15 | mul | dsp    | 2       |
+|         add_ln23_15_fu_2214_p2                                     |     |        | add_ln23_15 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U640                                    | 4   |        | mul_ln23_16 | mul | dsp    | 2       |
+|         add_ln23_16_fu_2237_p2                                     |     |        | add_ln23_16 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U641                                    | 4   |        | mul_ln23_17 | mul | dsp    | 2       |
+|         add_ln23_17_fu_2260_p2                                     |     |        | add_ln23_17 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U642                                    | 4   |        | mul_ln23_18 | mul | dsp    | 2       |
+|         add_ln23_18_fu_2283_p2                                     |     |        | add_ln23_18 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U643                                    | 4   |        | mul_ln23_19 | mul | dsp    | 2       |
+|         add_ln23_19_fu_2306_p2                                     |     |        | add_ln23_19 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U644                                    | 4   |        | mul_ln23_20 | mul | dsp    | 2       |
+|         add_ln23_20_fu_2329_p2                                     |     |        | add_ln23_20 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U645                                    | 4   |        | mul_ln23_21 | mul | dsp    | 2       |
+|         add_ln23_21_fu_2352_p2                                     |     |        | add_ln23_21 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U646                                    | 4   |        | mul_ln23_22 | mul | dsp    | 2       |
+|         add_ln23_22_fu_2375_p2                                     |     |        | add_ln23_22 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U647                                    | 4   |        | mul_ln23_23 | mul | dsp    | 2       |
+|         add_ln23_23_fu_2398_p2                                     |     |        | add_ln23_23 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U648                                    | 4   |        | mul_ln23_24 | mul | dsp    | 2       |
+|         add_ln23_24_fu_2421_p2                                     |     |        | add_ln23_24 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U649                                    | 4   |        | mul_ln23_25 | mul | dsp    | 2       |
+|         add_ln23_25_fu_2444_p2                                     |     |        | add_ln23_25 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U650                                    | 4   |        | mul_ln23_26 | mul | dsp    | 2       |
+|         add_ln23_26_fu_2467_p2                                     |     |        | add_ln23_26 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U651                                    | 4   |        | mul_ln23_27 | mul | dsp    | 2       |
+|         add_ln23_27_fu_2490_p2                                     |     |        | add_ln23_27 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U652                                    | 4   |        | mul_ln23_28 | mul | dsp    | 2       |
+|         add_ln23_28_fu_2513_p2                                     |     |        | add_ln23_28 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U653                                    | 4   |        | mul_ln23_29 | mul | dsp    | 2       |
+|         add_ln23_29_fu_2536_p2                                     |     |        | add_ln23_29 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U654                                    | 4   |        | mul_ln23_30 | mul | dsp    | 2       |
+|         add_ln23_30_fu_2559_p2                                     |     |        | add_ln23_30 | add | fabric | 0       |
+|         mul_32s_32s_56_3_1_U655                                    | 4   |        | mul_ln23_31 | mul | dsp    | 2       |
+|         add_ln23_31_fu_2582_p2                                     |     |        | add_ln23_31 | add | fabric | 0       |
 |    + loader_C_tiles9                                               | 0   |        |             |     |        |         |
 |     + loader_C_tile17                                              | 0   |        |             |     |        |         |
 |       add_ln39_1_fu_507_p2                                         |     |        | add_ln39_1  | add | fabric | 0       |
@@ -563,6 +563,36 @@
 |     A_TILE_1_U                          | ram_1wnr channel | pipo        | 1    |      |        | A_TILE_1            | bram   | 1       | 32, 128, 2       |
 |     A_TILE_U                            | ram_1wnr channel | pipo        | 1    |      |        | A_TILE              | bram   | 1       | 32, 128, 2       |
 |     tileA_c_U                           | fifo channel     | scalar prop |      |      |        | tileA_c             | memory | 0       | 1, 5, 1          |
+|     A_streams_31_U                      | fifo channel     | stream      |      |      |        | A_streams_31        | memory | 0       | 32, 2, 1         |
+|     A_streams_30_U                      | fifo channel     | stream      |      |      |        | A_streams_30        | memory | 0       | 32, 2, 1         |
+|     A_streams_29_U                      | fifo channel     | stream      |      |      |        | A_streams_29        | memory | 0       | 32, 2, 1         |
+|     A_streams_28_U                      | fifo channel     | stream      |      |      |        | A_streams_28        | memory | 0       | 32, 2, 1         |
+|     A_streams_27_U                      | fifo channel     | stream      |      |      |        | A_streams_27        | memory | 0       | 32, 2, 1         |
+|     A_streams_26_U                      | fifo channel     | stream      |      |      |        | A_streams_26        | memory | 0       | 32, 2, 1         |
+|     A_streams_25_U                      | fifo channel     | stream      |      |      |        | A_streams_25        | memory | 0       | 32, 2, 1         |
+|     A_streams_24_U                      | fifo channel     | stream      |      |      |        | A_streams_24        | memory | 0       | 32, 2, 1         |
+|     A_streams_23_U                      | fifo channel     | stream      |      |      |        | A_streams_23        | memory | 0       | 32, 2, 1         |
+|     A_streams_22_U                      | fifo channel     | stream      |      |      |        | A_streams_22        | memory | 0       | 32, 2, 1         |
+|     A_streams_21_U                      | fifo channel     | stream      |      |      |        | A_streams_21        | memory | 0       | 32, 2, 1         |
+|     A_streams_20_U                      | fifo channel     | stream      |      |      |        | A_streams_20        | memory | 0       | 32, 2, 1         |
+|     A_streams_19_U                      | fifo channel     | stream      |      |      |        | A_streams_19        | memory | 0       | 32, 2, 1         |
+|     A_streams_18_U                      | fifo channel     | stream      |      |      |        | A_streams_18        | memory | 0       | 32, 2, 1         |
+|     A_streams_17_U                      | fifo channel     | stream      |      |      |        | A_streams_17        | memory | 0       | 32, 2, 1         |
+|     A_streams_16_U                      | fifo channel     | stream      |      |      |        | A_streams_16        | memory | 0       | 32, 2, 1         |
+|     A_streams_15_U                      | fifo channel     | stream      |      |      |        | A_streams_15        | memory | 0       | 32, 2, 1         |
+|     A_streams_14_U                      | fifo channel     | stream      |      |      |        | A_streams_14        | memory | 0       | 32, 2, 1         |
+|     A_streams_13_U                      | fifo channel     | stream      |      |      |        | A_streams_13        | memory | 0       | 32, 2, 1         |
+|     A_streams_12_U                      | fifo channel     | stream      |      |      |        | A_streams_12        | memory | 0       | 32, 2, 1         |
+|     A_streams_11_U                      | fifo channel     | stream      |      |      |        | A_streams_11        | memory | 0       | 32, 2, 1         |
+|     A_streams_10_U                      | fifo channel     | stream      |      |      |        | A_streams_10        | memory | 0       | 32, 2, 1         |
+|     A_streams_9_U                       | fifo channel     | stream      |      |      |        | A_streams_9         | memory | 0       | 32, 2, 1         |
+|     A_streams_8_U                       | fifo channel     | stream      |      |      |        | A_streams_8         | memory | 0       | 32, 2, 1         |
+|     A_streams_7_U                       | fifo channel     | stream      |      |      |        | A_streams_7         | memory | 0       | 32, 2, 1         |
+|     A_streams_6_U                       | fifo channel     | stream      |      |      |        | A_streams_6         | memory | 0       | 32, 2, 1         |
+|     A_streams_5_U                       | fifo channel     | stream      |      |      |        | A_streams_5         | memory | 0       | 32, 2, 1         |
+|     A_streams_4_U                       | fifo channel     | stream      |      |      |        | A_streams_4         | memory | 0       | 32, 2, 1         |
+|     A_streams_3_U                       | fifo channel     | stream      |      |      |        | A_streams_3         | memory | 0       | 32, 2, 1         |
+|     A_streams_2_U                       | fifo channel     | stream      |      |      |        | A_streams_2         | memory | 0       | 32, 2, 1         |
 |     A_streams_1_U                       | fifo channel     | stream      |      |      |        | A_streams_1         | memory | 0       | 32, 2, 1         |
 |     A_streams_U                         | fifo channel     | stream      |      |      |        | A_streams           | memory | 0       | 32, 2, 1         |
 |     B_TILES_1_U                         | ram_1wnr channel | pipo        | 32   |      |        | B_TILES_1           | bram   | 1       | 32, 512, 2       |
@@ -837,17 +867,17 @@
 == Pragma Report
 ================================================================
 * Pragmas with Warnings
-+--------------+---------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Type         | Options                               | Location                                          | Messages                                                                                                                                                                           |
-+--------------+---------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| dataflow     |                                       | source/load_tiles.hpp:27 in loadtilesbfromdram    | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                       | source/load_tiles.hpp:46 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                       | source/loader.hpp:50 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                       | source/loader.hpp:59 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                       | source/usefulFunctions.hpp:11 in matmultile       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| bind_storage | variable=psum type=RAM_1WNR impl=BRAM | source/usefulFunctions.hpp:14 in matmultile, psum | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
-| dataflow     |                                       | source/usefulFunctions.hpp:47 in matmultiles      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-+--------------+---------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------+-------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type         | Options                             | Location                                          | Messages                                                                                                                                                                           |
++--------------+-------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow     |                                     | source/load_tiles.hpp:27 in loadtilesbfromdram    | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                     | source/load_tiles.hpp:46 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                     | source/loader.hpp:50 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                     | source/loader.hpp:59 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                     | source/usefulFunctions.hpp:11 in matmultile       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| bind_storage | variable=psum type=RAM_1P impl=BRAM | source/usefulFunctions.hpp:14 in matmultile, psum | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| dataflow     |                                     | source/usefulFunctions.hpp:45 in matmultiles      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++--------------+-------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
 +-----------------+--------------------------------------------+---------------------------------------------------+
@@ -871,16 +901,17 @@
 | stream          | variable=B_TILES type=pipo depth=2         | source/gemm.cpp:30 in gemm2, B_TILES              |
 | dataflow        |                                            | source/gemm.cpp:36 in gemm2                       |
 | array_partition | variable=A_streams dim=1 complete          | source/gemm.cpp:38 in gemm2, A_streams            |
-| stream          | variable=A_streams type=pipo depth=2       | source/gemm.cpp:39 in gemm2, A_streams            |
-| array_partition | variable=B_streams dim=1 type=complete     | source/gemm.cpp:41 in gemm2, B_streams            |
-| array_partition | variable=B_streams dim=2 complete          | source/gemm.cpp:42 in gemm2, B_streams            |
-| stream          | variable=B_streams type=pipo depth=2       | source/gemm.cpp:43 in gemm2, B_streams            |
-| array_partition | variable=C_streams dim=2 type=complete     | source/gemm.cpp:45 in gemm2, C_streams            |
-| array_partition | variable=C_streams dim=1 type=complete     | source/gemm.cpp:46 in gemm2, C_streams            |
-| stream          | variable=C_streams type=pipo depth=2       | source/gemm.cpp:47 in gemm2, C_streams            |
-| array_partition | variable=C_TILES dim=1 type=complete       | source/gemm.cpp:49 in gemm2, C_TILES              |
-| bind_storage    | variable=C_TILES type=RAM_1WNR impl=BRAM   | source/gemm.cpp:50 in gemm2, C_TILES              |
-| stream          | variable=C_TILES type=pipo depth=2         | source/gemm.cpp:51 in gemm2, C_TILES              |
+| array_partition | variable=A_streams dim=2 complete          | source/gemm.cpp:39 in gemm2, A_streams            |
+| stream          | variable=A_streams type=pipo depth=2       | source/gemm.cpp:40 in gemm2, A_streams            |
+| array_partition | variable=B_streams dim=1 type=complete     | source/gemm.cpp:42 in gemm2, B_streams            |
+| array_partition | variable=B_streams dim=2 complete          | source/gemm.cpp:43 in gemm2, B_streams            |
+| stream          | variable=B_streams type=pipo depth=2       | source/gemm.cpp:44 in gemm2, B_streams            |
+| array_partition | variable=C_streams dim=2 type=complete     | source/gemm.cpp:46 in gemm2, C_streams            |
+| array_partition | variable=C_streams dim=1 type=complete     | source/gemm.cpp:47 in gemm2, C_streams            |
+| stream          | variable=C_streams type=pipo depth=2       | source/gemm.cpp:48 in gemm2, C_streams            |
+| array_partition | variable=C_TILES dim=1 type=complete       | source/gemm.cpp:50 in gemm2, C_TILES              |
+| bind_storage    | variable=C_TILES type=RAM_1WNR impl=BRAM   | source/gemm.cpp:51 in gemm2, C_TILES              |
+| stream          | variable=C_TILES type=pipo depth=2         | source/gemm.cpp:52 in gemm2, C_TILES              |
 | inline          | off                                        | source/load_tiles.hpp:4 in loadtileafromdram      |
 | unroll          | factor=2                                   | source/load_tiles.hpp:8 in loadtileafromdram      |
 | pipeline        | II=1                                       | source/load_tiles.hpp:9 in loadtileafromdram      |
@@ -905,12 +936,11 @@
 | unroll          |                                            | source/loader.hpp:61 in loader_c_tiles            |
 | inline          | off                                        | source/usefulFunctions.hpp:8 in matmultile        |
 | array_partition | variable=psum type=complete dim=1          | source/usefulFunctions.hpp:13 in matmultile, psum |
-| pipeline        | II=1                                       | source/usefulFunctions.hpp:18 in matmultile       |
-| loop_flatten    |                                            | source/usefulFunctions.hpp:19 in matmultile       |
-| unroll          |                                            | source/usefulFunctions.hpp:23 in matmultile       |
-| unroll          |                                            | source/usefulFunctions.hpp:30 in matmultile       |
-| inline          | off                                        | source/usefulFunctions.hpp:46 in matmultiles      |
-| unroll          |                                            | source/usefulFunctions.hpp:49 in matmultiles      |
+| pipeline        | II=1                                       | source/usefulFunctions.hpp:17 in matmultile       |
+| unroll          |                                            | source/usefulFunctions.hpp:21 in matmultile       |
+| unroll          |                                            | source/usefulFunctions.hpp:28 in matmultile       |
+| inline          | off                                        | source/usefulFunctions.hpp:44 in matmultiles      |
+| unroll          |                                            | source/usefulFunctions.hpp:47 in matmultiles      |
 +-----------------+--------------------------------------------+---------------------------------------------------+
 
 

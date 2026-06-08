@@ -4,7 +4,7 @@
 // void matMulTile(const hls::stream<fm_t> &A_stream, const hls::stream<fm_t> &B_stream, hls::stream<fm_t> &C_stream);
 
 
-void loader_A_tiles(const fm_t A[I/NUM_OF_TILES][K], hls::stream<fm_t> A_streams[NUM_OF_TILES]){
+void loader_A_tiles(const fm_t A[I/NUM_OF_TILES][K], hls::stream<fm_t> A_streams[NUM_OF_TILES][K]){
     #pragma HLS INLINE off
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
@@ -13,7 +13,7 @@ void loader_A_tiles(const fm_t A[I/NUM_OF_TILES][K], hls::stream<fm_t> A_streams
             const fm_t temp = A[i][k];
             for(int t=0; t<NUM_OF_TILES; t++){
                 #pragma HLS UNROLL
-                A_streams[t].write(temp);
+                A_streams[t][k].write(temp);
             }
 		}
 	}

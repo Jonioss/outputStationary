@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_mat_mul_i_13220'
 ================================================================
-* Date:           Tue Jun  2 18:37:15 2026
+* Date:           Tue Jun  2 20:38:31 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
     |   min   |   max   |    min    |    max    | min | max |   Type   |
     +---------+---------+-----------+-----------+-----+-----+----------+
-    |       22|       22|  73.326 ns|  73.326 ns|   22|   22|  dataflow|
+    |       23|       23|  76.659 ns|  76.659 ns|   23|   23|  dataflow|
     +---------+---------+-----------+-----------+-----+-----+----------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                                          |                                                       |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
         |                         Instance                         |                         Module                        |   min   |   max   |    min    |    max    | min | max |   Type  |
         +----------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222_U0  |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222  |       21|       21|  69.993 ns|  69.993 ns|   21|   21|       no|
+        |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222_U0  |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222  |       22|       22|  73.326 ns|  73.326 ns|   22|   22|       no|
         |Block_newFuncRoot_proc_proc86_U0                          |Block_newFuncRoot_proc_proc86                          |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         |Block_newFuncRoot_proc_proc88_U0                          |Block_newFuncRoot_proc_proc88                          |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         |Block_newFuncRoot_proc_proc90_U0                          |Block_newFuncRoot_proc_proc90                          |        0|        0|       0 ns|       0 ns|    0|    0|       no|
@@ -120,12 +120,12 @@
 |DSP              |        -|     -|        -|       -|    -|
 |Expression       |        -|     -|        0|     136|    -|
 |FIFO             |        0|     -|     6592|    4224|    -|
-|Instance         |        -|   128|     7542|    7653|    -|
+|Instance         |        -|   128|     9113|    8069|    -|
 |Memory           |        -|     -|        -|       -|    -|
 |Multiplexer      |        -|     -|        -|      64|    -|
 |Register         |        -|     -|       32|       -|    -|
 +-----------------+---------+------+---------+--------+-----+
-|Total            |        0|   128|    14166|   12077|    0|
+|Total            |        0|   128|    15737|   12493|    0|
 +-----------------+---------+------+---------+--------+-----+
 |Available        |     1934|  1968|  1799680|  899840|  463|
 +-----------------+---------+------+---------+--------+-----+
@@ -201,9 +201,9 @@
     |Block_newFuncRoot_proc_proc97_U0                          |Block_newFuncRoot_proc_proc97                          |        0|    0|     2|     6|    0|
     |Block_newFuncRoot_proc_proc98_U0                          |Block_newFuncRoot_proc_proc98                          |        0|    0|    34|    36|    0|
     |Block_newFuncRoot_proc_proc99_U0                          |Block_newFuncRoot_proc_proc99                          |        0|    0|     2|     6|    0|
-    |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222_U0  |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222  |        0|  128|  6390|  6309|    0|
+    |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222_U0  |dataflow_in_loop_mat_mul_i_132_Loop_mat_mul_k_proc222  |        0|  128|  7961|  6725|    0|
     +----------------------------------------------------------+-------------------------------------------------------+---------+-----+------+------+-----+
-    |Total                                                     |                                                       |        0|  128|  7542|  7653|    0|
+    |Total                                                     |                                                       |        0|  128|  9113|  8069|    0|
     +----------------------------------------------------------+-------------------------------------------------------+---------+-----+------+------+-----+
 
     * DSP: 
@@ -449,9 +449,54 @@
 +------------------------+-----+-----+------------+----------------------------------+--------------+
 |        RTL Ports       | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
 +------------------------+-----+-----+------------+----------------------------------+--------------+
-|A_streams_1_dout        |   in|   32|     ap_fifo|                       A_streams_1|       pointer|
-|A_streams_1_empty_n     |   in|    1|     ap_fifo|                       A_streams_1|       pointer|
-|A_streams_1_read        |  out|    1|     ap_fifo|                       A_streams_1|       pointer|
+|A_streams_1_14_dout     |   in|   32|     ap_fifo|                    A_streams_1_14|       pointer|
+|A_streams_1_14_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_14|       pointer|
+|A_streams_1_14_read     |  out|    1|     ap_fifo|                    A_streams_1_14|       pointer|
+|A_streams_1_13_dout     |   in|   32|     ap_fifo|                    A_streams_1_13|       pointer|
+|A_streams_1_13_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_13|       pointer|
+|A_streams_1_13_read     |  out|    1|     ap_fifo|                    A_streams_1_13|       pointer|
+|A_streams_1_12_dout     |   in|   32|     ap_fifo|                    A_streams_1_12|       pointer|
+|A_streams_1_12_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_12|       pointer|
+|A_streams_1_12_read     |  out|    1|     ap_fifo|                    A_streams_1_12|       pointer|
+|A_streams_1_11_dout     |   in|   32|     ap_fifo|                    A_streams_1_11|       pointer|
+|A_streams_1_11_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_11|       pointer|
+|A_streams_1_11_read     |  out|    1|     ap_fifo|                    A_streams_1_11|       pointer|
+|A_streams_1_10_dout     |   in|   32|     ap_fifo|                    A_streams_1_10|       pointer|
+|A_streams_1_10_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_10|       pointer|
+|A_streams_1_10_read     |  out|    1|     ap_fifo|                    A_streams_1_10|       pointer|
+|A_streams_1_9_dout      |   in|   32|     ap_fifo|                     A_streams_1_9|       pointer|
+|A_streams_1_9_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_9|       pointer|
+|A_streams_1_9_read      |  out|    1|     ap_fifo|                     A_streams_1_9|       pointer|
+|A_streams_1_8_dout      |   in|   32|     ap_fifo|                     A_streams_1_8|       pointer|
+|A_streams_1_8_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_8|       pointer|
+|A_streams_1_8_read      |  out|    1|     ap_fifo|                     A_streams_1_8|       pointer|
+|A_streams_1_7_dout      |   in|   32|     ap_fifo|                     A_streams_1_7|       pointer|
+|A_streams_1_7_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_7|       pointer|
+|A_streams_1_7_read      |  out|    1|     ap_fifo|                     A_streams_1_7|       pointer|
+|A_streams_1_6_dout      |   in|   32|     ap_fifo|                     A_streams_1_6|       pointer|
+|A_streams_1_6_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_6|       pointer|
+|A_streams_1_6_read      |  out|    1|     ap_fifo|                     A_streams_1_6|       pointer|
+|A_streams_1_5_dout      |   in|   32|     ap_fifo|                     A_streams_1_5|       pointer|
+|A_streams_1_5_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_5|       pointer|
+|A_streams_1_5_read      |  out|    1|     ap_fifo|                     A_streams_1_5|       pointer|
+|A_streams_1_4_dout      |   in|   32|     ap_fifo|                     A_streams_1_4|       pointer|
+|A_streams_1_4_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_4|       pointer|
+|A_streams_1_4_read      |  out|    1|     ap_fifo|                     A_streams_1_4|       pointer|
+|A_streams_1_3_dout      |   in|   32|     ap_fifo|                     A_streams_1_3|       pointer|
+|A_streams_1_3_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_3|       pointer|
+|A_streams_1_3_read      |  out|    1|     ap_fifo|                     A_streams_1_3|       pointer|
+|A_streams_1_2_dout      |   in|   32|     ap_fifo|                     A_streams_1_2|       pointer|
+|A_streams_1_2_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_2|       pointer|
+|A_streams_1_2_read      |  out|    1|     ap_fifo|                     A_streams_1_2|       pointer|
+|A_streams_1_1_dout      |   in|   32|     ap_fifo|                     A_streams_1_1|       pointer|
+|A_streams_1_1_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_1|       pointer|
+|A_streams_1_1_read      |  out|    1|     ap_fifo|                     A_streams_1_1|       pointer|
+|A_streams_1_0_dout      |   in|   32|     ap_fifo|                     A_streams_1_0|       pointer|
+|A_streams_1_0_empty_n   |   in|    1|     ap_fifo|                     A_streams_1_0|       pointer|
+|A_streams_1_0_read      |  out|    1|     ap_fifo|                     A_streams_1_0|       pointer|
+|A_streams_1_15_dout     |   in|   32|     ap_fifo|                    A_streams_1_15|       pointer|
+|A_streams_1_15_empty_n  |   in|    1|     ap_fifo|                    A_streams_1_15|       pointer|
+|A_streams_1_15_read     |  out|    1|     ap_fifo|                    A_streams_1_15|       pointer|
 |B_streams_1_0_dout      |   in|   32|     ap_fifo|                     B_streams_1_0|       pointer|
 |B_streams_1_0_empty_n   |   in|    1|     ap_fifo|                     B_streams_1_0|       pointer|
 |B_streams_1_0_read      |  out|    1|     ap_fifo|                     B_streams_1_0|       pointer|

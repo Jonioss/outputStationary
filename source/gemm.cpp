@@ -34,17 +34,16 @@ void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
 	loop_for_tile_a:
 	for(int tileA = 0; tileA < NUM_OF_TILES; tileA++) {
 		#pragma HLS DATAFLOW
-		hls::stream<fm_t> A_streams[NUM_OF_TILES][K];
-		#pragma HLS ARRAY_PARTITION variable=A_streams dim=1 complete
-		#pragma HLS ARRAY_PARTITION variable=A_streams dim=2 complete
+		hls::stream<fm_t> A_streams[NUM_OF_TILES];
+		//#pragma HLS ARRAY_PARTITION variable=A_streams dim=1 complete
 		#pragma HLS STREAM variable=A_streams type=pipo depth=2
 		hls::stream<fm_t> B_streams[NUM_OF_TILES][J/NUM_OF_TILES];
-		#pragma HLS ARRAY_PARTITION variable=B_streams dim=1 type=complete
-		#pragma HLS ARRAY_PARTITION variable=B_streams dim=2 complete
-		#pragma HLS STREAM variable=B_streams type=pipo depth=2
+		//#pragma HLS ARRAY_PARTITION variable=B_streams dim=1 type=complete
+		//#pragma HLS ARRAY_PARTITION variable=B_streams dim=2 complete
+		#pragma HLS stream variable=B_streams type=pipo depth=2
 		hls::stream<fm_t> C_streams[NUM_OF_TILES][J/NUM_OF_TILES];
-		#pragma HLS ARRAY_PARTITION variable=C_streams dim=2 type=complete
-		#pragma HLS ARRAY_PARTITION variable=C_streams dim=1 type=complete
+		//#pragma HLS ARRAY_PARTITION variable=C_streams dim=2 type=complete
+		//#pragma HLS ARRAY_PARTITION variable=C_streams dim=1 type=complete
 		#pragma HLS STREAM variable=C_streams type=pipo depth=2
 		fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 		#pragma HLS ARRAY_PARTITION variable=C_TILES dim=1 type=complete

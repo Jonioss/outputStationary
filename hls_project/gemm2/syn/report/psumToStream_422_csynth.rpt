@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'psumToStream_522'
+== Vitis HLS Report for 'psumToStream_422'
 ================================================================
-* Date:           Thu Jun 11 13:51:52 2026
+* Date:           Thu Jun 11 18:08:34 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -145,13 +145,13 @@
 +-------------------------------+-----+-----+------------+------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
 +-------------------------------+-----+-----+------------+------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream.522|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream.422|  return value|
 |p_read                         |   in|   32|     ap_none|            p_read|        scalar|
 |p_read1                        |   in|   32|     ap_none|           p_read1|        scalar|
 |p_read2                        |   in|   32|     ap_none|           p_read2|        scalar|

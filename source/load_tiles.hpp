@@ -1,13 +1,16 @@
 #include "constants.h"
 
-void loadTileAFromDRAM(const fm_t A_DRAM[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
+void loadTileAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
     #pragma HLS INLINE off
 	load_tile_A:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
-		for(int k = 0; k < K; k++) {
-			#pragma HLS UNROLL factor=NUM_OF_TILES
+		for(int k = 0; k < K/16; k++) {
 			#pragma HLS PIPELINE II=1
-			A_TILE[i][k] = A_DRAM[i+tileA*I/NUM_OF_TILES][k];
+			const hls::vector<fm_t, 16> a_vec = A_DRAM[i + tileA*I/NUM_OF_TILES][k];
+			for(int v = 0; v < 16; v++) {
+				#pragma HLS UNROLL
+				A_TILE[i][k*16 + v] = a_vec[v];
+			}
 		}
 	}
 }
@@ -17,7 +20,7 @@ void loadTileBFromDRAM(const fm_t B_DRAM[K][J/NUM_OF_TILES], fm_t B_TILE[K][J/NU
 	load_tile_B:
 	for(int k = 0; k < K; k++) {
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-			#pragma HLS UNROLL factor=NUM_OF_TILES
+			#pragma HLS UNROLL
 			B_TILE[k][j] = B_DRAM[k][j];
 		}
 	}
@@ -34,9 +37,12 @@ void loadTilesBFromDRAM(const fm_t B_DRAM[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t
 
 void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
+	#pragma HLS DATAFLOW
 	store_C_tile:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
+		#pragma HLS PIPELINE II=1
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
+			#pragma HLS UNROLL
 			C_DRAM[i][j] = C_TILE[i][j];
 		}
 	}

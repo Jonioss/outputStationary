@@ -20,6 +20,7 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 	fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=1 type=complete
 	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=2 type=complete
+	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=4 type=complete
 	#pragma HLS bind_storage variable=C_BUF type=RAM_1WNR impl=BRAM
 	fm_t A_TILE[I/NUM_OF_TILES][K];
 	#pragma HLS bind_storage variable=A_TILE type=RAM_1WNR impl=BRAM
@@ -31,7 +32,8 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 	#pragma HLS stream variable=B_TILES type=pipo depth=2
 
 //#pragma HLS INLINE
-	loadInputsFromDRAM(A_DRAM, B_DRAM, A_BUF, B_BUF);
+	//loadInputsFromDRAM(A_DRAM, B_DRAM, A_BUF, B_BUF);
+	loadBFromDRAM(B_DRAM, B_BUF);
 	loop_for_tile_a:
 	for(int tileA = 0; tileA < NUM_OF_TILES; tileA++) {
 		#pragma HLS DATAFLOW
@@ -48,9 +50,10 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 		#pragma HLS STREAM variable=C_streams type=pipo depth=2
 		fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 		#pragma HLS ARRAY_PARTITION variable=C_TILES dim=1 type=complete
+		#pragma HLS ARRAY_PARTITION variable=C_TILES dim=3 type=complete
 		#pragma HLS bind_storage variable=C_TILES type=RAM_1WNR impl=BRAM
 		#pragma HLS stream variable=C_TILES type=pipo depth=2
-		loadTileAFromDRAM(A_BUF, A_TILE, tileA);
+		loadTileAFromDRAM(A_DRAM, A_TILE, tileA);
 		loader_A_tiles(A_TILE, A_streams);
 		loadTilesBFromDRAM(B_BUF, B_TILES);
 		loader_B_tiles(B_TILES, B_streams);

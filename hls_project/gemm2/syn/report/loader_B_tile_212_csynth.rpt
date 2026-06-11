@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_B_tile_312'
+== Vitis HLS Report for 'loader_B_tile_212'
 ================================================================
-* Date:           Thu Jun 11 13:51:50 2026
+* Date:           Thu Jun 11 18:08:32 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -225,13 +225,13 @@
 +-------------------------------+-----+-----+------------+-------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
 +-------------------------------+-----+-----+------------+-------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile.312|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile.212|  return value|
 |B_address0                     |  out|    9|   ap_memory|                  B|         array|
 |B_ce0                          |  out|    1|   ap_memory|                  B|         array|
 |B_q0                           |   in|   32|   ap_memory|                  B|         array|

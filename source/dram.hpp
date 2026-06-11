@@ -4,7 +4,6 @@ void loadInputsFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::v
 	#pragma HLS INLINE off
 	load_A:
 	for(int i = 0; i < I; i++) {
-		//#pragma HLS DATAFLOW
 		for(int k = 0; k < K/16; k++) {
 			#pragma HLS PIPELINE II=1
 			const hls::vector<fm_t, 16> a_vec = A_DRAM[i][k];

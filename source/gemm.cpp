@@ -15,6 +15,7 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 	#pragma HLS bind_storage variable=A_BUF type=RAM_1WNR impl=BRAM
 	fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=1 type=complete
+	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=2 type=complete
 	#pragma HLS bind_storage variable=B_BUF type=RAM_1WNR impl=BRAM
 	fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=1 type=complete

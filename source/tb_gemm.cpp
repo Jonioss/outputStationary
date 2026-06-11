@@ -15,6 +15,10 @@ fm_t A[I][K];
 fm_t B[K][J];
 fm_t C[I][J] = {0};
 
+hls::vector<fm_t, 16> A_vec[I][K/16];
+hls::vector<fm_t, 16> B_vec[K/16][J];
+hls::vector<fm_t, 16> C_vec[I][J/16];
+
 void generateMats() {
 
 	//Generate A and cast to fm_t
@@ -45,13 +49,49 @@ void generateMats() {
 	}
 }
 
+void initVectors() {
+	for(int i = 0; i < I; i++) {
+		for(int k = 0; k < K/16; k++) {
+			for(int v = 0; v < 16; v++) {
+				A_vec[i][k][v] = A[i][k*16 + v];
+			}
+		}
+	}
+	for(int k = 0; k < K/16; k++) {
+		for(int j = 0; j < J; j++) {
+			for(int v = 0; v < 16; v++) {
+				B_vec[k][j][v] = B[k*16+v][j];
+			}
+		}
+	}
+	for(int i = 0; i < I; i++) {
+		for(int j = 0; j < J/16; j++) {
+			for(int v = 0; v < 16; v++) {
+				C_vec[i][j][v] = (fm_t) 0.0;
+			}
+		}
+	}
+}
+
 int main() {
 	long double MSE = 0.0;
 
 	srand(0);
 
 	generateMats();
-	gemm2(A, B, C);
+	initVectors();
+
+	// Calculate GeMM
+	gemm2(A_vec, B_vec, C_vec);
+
+	// Unpack results
+	for(int i = 0; i < I; i++) {
+		for(int j = 0; j < J/16; j++) {
+			for(int v = 0; v < 16; v++) {
+				C[i][j*16 + v] = C_vec[i][j][v];
+			}
+		}
+	}
 
 	for(int i = 0; i < I; i++) {
 		for(int j = 0; j < J; j++) {

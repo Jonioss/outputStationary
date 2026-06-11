@@ -1,30 +1,47 @@
 #include "constants.h"
 
-void loadInputsFromDRAM(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t A_BUF[I][K], fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES]){
+void loadInputsFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 16> B_DRAM[K/16][J], fm_t A_BUF[I][K], fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES]){
 	#pragma HLS INLINE off
 	load_A:
 	for(int i = 0; i < I; i++) {
-		for(int k = 0; k < K; k++) {
-			A_BUF[i][k] = A_DRAM[i][k];
+		//#pragma HLS DATAFLOW
+		for(int k = 0; k < K/16; k++) {
+			#pragma HLS PIPELINE II=1
+			const hls::vector<fm_t, 16> a_vec = A_DRAM[i][k];
+			for(int v = 0; v < 16; v++) {
+				#pragma HLS UNROLL
+				A_BUF[i][k*16 + v] = a_vec[v];
+			}
 		}
 	}
 	load_B:
-	for(int k = 0; k < K; k++) {
+	for(int k = 0; k < K/16; k++) {
 		for(int t=0; t<NUM_OF_TILES; t++){
 			for(int j = 0; j < J/NUM_OF_TILES; j++) {
-				B_BUF[t][k][j] = B_DRAM[k][t*(J/NUM_OF_TILES) + j];
+				#pragma HLS PIPELINE II=1
+				const hls::vector<fm_t, 16> b_vec = B_DRAM[k][j + t*J/NUM_OF_TILES];
+				for(int v = 0; v < 16; v++) {
+					#pragma HLS UNROLL
+					B_BUF[t][k*16+v][j] = b_vec[v];
+				}
 			}
 		}
 	}
 }
-void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I][J]) {
+void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], hls::vector<fm_t, 16> C_DRAM[I][J/16]) {
 	#pragma HLS INLINE off
 	store_C:
 	for(int ti=0; ti<NUM_OF_TILES; ti++){
 		for(int ik=0; ik<I/NUM_OF_TILES; ik++){
 			for(int tj=0; tj<NUM_OF_TILES; tj++){
-				for(int jk=0; jk<J/NUM_OF_TILES; jk++){
-					C_DRAM[ti*(I/NUM_OF_TILES) + ik][tj*(J/NUM_OF_TILES) + jk] = C_BUF[ti][tj][ik][jk];
+				for(int jv = 0; jv < J/(NUM_OF_TILES*16); jv++) {
+					#pragma HLS PIPELINE II=1
+					hls::vector<fm_t, 16> c_vec;
+					for(int v = 0; v < 16; v++) {
+						#pragma HLS UNROLL
+						c_vec[v] = C_BUF[ti][tj][ik][jv*16 + v];
+					}
+					C_DRAM[ti*I/NUM_OF_TILES + ik][tj*J/(NUM_OF_TILES*16) + jv] = c_vec;
 				}
 			}
 		}

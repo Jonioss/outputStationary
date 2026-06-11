@@ -5,8 +5,8 @@ void loadTileAFromDRAM(const fm_t A_DRAM[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], 
 	load_tile_A:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
-#pragma HLS UNROLL factor=NUM_OF_TILES
-#pragma HLS PIPELINE II=1
+			#pragma HLS UNROLL factor=NUM_OF_TILES
+			#pragma HLS PIPELINE II=1
 			A_TILE[i][k] = A_DRAM[i+tileA*I/NUM_OF_TILES][k];
 		}
 	}
@@ -17,6 +17,7 @@ void loadTileBFromDRAM(const fm_t B_DRAM[K][J/NUM_OF_TILES], fm_t B_TILE[K][J/NU
 	load_tile_B:
 	for(int k = 0; k < K; k++) {
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
+			#pragma HLS UNROLL factor=NUM_OF_TILES
 			B_TILE[k][j] = B_DRAM[k][j];
 		}
 	}
@@ -49,3 +50,5 @@ void storeTilesToDRAM(const fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_
 		storeTileToDRAM(C_TILES[t], C_DRAM[t]);
 	}
 }
+
+//loadVectorsFromDRAM(hls::vector<fm_t, >)

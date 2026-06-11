@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'loadTileAFromDRAM26_Pipeline_load_tile_A_VITIS_LOOP_7_1'
 ================================================================
-* Date:           Tue Jun  9 12:48:28 2026
+* Date:           Thu Jun 11 13:33:10 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -89,7 +89,7 @@
     |add_ln6_1_fu_203_p2     |         +|   0|  0|   5|           5|           1|
     |add_ln6_fu_179_p2       |         +|   0|  0|   8|           8|           1|
     |add_ln7_fu_280_p2       |         +|   0|  0|   5|           5|           2|
-    |empty_49_fu_237_p2      |         +|   0|  0|   5|           5|           5|
+    |empty_41_fu_237_p2      |         +|   0|  0|   5|           5|           5|
     |icmp_ln6_fu_185_p2      |      icmp|   0|  0|   9|           8|           9|
     |or_ln7_fu_247_p2        |        or|   0|  0|   4|           4|           1|
     |select_ln6_1_fu_225_p3  |    select|   0|  0|   5|           1|           5|
@@ -124,7 +124,7 @@
     |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2           |  1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
-    |empty_49_reg_418                  |  5|   0|    5|          0|
+    |empty_41_reg_418                  |  5|   0|    5|          0|
     |empty_reg_413                     |  4|   0|    4|          0|
     |i_fu_68                           |  5|   0|    5|          0|
     |indvar_flatten_i_fu_72            |  8|   0|    8|          0|

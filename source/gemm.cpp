@@ -6,10 +6,10 @@
 
 using namespace std;
 
-void gemm2(const fm_t A_DRAM[I][K],const fm_t B_DRAM[K][J], fm_t C_DRAM[I][J]) {
+void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 16> B_DRAM[K/16][J], hls::vector<fm_t, 16> C_DRAM[I][J/16]) {
 
-#pragma HLS INTERFACE m_axi port=A_DRAM bundle=gmem0
-#pragma HLS INTERFACE m_axi port=B_DRAM bundle=gmem1
+	#pragma HLS INTERFACE m_axi offset=slave port=A_DRAM bundle=gmem0
+	#pragma HLS INTERFACE m_axi offset=slave port=B_DRAM bundle=gmem1
 
 	fm_t A_BUF[I][K];
 	#pragma HLS bind_storage variable=A_BUF type=RAM_1WNR impl=BRAM

@@ -36,6 +36,8 @@ hls_project/gemm2/sim/report/*
 
 vitis_hls.log
 
+vectors_test/*
+
 _x*
 build_dir*
 gemm_host.exe

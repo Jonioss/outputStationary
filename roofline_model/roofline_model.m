@@ -19,7 +19,7 @@ hold on;
 
 %% plot achieved performance - intensity point
 achieved_I = 4.57;
-achieved_P = 25.19;
+achieved_P = 65536.0/1710.0;
 plot(achieved_I, achieved_P, 'ro', 'MarkerSize', 8, 'DisplayName', 'Achieved');
 legend show;
 hold off;

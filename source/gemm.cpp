@@ -28,6 +28,8 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 	#pragma HLS stream variable=A_TILE type=pipo depth=2
 	fm_t B_TILES[NUM_OF_TILES][K][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=B_TILES dim=1 type=complete
+	#pragma HLS ARRAY_PARTITION variable=B_TILES dim=2 type=complete
+	#pragma HLS ARRAY_PARTITION variable=B_TILES dim=3 type=complete
 	#pragma HLS bind_storage variable=B_TILES type=RAM_1WNR impl=BRAM
 	#pragma HLS stream variable=B_TILES type=pipo depth=2
 

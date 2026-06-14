@@ -23,10 +23,9 @@ void loader_B_tile(const fm_t B[K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[
     #pragma HLS INLINE off
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
-            //#pragma HLS DATAFLOW
+            #pragma HLS PIPELINE II=1
+            #pragma HLS LOOP_FLATTEN
 			for(int j = 0; j < J/NUM_OF_TILES; j++) {
-                // #pragma HLS PIPELINE II=1
-                // #pragma HLS LOOP_FLATTEN
                 #pragma HLS UNROLL
                 B_streams[j].write(B[k][j]);
 			}

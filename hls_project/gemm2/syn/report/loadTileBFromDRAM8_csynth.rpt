@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadTileBFromDRAM9'
+== Vitis HLS Report for 'loadTileBFromDRAM8'
 ================================================================
-* Date:           Sun Jun 14 13:11:43 2026
+* Date:           Wed Jul  1 18:24:07 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -70,44 +70,44 @@
 
 + Detail: 
     * Instance: 
-    +----------------------------+-----------------------+---------+----+---+-----+-----+
-    |          Instance          |         Module        | BRAM_18K| DSP| FF| LUT | URAM|
-    +----------------------------+-----------------------+---------+----+---+-----+-----+
-    |sparsemux_33_4_32_1_1_U79   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U80   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U81   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U82   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U83   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U84   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U85   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U86   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U87   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U88   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U89   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U90   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U91   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U92   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U93   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U94   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U95   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U96   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U97   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U98   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U99   |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U100  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U101  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U102  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U103  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U104  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U105  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U106  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U107  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U108  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U109  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U110  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    +----------------------------+-----------------------+---------+----+---+-----+-----+
-    |Total                       |                       |        0|   0|  0| 5120|    0|
-    +----------------------------+-----------------------+---------+----+---+-----+-----+
+    +-----------------------------+-----------------------+---------+----+---+-----+-----+
+    |           Instance          |         Module        | BRAM_18K| DSP| FF| LUT | URAM|
+    +-----------------------------+-----------------------+---------+----+---+-----+-----+
+    |sparsemux_33_4_32_1_1_U1649  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1650  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1651  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1652  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1653  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1654  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1655  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1656  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1657  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1658  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1659  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1660  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1661  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1662  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1663  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1664  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1665  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1666  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1667  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1668  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1669  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1670  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1671  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1672  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1673  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1674  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1675  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1676  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1677  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1678  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1679  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U1680  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    +-----------------------------+-----------------------+---------+----+---+-----+-----+
+    |Total                        |                       |        0|   0|  0| 5120|    0|
+    +-----------------------------+-----------------------+---------+----+---+-----+-----+
 
     * DSP: 
     N/A
@@ -122,8 +122,8 @@
     +-----------------------+----------+----+---+----+------------+------------+
     |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------+----------+----+---+----+------------+------------+
-    |add_ln21_fu_16226_p2   |         +|   0|  0|   5|           5|           1|
-    |icmp_ln21_fu_16232_p2  |      icmp|   0|  0|   6|           5|           6|
+    |add_ln32_fu_16226_p2   |         +|   0|  0|   5|           5|           1|
+    |icmp_ln32_fu_16232_p2  |      icmp|   0|  0|   6|           5|           6|
     |ap_block_state1        |        or|   0|  0|   2|           1|           1|
     +-----------------------+----------+----+---+----+------------+------------+
     |Total                  |          |   0|  0|  13|          11|           8|
@@ -2448,13 +2448,13 @@
 +---------------------+-----+-----+------------+--------------------+--------------+
 |      RTL Ports      | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
 +---------------------+-----+-----+------------+--------------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_continue          |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM9|  return value|
+|ap_clk               |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_continue          |   in|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  loadTileBFromDRAM8|  return value|
 |B_DRAM_0_address0    |  out|    5|   ap_memory|            B_DRAM_0|         array|
 |B_DRAM_0_ce0         |  out|    1|   ap_memory|            B_DRAM_0|         array|
 |B_DRAM_0_q0          |   in|   32|   ap_memory|            B_DRAM_0|         array|

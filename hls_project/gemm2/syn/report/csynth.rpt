@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Sun Jun 14 13:12:34 2026
+    * Date:           Wed Jul  1 18:25:21 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)
@@ -19,46 +19,47 @@
     |                                   Modules                                  |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |           |           |              |              |     |
     |                                   & Loops                                  |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP    |      FF      |      LUT     | URAM|
     +----------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+-----------+--------------+--------------+-----+
-    |+ gemm2                                                                     |  Timing|  -0.80|     1617|  5.389e+03|         -|     1618|     -|        no|  796 (41%)|  256 (13%)|  258243 (14%)|  172611 (19%)|    -|
+    |+ gemm2                                                                     |  Timing|  -0.80|     1419|  4.730e+03|         -|     1420|     -|        no|  794 (41%)|  256 (13%)|  275193 (15%)|  177548 (19%)|    -|
     | + loadBFromDRAM                                                            |  Timing|  -0.00|      138|    459.954|         -|      138|     -|        no|          -|          -|     150 (~0%)|     286 (~0%)|    -|
-    |  + loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2                  |       -|   0.22|       66|    219.978|         -|       66|     -|        no|          -|          -|      18 (~0%)|      72 (~0%)|    -|
-    |   o VITIS_LOOP_57_1_VITIS_LOOP_58_2                                        |       -|   2.43|       64|    213.312|         2|        1|    64|       yes|          -|          -|             -|             -|    -|
-    | + dataflow_parent_loop_proc                                                |  Timing|  -0.80|     1272|  4.240e+03|         -|     1272|     -|        no|    66 (3%)|  256 (13%)|  242800 (13%)|  158075 (17%)|    -|
-    |  o loop_for_tile_a                                                         |       -|   2.43|     1271|  4.236e+03|       757|        -|     2|        no|          -|          -|             -|             -|    -|
-    |   + dataflow_in_loop_loop_for_tile_a_1*                                    |  Timing|  -0.80|      754|  2.513e+03|         -|      515|     -|  dataflow|    66 (3%)|  256 (13%)|  242739 (13%)|  158047 (17%)|    -|
-    |    + loadTileAFromDRAM2                                                    |  Timing|  -0.00|      216|    719.928|         -|      216|     -|        no|          -|          -|     543 (~0%)|     615 (~0%)|    -|
-    |     o load_tile_A                                                          |       -|   2.43|      144|    479.952|         9|        -|    16|        no|          -|          -|             -|             -|    -|
-    |    + loadTilesBFromDRAM4*                                                  |       -|   0.94|       19|     63.327|         -|       20|     -|  dataflow|          -|          -|    98326 (5%)|    45480 (5%)|    -|
-    |     + loadTileBFromDRAM9                                                   |       -|   0.94|       19|     63.327|         -|       19|     -|        no|          -|          -|    49162 (2%)|    22730 (2%)|    -|
+    |  + loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2                  |       -|   0.22|       66|    219.978|         -|       66|     -|        no|          -|          -|      18 (~0%)|      72 (~0%)|    -|
+    |   o VITIS_LOOP_72_1_VITIS_LOOP_73_2                                        |       -|   2.43|       64|    213.312|         2|        1|    64|       yes|          -|          -|             -|             -|    -|
+    | + loadAFromDRAM                                                            |  Timing|  -0.00|      103|    343.299|         -|      103|     -|        no|          -|          -|      78 (~0%)|     110 (~0%)|    -|
+    |  o load_A                                                                  |       -|   2.43|       32|    106.656|         1|        -|    32|        no|          -|          -|             -|             -|    -|
+    | + dataflow_parent_loop_proc                                                |  Timing|  -0.80|     1074|  3.580e+03|         -|     1074|     -|        no|    64 (3%)|  256 (13%)|  243287 (13%)|  162900 (18%)|    -|
+    |  o loop_for_tile_a                                                         |       -|   2.43|     1073|  3.576e+03|       559|        -|     2|        no|          -|          -|             -|             -|    -|
+    |   + dataflow_in_loop_loop_for_tile_a*                                      |  Timing|  -0.80|      557|  1.856e+03|         -|      515|     -|  dataflow|    64 (3%)|  256 (13%)|  243226 (13%)|  162872 (18%)|    -|
+    |    + loader_A_tiles2                                                       |  Timing|  -0.13|      260|    866.580|         -|      260|     -|        no|          -|          -|    1056 (~0%)|    5581 (~0%)|    -|
+    |     + loader_A_tiles2_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2              |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|    1050 (~0%)|    5567 (~0%)|    -|
+    |      o VITIS_LOOP_9_1_VITIS_LOOP_10_2                                      |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
+    |    + loadTilesBFromDRAM3*                                                  |       -|   0.94|       19|     63.327|         -|       20|     -|  dataflow|          -|          -|    98326 (5%)|    45480 (5%)|    -|
+    |     + loadTileBFromDRAM8                                                   |       -|   0.94|       19|     63.327|         -|       19|     -|        no|          -|          -|    49162 (2%)|    22730 (2%)|    -|
     |      o load_tile_B                                                         |       -|   2.43|       16|     53.328|         1|        -|    16|        no|          -|          -|             -|             -|    -|
-    |     + loadTileBFromDRAM_110                                                |       -|   0.94|       19|     63.327|         -|       19|     -|        no|          -|          -|    49162 (2%)|    22730 (2%)|    -|
+    |     + loadTileBFromDRAM_19                                                 |       -|   0.94|       19|     63.327|         -|       19|     -|        no|          -|          -|    49162 (2%)|    22730 (2%)|    -|
     |      o load_tile_B                                                         |       -|   2.43|       16|     53.328|         1|        -|    16|        no|          -|          -|             -|             -|    -|
-    |    + loader_A_tiles3                                                       |  Timing|  -0.07|      258|    859.914|         -|      258|     -|        no|          -|          -|      24 (~0%)|     125 (~0%)|    -|
-    |     o VITIS_LOOP_9_1_VITIS_LOOP_10_2                                       |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
-    |    + loader_B_tiles5*                                                      |  Timing|  -0.13|      258|    859.914|         -|      259|     -|  dataflow|          -|          -|    2084 (~0%)|    10534 (1%)|    -|
-    |     + loader_B_tile11                                                      |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|    1041 (~0%)|    5257 (~0%)|    -|
-    |      o VITIS_LOOP_24_1_VITIS_LOOP_25_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
-    |     + loader_B_tile_212                                                    |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|    1041 (~0%)|    5257 (~0%)|    -|
-    |      o VITIS_LOOP_24_1_VITIS_LOOP_25_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
-    |    + matMulTiles6*                                                         |  Timing|  -0.80|      354|  1.180e+03|         -|      355|     -|  dataflow|          -|  256 (13%)|    19611 (1%)|    17488 (1%)|    -|
-    |     + matMulTile13                                                         |  Timing|  -0.80|      354|  1.180e+03|         -|      354|     -|        no|          -|   128 (6%)|    9804 (~0%)|    8733 (~0%)|    -|
+    |    + loader_B_tiles4*                                                      |  Timing|  -0.13|      258|    859.914|         -|      259|     -|  dataflow|          -|          -|    2084 (~0%)|    10534 (1%)|    -|
+    |     + loader_B_tile10                                                      |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|    1041 (~0%)|    5257 (~0%)|    -|
+    |      o VITIS_LOOP_34_1_VITIS_LOOP_35_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
+    |     + loader_B_tile_211                                                    |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|    1041 (~0%)|    5257 (~0%)|    -|
+    |      o VITIS_LOOP_34_1_VITIS_LOOP_35_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|             -|             -|    -|
+    |    + matMulTiles5*                                                         |  Timing|  -0.80|      354|  1.180e+03|         -|      355|     -|  dataflow|          -|  256 (13%)|    19611 (1%)|    17488 (1%)|    -|
+    |     + matMulTile12                                                         |  Timing|  -0.80|      354|  1.180e+03|         -|      354|     -|        no|          -|   128 (6%)|    9804 (~0%)|    8733 (~0%)|    -|
     |      o mat_mul_i                                                           |       -|   2.43|      353|  1.177e+03|        24|        -|    16|        no|          -|          -|             -|             -|    -|
-    |       + dataflow_in_loop_mat_mul_i17*                                      |  Timing|  -0.80|       22|     73.326|         -|       22|     -|  dataflow|          -|   128 (6%)|    9720 (~0%)|    8687 (~0%)|    -|
-    |        + calculatepsum19                                                   |       -|   0.25|       21|     69.993|         -|       21|     -|        no|          -|   128 (6%)|    6390 (~0%)|    6309 (~0%)|    -|
+    |       + dataflow_in_loop_mat_mul_i16*                                      |  Timing|  -0.80|       22|     73.326|         -|       22|     -|  dataflow|          -|   128 (6%)|    9720 (~0%)|    8687 (~0%)|    -|
+    |        + calculatepsum18                                                   |       -|   0.25|       21|     69.993|         -|       21|     -|        no|          -|   128 (6%)|    6390 (~0%)|    6309 (~0%)|    -|
     |         o VITIS_LOOP_10_1                                                  |       -|   2.43|       19|     63.327|         5|        1|    16|       yes|          -|          -|             -|             -|    -|
-    |        + psumToStream20                                                    |       -|   0.63|        0|      0.000|         -|        0|     -|        no|          -|          -|       2 (~0%)|      68 (~0%)|    -|
-    |     + matMulTile_514                                                       |  Timing|  -0.80|      354|  1.180e+03|         -|      354|     -|        no|          -|   128 (6%)|    9804 (~0%)|    8733 (~0%)|    -|
+    |        + psumToStream19                                                    |       -|   0.63|        0|      0.000|         -|        0|     -|        no|          -|          -|       2 (~0%)|      68 (~0%)|    -|
+    |     + matMulTile_513                                                       |  Timing|  -0.80|      354|  1.180e+03|         -|      354|     -|        no|          -|   128 (6%)|    9804 (~0%)|    8733 (~0%)|    -|
     |      o mat_mul_i                                                           |       -|   2.43|      353|  1.177e+03|        24|        -|    16|        no|          -|          -|             -|             -|    -|
-    |       + dataflow_in_loop_mat_mul_i_17418*                                  |  Timing|  -0.80|       22|     73.326|         -|       22|     -|  dataflow|          -|   128 (6%)|    9720 (~0%)|    8687 (~0%)|    -|
-    |        + calculatepsum_321                                                 |       -|   0.25|       21|     69.993|         -|       21|     -|        no|          -|   128 (6%)|    6390 (~0%)|    6309 (~0%)|    -|
+    |       + dataflow_in_loop_mat_mul_i_17417*                                  |  Timing|  -0.80|       22|     73.326|         -|       22|     -|  dataflow|          -|   128 (6%)|    9720 (~0%)|    8687 (~0%)|    -|
+    |        + calculatepsum_320                                                 |       -|   0.25|       21|     69.993|         -|       21|     -|        no|          -|   128 (6%)|    6390 (~0%)|    6309 (~0%)|    -|
     |         o VITIS_LOOP_10_1                                                  |       -|   2.43|       19|     63.327|         5|        1|    16|       yes|          -|          -|             -|             -|    -|
-    |        + psumToStream_422                                                  |       -|   0.63|        0|      0.000|         -|        0|     -|        no|          -|          -|       2 (~0%)|      68 (~0%)|    -|
-    |    + loader_C_tiles7*                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      515|     -|  dataflow|          -|          -|    2112 (~0%)|     484 (~0%)|    -|
-    |     + loader_C_tile15                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|    1055 (~0%)|     232 (~0%)|    -|
-    |      o VITIS_LOOP_38_1_VITIS_LOOP_39_2                                     |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|             -|             -|    -|
-    |     + loader_C_tile_616                                                    |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|    1055 (~0%)|     232 (~0%)|    -|
-    |      o VITIS_LOOP_38_1_VITIS_LOOP_39_2                                     |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|             -|             -|    -|
-    |    + dataflow_in_loop_loop_for_tile_a_1_Block_newFuncRoot112_proc8         |       -|   0.99|       19|     63.327|         -|       19|     -|        no|          -|          -|      66 (~0%)|     566 (~0%)|    -|
+    |        + psumToStream_421                                                  |       -|   0.63|        0|      0.000|         -|        0|     -|        no|          -|          -|       2 (~0%)|      68 (~0%)|    -|
+    |    + loader_C_tiles6*                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      515|     -|  dataflow|          -|          -|    2112 (~0%)|     484 (~0%)|    -|
+    |     + loader_C_tile14                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|    1055 (~0%)|     232 (~0%)|    -|
+    |      o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                     |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|             -|             -|    -|
+    |     + loader_C_tile_615                                                    |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|    1055 (~0%)|     232 (~0%)|    -|
+    |      o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                     |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|             -|             -|    -|
+    |    + dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot111_proc7           |       -|   0.99|       19|     63.327|         -|       19|     -|        no|          -|          -|      66 (~0%)|     566 (~0%)|    -|
     |     + storeTilesToDRAM*                                                    |       -|   0.99|       18|     59.994|         -|       19|     -|  dataflow|          -|          -|      28 (~0%)|      82 (~0%)|    -|
     |      + storeTileToDRAM*                                                    |       -|   0.99|       18|     59.994|         -|       19|     -|  dataflow|          -|          -|      13 (~0%)|      31 (~0%)|    -|
     |       + storeTileToDRAM_Loop_store_C_tile_proc                             |       -|   0.99|       18|     59.994|         -|       18|     -|        no|          -|          -|      13 (~0%)|      31 (~0%)|    -|
@@ -160,25 +161,25 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------+-----------+--------+-------+-----------------+---------------------------+
-| HW Interface | Direction | Length | Width | Loop            | Loop Location             |
-+--------------+-----------+--------+-------+-----------------+---------------------------+
-| m_axi_gmem   | write     | 128    | 512   | store_C_ti      | source/dram.hpp:33:2      |
-| m_axi_gmem0  | read      | 16     | 512   | load_tile_A     | source/load_tiles.hpp:6:2 |
-| m_axi_gmem1  | read      | 64     | 512   | VITIS_LOOP_57_1 | source/dram.hpp:57:20     |
-+--------------+-----------+--------+-------+-----------------+---------------------------+
++--------------+-----------+--------+-------+-----------------+-----------------------+
+| HW Interface | Direction | Length | Width | Loop            | Loop Location         |
++--------------+-----------+--------+-------+-----------------+-----------------------+
+| m_axi_gmem   | write     | 128    | 512   | store_C_ti      | source/dram.hpp:33:2  |
+| m_axi_gmem0  | read      | 32     | 512   | load_A          | source/dram.hpp:56:2  |
+| m_axi_gmem1  | read      | 64     | 512   | VITIS_LOOP_72_1 | source/dram.hpp:72:20 |
++--------------+-----------+--------+-------+-----------------+-----------------------+
 
 * All M_AXI Variable Accesses
-+--------------+----------+----------------------------+-----------+--------------+--------+-----------------+---------------------------+------------+----------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable | Access Location            | Direction | Burst Status | Length | Loop            | Loop Location             | Resolution | Problem                                                                                                  |
-+--------------+----------+----------------------------+-----------+--------------+--------+-----------------+---------------------------+------------+----------------------------------------------------------------------------------------------------------+
-| m_axi_gmem   | C_DRAM   | source/dram.hpp:46:46      | write     | Widen Fail   |        | store_C_jv      | source/dram.hpp:39:5      | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
-| m_axi_gmem   | C_DRAM   | source/dram.hpp:46:46      | write     | Inferred     | 128    | store_C_ti      | source/dram.hpp:33:2      |            |                                                                                                          |
-| m_axi_gmem0  | A_DRAM   | source/load_tiles.hpp:9:38 | read      | Widen Fail   |        | load_tile_A     | source/load_tiles.hpp:6:2 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
-| m_axi_gmem0  | A_DRAM   | source/load_tiles.hpp:9:38 | read      | Inferred     | 16     | load_tile_A     | source/load_tiles.hpp:6:2 |            |                                                                                                          |
-| m_axi_gmem1  | B_DRAM   | source/dram.hpp:60:38      | read      | Widen Fail   |        | VITIS_LOOP_58_2 | source/dram.hpp:58:21     | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
-| m_axi_gmem1  | B_DRAM   | source/dram.hpp:60:38      | read      | Inferred     | 64     | VITIS_LOOP_57_1 | source/dram.hpp:57:20     |            |                                                                                                          |
-+--------------+----------+----------------------------+-----------+--------------+--------+-----------------+---------------------------+------------+----------------------------------------------------------------------------------------------------------+
++--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location       | Direction | Burst Status | Length | Loop            | Loop Location         | Resolution | Problem                                                                                                  |
++--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | C_DRAM   | source/dram.hpp:46:46 | write     | Widen Fail   |        | store_C_jv      | source/dram.hpp:39:5  | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem   | C_DRAM   | source/dram.hpp:46:46 | write     | Inferred     | 128    | store_C_ti      | source/dram.hpp:33:2  |            |                                                                                                          |
+| m_axi_gmem0  | A_DRAM   | source/dram.hpp:59:38 | read      | Widen Fail   |        | load_A          | source/dram.hpp:56:2  | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem0  | A_DRAM   | source/dram.hpp:59:38 | read      | Inferred     | 32     | load_A          | source/dram.hpp:56:2  |            |                                                                                                          |
+| m_axi_gmem1  | B_DRAM   | source/dram.hpp:75:38 | read      | Widen Fail   |        | VITIS_LOOP_73_2 | source/dram.hpp:73:21 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem1  | B_DRAM   | source/dram.hpp:75:38 | read      | Inferred     | 64     | VITIS_LOOP_72_1 | source/dram.hpp:72:20 |            |                                                                                                          |
++--------------+----------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
@@ -190,196 +191,196 @@
 +------------------------------------------------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
 | + gemm2                                                                                        | 256 |        |             |     |        |         |
 |  + loadBFromDRAM                                                                               | 0   |        |             |     |        |         |
-|   + loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2                                     | 0   |        |             |     |        |         |
-|     add_ln57_1_fu_723_p2                                                                       |     |        | add_ln57_1  | add | fabric | 0       |
-|     add_ln57_fu_765_p2                                                                         |     |        | add_ln57    | add | fabric | 0       |
-|     add_ln58_fu_1165_p2                                                                        |     |        | add_ln58    | add | fabric | 0       |
+|   + loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2                                     | 0   |        |             |     |        |         |
+|     add_ln72_fu_723_p2                                                                         |     |        | add_ln72    | add | fabric | 0       |
+|     add_ln72_1_fu_779_p2                                                                       |     |        | add_ln72_1  | add | fabric | 0       |
+|     add_ln73_fu_1165_p2                                                                        |     |        | add_ln73    | add | fabric | 0       |
+|  + loadAFromDRAM                                                                               | 0   |        |             |     |        |         |
+|    add_ln56_fu_4891_p2                                                                         |     |        | add_ln56    | add | fabric | 0       |
 |  + dataflow_parent_loop_proc                                                                   | 256 |        |             |     |        |         |
-|   + dataflow_in_loop_loop_for_tile_a_1                                                         | 256 |        |             |     |        |         |
-|    + loadTileAFromDRAM2                                                                        | 0   |        |             |     |        |         |
-|      add_ln6_fu_363_p2                                                                         |     |        | add_ln6     | add | fabric | 0       |
-|      add_ln6_1_fu_396_p2                                                                       |     |        | add_ln6_1   | add | fabric | 0       |
-|    + loadTilesBFromDRAM4                                                                       | 0   |        |             |     |        |         |
-|     + loadTileBFromDRAM9                                                                       | 0   |        |             |     |        |         |
-|       add_ln21_fu_16226_p2                                                                     |     |        | add_ln21    | add | fabric | 0       |
-|     + loadTileBFromDRAM_110                                                                    | 0   |        |             |     |        |         |
-|       add_ln21_fu_16226_p2                                                                     |     |        | add_ln21    | add | fabric | 0       |
-|    + loader_A_tiles3                                                                           | 0   |        |             |     |        |         |
-|      add_ln9_1_fu_154_p2                                                                       |     |        | add_ln9_1   | add | fabric | 0       |
-|      add_ln9_fu_178_p2                                                                         |     |        | add_ln9     | add | fabric | 0       |
-|      add_ln10_fu_246_p2                                                                        |     |        | add_ln10    | add | fabric | 0       |
-|    + loader_B_tiles5                                                                           | 0   |        |             |     |        |         |
-|     + loader_B_tile11                                                                          | 0   |        |             |     |        |         |
-|       add_ln24_fu_5520_p2                                                                      |     |        | add_ln24    | add | fabric | 0       |
-|       add_ln25_fu_7860_p2                                                                      |     |        | add_ln25    | add | fabric | 0       |
-|     + loader_B_tile_212                                                                        | 0   |        |             |     |        |         |
-|       add_ln24_fu_5520_p2                                                                      |     |        | add_ln24    | add | fabric | 0       |
-|       add_ln25_fu_7860_p2                                                                      |     |        | add_ln25    | add | fabric | 0       |
-|    + matMulTiles6                                                                              | 256 |        |             |     |        |         |
-|     + matMulTile13                                                                             | 128 |        |             |     |        |         |
-|      + dataflow_in_loop_mat_mul_i17                                                            | 128 |        |             |     |        |         |
-|       + calculatepsum19                                                                        | 128 |        |             |     |        |         |
+|   + dataflow_in_loop_loop_for_tile_a                                                           | 256 |        |             |     |        |         |
+|    + loader_A_tiles2                                                                           | 0   |        |             |     |        |         |
+|     + loader_A_tiles2_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2                                  | 0   |        |             |     |        |         |
+|       add_ln9_fu_5340_p2                                                                       |     |        | add_ln9     | add | fabric | 0       |
+|       add_ln9_1_fu_5378_p2                                                                     |     |        | add_ln9_1   | add | fabric | 0       |
+|       add_ln10_fu_7704_p2                                                                      |     |        | add_ln10    | add | fabric | 0       |
+|    + loadTilesBFromDRAM3                                                                       | 0   |        |             |     |        |         |
+|     + loadTileBFromDRAM8                                                                       | 0   |        |             |     |        |         |
+|       add_ln32_fu_16226_p2                                                                     |     |        | add_ln32    | add | fabric | 0       |
+|     + loadTileBFromDRAM_19                                                                     | 0   |        |             |     |        |         |
+|       add_ln32_fu_16226_p2                                                                     |     |        | add_ln32    | add | fabric | 0       |
+|    + loader_B_tiles4                                                                           | 0   |        |             |     |        |         |
+|     + loader_B_tile10                                                                          | 0   |        |             |     |        |         |
+|       add_ln34_fu_5520_p2                                                                      |     |        | add_ln34    | add | fabric | 0       |
+|       add_ln35_fu_7860_p2                                                                      |     |        | add_ln35    | add | fabric | 0       |
+|     + loader_B_tile_211                                                                        | 0   |        |             |     |        |         |
+|       add_ln34_fu_5520_p2                                                                      |     |        | add_ln34    | add | fabric | 0       |
+|       add_ln35_fu_7860_p2                                                                      |     |        | add_ln35    | add | fabric | 0       |
+|    + matMulTiles5                                                                              | 256 |        |             |     |        |         |
+|     + matMulTile12                                                                             | 128 |        |             |     |        |         |
+|      + dataflow_in_loop_mat_mul_i16                                                            | 128 |        |             |     |        |         |
+|       + calculatepsum18                                                                        | 128 |        |             |     |        |         |
 |         k_4_fu_968_p2                                                                          |     |        | k_4         | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4496                                                               | 4   |        | mul_ln16    | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6065                                                               | 4   |        | mul_ln16    | mul | dsp    | 2       |
 |         add_ln16_fu_1677_p2                                                                    |     |        | add_ln16    | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4497                                                               | 4   |        | mul_ln16_1  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6066                                                               | 4   |        | mul_ln16_1  | mul | dsp    | 2       |
 |         add_ln16_1_fu_1700_p2                                                                  |     |        | add_ln16_1  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4498                                                               | 4   |        | mul_ln16_2  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6067                                                               | 4   |        | mul_ln16_2  | mul | dsp    | 2       |
 |         add_ln16_2_fu_1723_p2                                                                  |     |        | add_ln16_2  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4499                                                               | 4   |        | mul_ln16_3  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6068                                                               | 4   |        | mul_ln16_3  | mul | dsp    | 2       |
 |         add_ln16_3_fu_1746_p2                                                                  |     |        | add_ln16_3  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4500                                                               | 4   |        | mul_ln16_4  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6069                                                               | 4   |        | mul_ln16_4  | mul | dsp    | 2       |
 |         add_ln16_4_fu_1769_p2                                                                  |     |        | add_ln16_4  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4501                                                               | 4   |        | mul_ln16_5  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6070                                                               | 4   |        | mul_ln16_5  | mul | dsp    | 2       |
 |         add_ln16_5_fu_1792_p2                                                                  |     |        | add_ln16_5  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4502                                                               | 4   |        | mul_ln16_6  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6071                                                               | 4   |        | mul_ln16_6  | mul | dsp    | 2       |
 |         add_ln16_6_fu_1815_p2                                                                  |     |        | add_ln16_6  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4503                                                               | 4   |        | mul_ln16_7  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6072                                                               | 4   |        | mul_ln16_7  | mul | dsp    | 2       |
 |         add_ln16_7_fu_1838_p2                                                                  |     |        | add_ln16_7  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4504                                                               | 4   |        | mul_ln16_8  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6073                                                               | 4   |        | mul_ln16_8  | mul | dsp    | 2       |
 |         add_ln16_8_fu_1861_p2                                                                  |     |        | add_ln16_8  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4505                                                               | 4   |        | mul_ln16_9  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6074                                                               | 4   |        | mul_ln16_9  | mul | dsp    | 2       |
 |         add_ln16_9_fu_1884_p2                                                                  |     |        | add_ln16_9  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4506                                                               | 4   |        | mul_ln16_10 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6075                                                               | 4   |        | mul_ln16_10 | mul | dsp    | 2       |
 |         add_ln16_10_fu_1907_p2                                                                 |     |        | add_ln16_10 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4507                                                               | 4   |        | mul_ln16_11 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6076                                                               | 4   |        | mul_ln16_11 | mul | dsp    | 2       |
 |         add_ln16_11_fu_1930_p2                                                                 |     |        | add_ln16_11 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4508                                                               | 4   |        | mul_ln16_12 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6077                                                               | 4   |        | mul_ln16_12 | mul | dsp    | 2       |
 |         add_ln16_12_fu_1953_p2                                                                 |     |        | add_ln16_12 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4509                                                               | 4   |        | mul_ln16_13 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6078                                                               | 4   |        | mul_ln16_13 | mul | dsp    | 2       |
 |         add_ln16_13_fu_1976_p2                                                                 |     |        | add_ln16_13 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4510                                                               | 4   |        | mul_ln16_14 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6079                                                               | 4   |        | mul_ln16_14 | mul | dsp    | 2       |
 |         add_ln16_14_fu_1999_p2                                                                 |     |        | add_ln16_14 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4511                                                               | 4   |        | mul_ln16_15 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6080                                                               | 4   |        | mul_ln16_15 | mul | dsp    | 2       |
 |         add_ln16_15_fu_2022_p2                                                                 |     |        | add_ln16_15 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4512                                                               | 4   |        | mul_ln16_16 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6081                                                               | 4   |        | mul_ln16_16 | mul | dsp    | 2       |
 |         add_ln16_16_fu_2045_p2                                                                 |     |        | add_ln16_16 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4513                                                               | 4   |        | mul_ln16_17 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6082                                                               | 4   |        | mul_ln16_17 | mul | dsp    | 2       |
 |         add_ln16_17_fu_2068_p2                                                                 |     |        | add_ln16_17 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4514                                                               | 4   |        | mul_ln16_18 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6083                                                               | 4   |        | mul_ln16_18 | mul | dsp    | 2       |
 |         add_ln16_18_fu_2091_p2                                                                 |     |        | add_ln16_18 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4515                                                               | 4   |        | mul_ln16_19 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6084                                                               | 4   |        | mul_ln16_19 | mul | dsp    | 2       |
 |         add_ln16_19_fu_2114_p2                                                                 |     |        | add_ln16_19 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4516                                                               | 4   |        | mul_ln16_20 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6085                                                               | 4   |        | mul_ln16_20 | mul | dsp    | 2       |
 |         add_ln16_20_fu_2137_p2                                                                 |     |        | add_ln16_20 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4517                                                               | 4   |        | mul_ln16_21 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6086                                                               | 4   |        | mul_ln16_21 | mul | dsp    | 2       |
 |         add_ln16_21_fu_2160_p2                                                                 |     |        | add_ln16_21 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4518                                                               | 4   |        | mul_ln16_22 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6087                                                               | 4   |        | mul_ln16_22 | mul | dsp    | 2       |
 |         add_ln16_22_fu_2183_p2                                                                 |     |        | add_ln16_22 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4519                                                               | 4   |        | mul_ln16_23 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6088                                                               | 4   |        | mul_ln16_23 | mul | dsp    | 2       |
 |         add_ln16_23_fu_2206_p2                                                                 |     |        | add_ln16_23 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4520                                                               | 4   |        | mul_ln16_24 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6089                                                               | 4   |        | mul_ln16_24 | mul | dsp    | 2       |
 |         add_ln16_24_fu_2229_p2                                                                 |     |        | add_ln16_24 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4521                                                               | 4   |        | mul_ln16_25 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6090                                                               | 4   |        | mul_ln16_25 | mul | dsp    | 2       |
 |         add_ln16_25_fu_2252_p2                                                                 |     |        | add_ln16_25 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4522                                                               | 4   |        | mul_ln16_26 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6091                                                               | 4   |        | mul_ln16_26 | mul | dsp    | 2       |
 |         add_ln16_26_fu_2275_p2                                                                 |     |        | add_ln16_26 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4523                                                               | 4   |        | mul_ln16_27 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6092                                                               | 4   |        | mul_ln16_27 | mul | dsp    | 2       |
 |         add_ln16_27_fu_2298_p2                                                                 |     |        | add_ln16_27 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4524                                                               | 4   |        | mul_ln16_28 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6093                                                               | 4   |        | mul_ln16_28 | mul | dsp    | 2       |
 |         add_ln16_28_fu_2321_p2                                                                 |     |        | add_ln16_28 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4525                                                               | 4   |        | mul_ln16_29 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6094                                                               | 4   |        | mul_ln16_29 | mul | dsp    | 2       |
 |         add_ln16_29_fu_2344_p2                                                                 |     |        | add_ln16_29 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4526                                                               | 4   |        | mul_ln16_30 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6095                                                               | 4   |        | mul_ln16_30 | mul | dsp    | 2       |
 |         add_ln16_30_fu_2367_p2                                                                 |     |        | add_ln16_30 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4527                                                               | 4   |        | mul_ln16_31 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6096                                                               | 4   |        | mul_ln16_31 | mul | dsp    | 2       |
 |         add_ln16_31_fu_2390_p2                                                                 |     |        | add_ln16_31 | add | fabric | 0       |
-|     + matMulTile_514                                                                           | 128 |        |             |     |        |         |
-|      + dataflow_in_loop_mat_mul_i_17418                                                        | 128 |        |             |     |        |         |
-|       + calculatepsum_321                                                                      | 128 |        |             |     |        |         |
+|     + matMulTile_513                                                                           | 128 |        |             |     |        |         |
+|      + dataflow_in_loop_mat_mul_i_17417                                                        | 128 |        |             |     |        |         |
+|       + calculatepsum_320                                                                      | 128 |        |             |     |        |         |
 |         k_6_fu_968_p2                                                                          |     |        | k_6         | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4788                                                               | 4   |        | mul_ln16    | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6357                                                               | 4   |        | mul_ln16    | mul | dsp    | 2       |
 |         add_ln16_fu_1677_p2                                                                    |     |        | add_ln16    | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4789                                                               | 4   |        | mul_ln16_1  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6358                                                               | 4   |        | mul_ln16_1  | mul | dsp    | 2       |
 |         add_ln16_1_fu_1700_p2                                                                  |     |        | add_ln16_1  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4790                                                               | 4   |        | mul_ln16_2  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6359                                                               | 4   |        | mul_ln16_2  | mul | dsp    | 2       |
 |         add_ln16_2_fu_1723_p2                                                                  |     |        | add_ln16_2  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4791                                                               | 4   |        | mul_ln16_3  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6360                                                               | 4   |        | mul_ln16_3  | mul | dsp    | 2       |
 |         add_ln16_3_fu_1746_p2                                                                  |     |        | add_ln16_3  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4792                                                               | 4   |        | mul_ln16_4  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6361                                                               | 4   |        | mul_ln16_4  | mul | dsp    | 2       |
 |         add_ln16_4_fu_1769_p2                                                                  |     |        | add_ln16_4  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4793                                                               | 4   |        | mul_ln16_5  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6362                                                               | 4   |        | mul_ln16_5  | mul | dsp    | 2       |
 |         add_ln16_5_fu_1792_p2                                                                  |     |        | add_ln16_5  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4794                                                               | 4   |        | mul_ln16_6  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6363                                                               | 4   |        | mul_ln16_6  | mul | dsp    | 2       |
 |         add_ln16_6_fu_1815_p2                                                                  |     |        | add_ln16_6  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4795                                                               | 4   |        | mul_ln16_7  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6364                                                               | 4   |        | mul_ln16_7  | mul | dsp    | 2       |
 |         add_ln16_7_fu_1838_p2                                                                  |     |        | add_ln16_7  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4796                                                               | 4   |        | mul_ln16_8  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6365                                                               | 4   |        | mul_ln16_8  | mul | dsp    | 2       |
 |         add_ln16_8_fu_1861_p2                                                                  |     |        | add_ln16_8  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4797                                                               | 4   |        | mul_ln16_9  | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6366                                                               | 4   |        | mul_ln16_9  | mul | dsp    | 2       |
 |         add_ln16_9_fu_1884_p2                                                                  |     |        | add_ln16_9  | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4798                                                               | 4   |        | mul_ln16_10 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6367                                                               | 4   |        | mul_ln16_10 | mul | dsp    | 2       |
 |         add_ln16_10_fu_1907_p2                                                                 |     |        | add_ln16_10 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4799                                                               | 4   |        | mul_ln16_11 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6368                                                               | 4   |        | mul_ln16_11 | mul | dsp    | 2       |
 |         add_ln16_11_fu_1930_p2                                                                 |     |        | add_ln16_11 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4800                                                               | 4   |        | mul_ln16_12 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6369                                                               | 4   |        | mul_ln16_12 | mul | dsp    | 2       |
 |         add_ln16_12_fu_1953_p2                                                                 |     |        | add_ln16_12 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4801                                                               | 4   |        | mul_ln16_13 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6370                                                               | 4   |        | mul_ln16_13 | mul | dsp    | 2       |
 |         add_ln16_13_fu_1976_p2                                                                 |     |        | add_ln16_13 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4802                                                               | 4   |        | mul_ln16_14 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6371                                                               | 4   |        | mul_ln16_14 | mul | dsp    | 2       |
 |         add_ln16_14_fu_1999_p2                                                                 |     |        | add_ln16_14 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4803                                                               | 4   |        | mul_ln16_15 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6372                                                               | 4   |        | mul_ln16_15 | mul | dsp    | 2       |
 |         add_ln16_15_fu_2022_p2                                                                 |     |        | add_ln16_15 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4804                                                               | 4   |        | mul_ln16_16 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6373                                                               | 4   |        | mul_ln16_16 | mul | dsp    | 2       |
 |         add_ln16_16_fu_2045_p2                                                                 |     |        | add_ln16_16 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4805                                                               | 4   |        | mul_ln16_17 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6374                                                               | 4   |        | mul_ln16_17 | mul | dsp    | 2       |
 |         add_ln16_17_fu_2068_p2                                                                 |     |        | add_ln16_17 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4806                                                               | 4   |        | mul_ln16_18 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6375                                                               | 4   |        | mul_ln16_18 | mul | dsp    | 2       |
 |         add_ln16_18_fu_2091_p2                                                                 |     |        | add_ln16_18 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4807                                                               | 4   |        | mul_ln16_19 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6376                                                               | 4   |        | mul_ln16_19 | mul | dsp    | 2       |
 |         add_ln16_19_fu_2114_p2                                                                 |     |        | add_ln16_19 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4808                                                               | 4   |        | mul_ln16_20 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6377                                                               | 4   |        | mul_ln16_20 | mul | dsp    | 2       |
 |         add_ln16_20_fu_2137_p2                                                                 |     |        | add_ln16_20 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4809                                                               | 4   |        | mul_ln16_21 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6378                                                               | 4   |        | mul_ln16_21 | mul | dsp    | 2       |
 |         add_ln16_21_fu_2160_p2                                                                 |     |        | add_ln16_21 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4810                                                               | 4   |        | mul_ln16_22 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6379                                                               | 4   |        | mul_ln16_22 | mul | dsp    | 2       |
 |         add_ln16_22_fu_2183_p2                                                                 |     |        | add_ln16_22 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4811                                                               | 4   |        | mul_ln16_23 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6380                                                               | 4   |        | mul_ln16_23 | mul | dsp    | 2       |
 |         add_ln16_23_fu_2206_p2                                                                 |     |        | add_ln16_23 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4812                                                               | 4   |        | mul_ln16_24 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6381                                                               | 4   |        | mul_ln16_24 | mul | dsp    | 2       |
 |         add_ln16_24_fu_2229_p2                                                                 |     |        | add_ln16_24 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4813                                                               | 4   |        | mul_ln16_25 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6382                                                               | 4   |        | mul_ln16_25 | mul | dsp    | 2       |
 |         add_ln16_25_fu_2252_p2                                                                 |     |        | add_ln16_25 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4814                                                               | 4   |        | mul_ln16_26 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6383                                                               | 4   |        | mul_ln16_26 | mul | dsp    | 2       |
 |         add_ln16_26_fu_2275_p2                                                                 |     |        | add_ln16_26 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4815                                                               | 4   |        | mul_ln16_27 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6384                                                               | 4   |        | mul_ln16_27 | mul | dsp    | 2       |
 |         add_ln16_27_fu_2298_p2                                                                 |     |        | add_ln16_27 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4816                                                               | 4   |        | mul_ln16_28 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6385                                                               | 4   |        | mul_ln16_28 | mul | dsp    | 2       |
 |         add_ln16_28_fu_2321_p2                                                                 |     |        | add_ln16_28 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4817                                                               | 4   |        | mul_ln16_29 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6386                                                               | 4   |        | mul_ln16_29 | mul | dsp    | 2       |
 |         add_ln16_29_fu_2344_p2                                                                 |     |        | add_ln16_29 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4818                                                               | 4   |        | mul_ln16_30 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6387                                                               | 4   |        | mul_ln16_30 | mul | dsp    | 2       |
 |         add_ln16_30_fu_2367_p2                                                                 |     |        | add_ln16_30 | add | fabric | 0       |
-|         mul_32s_32s_56_3_1_U4819                                                               | 4   |        | mul_ln16_31 | mul | dsp    | 2       |
+|         mul_32s_32s_56_3_1_U6388                                                               | 4   |        | mul_ln16_31 | mul | dsp    | 2       |
 |         add_ln16_31_fu_2390_p2                                                                 |     |        | add_ln16_31 | add | fabric | 0       |
-|    + loader_C_tiles7                                                                           | 0   |        |             |     |        |         |
-|     + loader_C_tile15                                                                          | 0   |        |             |     |        |         |
-|       add_ln38_1_fu_900_p2                                                                     |     |        | add_ln38_1  | add | fabric | 0       |
-|       add_ln38_fu_972_p2                                                                       |     |        | add_ln38    | add | fabric | 0       |
-|       add_ln39_fu_936_p2                                                                       |     |        | add_ln39    | add | fabric | 0       |
-|     + loader_C_tile_616                                                                        | 0   |        |             |     |        |         |
-|       add_ln38_2_fu_900_p2                                                                     |     |        | add_ln38_2  | add | fabric | 0       |
-|       add_ln38_fu_972_p2                                                                       |     |        | add_ln38    | add | fabric | 0       |
-|       add_ln39_fu_936_p2                                                                       |     |        | add_ln39    | add | fabric | 0       |
-|    + dataflow_in_loop_loop_for_tile_a_1_Block_newFuncRoot112_proc8                             | 0   |        |             |     |        |         |
+|    + loader_C_tiles6                                                                           | 0   |        |             |     |        |         |
+|     + loader_C_tile14                                                                          | 0   |        |             |     |        |         |
+|       add_ln48_fu_900_p2                                                                       |     |        | add_ln48    | add | fabric | 0       |
+|       add_ln48_1_fu_972_p2                                                                     |     |        | add_ln48_1  | add | fabric | 0       |
+|       add_ln49_fu_936_p2                                                                       |     |        | add_ln49    | add | fabric | 0       |
+|     + loader_C_tile_615                                                                        | 0   |        |             |     |        |         |
+|       add_ln48_fu_900_p2                                                                       |     |        | add_ln48    | add | fabric | 0       |
+|       add_ln48_2_fu_972_p2                                                                     |     |        | add_ln48_2  | add | fabric | 0       |
+|       add_ln49_fu_936_p2                                                                       |     |        | add_ln49    | add | fabric | 0       |
+|    + dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot111_proc7                               | 0   |        |             |     |        |         |
 |     + storeTilesToDRAM (grp_storeTilesToDRAM_fu_435)                                           | 0   |        |             |     |        |         |
 |      + storeTileToDRAM (storeTileToDRAM_U0)                                                    | 0   |        |             |     |        |         |
 |       + storeTileToDRAM_Loop_store_C_tile_proc (storeTileToDRAM_Loop_store_C_tile_proc_U0)     | 0   |        |             |     |        |         |
-|         add_ln42_fu_1046_p2                                                                    |     |        | add_ln42    | add | fabric | 0       |
+|         add_ln53_fu_1046_p2                                                                    |     |        | add_ln53    | add | fabric | 0       |
 |      + storeTileToDRAM_7 (storeTileToDRAM_7_U0)                                                | 0   |        |             |     |        |         |
 |       + storeTileToDRAM_7_Loop_store_C_tile_proc (storeTileToDRAM_7_Loop_store_C_tile_proc_U0) | 0   |        |             |     |        |         |
-|         add_ln42_fu_1046_p2                                                                    |     |        | add_ln42    | add | fabric | 0       |
+|         add_ln53_fu_1046_p2                                                                    |     |        | add_ln53    | add | fabric | 0       |
 |     + storeTilesToDRAM (grp_storeTilesToDRAM_fu_695)                                           | 0   |        |             |     |        |         |
 |      + storeTileToDRAM (storeTileToDRAM_U0)                                                    | 0   |        |             |     |        |         |
 |       + storeTileToDRAM_Loop_store_C_tile_proc (storeTileToDRAM_Loop_store_C_tile_proc_U0)     | 0   |        |             |     |        |         |
-|         add_ln42_fu_1046_p2                                                                    |     |        | add_ln42    | add | fabric | 0       |
+|         add_ln53_fu_1046_p2                                                                    |     |        | add_ln53    | add | fabric | 0       |
 |      + storeTileToDRAM_7 (storeTileToDRAM_7_U0)                                                | 0   |        |             |     |        |         |
 |       + storeTileToDRAM_7_Loop_store_C_tile_proc (storeTileToDRAM_7_Loop_store_C_tile_proc_U0) | 0   |        |             |     |        |         |
-|         add_ln42_fu_1046_p2                                                                    |     |        | add_ln42    | add | fabric | 0       |
+|         add_ln53_fu_1046_p2                                                                    |     |        | add_ln53    | add | fabric | 0       |
 |  + storeOutputToDRAM                                                                           | 0   |        |             |     |        |         |
 |   + storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv                     | 0   |        |             |     |        |         |
-|     add_ln33_1_fu_2678_p2                                                                      |     |        | add_ln33_1  | add | fabric | 0       |
-|     add_ln33_fu_5177_p2                                                                        |     |        | add_ln33    | add | fabric | 0       |
+|     add_ln33_fu_2678_p2                                                                        |     |        | add_ln33    | add | fabric | 0       |
+|     add_ln33_1_fu_5177_p2                                                                      |     |        | add_ln33_1  | add | fabric | 0       |
 |     add_ln35_fu_2798_p2                                                                        |     |        | add_ln35    | add | fabric | 0       |
 |     add_ln37_fu_3600_p2                                                                        |     |        | add_ln37    | add | fabric | 0       |
 |     add_ln39_fu_3531_p2                                                                        |     |        | add_ln39    | add | fabric | 0       |
@@ -395,7 +396,7 @@
 | Name                                    | Usage            | Type        | BRAM | URAM | Pragma | Variable     | Impl   | Latency | Bitwidth, Depth, |
 |                                         |                  |             |      |      |        |              |        |         | Banks            |
 +-----------------------------------------+------------------+-------------+------+------+--------+--------------+--------+---------+------------------+
-| + gemm2                                 |                  |             | 796  | 0    |        |              |        |         |                  |
+| + gemm2                                 |                  |             | 794  | 0    |        |              |        |         |                  |
 |   control_s_axi_U                       | interface        | s_axilite   |      |      |        |              |        |         |                  |
 |   gmem_m_axi_U                          | interface        | m_axi       | 30   |      |        |              |        |         |                  |
 |   gmem0_m_axi_U                         | interface        | m_axi       | 30   |      |        |              |        |         |                  |
@@ -560,13 +561,11 @@
 |   C_BUF_125_U                           | ram_1wnr array   |             | 1    |      | yes    | C_BUF_125    | bram   | 1       | 32, 16, 1        |
 |   C_BUF_126_U                           | ram_1wnr array   |             | 1    |      | yes    | C_BUF_126    | bram   | 1       | 32, 16, 1        |
 |   C_BUF_127_U                           | ram_1wnr array   |             | 1    |      | yes    | C_BUF_127    | bram   | 1       | 32, 16, 1        |
-|  + dataflow_parent_loop_proc            |                  |             | 66   | 0    |        |              |        |         |                  |
-|   + dataflow_in_loop_loop_for_tile_a_1  |                  |             | 66   | 0    |        |              |        |         |                  |
-|     A_TILE_1_U                          | ram_1wnr channel | pipo        | 1    |      |        | A_TILE_1     | bram   | 1       | 32, 128, 2       |
-|     A_TILE_U                            | ram_1wnr channel | pipo        | 1    |      |        | A_TILE       | bram   | 1       | 32, 128, 2       |
-|     tileA_c_U                           | fifo channel     | scalar prop |      |      |        | tileA_c      | memory | 0       | 1, 5, 1          |
+|  + dataflow_parent_loop_proc            |                  |             | 64   | 0    |        |              |        |         |                  |
+|   + dataflow_in_loop_loop_for_tile_a    |                  |             | 64   | 0    |        |              |        |         |                  |
 |     A_streams_1_U                       | fifo channel     | stream      |      |      |        | A_streams_1  | memory | 0       | 32, 2, 1         |
 |     A_streams_U                         | fifo channel     | stream      |      |      |        | A_streams    | memory | 0       | 32, 2, 1         |
+|     tileA_c_U                           | fifo channel     | scalar prop |      |      |        | tileA_c      | memory | 0       | 1, 5, 1          |
 |     B_TILES_1023_U                      | fifo channel     | task level  |      |      |        | B_TILES_1023 | memory | 0       | 32, 2, 1         |
 |     B_TILES_1022_U                      | fifo channel     | task level  |      |      |        | B_TILES_1022 | memory | 0       | 32, 2, 1         |
 |     B_TILES_1021_U                      | fifo channel     | task level  |      |      |        | B_TILES_1021 | memory | 0       | 32, 2, 1         |
@@ -1783,9 +1782,9 @@
 |     C_TILES_2_U                         | ram_1wnr channel | pipo        | 1    |      |        | C_TILES_2    | bram   | 1       | 32, 16, 2        |
 |     C_TILES_1_U                         | ram_1wnr channel | pipo        | 1    |      |        | C_TILES_1    | bram   | 1       | 32, 16, 2        |
 |     C_TILES_U                           | ram_1wnr channel | pipo        | 1    |      |        | C_TILES      | bram   | 1       | 32, 16, 2        |
-|    + matMulTiles6                       |                  |             | 0    | 0    |        |              |        |         |                  |
-|     + matMulTile13                      |                  |             | 0    | 0    |        |              |        |         |                  |
-|      + dataflow_in_loop_mat_mul_i17     |                  |             | 0    | 0    |        |              |        |         |                  |
+|    + matMulTiles5                       |                  |             | 0    | 0    |        |              |        |         |                  |
+|     + matMulTile12                      |                  |             | 0    | 0    |        |              |        |         |                  |
+|      + dataflow_in_loop_mat_mul_i16     |                  |             | 0    | 0    |        |              |        |         |                  |
 |        psum_U                           | fifo channel     | task level  |      |      |        | psum         | memory | 0       | 32, 2, 1         |
 |        psum_1_U                         | fifo channel     | task level  |      |      |        | psum_1       | memory | 0       | 32, 2, 1         |
 |        psum_2_U                         | fifo channel     | task level  |      |      |        | psum_2       | memory | 0       | 32, 2, 1         |
@@ -1818,8 +1817,8 @@
 |        psum_29_U                        | fifo channel     | task level  |      |      |        | psum_29      | memory | 0       | 32, 2, 1         |
 |        psum_30_U                        | fifo channel     | task level  |      |      |        | psum_30      | memory | 0       | 32, 2, 1         |
 |        psum31_U                         | fifo channel     | task level  |      |      |        | psum31       | memory | 0       | 32, 2, 1         |
-|     + matMulTile_514                    |                  |             | 0    | 0    |        |              |        |         |                  |
-|      + dataflow_in_loop_mat_mul_i_17418 |                  |             | 0    | 0    |        |              |        |         |                  |
+|     + matMulTile_513                    |                  |             | 0    | 0    |        |              |        |         |                  |
+|      + dataflow_in_loop_mat_mul_i_17417 |                  |             | 0    | 0    |        |              |        |         |                  |
 |        psum_U                           | fifo channel     | task level  |      |      |        | psum         | memory | 0       | 32, 2, 1         |
 |        psum_32_U                        | fifo channel     | task level  |      |      |        | psum_32      | memory | 0       | 32, 2, 1         |
 |        psum_33_U                        | fifo channel     | task level  |      |      |        | psum_33      | memory | 0       | 32, 2, 1         |
@@ -1862,13 +1861,14 @@
 +--------------+------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Type         | Options                                  | Location                                          | Messages                                                                                                                                                                           |
 +--------------+------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| bind_storage | variable=B_TILES type=RAM_1WNR impl=BRAM | source/gemm.cpp:33 in gemm2, B_TILES              | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
-| stream       | variable=B_TILES type=pipo depth=2       | source/gemm.cpp:34 in gemm2, B_TILES              | Unsuported scalar variable on pragma 'Stream', ignore it.                                                                                                                          |
-| dataflow     |                                          | source/load_tiles.hpp:31 in loadtilesbfromdram    | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                          | source/load_tiles.hpp:40 in storetiletodram       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                          | source/load_tiles.hpp:53 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                          | source/loader.hpp:49 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                          | source/loader.hpp:58 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| bind_storage | variable=A_BUF type=RAM_1WNR impl=BRAM   | source/gemm.cpp:15 in gemm2, A_BUF                | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| bind_storage | variable=B_TILES type=RAM_1WNR impl=BRAM | source/gemm.cpp:35 in gemm2, B_TILES              | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| stream       | variable=B_TILES type=pipo depth=2       | source/gemm.cpp:36 in gemm2, B_TILES              | Unsuported scalar variable on pragma 'Stream', ignore it.                                                                                                                          |
+| dataflow     |                                          | source/load_tiles.hpp:42 in loadtilesbfromdram    | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                          | source/load_tiles.hpp:51 in storetiletodram       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                          | source/load_tiles.hpp:64 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                          | source/loader.hpp:59 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                          | source/loader.hpp:68 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 | stream       | variable=psum type=pipo depth=2          | source/usefulFunctions.hpp:36 in matmultile, psum | Unsuported scalar variable on pragma 'Stream', ignore it.                                                                                                                          |
 | dataflow     |                                          | source/usefulFunctions.hpp:54 in matmultiles      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 +--------------+------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1885,60 +1885,65 @@
 | inline          | off                                         | source/dram.hpp:31 in storeoutputtodram           |
 | pipeline        | II=1                                        | source/dram.hpp:40 in storeoutputtodram           |
 | unroll          |                                             | source/dram.hpp:43 in storeoutputtodram           |
-| inline          | off                                         | source/dram.hpp:54 in loadbfromdram               |
-| pipeline        | II=1                                        | source/dram.hpp:59 in loadbfromdram               |
-| unroll          |                                             | source/dram.hpp:62 in loadbfromdram               |
+| inline          | off                                         | source/dram.hpp:54 in loadafromdram               |
+| pipeline        | II=1                                        | source/dram.hpp:58 in loadafromdram               |
+| unroll          |                                             | source/dram.hpp:61 in loadafromdram               |
+| inline          | off                                         | source/dram.hpp:69 in loadbfromdram               |
+| pipeline        | II=1                                        | source/dram.hpp:74 in loadbfromdram               |
+| unroll          |                                             | source/dram.hpp:77 in loadbfromdram               |
 | interface       | m_axi offset=slave port=A_DRAM bundle=gmem0 | source/gemm.cpp:11 in gemm2, A_DRAM               |
 | interface       | m_axi offset=slave port=B_DRAM bundle=gmem1 | source/gemm.cpp:12 in gemm2, B_DRAM               |
-| bind_storage    | variable=A_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:15 in gemm2, A_BUF                |
-| array_partition | variable=B_BUF dim=1 type=complete          | source/gemm.cpp:17 in gemm2, B_BUF                |
-| array_partition | variable=B_BUF dim=2 type=complete          | source/gemm.cpp:18 in gemm2, B_BUF                |
-| bind_storage    | variable=B_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:19 in gemm2, B_BUF                |
-| array_partition | variable=C_BUF dim=1 type=complete          | source/gemm.cpp:21 in gemm2, C_BUF                |
-| array_partition | variable=C_BUF dim=2 type=complete          | source/gemm.cpp:22 in gemm2, C_BUF                |
-| array_partition | variable=C_BUF dim=4 type=complete          | source/gemm.cpp:23 in gemm2, C_BUF                |
-| bind_storage    | variable=C_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:24 in gemm2, C_BUF                |
-| bind_storage    | variable=A_TILE type=RAM_1WNR impl=BRAM     | source/gemm.cpp:26 in gemm2, A_TILE               |
-| array_partition | variable=A_TILE dim=2 type=cyclic factor=2  | source/gemm.cpp:27 in gemm2, A_TILE               |
-| stream          | variable=A_TILE type=pipo depth=2           | source/gemm.cpp:28 in gemm2, A_TILE               |
-| array_partition | variable=B_TILES dim=1 type=complete        | source/gemm.cpp:30 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=2 type=complete        | source/gemm.cpp:31 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=3 type=complete        | source/gemm.cpp:32 in gemm2, B_TILES              |
-| dataflow        |                                             | source/gemm.cpp:41 in gemm2                       |
-| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:44 in gemm2, A_streams            |
-| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:48 in gemm2, B_streams            |
-| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:52 in gemm2, C_streams            |
-| array_partition | variable=C_TILES dim=1 type=complete        | source/gemm.cpp:54 in gemm2, C_TILES              |
-| array_partition | variable=C_TILES dim=3 type=complete        | source/gemm.cpp:55 in gemm2, C_TILES              |
-| bind_storage    | variable=C_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:56 in gemm2, C_TILES              |
-| stream          | variable=C_TILES type=pipo depth=2          | source/gemm.cpp:57 in gemm2, C_TILES              |
-| inline          | off                                         | source/load_tiles.hpp:4 in loadtileafromdram      |
-| pipeline        | II=1                                        | source/load_tiles.hpp:8 in loadtileafromdram      |
-| unroll          |                                             | source/load_tiles.hpp:11 in loadtileafromdram     |
-| inline          | off                                         | source/load_tiles.hpp:19 in loadtilebfromdram     |
-| unroll          |                                             | source/load_tiles.hpp:23 in loadtilebfromdram     |
-| inline          | off                                         | source/load_tiles.hpp:30 in loadtilesbfromdram    |
-| unroll          |                                             | source/load_tiles.hpp:33 in loadtilesbfromdram    |
-| inline          | off                                         | source/load_tiles.hpp:39 in storetiletodram       |
-| pipeline        | II=1                                        | source/load_tiles.hpp:43 in storetiletodram       |
-| unroll          |                                             | source/load_tiles.hpp:45 in storetiletodram       |
-| inline          | off                                         | source/load_tiles.hpp:52 in storetilestodram      |
-| unroll          |                                             | source/load_tiles.hpp:55 in storetilestodram      |
+| array_partition | variable=A_BUF dim=1 type=complete          | source/gemm.cpp:16 in gemm2, A_BUF                |
+| array_partition | variable=A_BUF dim=2 type=complete          | source/gemm.cpp:17 in gemm2, A_BUF                |
+| array_partition | variable=B_BUF dim=1 type=complete          | source/gemm.cpp:19 in gemm2, B_BUF                |
+| array_partition | variable=B_BUF dim=2 type=complete          | source/gemm.cpp:20 in gemm2, B_BUF                |
+| bind_storage    | variable=B_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:21 in gemm2, B_BUF                |
+| array_partition | variable=C_BUF dim=1 type=complete          | source/gemm.cpp:23 in gemm2, C_BUF                |
+| array_partition | variable=C_BUF dim=2 type=complete          | source/gemm.cpp:24 in gemm2, C_BUF                |
+| array_partition | variable=C_BUF dim=4 type=complete          | source/gemm.cpp:25 in gemm2, C_BUF                |
+| bind_storage    | variable=C_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:26 in gemm2, C_BUF                |
+| bind_storage    | variable=A_TILE type=RAM_1WNR impl=BRAM     | source/gemm.cpp:28 in gemm2, A_TILE               |
+| array_partition | variable=A_TILE dim=2 type=complete         | source/gemm.cpp:29 in gemm2, A_TILE               |
+| stream          | variable=A_TILE type=pipo depth=2           | source/gemm.cpp:30 in gemm2, A_TILE               |
+| array_partition | variable=B_TILES dim=1 type=complete        | source/gemm.cpp:32 in gemm2, B_TILES              |
+| array_partition | variable=B_TILES dim=2 type=complete        | source/gemm.cpp:33 in gemm2, B_TILES              |
+| array_partition | variable=B_TILES dim=3 type=complete        | source/gemm.cpp:34 in gemm2, B_TILES              |
+| dataflow        |                                             | source/gemm.cpp:44 in gemm2                       |
+| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:47 in gemm2, A_streams            |
+| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:51 in gemm2, B_streams            |
+| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:55 in gemm2, C_streams            |
+| array_partition | variable=C_TILES dim=1 type=complete        | source/gemm.cpp:57 in gemm2, C_TILES              |
+| array_partition | variable=C_TILES dim=3 type=complete        | source/gemm.cpp:58 in gemm2, C_TILES              |
+| bind_storage    | variable=C_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:59 in gemm2, C_TILES              |
+| stream          | variable=C_TILES type=pipo depth=2          | source/gemm.cpp:60 in gemm2, C_TILES              |
+| inline          | off                                         | source/load_tiles.hpp:4 in loadtileafrombuf       |
+| pipeline        | II=1                                        | source/load_tiles.hpp:8 in loadtileafrombuf       |
+| inline          | off                                         | source/load_tiles.hpp:15 in loadtileafromdram     |
+| pipeline        | II=1                                        | source/load_tiles.hpp:19 in loadtileafromdram     |
+| unroll          |                                             | source/load_tiles.hpp:22 in loadtileafromdram     |
+| inline          | off                                         | source/load_tiles.hpp:30 in loadtilebfromdram     |
+| unroll          |                                             | source/load_tiles.hpp:34 in loadtilebfromdram     |
+| inline          | off                                         | source/load_tiles.hpp:41 in loadtilesbfromdram    |
+| unroll          |                                             | source/load_tiles.hpp:44 in loadtilesbfromdram    |
+| inline          | off                                         | source/load_tiles.hpp:50 in storetiletodram       |
+| pipeline        | II=1                                        | source/load_tiles.hpp:54 in storetiletodram       |
+| unroll          |                                             | source/load_tiles.hpp:56 in storetiletodram       |
+| inline          | off                                         | source/load_tiles.hpp:63 in storetilestodram      |
+| unroll          |                                             | source/load_tiles.hpp:66 in storetilestodram      |
 | inline          | off                                         | source/loader.hpp:8 in loader_a_tiles             |
 | pipeline        | II=1                                        | source/loader.hpp:11 in loader_a_tiles            |
-| loop_flatten    |                                             | source/loader.hpp:12 in loader_a_tiles            |
-| unroll          |                                             | source/loader.hpp:15 in loader_a_tiles            |
-| inline          | off                                         | source/loader.hpp:23 in loader_b_tile             |
-| pipeline        | II=1                                        | source/loader.hpp:26 in loader_b_tile             |
-| loop_flatten    |                                             | source/loader.hpp:27 in loader_b_tile             |
-| unroll          |                                             | source/loader.hpp:29 in loader_b_tile             |
-| inline          | off                                         | source/loader.hpp:37 in loader_c_tile             |
-| pipeline        | II=1                                        | source/loader.hpp:40 in loader_c_tile             |
-| loop_flatten    |                                             | source/loader.hpp:41 in loader_c_tile             |
-| inline          | off                                         | source/loader.hpp:48 in loader_b_tiles            |
-| unroll          |                                             | source/loader.hpp:51 in loader_b_tiles            |
-| inline          | off                                         | source/loader.hpp:57 in loader_c_tiles            |
-| unroll          |                                             | source/loader.hpp:60 in loader_c_tiles            |
+| unroll          |                                             | source/loader.hpp:14 in loader_a_tiles            |
+| inline          | off                                         | source/loader.hpp:33 in loader_b_tile             |
+| pipeline        | II=1                                        | source/loader.hpp:36 in loader_b_tile             |
+| loop_flatten    |                                             | source/loader.hpp:37 in loader_b_tile             |
+| unroll          |                                             | source/loader.hpp:39 in loader_b_tile             |
+| inline          | off                                         | source/loader.hpp:47 in loader_c_tile             |
+| pipeline        | II=1                                        | source/loader.hpp:50 in loader_c_tile             |
+| loop_flatten    |                                             | source/loader.hpp:51 in loader_c_tile             |
+| inline          | off                                         | source/loader.hpp:58 in loader_b_tiles            |
+| unroll          |                                             | source/loader.hpp:61 in loader_b_tiles            |
+| inline          | off                                         | source/loader.hpp:67 in loader_c_tiles            |
+| unroll          |                                             | source/loader.hpp:70 in loader_c_tiles            |
 | inline          | off                                         | source/usefulFunctions.hpp:9 in calculatepsum     |
 | pipeline        | II=1                                        | source/usefulFunctions.hpp:11 in calculatepsum    |
 | unroll          |                                             | source/usefulFunctions.hpp:15 in calculatepsum    |

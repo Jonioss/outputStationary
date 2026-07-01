@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_B_tile11'
+== Vitis HLS Report for 'loader_B_tile10'
 ================================================================
-* Date:           Sun Jun 14 13:11:50 2026
+* Date:           Wed Jul  1 18:24:17 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -41,7 +41,7 @@
         |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_24_1_VITIS_LOOP_25_2  |      256|      256|         2|          1|          1|   256|       yes|
+        |- VITIS_LOOP_34_1_VITIS_LOOP_35_2  |      256|      256|         2|          1|          1|   256|       yes|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -73,38 +73,38 @@
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
     |           Instance          |         Module        | BRAM_18K| DSP| FF| LUT | URAM|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
-    |sparsemux_33_4_32_1_1_U2256  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2257  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2258  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2259  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2260  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2261  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2262  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2263  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2264  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2265  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2266  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2267  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2268  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2269  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2270  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2271  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2272  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2273  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2274  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2275  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2276  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2277  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2278  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2279  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2280  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2281  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2282  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2283  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2284  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2285  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2286  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2287  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3825  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3826  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3827  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3828  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3829  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3830  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3831  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3832  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3833  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3834  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3835  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3836  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3837  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3838  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3839  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3840  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3841  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3842  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3843  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3844  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3845  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3846  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3847  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3848  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3849  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3850  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3851  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3852  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3853  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3854  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3855  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U3856  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
     |Total                        |                       |        0|   0|  0| 5120|    0|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
@@ -122,14 +122,14 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln24_fu_5520_p2               |         +|   0|  0|   9|           9|           1|
-    |add_ln25_fu_7860_p2               |         +|   0|  0|   5|           5|           1|
+    |add_ln34_fu_5520_p2               |         +|   0|  0|   9|           9|           1|
+    |add_ln35_fu_7860_p2               |         +|   0|  0|   5|           5|           1|
     |ap_condition_936                  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln24_fu_5526_p2              |      icmp|   0|  0|  10|           9|          10|
-    |icmp_ln25_fu_5538_p2              |      icmp|   0|  0|   6|           5|           6|
+    |icmp_ln34_fu_5526_p2              |      icmp|   0|  0|  10|           9|          10|
+    |icmp_ln35_fu_5538_p2              |      icmp|   0|  0|   6|           5|           6|
     |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
     |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
-    |select_ln24_fu_5544_p3            |    select|   0|  0|   5|           1|           1|
+    |select_ln34_fu_5544_p3            |    select|   0|  0|   5|           1|           1|
     |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
     +----------------------------------+----------+----+---+----+------------+------------+
     |Total                             |          |   0|  0|  43|          33|          24|
@@ -220,7 +220,7 @@
     |tmp_7_i_reg_8057          |  32|   0|   32|          0|
     |tmp_8_i_reg_8063          |  32|   0|   32|          0|
     |tmp_9_i_reg_8069          |  32|   0|   32|          0|
-    |tmp_i_37_reg_8015         |  32|   0|   32|          0|
+    |tmp_i_35_reg_8015         |  32|   0|   32|          0|
     |tmp_i_reg_8009            |  32|   0|   32|          0|
     +--------------------------+----+----+-----+-----------+
     |Total                     |1041|   0| 1041|          0|
@@ -235,13 +235,13 @@
 +-------------------------------+-----+-----+------------+-----------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
 +-------------------------------+-----+-----+------------+-----------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile11|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile10|  return value|
 |B_streams_0_0_din              |  out|   32|     ap_fifo|    B_streams_0_0|       pointer|
 |B_streams_0_0_num_data_valid   |   in|    3|     ap_fifo|    B_streams_0_0|       pointer|
 |B_streams_0_0_fifo_cap         |   in|    3|     ap_fifo|    B_streams_0_0|       pointer|

@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'dataflow_in_loop_mat_mul_i17'
+== Vitis HLS Report for 'dataflow_in_loop_mat_mul_i16'
 ================================================================
-* Date:           Sun Jun 14 13:11:52 2026
+* Date:           Wed Jul  1 18:24:20 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,8 +38,8 @@
         |                    |                 |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
         |      Instance      |      Module     |   min   |   max   |    min    |    max    | min | max |   Type  |
         +--------------------+-----------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |calculatepsum19_U0  |calculatepsum19  |       21|       21|  69.993 ns|  69.993 ns|   21|   21|       no|
-        |psumToStream20_U0   |psumToStream20   |        0|        0|       0 ns|       0 ns|    0|    0|       no|
+        |calculatepsum18_U0  |calculatepsum18  |       21|       21|  69.993 ns|  69.993 ns|   21|   21|       no|
+        |psumToStream19_U0   |psumToStream19   |        0|        0|       0 ns|       0 ns|    0|    0|       no|
         +--------------------+-----------------+---------+---------+-----------+-----------+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +--------------------+-----------------+---------+-----+------+------+-----+
     |      Instance      |      Module     | BRAM_18K| DSP |  FF  |  LUT | URAM|
     +--------------------+-----------------+---------+-----+------+------+-----+
-    |calculatepsum19_U0  |calculatepsum19  |        0|  128|  6390|  6309|    0|
-    |psumToStream20_U0   |psumToStream20   |        0|    0|     2|    68|    0|
+    |calculatepsum18_U0  |calculatepsum18  |        0|  128|  6390|  6309|    0|
+    |psumToStream19_U0   |psumToStream19   |        0|    0|     2|    68|    0|
     +--------------------+-----------------+---------+-----+------+------+-----+
     |Total               |                 |        0|  128|  6392|  6377|    0|
     +--------------------+-----------------+---------+-----+------+------+-----+
@@ -163,8 +163,8 @@
     |ap_channel_done_psum_8          |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_psum_9          |       and|   0|  0|   2|           1|           1|
     |ap_idle                         |       and|   0|  0|   2|           1|           1|
-    |calculatepsum19_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |psumToStream20_U0_ap_start      |       and|   0|  0|   2|           1|           1|
+    |calculatepsum18_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
+    |psumToStream19_U0_ap_start      |       and|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_psum      |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_psum31    |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_psum_1    |        or|   0|  0|   2|           1|           1|
@@ -485,12 +485,12 @@
 |C_streams_0_31_din      |  out|   32|     ap_fifo|                C_streams_0_31|       pointer|
 |C_streams_0_31_full_n   |   in|    1|     ap_fifo|                C_streams_0_31|       pointer|
 |C_streams_0_31_write    |  out|    1|     ap_fifo|                C_streams_0_31|       pointer|
-|ap_clk                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_rst                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_start                |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_done                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_ready                |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_idle                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
-|ap_continue             |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i17|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_mat_mul_i16|  return value|
 +------------------------+-----+-----+------------+------------------------------+--------------+
 

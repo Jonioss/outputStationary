@@ -1,5 +1,16 @@
 #include "constants.h"
 
+void loadTileAFromBUF(const fm_t A_BUF[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
+    #pragma HLS INLINE off
+	load_tile_A_buf:
+	for(int i = 0; i < I/NUM_OF_TILES; i++) {
+		for(int k = 0; k < K; k++) {
+			#pragma HLS PIPELINE II=1
+			A_TILE[i][k] = A_BUF[i + tileA*(I/NUM_OF_TILES)][k];
+		}
+	}
+}
+
 void loadTileAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
     #pragma HLS INLINE off
 	load_tile_A:

@@ -50,6 +50,21 @@ void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TIL
 	}
 }
 
+void loadAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_BUF[I][K]) {
+	#pragma HLS INLINE off
+	load_A:
+	for(int i = 0; i < I; i++) {
+		for(int k = 0; k < K/16; k++) {
+			#pragma HLS PIPELINE II=1
+			const hls::vector<fm_t, 16> a_vec = A_DRAM[i][k];
+			for(int v = 0; v < 16; v++) {
+				#pragma HLS UNROLL
+				A_BUF[i][k*16 + v] = a_vec[v];
+			}
+		}
+	}
+}
+
 void loadBFromDRAM(const hls::vector<fm_t, 16> B_DRAM[K/16][J], fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES]) {
 	#pragma HLS INLINE off
 	load_B:

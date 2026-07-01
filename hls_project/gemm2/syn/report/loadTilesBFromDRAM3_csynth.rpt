@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadTilesBFromDRAM4'
+== Vitis HLS Report for 'loadTilesBFromDRAM3'
 ================================================================
-* Date:           Sun Jun 14 13:11:48 2026
+* Date:           Wed Jul  1 18:24:13 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -34,13 +34,13 @@
 
     + Detail: 
         * Instance: 
-        +--------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |                          |                       |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
-        |         Instance         |         Module        |   min   |   max   |    min    |    max    | min | max |   Type  |
-        +--------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |loadTileBFromDRAM9_U0     |loadTileBFromDRAM9     |       19|       19|  63.327 ns|  63.327 ns|   19|   19|       no|
-        |loadTileBFromDRAM_110_U0  |loadTileBFromDRAM_110  |       19|       19|  63.327 ns|  63.327 ns|   19|   19|       no|
-        +--------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                         |                      |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |         Instance        |        Module        |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |loadTileBFromDRAM8_U0    |loadTileBFromDRAM8    |       19|       19|  63.327 ns|  63.327 ns|   19|   19|       no|
+        |loadTileBFromDRAM_19_U0  |loadTileBFromDRAM_19  |       19|       19|  63.327 ns|  63.327 ns|   19|   19|       no|
+        +-------------------------+----------------------+---------+---------+-----------+-----------+-----+-----+---------+
 
         * Loop: 
         N/A
@@ -71,14 +71,14 @@
 
 + Detail: 
     * Instance: 
-    +--------------------------+-----------------------+---------+----+-------+-------+-----+
-    |         Instance         |         Module        | BRAM_18K| DSP|   FF  |  LUT  | URAM|
-    +--------------------------+-----------------------+---------+----+-------+-------+-----+
-    |loadTileBFromDRAM9_U0     |loadTileBFromDRAM9     |        0|   0|  49162|  22730|    0|
-    |loadTileBFromDRAM_110_U0  |loadTileBFromDRAM_110  |        0|   0|  49162|  22730|    0|
-    +--------------------------+-----------------------+---------+----+-------+-------+-----+
-    |Total                     |                       |        0|   0|  98324|  45460|    0|
-    +--------------------------+-----------------------+---------+----+-------+-------+-----+
+    +-------------------------+----------------------+---------+----+-------+-------+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +-------------------------+----------------------+---------+----+-------+-------+-----+
+    |loadTileBFromDRAM8_U0    |loadTileBFromDRAM8    |        0|   0|  49162|  22730|    0|
+    |loadTileBFromDRAM_19_U0  |loadTileBFromDRAM_19  |        0|   0|  49162|  22730|    0|
+    +-------------------------+----------------------+---------+----+-------+-------+-----+
+    |Total                    |                      |        0|   0|  98324|  45460|    0|
+    +-------------------------+----------------------+---------+----+-------+-------+-----+
 
     * DSP: 
     N/A
@@ -90,40 +90,40 @@
     N/A
 
     * Expression: 
-    +-------------------------------------------+----------+----+---+----+------------+------------+
-    |               Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-------------------------------------------+----------+----+---+----+------------+------------+
-    |ap_idle                                    |       and|   0|  0|   2|           1|           1|
-    |ap_sync_continue                           |       and|   0|  0|   2|           1|           1|
-    |ap_sync_done                               |       and|   0|  0|   2|           1|           1|
-    |ap_sync_ready                              |       and|   0|  0|   2|           1|           1|
-    |loadTileBFromDRAM9_U0_ap_start             |       and|   0|  0|   2|           1|           1|
-    |loadTileBFromDRAM_110_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |ap_sync_loadTileBFromDRAM9_U0_ap_ready     |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loadTileBFromDRAM_110_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
-    +-------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                      |          |   0|  0|  16|           8|           8|
-    +-------------------------------------------+----------+----+---+----+------------+------------+
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                                   |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                             |       and|   0|  0|   2|           1|           1|
+    |loadTileBFromDRAM8_U0_ap_start            |       and|   0|  0|   2|           1|           1|
+    |loadTileBFromDRAM_19_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_loadTileBFromDRAM8_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loadTileBFromDRAM_19_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                     |          |   0|  0|  16|           8|           8|
+    +------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------------------------------+----+-----------+-----+-----------+
-    |                      Name                     | LUT| Input Size| Bits| Total Bits|
-    +-----------------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_loadTileBFromDRAM9_U0_ap_ready     |   2|          2|    1|          2|
-    |ap_sync_reg_loadTileBFromDRAM_110_U0_ap_ready  |   2|          2|    1|          2|
-    +-----------------------------------------------+----+-----------+-----+-----------+
-    |Total                                          |   4|          4|    2|          4|
-    +-----------------------------------------------+----+-----------+-----+-----------+
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_loadTileBFromDRAM8_U0_ap_ready    |   2|          2|    1|          2|
+    |ap_sync_reg_loadTileBFromDRAM_19_U0_ap_ready  |   2|          2|    1|          2|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |   4|          4|    2|          4|
+    +----------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-----------------------------------------------+---+----+-----+-----------+
-    |                      Name                     | FF| LUT| Bits| Const Bits|
-    +-----------------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_loadTileBFromDRAM9_U0_ap_ready     |  1|   0|    1|          0|
-    |ap_sync_reg_loadTileBFromDRAM_110_U0_ap_ready  |  1|   0|    1|          0|
-    +-----------------------------------------------+---+----+-----+-----------+
-    |Total                                          |  2|   0|    2|          0|
-    +-----------------------------------------------+---+----+-----+-----------+
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_loadTileBFromDRAM8_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_loadTileBFromDRAM_19_U0_ap_ready  |  1|   0|    1|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  2|   0|    2|          0|
+    +----------------------------------------------+---+----+-----+-----------+
 
 
 
@@ -4902,12 +4902,12 @@
 |B_TILES_1_15_30_out_ap_vld  |  out|    1|     ap_none|  B_TILES_1_15_30_out|       pointer|
 |B_TILES_1_15_31_out         |  out|   32|     ap_none|  B_TILES_1_15_31_out|       pointer|
 |B_TILES_1_15_31_out_ap_vld  |  out|    1|     ap_none|  B_TILES_1_15_31_out|       pointer|
-|ap_clk                      |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_rst                      |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_start                    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_done                     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_ready                    |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_idle                     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
-|ap_continue                 |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM4|  return value|
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  loadTilesBFromDRAM3|  return value|
 +----------------------------+-----+-----+------------+---------------------+--------------+
 

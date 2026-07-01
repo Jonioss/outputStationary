@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2'
+== Vitis HLS Report for 'loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2'
 ================================================================
-* Date:           Sun Jun 14 13:11:42 2026
+* Date:           Wed Jul  1 18:24:04 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -41,7 +41,7 @@
         |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_57_1_VITIS_LOOP_58_2  |       64|       64|         2|          1|          1|    64|       yes|
+        |- VITIS_LOOP_72_1_VITIS_LOOP_73_2  |       64|       64|         2|          1|          1|    64|       yes|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -85,14 +85,14 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln57_1_fu_723_p2       |         +|   0|  0|   7|           7|           1|
-    |add_ln57_fu_765_p2         |         +|   0|  0|   5|           2|           1|
-    |add_ln58_fu_1165_p2        |         +|   0|  0|   6|           6|           1|
+    |add_ln72_1_fu_779_p2       |         +|   0|  0|   5|           2|           1|
+    |add_ln72_fu_723_p2         |         +|   0|  0|   7|           7|           1|
+    |add_ln73_fu_1165_p2        |         +|   0|  0|   6|           6|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln57_fu_729_p2        |      icmp|   0|  0|   8|           7|           8|
-    |icmp_ln58_fu_771_p2        |      icmp|   0|  0|   7|           6|           7|
-    |select_ln57_1_fu_785_p3    |    select|   0|  0|   2|           1|           2|
-    |select_ln57_fu_777_p3      |    select|   0|  0|   6|           1|           1|
+    |icmp_ln72_fu_729_p2        |      icmp|   0|  0|   8|           7|           8|
+    |icmp_ln73_fu_765_p2        |      icmp|   0|  0|   7|           6|           7|
+    |select_ln72_1_fu_785_p3    |    select|   0|  0|   2|           1|           2|
+    |select_ln72_fu_771_p3      |    select|   0|  0|   6|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  45|          32|          24|
@@ -136,12 +136,12 @@
 +----------------------+-----+-----+------------+--------------------------------------------------------+--------------+
 |       RTL Ports      | Dir | Bits|  Protocol  |                      Source Object                     |    C Type    |
 +----------------------+-----+-----+------------+--------------------------------------------------------+--------------+
-|ap_clk                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
-|ap_rst                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
-|ap_start              |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
-|ap_done               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
-|ap_idle               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
-|ap_ready              |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_57_1_VITIS_LOOP_58_2|  return value|
+|ap_clk                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2|  return value|
 |m_axi_gmem1_AWVALID   |  out|    1|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_AWREADY   |   in|    1|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_AWADDR    |  out|   64|       m_axi|                                                   gmem1|       pointer|
@@ -188,7 +188,7 @@
 |m_axi_gmem1_BRESP     |   in|    2|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_BID       |   in|    1|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_BUSER     |   in|    1|       m_axi|                                                   gmem1|       pointer|
-|sext_ln57             |   in|   58|     ap_none|                                               sext_ln57|        scalar|
+|sext_ln72             |   in|   58|     ap_none|                                               sext_ln72|        scalar|
 |B_BUF_1_15_address0   |  out|    5|   ap_memory|                                              B_BUF_1_15|         array|
 |B_BUF_1_15_ce0        |  out|    1|   ap_memory|                                              B_BUF_1_15|         array|
 |B_BUF_1_15_we0        |  out|    1|   ap_memory|                                              B_BUF_1_15|         array|

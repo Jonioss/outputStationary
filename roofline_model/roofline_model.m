@@ -19,7 +19,12 @@ hold on;
 
 %% plot achieved performance - intensity point
 achieved_I = 4.57;
-achieved_P = 65536.0/1710.0;
+achieved_P = 65536.0/1512.0;
 plot(achieved_I, achieved_P, 'ro', 'MarkerSize', 8, 'DisplayName', 'Achieved');
 legend show;
 hold off;
+
+%% print percentage of achieved performance
+percentage = (achieved_P / BW) * 100;
+fprintf('Achieved performance: %.2f FLOPs/Cycle\n', achieved_P);
+fprintf('Percentage of roofline performance: %.2f%%\n', percentage);

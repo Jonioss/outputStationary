@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'calculatepsum19'
+== Vitis HLS Report for 'calculatepsum18'
 ================================================================
-* Date:           Sun Jun 14 13:11:51 2026
+* Date:           Wed Jul  1 18:24:20 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -73,38 +73,38 @@
     +--------------------------+--------------------+---------+----+----+----+-----+
     |         Instance         |       Module       | BRAM_18K| DSP| FF | LUT| URAM|
     +--------------------------+--------------------+---------+----+----+----+-----+
-    |mul_32s_32s_56_3_1_U4496  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4497  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4498  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4499  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4500  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4501  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4502  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4503  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4504  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4505  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4506  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4507  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4508  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4509  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4510  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4511  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4512  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4513  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4514  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4515  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4516  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4517  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4518  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4519  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4520  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4521  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4522  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4523  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4524  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4525  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4526  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
-    |mul_32s_32s_56_3_1_U4527  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6065  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6066  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6067  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6068  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6069  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6070  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6071  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6072  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6073  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6074  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6075  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6076  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6077  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6078  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6079  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6080  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6081  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6082  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6083  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6084  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6085  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6086  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6087  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6088  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6089  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6090  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6091  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6092  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6093  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6094  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6095  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
+    |mul_32s_32s_56_3_1_U6096  |mul_32s_32s_56_3_1  |        0|   4|  46|  42|    0|
     +--------------------------+--------------------+---------+----+----+----+-----+
     |Total                     |                    |        0| 128|1472|1344|    0|
     +--------------------------+--------------------+---------+----+----+----+-----+
@@ -466,45 +466,45 @@
 +-------------------------------+-----+-----+------------+-----------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
 +-------------------------------+-----+-----+------------+-----------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_0                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_1                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_2                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_3                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_4                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_5                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_6                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_7                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_8                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_9                    |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_10                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_11                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_12                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_13                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_14                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_15                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_16                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_17                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_18                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_19                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_20                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_21                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_22                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_23                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_24                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_25                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_26                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_27                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_28                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_29                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_30                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
-|ap_return_31                   |  out|   32|  ap_ctrl_hs|  calculatepsum19|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_0                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_1                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_2                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_3                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_4                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_5                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_6                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_7                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_8                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_9                    |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_10                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_11                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_12                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_13                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_14                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_15                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_16                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_17                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_18                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_19                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_20                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_21                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_22                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_23                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_24                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_25                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_26                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_27                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_28                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_29                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_30                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
+|ap_return_31                   |  out|   32|  ap_ctrl_hs|  calculatepsum18|  return value|
 |A_streams_0_dout               |   in|   32|     ap_fifo|      A_streams_0|       pointer|
 |A_streams_0_num_data_valid     |   in|    3|     ap_fifo|      A_streams_0|       pointer|
 |A_streams_0_fifo_cap           |   in|    3|     ap_fifo|      A_streams_0|       pointer|

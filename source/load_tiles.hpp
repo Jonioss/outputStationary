@@ -11,41 +11,6 @@ void loadTileAFromBUF(const fm_t A_BUF[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], co
 	}
 }
  
-// void loadTileAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
-//     #pragma HLS INLINE off
-// 	load_tile_A:
-// 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
-// 		for(int k = 0; k < K/16; k++) {
-// 			#pragma HLS PIPELINE II=1
-// 			const hls::vector<fm_t, 16> a_vec = A_DRAM[i + tileA*I/NUM_OF_TILES][k];
-// 			for(int v = 0; v < 16; v++) {
-// 				#pragma HLS UNROLL
-// 				A_TILE[i][k*16 + v] = a_vec[v];
-// 			}
-// 		}
-// 	}
-// }
- 
-// void loadTileBFromDRAM(const fm_t B_DRAM[K][J/NUM_OF_TILES], fm_t B_TILE[K][J/NUM_OF_TILES]) {
-//     #pragma HLS INLINE off
-// 	load_tile_B:
-// 	for(int k = 0; k < K; k++) {
-// 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-// 			#pragma HLS UNROLL
-// 			B_TILE[k][j] = B_DRAM[k][j];
-// 		}
-// 	}
-// }
-
-// void loadTilesBFromDRAM(const fm_t B_DRAM[NUM_OF_TILES][K][J/NUM_OF_TILES], fm_t B_TILES[NUM_OF_TILES][K][J/NUM_OF_TILES]) {
-//     #pragma HLS INLINE off
-// 	#pragma HLS DATAFLOW
-// 	for(int t=0; t<NUM_OF_TILES; t++){
-// 		#pragma HLS UNROLL
-// 		loadTileBFromDRAM(B_DRAM[t], B_TILES[t]);
-// 	}
-// }
- 
 void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
 	#pragma HLS DATAFLOW

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Thu Jul  2 11:27:44 2026
+    * Date:           Thu Jul  2 11:46:08 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)
@@ -756,22 +756,19 @@
 | array_partition | variable=C_BUF dim=2 type=complete          | source/gemm.cpp:25 in gemm2, C_BUF                |
 | array_partition | variable=C_BUF dim=4 type=complete          | source/gemm.cpp:26 in gemm2, C_BUF                |
 | bind_storage    | variable=C_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:27 in gemm2, C_BUF                |
-| bind_storage    | variable=A_TILE type=RAM_1WNR impl=BRAM     | source/gemm.cpp:29 in gemm2, A_TILE               |
-| array_partition | variable=A_TILE dim=2 type=complete         | source/gemm.cpp:30 in gemm2, A_TILE               |
-| stream          | variable=A_TILE type=pipo depth=2           | source/gemm.cpp:31 in gemm2, A_TILE               |
-| array_partition | variable=B_TILES dim=1 type=complete        | source/gemm.cpp:33 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=2 type=complete        | source/gemm.cpp:34 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=3 type=complete        | source/gemm.cpp:35 in gemm2, B_TILES              |
-| bind_storage    | variable=B_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:36 in gemm2, B_TILES              |
-| stream          | variable=B_TILES type=pipo depth=2          | source/gemm.cpp:37 in gemm2, B_TILES              |
-| dataflow        |                                             | source/gemm.cpp:45 in gemm2                       |
-| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:48 in gemm2, A_streams            |
-| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:52 in gemm2, B_streams            |
-| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:56 in gemm2, C_streams            |
-| array_partition | variable=C_TILES dim=1 type=complete        | source/gemm.cpp:58 in gemm2, C_TILES              |
-| array_partition | variable=C_TILES dim=3 type=complete        | source/gemm.cpp:59 in gemm2, C_TILES              |
-| bind_storage    | variable=C_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:60 in gemm2, C_TILES              |
-| stream          | variable=C_TILES type=pipo depth=2          | source/gemm.cpp:61 in gemm2, C_TILES              |
+| stream          | variable=C_BUF type=pipo depth=2            | source/gemm.cpp:28 in gemm2, C_BUF                |
+| bind_storage    | variable=A_TILE type=RAM_1WNR impl=BRAM     | source/gemm.cpp:30 in gemm2, A_TILE               |
+| array_partition | variable=A_TILE dim=2 type=complete         | source/gemm.cpp:31 in gemm2, A_TILE               |
+| stream          | variable=A_TILE type=pipo depth=2           | source/gemm.cpp:32 in gemm2, A_TILE               |
+| array_partition | variable=B_TILES dim=1 type=complete        | source/gemm.cpp:34 in gemm2, B_TILES              |
+| array_partition | variable=B_TILES dim=2 type=complete        | source/gemm.cpp:35 in gemm2, B_TILES              |
+| array_partition | variable=B_TILES dim=3 type=complete        | source/gemm.cpp:36 in gemm2, B_TILES              |
+| bind_storage    | variable=B_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:37 in gemm2, B_TILES              |
+| stream          | variable=B_TILES type=pipo depth=2          | source/gemm.cpp:38 in gemm2, B_TILES              |
+| dataflow        |                                             | source/gemm.cpp:46 in gemm2                       |
+| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:49 in gemm2, A_streams            |
+| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:53 in gemm2, B_streams            |
+| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:57 in gemm2, C_streams            |
 | inline          | off                                         | source/load_tiles.hpp:4 in loadtileafrombuf       |
 | pipeline        | II=1                                        | source/load_tiles.hpp:8 in loadtileafrombuf       |
 | inline          | off                                         | source/load_tiles.hpp:50 in storetiletodram       |

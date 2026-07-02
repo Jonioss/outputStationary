@@ -40,6 +40,8 @@ vectors_test/*
 
 !roofline_model/*
 
+.vscode/*
+
 _x*
 build_dir*
 gemm_host.exe

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_loop_for_tile_a'
 ================================================================
-* Date:           Thu Jul  2 10:51:53 2026
+* Date:           Thu Jul  2 11:27:29 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -29,21 +29,20 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
     |   min   |   max   |    min   |    max   | min | max |   Type   |
     +---------+---------+----------+----------+-----+-----+----------+
-    |      538|      538|  1.793 us|  1.793 us|  515|  515|  dataflow|
+    |      519|      519|  1.730 us|  1.730 us|  516|  516|  dataflow|
     +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
-        |                                                                |                                                             |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
-        |                            Instance                            |                            Module                           |   min   |   max   |    min    |    max    | min | max |   Type   |
-        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
-        |loader_A_tiles2_U0                                              |loader_A_tiles2                                              |      260|      260|   0.867 us|   0.867 us|  260|  260|        no|
-        |loader_B_tiles3_U0                                              |loader_B_tiles3                                              |      258|      258|   0.860 us|   0.860 us|  259|  259|  dataflow|
-        |matMulTiles4_U0                                                 |matMulTiles4                                                 |      354|      354|   1.180 us|   1.180 us|  355|  355|  dataflow|
-        |loader_C_tiles5_U0                                              |loader_C_tiles5                                              |      514|      514|   1.713 us|   1.713 us|  515|  515|  dataflow|
-        |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot110_proc6_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot110_proc6  |       19|       19|  63.327 ns|  63.327 ns|   19|   19|        no|
-        +----------------------------------------------------------------+-------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
+        +---------------------------------------------------------------+------------------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                                                               |                                                            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |                            Instance                           |                           Module                           |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +---------------------------------------------------------------+------------------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |loader_A_tiles2_U0                                             |loader_A_tiles2                                             |      260|      260|  0.867 us|  0.867 us|  260|  260|        no|
+        |loader_B_tiles3_U0                                             |loader_B_tiles3                                             |      258|      258|  0.860 us|  0.860 us|  259|  259|  dataflow|
+        |matMulTiles4_U0                                                |matMulTiles4                                                |      354|      354|  1.180 us|  1.180 us|  355|  355|  dataflow|
+        |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5  |      515|      515|  1.716 us|  1.716 us|  515|  515|        no|
+        +---------------------------------------------------------------+------------------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
 
         * Loop: 
         N/A
@@ -58,108 +57,38 @@
 |       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
 +-----------------+---------+------+---------+--------+-----+
 |DSP              |        -|     -|        -|       -|    -|
-|Expression       |        -|     -|        0|     272|    -|
+|Expression       |        -|     -|        0|      14|    -|
 |FIFO             |        0|     -|    13406|    8600|    -|
-|Instance         |        0|   256|    24929|   34653|    -|
-|Memory           |       64|     -|        0|       0|    -|
-|Multiplexer      |        -|     -|        -|     132|    -|
-|Register         |        -|     -|       66|       -|    -|
+|Instance         |        0|   256|    26984|   34715|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|       4|    -|
+|Register         |        -|     -|        2|       -|    -|
 +-----------------+---------+------+---------+--------+-----+
-|Total            |       64|   256|    38401|   43657|    0|
+|Total            |        0|   256|    40392|   43333|    0|
 +-----------------+---------+------+---------+--------+-----+
 |Available        |     1934|  1968|  1799680|  899840|  463|
 +-----------------+---------+------+---------+--------+-----+
-|Utilization (%)  |        3|    13|        2|       4|    0|
+|Utilization (%)  |        0|    13|        2|       4|    0|
 +-----------------+---------+------+---------+--------+-----+
 
 + Detail: 
     * Instance: 
-    +----------------------------------------------------------------+-------------------------------------------------------------+---------+-----+-------+-------+-----+
-    |                            Instance                            |                            Module                           | BRAM_18K| DSP |   FF  |  LUT  | URAM|
-    +----------------------------------------------------------------+-------------------------------------------------------------+---------+-----+-------+-------+-----+
-    |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot110_proc6_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot110_proc6  |        0|    0|     66|    566|    0|
-    |loader_A_tiles2_U0                                              |loader_A_tiles2                                              |        0|    0|   1056|   5581|    0|
-    |loader_B_tiles3_U0                                              |loader_B_tiles3                                              |        0|    0|   2084|  10534|    0|
-    |loader_C_tiles5_U0                                              |loader_C_tiles5                                              |        0|    0|   2112|    484|    0|
-    |matMulTiles4_U0                                                 |matMulTiles4                                                 |        0|  256|  19611|  17488|    0|
-    +----------------------------------------------------------------+-------------------------------------------------------------+---------+-----+-------+-------+-----+
-    |Total                                                           |                                                             |        0|  256|  24929|  34653|    0|
-    +----------------------------------------------------------------+-------------------------------------------------------------+---------+-----+-------+-------+-----+
+    +---------------------------------------------------------------+------------------------------------------------------------+---------+-----+-------+-------+-----+
+    |                            Instance                           |                           Module                           | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +---------------------------------------------------------------+------------------------------------------------------------+---------+-----+-------+-------+-----+
+    |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5  |        0|    0|   4234|   1114|    0|
+    |loader_A_tiles2_U0                                             |loader_A_tiles2                                             |        0|    0|   1056|   5581|    0|
+    |loader_B_tiles3_U0                                             |loader_B_tiles3                                             |        0|    0|   2084|  10534|    0|
+    |matMulTiles4_U0                                                |matMulTiles4                                                |        0|  256|  19610|  17486|    0|
+    +---------------------------------------------------------------+------------------------------------------------------------+---------+-----+-------+-------+-----+
+    |Total                                                          |                                                            |        0|  256|  26984|  34715|    0|
+    +---------------------------------------------------------------+------------------------------------------------------------+---------+-----+-------+-------+-----+
 
     * DSP: 
     N/A
 
     * Memory: 
-    +--------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |    Memory    |                            Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +--------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |C_TILES_U     |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_1_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_2_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_3_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_4_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_5_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_6_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_7_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_8_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_9_U   |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_10_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_11_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_12_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_13_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_14_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_15_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_16_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_17_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_18_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_19_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_20_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_21_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_22_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_23_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_24_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_25_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_26_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_27_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_28_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_29_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_30_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_31_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_32_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_33_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_34_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_35_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_36_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_37_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_38_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_39_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_40_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_41_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_42_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_43_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_44_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_45_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_46_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_47_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_48_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_49_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_50_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_51_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_52_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_53_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_54_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_55_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_56_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_57_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_58_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_59_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_60_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_61_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_62_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    |C_TILES_63_U  |dataflow_in_loop_loop_for_tile_a_C_TILES_RAM_1WNR_BRAM_1R1W  |        1|  0|   0|    0|    16|   32|     1|          512|
-    +--------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total         |                                                             |       64|  0|   0|    0|  1024| 2048|    64|        32768|
-    +--------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    N/A
 
     * FIFO: 
     +----------------+---------+-----+----+-----+------+-----+---------+
@@ -295,301 +224,44 @@
     |C_streams_8_U   |        0|  103|   0|    -|     2|   32|       64|
     |C_streams_9_U   |        0|  103|   0|    -|     2|   32|       64|
     |C_streams_U     |        0|  103|   0|    -|     2|   32|       64|
-    |tileA_c_U       |        0|   16|   0|    -|     4|    1|        4|
+    |tileA_c_U       |        0|   16|   0|    -|     3|    1|        3|
     +----------------+---------+-----+----+-----+------+-----+---------+
-    |Total           |        0|13406|   0|    0|   264| 4161|     8324|
+    |Total           |        0|13406|   0|    0|   263| 4161|     8323|
     +----------------+---------+-----+----+-----+------+-----+---------+
 
     * Expression: 
-    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |                              Variable Name                              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |ap_channel_done_C_TILES                                                  |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_1                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_10                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_11                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_12                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_13                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_14                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_15                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_16                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_17                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_18                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_19                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_2                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_20                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_21                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_22                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_23                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_24                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_25                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_26                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_27                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_28                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_29                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_3                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_30                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_31                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_32                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_33                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_34                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_35                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_36                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_37                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_38                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_39                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_4                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_40                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_41                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_42                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_43                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_44                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_45                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_46                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_47                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_48                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_49                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_5                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_50                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_51                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_52                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_53                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_54                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_55                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_56                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_57                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_58                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_59                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_6                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_60                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_61                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_62                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_63                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_7                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_8                                                |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_C_TILES_9                                                |       and|   0|  0|   2|           1|           1|
-    |ap_idle                                                                  |       and|   0|  0|   2|           1|           1|
-    |ap_sync_ready                                                            |       and|   0|  0|   2|           1|           1|
-    |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot110_proc6_U0_ap_start  |       and|   0|  0|   2|           1|           1|
-    |loader_A_tiles2_U0_ap_start                                              |       and|   0|  0|   2|           1|           1|
-    |loader_B_tiles3_U0_ap_start                                              |       and|   0|  0|   2|           1|           1|
-    |loader_C_tiles5_U0_ap_continue                                           |       and|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES                                            |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_1                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_10                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_11                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_12                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_13                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_14                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_15                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_16                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_17                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_18                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_19                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_2                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_20                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_21                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_22                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_23                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_24                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_25                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_26                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_27                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_28                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_29                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_3                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_30                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_31                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_32                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_33                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_34                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_35                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_36                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_37                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_38                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_39                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_4                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_40                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_41                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_42                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_43                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_44                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_45                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_46                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_47                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_48                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_49                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_5                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_50                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_51                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_52                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_53                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_54                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_55                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_56                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_57                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_58                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_59                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_6                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_60                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_61                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_62                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_63                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_7                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_8                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_C_TILES_9                                          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loader_A_tiles2_U0_ap_ready                                      |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loader_B_tiles3_U0_ap_ready                                      |        or|   0|  0|   2|           1|           1|
-    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                                    |          |   0|  0| 272|         136|         136|
-    +-------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                        |       and|   0|  0|   2|           1|           1|
+    |loader_A_tiles2_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |loader_A_tiles2_U0_start_full_n      |       and|   0|  0|   2|           1|           1|
+    |loader_B_tiles3_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_loader_A_tiles2_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loader_B_tiles3_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                |          |   0|  0|  14|           7|           7|
+    +-------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-----------------------------------------+----+-----------+-----+-----------+
     |                   Name                  | LUT| Input Size| Bits| Total Bits|
     +-----------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_channel_write_C_TILES        |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_1      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_10     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_11     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_12     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_13     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_14     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_15     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_16     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_17     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_18     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_19     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_2      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_20     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_21     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_22     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_23     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_24     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_25     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_26     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_27     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_28     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_29     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_3      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_30     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_31     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_32     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_33     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_34     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_35     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_36     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_37     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_38     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_39     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_4      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_40     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_41     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_42     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_43     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_44     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_45     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_46     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_47     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_48     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_49     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_5      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_50     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_51     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_52     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_53     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_54     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_55     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_56     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_57     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_58     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_59     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_6      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_60     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_61     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_62     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_63     |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_7      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_8      |   2|          2|    1|          2|
-    |ap_sync_reg_channel_write_C_TILES_9      |   2|          2|    1|          2|
     |ap_sync_reg_loader_A_tiles2_U0_ap_ready  |   2|          2|    1|          2|
     |ap_sync_reg_loader_B_tiles3_U0_ap_ready  |   2|          2|    1|          2|
     +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    | 132|        132|   66|        132|
+    |Total                                    |   4|          4|    2|          4|
     +-----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-----------------------------------------+---+----+-----+-----------+
     |                   Name                  | FF| LUT| Bits| Const Bits|
     +-----------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_channel_write_C_TILES        |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_1      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_10     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_11     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_12     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_13     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_14     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_15     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_16     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_17     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_18     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_19     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_2      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_20     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_21     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_22     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_23     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_24     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_25     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_26     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_27     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_28     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_29     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_3      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_30     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_31     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_32     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_33     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_34     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_35     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_36     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_37     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_38     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_39     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_4      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_40     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_41     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_42     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_43     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_44     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_45     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_46     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_47     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_48     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_49     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_5      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_50     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_51     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_52     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_53     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_54     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_55     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_56     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_57     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_58     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_59     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_6      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_60     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_61     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_62     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_63     |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_7      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_8      |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_C_TILES_9      |  1|   0|    1|          0|
     |ap_sync_reg_loader_A_tiles2_U0_ap_ready  |  1|   0|    1|          0|
     |ap_sync_reg_loader_B_tiles3_U0_ap_ready  |  1|   0|    1|          0|
     +-----------------------------------------+---+----+-----+-----------+
-    |Total                                    | 66|   0|   66|          0|
+    |Total                                    |  2|   0|    2|          0|
     +-----------------------------------------+---+----+-----+-----------+
 
 
@@ -601,13 +273,6 @@
 +---------------------+-----+-----+------------+----------------------------------+--------------+
 |      RTL Ports      | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
 +---------------------+-----+-----+------------+----------------------------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
-|ap_continue          |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
 |tileA                |   in|    2|     ap_none|                             tileA|        scalar|
 |tileA_ap_vld         |   in|    1|     ap_none|                             tileA|        scalar|
 |p_read               |   in|   32|     ap_none|                            p_read|        scalar|
@@ -14562,5 +14227,12 @@
 |C_BUF_63_d16         |  out|   32|   ap_memory|                          C_BUF_63|         array|
 |C_BUF_63_q16         |   in|   32|   ap_memory|                          C_BUF_63|         array|
 |C_BUF_63_we16        |  out|    1|   ap_memory|                          C_BUF_63|         array|
+|ap_clk               |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
+|ap_continue          |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_loop_for_tile_a|  return value|
 +---------------------+-----+-----+------------+----------------------------------+--------------+
 

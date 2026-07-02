@@ -64,8 +64,8 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 		// loadTilesBFromDRAM(B_BUF, B_TILES);
 		loader_B_tiles(B_BUF, B_streams);
 		matMulTiles(A_streams, B_streams, C_streams);
-		loader_C_tiles(C_streams, C_TILES);
-		storeTilesToDRAM(C_TILES, C_BUF[tileA]);
+		loader_C_tiles(C_streams, C_BUF[tileA]);
+		// storeTilesToDRAM(C_TILES, C_BUF[tileA]);
 	}
 	storeOutputToDRAM(C_BUF, C_DRAM);
 }

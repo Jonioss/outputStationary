@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_B_tile_18'
+== Vitis HLS Report for 'loader_B_tile_17'
 ================================================================
-* Date:           Thu Jul  2 10:51:41 2026
+* Date:           Thu Jul  2 11:27:23 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -235,13 +235,13 @@
 +-------------------------------+-----+-----+------------+------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
 +-------------------------------+-----+-----+------------+------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile.18|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  loader_B_tile.17|  return value|
 |B_streams_1_0_din              |  out|   32|     ap_fifo|     B_streams_1_0|       pointer|
 |B_streams_1_0_num_data_valid   |   in|    3|     ap_fifo|     B_streams_1_0|       pointer|
 |B_streams_1_0_fifo_cap         |   in|    3|     ap_fifo|     B_streams_1_0|       pointer|

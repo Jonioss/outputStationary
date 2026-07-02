@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'calculatepsum_217'
+== Vitis HLS Report for 'calculatepsum_214'
 ================================================================
-* Date:           Thu Jul  2 10:51:44 2026
+* Date:           Thu Jul  2 11:27:25 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -466,45 +466,45 @@
 +-------------------------------+-----+-----+------------+-------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
 +-------------------------------+-----+-----+------------+-------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_0                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_1                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_2                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_3                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_4                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_5                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_6                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_7                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_8                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_9                    |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_10                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_11                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_12                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_13                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_14                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_15                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_16                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_17                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_18                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_19                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_20                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_21                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_22                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_23                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_24                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_25                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_26                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_27                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_28                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_29                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_30                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
-|ap_return_31                   |  out|   32|  ap_ctrl_hs|  calculatepsum.217|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_0                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_1                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_2                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_3                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_4                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_5                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_6                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_7                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_8                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_9                    |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_10                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_11                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_12                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_13                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_14                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_15                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_16                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_17                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_18                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_19                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_20                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_21                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_22                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_23                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_24                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_25                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_26                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_27                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_28                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_29                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_30                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
+|ap_return_31                   |  out|   32|  ap_ctrl_hs|  calculatepsum.214|  return value|
 |A_streams_1_dout               |   in|   32|     ap_fifo|        A_streams_1|       pointer|
 |A_streams_1_num_data_valid     |   in|    3|     ap_fifo|        A_streams_1|       pointer|
 |A_streams_1_fifo_cap           |   in|    3|     ap_fifo|        A_streams_1|       pointer|

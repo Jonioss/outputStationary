@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'storeTileToDRAM_7_Loop_store_C_tile_proc'
+== Vitis HLS Report for 'storeTileToDRAM_6_Loop_store_C_tile_proc'
 ================================================================
-* Date:           Wed Jul  1 18:24:24 2026
+* Date:           Thu Jul  2 10:51:47 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -128,13 +128,13 @@
 +--------------------+-----+-----+------------+------------------------------------------+--------------+
 |      RTL Ports     | Dir | Bits|  Protocol  |               Source Object              |    C Type    |
 +--------------------+-----+-----+------------+------------------------------------------+--------------+
-|ap_clk              |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_rst              |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_start            |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_done             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_continue         |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_idle             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
-|ap_ready            |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7_Loop_store_C_tile_proc|  return value|
+|ap_clk              |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_continue         |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6_Loop_store_C_tile_proc|  return value|
 |C_DRAM_31_address0  |  out|    4|   ap_memory|                                 C_DRAM_31|         array|
 |C_DRAM_31_ce0       |  out|    1|   ap_memory|                                 C_DRAM_31|         array|
 |C_DRAM_31_we0       |  out|    1|   ap_memory|                                 C_DRAM_31|         array|

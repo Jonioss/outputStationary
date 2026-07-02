@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'matMulTiles5'
+== Vitis HLS Report for 'matMulTiles4'
 ================================================================
-* Date:           Wed Jul  1 18:24:22 2026
+* Date:           Thu Jul  2 10:51:45 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,8 +38,8 @@
         |                   |                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |      Instance     |     Module     |   min   |   max   |    min   |    max   | min | max |   Type  |
         +-------------------+----------------+---------+---------+----------+----------+-----+-----+---------+
-        |matMulTile12_U0    |matMulTile12    |      354|      354|  1.180 us|  1.180 us|  354|  354|       no|
-        |matMulTile_513_U0  |matMulTile_513  |      354|      354|  1.180 us|  1.180 us|  354|  354|       no|
+        |matMulTile9_U0     |matMulTile9     |      354|      354|  1.180 us|  1.180 us|  354|  354|       no|
+        |matMulTile_410_U0  |matMulTile_410  |      354|      354|  1.180 us|  1.180 us|  354|  354|       no|
         +-------------------+----------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +-------------------+----------------+---------+-----+------+------+-----+
     |      Instance     |     Module     | BRAM_18K| DSP |  FF  |  LUT | URAM|
     +-------------------+----------------+---------+-----+------+------+-----+
-    |matMulTile12_U0    |matMulTile12    |        0|  128|  9804|  8733|    0|
-    |matMulTile_513_U0  |matMulTile_513  |        0|  128|  9804|  8733|    0|
+    |matMulTile9_U0     |matMulTile9     |        0|  128|  9804|  8733|    0|
+    |matMulTile_410_U0  |matMulTile_410  |        0|  128|  9804|  8733|    0|
     +-------------------+----------------+---------+-----+------+------+-----+
     |Total              |                |        0|  256| 19608| 17466|    0|
     +-------------------+----------------+---------+-----+------+------+-----+
@@ -97,10 +97,10 @@
     |ap_sync_continue                    |       and|   0|  0|   2|           1|           1|
     |ap_sync_done                        |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                       |       and|   0|  0|   2|           1|           1|
-    |matMulTile12_U0_ap_start            |       and|   0|  0|   2|           1|           1|
-    |matMulTile_513_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |ap_sync_matMulTile12_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
-    |ap_sync_matMulTile_513_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |matMulTile9_U0_ap_start             |       and|   0|  0|   2|           1|           1|
+    |matMulTile_410_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile9_U0_ap_ready     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_matMulTile_410_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
     +------------------------------------+----------+----+---+----+------------+------------+
     |Total                               |          |   0|  0|  16|           8|           8|
     +------------------------------------+----------+----+---+----+------------+------------+
@@ -109,8 +109,8 @@
     +----------------------------------------+----+-----------+-----+-----------+
     |                  Name                  | LUT| Input Size| Bits| Total Bits|
     +----------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_matMulTile12_U0_ap_ready    |   2|          2|    1|          2|
-    |ap_sync_reg_matMulTile_513_U0_ap_ready  |   2|          2|    1|          2|
+    |ap_sync_reg_matMulTile9_U0_ap_ready     |   2|          2|    1|          2|
+    |ap_sync_reg_matMulTile_410_U0_ap_ready  |   2|          2|    1|          2|
     |real_start                              |   2|          2|    1|          2|
     +----------------------------------------+----+-----------+-----+-----------+
     |Total                                   |   6|          6|    3|          6|
@@ -120,8 +120,8 @@
     +----------------------------------------+---+----+-----+-----------+
     |                  Name                  | FF| LUT| Bits| Const Bits|
     +----------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_matMulTile12_U0_ap_ready    |  1|   0|    1|          0|
-    |ap_sync_reg_matMulTile_513_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile9_U0_ap_ready     |  1|   0|    1|          0|
+    |ap_sync_reg_matMulTile_410_U0_ap_ready  |  1|   0|    1|          0|
     |start_once_reg                          |  1|   0|    1|          0|
     +----------------------------------------+---+----+-----+-----------+
     |Total                                   |  3|   0|    3|          0|
@@ -136,16 +136,16 @@
 +------------------------+-----+-----+------------+----------------+--------------+
 |        RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
 +------------------------+-----+-----+------------+----------------+--------------+
-|ap_start                |   in|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|start_full_n            |   in|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|start_out               |  out|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|start_write             |  out|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_clk                  |   in|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_rst                  |   in|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_done                 |  out|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_ready                |  out|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_idle                 |  out|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
-|ap_continue             |   in|    1|  ap_ctrl_hs|    matMulTiles5|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|start_full_n            |   in|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|start_out               |  out|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|start_write             |  out|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|    matMulTiles4|  return value|
 |A_streams_0_dout        |   in|   32|     ap_fifo|     A_streams_0|       pointer|
 |A_streams_0_empty_n     |   in|    1|     ap_fifo|     A_streams_0|       pointer|
 |A_streams_0_read        |  out|    1|     ap_fifo|     A_streams_0|       pointer|

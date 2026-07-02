@@ -18,6 +18,7 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 	fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=1 type=complete
 	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=2 type=complete
+	#pragma HLS ARRAY_PARTITION variable=B_BUF dim=3 type=complete
 	#pragma HLS bind_storage variable=B_BUF type=RAM_1WNR impl=BRAM
 	fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES];
 	#pragma HLS ARRAY_PARTITION variable=C_BUF dim=1 type=complete
@@ -60,8 +61,8 @@ void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 1
 		#pragma HLS stream variable=C_TILES type=pipo depth=2
 		// loadTileAFromBUF(A_BUF, A_TILE, tileA);
 		loader_A_tiles(A_BUF, A_streams, tileA);
-		loadTilesBFromDRAM(B_BUF, B_TILES);
-		loader_B_tiles(B_TILES, B_streams); /////////// Change this
+		// loadTilesBFromDRAM(B_BUF, B_TILES);
+		loader_B_tiles(B_BUF, B_streams);
 		matMulTiles(A_streams, B_streams, C_streams);
 		loader_C_tiles(C_streams, C_TILES);
 		storeTilesToDRAM(C_TILES, C_BUF[tileA]);

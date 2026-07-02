@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'matMulTile12'
+== Vitis HLS Report for 'matMulTile9'
 ================================================================
-* Date:           Wed Jul  1 18:24:20 2026
+* Date:           Thu Jul  2 10:51:44 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,7 +38,7 @@
         |                                 |                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
         |             Instance            |            Module            |   min   |   max   |    min    |    max    | min | max |   Type   |
         +---------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
-        |dataflow_in_loop_mat_mul_i16_U0  |dataflow_in_loop_mat_mul_i16  |       22|       22|  73.326 ns|  73.326 ns|   22|   22|  dataflow|
+        |dataflow_in_loop_mat_mul_i13_U0  |dataflow_in_loop_mat_mul_i13  |       22|       22|  73.326 ns|  73.326 ns|   22|   22|  dataflow|
         +---------------------------------+------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
 
         * Loop: 
@@ -78,7 +78,7 @@
     +---------------------------------+------------------------------+---------+-----+------+------+-----+
     |             Instance            |            Module            | BRAM_18K| DSP |  FF  |  LUT | URAM|
     +---------------------------------+------------------------------+---------+-----+------+------+-----+
-    |dataflow_in_loop_mat_mul_i16_U0  |dataflow_in_loop_mat_mul_i16  |        0|  128|  9720|  8687|    0|
+    |dataflow_in_loop_mat_mul_i13_U0  |dataflow_in_loop_mat_mul_i13  |        0|  128|  9720|  8687|    0|
     +---------------------------------+------------------------------+---------+-----+------+------+-----+
     |Total                            |                              |        0|  128|  9720|  8687|    0|
     +---------------------------------+------------------------------+---------+-----+------+------+-----+
@@ -327,12 +327,12 @@
 |C_streams_0_31_din      |  out|   32|     ap_fifo|  C_streams_0_31|       pointer|
 |C_streams_0_31_full_n   |   in|    1|     ap_fifo|  C_streams_0_31|       pointer|
 |C_streams_0_31_write    |  out|    1|     ap_fifo|  C_streams_0_31|       pointer|
-|ap_clk                  |   in|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_rst                  |   in|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_start                |   in|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_done                 |  out|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_ready                |  out|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_idle                 |  out|    1|  ap_ctrl_hs|    matMulTile12|  return value|
-|ap_continue             |   in|    1|  ap_ctrl_hs|    matMulTile12|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|     matMulTile9|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|     matMulTile9|  return value|
 +------------------------+-----+-----+------------+----------------+--------------+
 

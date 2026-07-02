@@ -1,9 +1,9 @@
 #include "constants.h"
-
+ 
 // void matMulTile(const fm_t A[I/NUM_OF_TILES][K],const fm_t B[K][J/NUM_OF_TILES], fm_t C[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
 // void matMulTile(const hls::stream<fm_t> &A_stream, const hls::stream<fm_t> &B_stream, hls::stream<fm_t> &C_stream);
-
-
+ 
+ 
 void loader_A_tiles(const fm_t A_BUF[I][K], hls::stream<fm_t> A_streams[NUM_OF_TILES], const int tileA){
     #pragma HLS INLINE off
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
@@ -17,7 +17,7 @@ void loader_A_tiles(const fm_t A_BUF[I][K], hls::stream<fm_t> A_streams[NUM_OF_T
 		}
 	}
 }
-
+ 
 // void loadTileAFromBUF(const fm_t A_BUF[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
 //     #pragma HLS INLINE off
 // 	load_tile_A_buf:
@@ -28,8 +28,8 @@ void loader_A_tiles(const fm_t A_BUF[I][K], hls::stream<fm_t> A_streams[NUM_OF_T
 // 		}
 // 	}
 // }
-
-void loader_B_tile(const fm_t B[K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[J/NUM_OF_TILES]){
+ 
+void loader_B_tile(const fm_t B_TILE[K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[J/NUM_OF_TILES]){
     #pragma HLS INLINE off
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
@@ -37,12 +37,12 @@ void loader_B_tile(const fm_t B[K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[
             #pragma HLS LOOP_FLATTEN
 			for(int j = 0; j < J/NUM_OF_TILES; j++) {
                 #pragma HLS UNROLL
-                B_streams[j].write(B[k][j]);
+                B_streams[j].write(B_TILE[k][j]);
 			}
 		}
 	}
 }
-
+ 
 void loader_C_tile(hls::stream<fm_t> C_streams[J/NUM_OF_TILES], fm_t C[I/NUM_OF_TILES][J/NUM_OF_TILES]){
     #pragma HLS INLINE off
     for(int i = 0; i < I/NUM_OF_TILES; i++) {
@@ -53,16 +53,16 @@ void loader_C_tile(hls::stream<fm_t> C_streams[J/NUM_OF_TILES], fm_t C[I/NUM_OF_
 		}
 	}
 }
-
-void loader_B_tiles(const fm_t B_TILES[NUM_OF_TILES][K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[NUM_OF_TILES][J/NUM_OF_TILES]){
+ 
+void loader_B_tiles(const fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES], hls::stream<fm_t> B_streams[NUM_OF_TILES][J/NUM_OF_TILES]){
     #pragma HLS INLINE off
     #pragma HLS DATAFLOW
     for(int t=0; t<NUM_OF_TILES; t++){
         #pragma HLS UNROLL
-        loader_B_tile(B_TILES[t], B_streams[t]);
+        loader_B_tile(B_BUF[t], B_streams[t]);
     }
 }
-
+ 
 void loader_C_tiles(hls::stream<fm_t> C_streams[NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES]){
     #pragma HLS INLINE off
     #pragma HLS DATAFLOW

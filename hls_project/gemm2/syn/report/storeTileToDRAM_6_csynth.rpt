@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'storeTileToDRAM_7'
+== Vitis HLS Report for 'storeTileToDRAM_6'
 ================================================================
-* Date:           Wed Jul  1 18:24:24 2026
+* Date:           Thu Jul  2 10:51:47 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,7 +38,7 @@
         |                                             |                                          |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
         |                   Instance                  |                  Module                  |   min   |   max   |    min    |    max    | min | max |   Type  |
         +---------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |storeTileToDRAM_7_Loop_store_C_tile_proc_U0  |storeTileToDRAM_7_Loop_store_C_tile_proc  |       18|       18|  59.994 ns|  59.994 ns|   18|   18|       no|
+        |storeTileToDRAM_6_Loop_store_C_tile_proc_U0  |storeTileToDRAM_6_Loop_store_C_tile_proc  |       18|       18|  59.994 ns|  59.994 ns|   18|   18|       no|
         +---------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
 
         * Loop: 
@@ -73,7 +73,7 @@
     +---------------------------------------------+------------------------------------------+---------+----+----+----+-----+
     |                   Instance                  |                  Module                  | BRAM_18K| DSP| FF | LUT| URAM|
     +---------------------------------------------+------------------------------------------+---------+----+----+----+-----+
-    |storeTileToDRAM_7_Loop_store_C_tile_proc_U0  |storeTileToDRAM_7_Loop_store_C_tile_proc  |        0|   0|  13|  31|    0|
+    |storeTileToDRAM_6_Loop_store_C_tile_proc_U0  |storeTileToDRAM_6_Loop_store_C_tile_proc  |        0|   0|  13|  31|    0|
     +---------------------------------------------+------------------------------------------+---------+----+----+----+-----+
     |Total                                        |                                          |        0|   0|  13|  31|    0|
     +---------------------------------------------+------------------------------------------+---------+----+----+----+-----+
@@ -5545,76 +5545,76 @@
 |C_DRAM_31_d16        |  out|   32|   ap_memory|          C_DRAM_31|         array|
 |C_DRAM_31_q16        |   in|   32|   ap_memory|          C_DRAM_31|         array|
 |C_DRAM_31_we16       |  out|    1|   ap_memory|          C_DRAM_31|         array|
-|ap_clk               |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_0_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_0_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_1_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_1_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_2_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_2_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_3_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_3_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_4_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_4_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_5_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_5_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_6_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_6_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_7_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_7_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_8_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_8_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_9_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_9_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_10_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_10_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_11_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_11_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_12_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_12_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_13_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_13_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_14_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_14_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_15_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_15_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_16_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_16_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_17_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_17_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_18_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_18_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_19_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_19_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_20_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_20_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_21_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_21_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_22_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_22_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_23_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_23_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_24_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_24_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_25_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_25_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_26_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_26_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_27_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_27_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_28_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_28_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_29_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_29_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_30_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_30_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_31_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|C_TILE_31_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
-|ap_continue          |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.7|  return value|
+|ap_clk               |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_0_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_0_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_1_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_1_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_2_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_2_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_3_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_3_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_4_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_4_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_5_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_5_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_6_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_6_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_7_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_7_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_8_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_8_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_9_empty_n     |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_9_read        |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_10_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_10_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_11_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_11_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_12_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_12_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_13_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_13_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_14_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_14_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_15_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_15_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_16_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_16_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_17_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_17_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_18_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_18_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_19_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_19_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_20_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_20_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_21_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_21_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_22_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_22_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_23_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_23_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_24_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_24_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_25_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_25_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_26_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_26_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_27_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_27_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_28_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_28_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_29_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_29_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_30_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_30_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_31_empty_n    |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|C_TILE_31_read       |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
+|ap_continue          |   in|    1|  ap_ctrl_hs|  storeTileToDRAM.6|  return value|
 +---------------------+-----+-----+------------+-------------------+--------------+
 

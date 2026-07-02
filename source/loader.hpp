@@ -31,9 +31,9 @@ void loader_B_tile(const fm_t B_TILE[K][J/NUM_OF_TILES], hls::stream<fm_t> B_str
 void loader_C_tile(hls::stream<fm_t> C_streams[J/NUM_OF_TILES], fm_t C[I/NUM_OF_TILES][J/NUM_OF_TILES]){
     #pragma HLS INLINE off
     for(int i = 0; i < I/NUM_OF_TILES; i++) {
+        # pragma HLS PIPELINE II=1
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
-            #pragma HLS PIPELINE II=1
-            #pragma HLS LOOP_FLATTEN
+            #pragma HLS UNROLL
             C[i][j] = C_streams[j].read();
 		}
 	}

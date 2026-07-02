@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'gemm2'
 ================================================================
 + General Information: 
-    * Date:           Thu Jul  2 11:46:08 2026
+    * Date:           Thu Jul  2 13:28:02 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        hls_project
     * Solution:       gemm2 (Vitis Kernel Flow Target)
@@ -19,23 +19,23 @@
     |                                   Modules                                  |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |           |           |             |            |     |
     |                                   & Loops                                  |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP    |      FF     |     LUT    | URAM|
     +----------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+-----------+-----------+-------------+------------+-----+
-    |+ gemm2                                                                     |  Timing|  -0.80|     1382|  4.606e+03|         -|     1383|     -|        no|  218 (11%)|  256 (13%)|  105133 (5%)|  56704 (6%)|    -|
+    |+ gemm2                                                                     |  Timing|  -0.80|     1058|  3.526e+03|         -|     1059|     -|        no|  218 (11%)|  256 (13%)|  100941 (5%)|  56132 (6%)|    -|
     | + loadBFromDRAM                                                            |  Timing|  -0.18|      138|    459.954|         -|      138|     -|        no|          -|          -|    156 (~0%)|   293 (~0%)|    -|
     |  + loadBFromDRAM_Pipeline_VITIS_LOOP_72_1_VITIS_LOOP_73_2                  |  Timing|  -0.18|       66|    219.978|         -|       66|     -|        no|          -|          -|     24 (~0%)|    79 (~0%)|    -|
     |   o VITIS_LOOP_72_1_VITIS_LOOP_73_2                                        |       -|   2.43|       64|    213.312|         2|        1|    64|       yes|          -|          -|            -|           -|    -|
     | + loadAFromDRAM                                                            |  Timing|  -0.00|      103|    343.299|         -|      103|     -|        no|          -|          -|     78 (~0%)|   110 (~0%)|    -|
     |  o load_A                                                                  |       -|   2.43|       32|    106.656|         1|        -|    32|        no|          -|          -|            -|           -|    -|
-    | + dataflow_parent_loop_proc                                                |  Timing|  -0.80|     1037|  3.456e+03|         -|     1037|     -|        no|          -|  256 (13%)|   40453 (2%)|  43361 (4%)|    -|
-    |  o loop_for_tile_a                                                         |       -|   2.43|     1036|  3.453e+03|       521|        -|     2|        no|          -|          -|            -|           -|    -|
-    |   + dataflow_in_loop_loop_for_tile_a*                                      |  Timing|  -0.80|      519|  1.730e+03|         -|      516|     -|  dataflow|          -|  256 (13%)|   40392 (2%)|  43333 (4%)|    -|
+    | + dataflow_parent_loop_proc                                                |  Timing|  -0.80|      713|  2.376e+03|         -|      713|     -|        no|          -|  256 (13%)|   36261 (2%)|  42789 (4%)|    -|
+    |  o loop_for_tile_a                                                         |       -|   2.43|      712|  2.373e+03|       358|        -|     2|        no|          -|          -|            -|           -|    -|
+    |   + dataflow_in_loop_loop_for_tile_a*                                      |  Timing|  -0.80|      356|  1.187e+03|         -|      355|     -|  dataflow|          -|  256 (13%)|   36200 (2%)|  42761 (4%)|    -|
     |    + loader_A_tiles2                                                       |  Timing|  -0.13|      260|    866.580|         -|      260|     -|        no|          -|          -|   1056 (~0%)|  5581 (~0%)|    -|
-    |     + loader_A_tiles2_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2              |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|   1050 (~0%)|  5567 (~0%)|    -|
-    |      o VITIS_LOOP_9_1_VITIS_LOOP_10_2                                      |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
+    |     + loader_A_tiles2_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2               |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|   1050 (~0%)|  5567 (~0%)|    -|
+    |      o VITIS_LOOP_5_1_VITIS_LOOP_6_2                                       |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
     |    + loader_B_tiles3*                                                      |  Timing|  -0.13|      258|    859.914|         -|      259|     -|  dataflow|          -|          -|   2084 (~0%)|  10534 (1%)|    -|
     |     + loader_B_tile6                                                       |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|   1041 (~0%)|  5257 (~0%)|    -|
-    |      o VITIS_LOOP_34_1_VITIS_LOOP_35_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
+    |      o VITIS_LOOP_19_1_VITIS_LOOP_20_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
     |     + loader_B_tile_17                                                     |  Timing|  -0.13|      258|    859.914|         -|      258|     -|        no|          -|          -|   1041 (~0%)|  5257 (~0%)|    -|
-    |      o VITIS_LOOP_34_1_VITIS_LOOP_35_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
+    |      o VITIS_LOOP_19_1_VITIS_LOOP_20_2                                     |       -|   2.43|      256|    853.248|         2|        1|   256|       yes|          -|          -|            -|           -|    -|
     |    + matMulTiles4*                                                         |  Timing|  -0.80|      354|  1.180e+03|         -|      355|     -|  dataflow|          -|  256 (13%)|   19610 (1%)|  17486 (1%)|    -|
     |     + matMulTile8                                                          |  Timing|  -0.80|      354|  1.180e+03|         -|      354|     -|        no|          -|   128 (6%)|   9804 (~0%)|  8733 (~0%)|    -|
     |      o mat_mul_i                                                           |       -|   2.43|      353|  1.177e+03|        24|        -|    16|        no|          -|          -|            -|           -|    -|
@@ -49,17 +49,17 @@
     |        + calculatepsum_214                                                 |       -|   0.25|       21|     69.993|         -|       21|     -|        no|          -|   128 (6%)|   6390 (~0%)|  6309 (~0%)|    -|
     |         o VITIS_LOOP_10_1                                                  |       -|   2.43|       19|     63.327|         5|        1|    16|       yes|          -|          -|            -|           -|    -|
     |        + psumToStream_315                                                  |       -|   0.63|        0|      0.000|         -|        0|     -|        no|          -|          -|      2 (~0%)|    68 (~0%)|    -|
-    |    + dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5            |  Timing|  -0.56|      515|  1.716e+03|         -|      515|     -|        no|          -|          -|   4234 (~0%)|  1114 (~0%)|    -|
-    |     + loader_C_tiles*                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      515|     -|  dataflow|          -|          -|   2112 (~0%)|   484 (~0%)|    -|
-    |      + loader_C_tile                                                       |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|   1055 (~0%)|   232 (~0%)|    -|
-    |       o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                    |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|            -|           -|    -|
-    |      + loader_C_tile_5                                                     |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|   1055 (~0%)|   232 (~0%)|    -|
-    |       o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                    |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|            -|           -|    -|
-    |     + loader_C_tiles*                                                      |  Timing|  -0.56|      514|  1.713e+03|         -|      515|     -|  dataflow|          -|          -|   2112 (~0%)|   484 (~0%)|    -|
-    |      + loader_C_tile                                                       |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|   1055 (~0%)|   232 (~0%)|    -|
-    |       o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                    |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|            -|           -|    -|
-    |      + loader_C_tile_5                                                     |  Timing|  -0.56|      514|  1.713e+03|         -|      514|     -|        no|          -|          -|   1055 (~0%)|   232 (~0%)|    -|
-    |       o VITIS_LOOP_48_1_VITIS_LOOP_49_2                                    |       -|   2.43|      512|  1.706e+03|         2|        1|   512|       yes|          -|          -|            -|           -|    -|
+    |    + dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5            |  Timing|  -0.08|       19|     63.327|         -|       19|     -|        no|          -|          -|     42 (~0%)|   542 (~0%)|    -|
+    |     + loader_C_tiles*                                                      |  Timing|  -0.08|       18|     59.994|         -|       19|     -|  dataflow|          -|          -|     16 (~0%)|   198 (~0%)|    -|
+    |      + loader_C_tile                                                       |  Timing|  -0.08|       18|     59.994|         -|       18|     -|        no|          -|          -|      7 (~0%)|    89 (~0%)|    -|
+    |       o VITIS_LOOP_33_1                                                    |       -|   2.43|       16|     53.328|         1|        1|    16|       yes|          -|          -|            -|           -|    -|
+    |      + loader_C_tile_5                                                     |  Timing|  -0.08|       18|     59.994|         -|       18|     -|        no|          -|          -|      7 (~0%)|    89 (~0%)|    -|
+    |       o VITIS_LOOP_33_1                                                    |       -|   2.43|       16|     53.328|         1|        1|    16|       yes|          -|          -|            -|           -|    -|
+    |     + loader_C_tiles*                                                      |  Timing|  -0.08|       18|     59.994|         -|       19|     -|  dataflow|          -|          -|     16 (~0%)|   198 (~0%)|    -|
+    |      + loader_C_tile                                                       |  Timing|  -0.08|       18|     59.994|         -|       18|     -|        no|          -|          -|      7 (~0%)|    89 (~0%)|    -|
+    |       o VITIS_LOOP_33_1                                                    |       -|   2.43|       16|     53.328|         1|        1|    16|       yes|          -|          -|            -|           -|    -|
+    |      + loader_C_tile_5                                                     |  Timing|  -0.08|       18|     59.994|         -|       18|     -|        no|          -|          -|      7 (~0%)|    89 (~0%)|    -|
+    |       o VITIS_LOOP_33_1                                                    |       -|   2.43|       16|     53.328|         1|        1|    16|       yes|          -|          -|            -|           -|    -|
     | + storeOutputToDRAM                                                        |  Timing|  -0.00|      202|    673.266|         -|      202|     -|        no|          -|          -|   4283 (~0%)|  3329 (~0%)|    -|
     |  + storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv  |       -|   0.18|      132|    439.956|         -|      132|     -|        no|          -|          -|   4153 (~0%)|  3111 (~0%)|    -|
     |   o store_C_ti_store_C_ik_store_C_tj_store_C_jv                            |       -|   2.43|      130|    433.290|         4|        1|   128|       yes|          -|          -|            -|           -|    -|
@@ -186,17 +186,17 @@
 |  + dataflow_parent_loop_proc                                               | 256 |        |             |     |        |         |
 |   + dataflow_in_loop_loop_for_tile_a                                       | 256 |        |             |     |        |         |
 |    + loader_A_tiles2                                                       | 0   |        |             |     |        |         |
-|     + loader_A_tiles2_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2              | 0   |        |             |     |        |         |
-|       add_ln9_fu_5340_p2                                                   |     |        | add_ln9     | add | fabric | 0       |
-|       add_ln9_1_fu_5378_p2                                                 |     |        | add_ln9_1   | add | fabric | 0       |
-|       add_ln10_fu_7704_p2                                                  |     |        | add_ln10    | add | fabric | 0       |
+|     + loader_A_tiles2_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2               | 0   |        |             |     |        |         |
+|       add_ln5_fu_5340_p2                                                   |     |        | add_ln5     | add | fabric | 0       |
+|       add_ln5_1_fu_5378_p2                                                 |     |        | add_ln5_1   | add | fabric | 0       |
+|       add_ln6_fu_7704_p2                                                   |     |        | add_ln6     | add | fabric | 0       |
 |    + loader_B_tiles3                                                       | 0   |        |             |     |        |         |
 |     + loader_B_tile6                                                       | 0   |        |             |     |        |         |
-|       add_ln34_fu_5520_p2                                                  |     |        | add_ln34    | add | fabric | 0       |
-|       add_ln35_fu_7860_p2                                                  |     |        | add_ln35    | add | fabric | 0       |
+|       add_ln19_fu_5520_p2                                                  |     |        | add_ln19    | add | fabric | 0       |
+|       add_ln20_fu_7860_p2                                                  |     |        | add_ln20    | add | fabric | 0       |
 |     + loader_B_tile_17                                                     | 0   |        |             |     |        |         |
-|       add_ln34_fu_5520_p2                                                  |     |        | add_ln34    | add | fabric | 0       |
-|       add_ln35_fu_7860_p2                                                  |     |        | add_ln35    | add | fabric | 0       |
+|       add_ln19_fu_5520_p2                                                  |     |        | add_ln19    | add | fabric | 0       |
+|       add_ln20_fu_7860_p2                                                  |     |        | add_ln20    | add | fabric | 0       |
 |    + matMulTiles4                                                          | 256 |        |             |     |        |         |
 |     + matMulTile8                                                          | 128 |        |             |     |        |         |
 |      + dataflow_in_loop_mat_mul_i10                                        | 128 |        |             |     |        |         |
@@ -337,22 +337,14 @@
 |    + dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc5            | 0   |        |             |     |        |         |
 |     + loader_C_tiles (grp_loader_C_tiles_fu_437)                           | 0   |        |             |     |        |         |
 |      + loader_C_tile (loader_C_tile_U0)                                    | 0   |        |             |     |        |         |
-|        add_ln48_fu_900_p2                                                  |     |        | add_ln48    | add | fabric | 0       |
-|        add_ln48_2_fu_972_p2                                                |     |        | add_ln48_2  | add | fabric | 0       |
-|        add_ln49_fu_936_p2                                                  |     |        | add_ln49    | add | fabric | 0       |
+|        add_ln33_fu_830_p2                                                  |     |        | add_ln33    | add | fabric | 0       |
 |      + loader_C_tile_5 (loader_C_tile_5_U0)                                | 0   |        |             |     |        |         |
-|        add_ln48_fu_900_p2                                                  |     |        | add_ln48    | add | fabric | 0       |
-|        add_ln48_1_fu_972_p2                                                |     |        | add_ln48_1  | add | fabric | 0       |
-|        add_ln49_fu_936_p2                                                  |     |        | add_ln49    | add | fabric | 0       |
+|        add_ln33_fu_830_p2                                                  |     |        | add_ln33    | add | fabric | 0       |
 |     + loader_C_tiles (grp_loader_C_tiles_fu_697)                           | 0   |        |             |     |        |         |
 |      + loader_C_tile (loader_C_tile_U0)                                    | 0   |        |             |     |        |         |
-|        add_ln48_fu_900_p2                                                  |     |        | add_ln48    | add | fabric | 0       |
-|        add_ln48_2_fu_972_p2                                                |     |        | add_ln48_2  | add | fabric | 0       |
-|        add_ln49_fu_936_p2                                                  |     |        | add_ln49    | add | fabric | 0       |
+|        add_ln33_fu_830_p2                                                  |     |        | add_ln33    | add | fabric | 0       |
 |      + loader_C_tile_5 (loader_C_tile_5_U0)                                | 0   |        |             |     |        |         |
-|        add_ln48_fu_900_p2                                                  |     |        | add_ln48    | add | fabric | 0       |
-|        add_ln48_1_fu_972_p2                                                |     |        | add_ln48_1  | add | fabric | 0       |
-|        add_ln49_fu_936_p2                                                  |     |        | add_ln49    | add | fabric | 0       |
+|        add_ln33_fu_830_p2                                                  |     |        | add_ln33    | add | fabric | 0       |
 |  + storeOutputToDRAM                                                       | 0   |        |             |     |        |         |
 |   + storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv | 0   |        |             |     |        |         |
 |     add_ln33_fu_2678_p2                                                    |     |        | add_ln33    | add | fabric | 0       |
@@ -719,10 +711,11 @@
 +--------------+----------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | bind_storage | variable=A_BUF type=RAM_1WNR impl=BRAM | source/gemm.cpp:15 in gemm2, A_BUF                | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
 | bind_storage | variable=B_BUF type=RAM_1WNR impl=BRAM | source/gemm.cpp:22 in gemm2, B_BUF                | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
-| dataflow     |                                        | source/load_tiles.hpp:51 in storetiletodram       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                        | source/load_tiles.hpp:64 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                        | source/loader.hpp:59 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
-| dataflow     |                                        | source/loader.hpp:68 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| stream       | variable=B_BUF type=pipo depth=2       | source/gemm.cpp:23 in gemm2, B_BUF                | Unsuported scalar variable on pragma 'Stream', ignore it.                                                                                                                          |
+| dataflow     |                                        | source/load_tiles.hpp:16 in storetiletodram       | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                        | source/load_tiles.hpp:29 in storetilestodram      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                        | source/loader.hpp:44 in loader_b_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow     |                                        | source/loader.hpp:53 in loader_c_tiles            | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 | stream       | variable=psum type=pipo depth=2        | source/usefulFunctions.hpp:36 in matmultile, psum | Unsuported scalar variable on pragma 'Stream', ignore it.                                                                                                                          |
 | dataflow     |                                        | source/usefulFunctions.hpp:54 in matmultiles      | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
 +--------------+----------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -752,44 +745,36 @@
 | array_partition | variable=B_BUF dim=1 type=complete          | source/gemm.cpp:19 in gemm2, B_BUF                |
 | array_partition | variable=B_BUF dim=2 type=complete          | source/gemm.cpp:20 in gemm2, B_BUF                |
 | array_partition | variable=B_BUF dim=3 type=complete          | source/gemm.cpp:21 in gemm2, B_BUF                |
-| array_partition | variable=C_BUF dim=1 type=complete          | source/gemm.cpp:24 in gemm2, C_BUF                |
-| array_partition | variable=C_BUF dim=2 type=complete          | source/gemm.cpp:25 in gemm2, C_BUF                |
-| array_partition | variable=C_BUF dim=4 type=complete          | source/gemm.cpp:26 in gemm2, C_BUF                |
-| bind_storage    | variable=C_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:27 in gemm2, C_BUF                |
-| stream          | variable=C_BUF type=pipo depth=2            | source/gemm.cpp:28 in gemm2, C_BUF                |
-| bind_storage    | variable=A_TILE type=RAM_1WNR impl=BRAM     | source/gemm.cpp:30 in gemm2, A_TILE               |
-| array_partition | variable=A_TILE dim=2 type=complete         | source/gemm.cpp:31 in gemm2, A_TILE               |
-| stream          | variable=A_TILE type=pipo depth=2           | source/gemm.cpp:32 in gemm2, A_TILE               |
-| array_partition | variable=B_TILES dim=1 type=complete        | source/gemm.cpp:34 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=2 type=complete        | source/gemm.cpp:35 in gemm2, B_TILES              |
-| array_partition | variable=B_TILES dim=3 type=complete        | source/gemm.cpp:36 in gemm2, B_TILES              |
-| bind_storage    | variable=B_TILES type=RAM_1WNR impl=BRAM    | source/gemm.cpp:37 in gemm2, B_TILES              |
-| stream          | variable=B_TILES type=pipo depth=2          | source/gemm.cpp:38 in gemm2, B_TILES              |
-| dataflow        |                                             | source/gemm.cpp:46 in gemm2                       |
-| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:49 in gemm2, A_streams            |
-| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:53 in gemm2, B_streams            |
-| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:57 in gemm2, C_streams            |
+| array_partition | variable=C_BUF dim=1 type=complete          | source/gemm.cpp:25 in gemm2, C_BUF                |
+| array_partition | variable=C_BUF dim=2 type=complete          | source/gemm.cpp:26 in gemm2, C_BUF                |
+| array_partition | variable=C_BUF dim=4 type=complete          | source/gemm.cpp:27 in gemm2, C_BUF                |
+| bind_storage    | variable=C_BUF type=RAM_1WNR impl=BRAM      | source/gemm.cpp:28 in gemm2, C_BUF                |
+| stream          | variable=C_BUF type=pipo depth=2            | source/gemm.cpp:29 in gemm2, C_BUF                |
+| dataflow        |                                             | source/gemm.cpp:35 in gemm2                       |
+| stream          | variable=A_streams type=pipo depth=2        | source/gemm.cpp:37 in gemm2, A_streams            |
+| stream          | variable=B_streams type=pipo depth=2        | source/gemm.cpp:39 in gemm2, B_streams            |
+| stream          | variable=C_streams type=pipo depth=2        | source/gemm.cpp:41 in gemm2, C_streams            |
 | inline          | off                                         | source/load_tiles.hpp:4 in loadtileafrombuf       |
 | pipeline        | II=1                                        | source/load_tiles.hpp:8 in loadtileafrombuf       |
-| inline          | off                                         | source/load_tiles.hpp:50 in storetiletodram       |
-| pipeline        | II=1                                        | source/load_tiles.hpp:54 in storetiletodram       |
-| unroll          |                                             | source/load_tiles.hpp:56 in storetiletodram       |
-| inline          | off                                         | source/load_tiles.hpp:63 in storetilestodram      |
-| unroll          |                                             | source/load_tiles.hpp:66 in storetilestodram      |
-| inline          | off                                         | source/loader.hpp:8 in loader_a_tiles             |
-| pipeline        | II=1                                        | source/loader.hpp:11 in loader_a_tiles            |
-| unroll          |                                             | source/loader.hpp:14 in loader_a_tiles            |
-| inline          | off                                         | source/loader.hpp:33 in loader_b_tile             |
-| pipeline        | II=1                                        | source/loader.hpp:36 in loader_b_tile             |
-| loop_flatten    |                                             | source/loader.hpp:37 in loader_b_tile             |
-| unroll          |                                             | source/loader.hpp:39 in loader_b_tile             |
-| inline          | off                                         | source/loader.hpp:47 in loader_c_tile             |
-| pipeline        | II=1                                        | source/loader.hpp:50 in loader_c_tile             |
-| loop_flatten    |                                             | source/loader.hpp:51 in loader_c_tile             |
-| inline          | off                                         | source/loader.hpp:58 in loader_b_tiles            |
-| unroll          |                                             | source/loader.hpp:61 in loader_b_tiles            |
-| inline          | off                                         | source/loader.hpp:67 in loader_c_tiles            |
-| unroll          |                                             | source/loader.hpp:70 in loader_c_tiles            |
+| inline          | off                                         | source/load_tiles.hpp:15 in storetiletodram       |
+| pipeline        | II=1                                        | source/load_tiles.hpp:19 in storetiletodram       |
+| unroll          |                                             | source/load_tiles.hpp:21 in storetiletodram       |
+| inline          | off                                         | source/load_tiles.hpp:28 in storetilestodram      |
+| unroll          |                                             | source/load_tiles.hpp:31 in storetilestodram      |
+| inline          | off                                         | source/loader.hpp:4 in loader_a_tiles             |
+| pipeline        | II=1                                        | source/loader.hpp:7 in loader_a_tiles             |
+| unroll          |                                             | source/loader.hpp:10 in loader_a_tiles            |
+| inline          | off                                         | source/loader.hpp:18 in loader_b_tile             |
+| pipeline        | II=1                                        | source/loader.hpp:21 in loader_b_tile             |
+| loop_flatten    |                                             | source/loader.hpp:22 in loader_b_tile             |
+| unroll          |                                             | source/loader.hpp:24 in loader_b_tile             |
+| inline          | off                                         | source/loader.hpp:32 in loader_c_tile             |
+| pipeline        | II=1                                        | source/loader.hpp:34 in loader_c_tile             |
+| unroll          |                                             | source/loader.hpp:36 in loader_c_tile             |
+| inline          | off                                         | source/loader.hpp:43 in loader_b_tiles            |
+| unroll          |                                             | source/loader.hpp:46 in loader_b_tiles            |
+| inline          | off                                         | source/loader.hpp:52 in loader_c_tiles            |
+| unroll          |                                             | source/loader.hpp:55 in loader_c_tiles            |
 | inline          | off                                         | source/usefulFunctions.hpp:9 in calculatepsum     |
 | pipeline        | II=1                                        | source/usefulFunctions.hpp:11 in calculatepsum    |
 | unroll          |                                             | source/usefulFunctions.hpp:15 in calculatepsum    |

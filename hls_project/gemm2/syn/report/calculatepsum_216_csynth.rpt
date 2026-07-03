@@ -1,0 +1,279 @@
+
+
+================================================================
+== Vitis HLS Report for 'calculatepsum_216'
+================================================================
+* Date:           Fri Jul  3 13:55:38 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_project
+* Solution:       gemm2 (Vitis Kernel Flow Target)
+* Product family: versalaicore
+* Target device:  xcvc1902-vsva2197-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.269 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |       19|       20|  63.327 ns|  66.660 ns|   16|   16|  dataflow|
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+        |                                                 |                                              |  Latency (cycles) |   Latency (absolute)  |  Interval |                 Pipeline                 |
+        |                     Instance                    |                    Module                    |   min   |   max   |    min    |    max    | min | max |                   Type                   |
+        +-------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+        |calculatepsum_2_Loop_VITIS_LOOP_10_1_proc219_U0  |calculatepsum_2_Loop_VITIS_LOOP_10_1_proc219  |       19|       20|  63.327 ns|  66.660 ns|   16|   16|  loop rewind stp(delay=0 clock cycles(s))|
+        +-------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        -|       -|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|   128|     5616|    6312|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|       -|    -|
+|Register         |        -|     -|        -|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|   128|     5616|    6312|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     6|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+----------------------------------------------+---------+-----+------+------+-----+
+    |                     Instance                    |                    Module                    | BRAM_18K| DSP |  FF  |  LUT | URAM|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+------+------+-----+
+    |calculatepsum_2_Loop_VITIS_LOOP_10_1_proc219_U0  |calculatepsum_2_Loop_VITIS_LOOP_10_1_proc219  |        0|  128|  5616|  6312|    0|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+------+------+-----+
+    |Total                                            |                                              |        0|  128|  5616|  6312|    0|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++------------------------+-----+-----+------------+-------------------+--------------+
+|A_streams_1_dout        |   in|   32|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_empty_n     |   in|    1|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_read        |  out|    1|     ap_fifo|        A_streams_1|       pointer|
+|B_streams_1_0_dout      |   in|   32|     ap_fifo|      B_streams_1_0|       pointer|
+|B_streams_1_0_empty_n   |   in|    1|     ap_fifo|      B_streams_1_0|       pointer|
+|B_streams_1_0_read      |  out|    1|     ap_fifo|      B_streams_1_0|       pointer|
+|B_streams_1_1_dout      |   in|   32|     ap_fifo|      B_streams_1_1|       pointer|
+|B_streams_1_1_empty_n   |   in|    1|     ap_fifo|      B_streams_1_1|       pointer|
+|B_streams_1_1_read      |  out|    1|     ap_fifo|      B_streams_1_1|       pointer|
+|B_streams_1_2_dout      |   in|   32|     ap_fifo|      B_streams_1_2|       pointer|
+|B_streams_1_2_empty_n   |   in|    1|     ap_fifo|      B_streams_1_2|       pointer|
+|B_streams_1_2_read      |  out|    1|     ap_fifo|      B_streams_1_2|       pointer|
+|B_streams_1_3_dout      |   in|   32|     ap_fifo|      B_streams_1_3|       pointer|
+|B_streams_1_3_empty_n   |   in|    1|     ap_fifo|      B_streams_1_3|       pointer|
+|B_streams_1_3_read      |  out|    1|     ap_fifo|      B_streams_1_3|       pointer|
+|B_streams_1_4_dout      |   in|   32|     ap_fifo|      B_streams_1_4|       pointer|
+|B_streams_1_4_empty_n   |   in|    1|     ap_fifo|      B_streams_1_4|       pointer|
+|B_streams_1_4_read      |  out|    1|     ap_fifo|      B_streams_1_4|       pointer|
+|B_streams_1_5_dout      |   in|   32|     ap_fifo|      B_streams_1_5|       pointer|
+|B_streams_1_5_empty_n   |   in|    1|     ap_fifo|      B_streams_1_5|       pointer|
+|B_streams_1_5_read      |  out|    1|     ap_fifo|      B_streams_1_5|       pointer|
+|B_streams_1_6_dout      |   in|   32|     ap_fifo|      B_streams_1_6|       pointer|
+|B_streams_1_6_empty_n   |   in|    1|     ap_fifo|      B_streams_1_6|       pointer|
+|B_streams_1_6_read      |  out|    1|     ap_fifo|      B_streams_1_6|       pointer|
+|B_streams_1_7_dout      |   in|   32|     ap_fifo|      B_streams_1_7|       pointer|
+|B_streams_1_7_empty_n   |   in|    1|     ap_fifo|      B_streams_1_7|       pointer|
+|B_streams_1_7_read      |  out|    1|     ap_fifo|      B_streams_1_7|       pointer|
+|B_streams_1_8_dout      |   in|   32|     ap_fifo|      B_streams_1_8|       pointer|
+|B_streams_1_8_empty_n   |   in|    1|     ap_fifo|      B_streams_1_8|       pointer|
+|B_streams_1_8_read      |  out|    1|     ap_fifo|      B_streams_1_8|       pointer|
+|B_streams_1_9_dout      |   in|   32|     ap_fifo|      B_streams_1_9|       pointer|
+|B_streams_1_9_empty_n   |   in|    1|     ap_fifo|      B_streams_1_9|       pointer|
+|B_streams_1_9_read      |  out|    1|     ap_fifo|      B_streams_1_9|       pointer|
+|B_streams_1_10_dout     |   in|   32|     ap_fifo|     B_streams_1_10|       pointer|
+|B_streams_1_10_empty_n  |   in|    1|     ap_fifo|     B_streams_1_10|       pointer|
+|B_streams_1_10_read     |  out|    1|     ap_fifo|     B_streams_1_10|       pointer|
+|B_streams_1_11_dout     |   in|   32|     ap_fifo|     B_streams_1_11|       pointer|
+|B_streams_1_11_empty_n  |   in|    1|     ap_fifo|     B_streams_1_11|       pointer|
+|B_streams_1_11_read     |  out|    1|     ap_fifo|     B_streams_1_11|       pointer|
+|B_streams_1_12_dout     |   in|   32|     ap_fifo|     B_streams_1_12|       pointer|
+|B_streams_1_12_empty_n  |   in|    1|     ap_fifo|     B_streams_1_12|       pointer|
+|B_streams_1_12_read     |  out|    1|     ap_fifo|     B_streams_1_12|       pointer|
+|B_streams_1_13_dout     |   in|   32|     ap_fifo|     B_streams_1_13|       pointer|
+|B_streams_1_13_empty_n  |   in|    1|     ap_fifo|     B_streams_1_13|       pointer|
+|B_streams_1_13_read     |  out|    1|     ap_fifo|     B_streams_1_13|       pointer|
+|B_streams_1_14_dout     |   in|   32|     ap_fifo|     B_streams_1_14|       pointer|
+|B_streams_1_14_empty_n  |   in|    1|     ap_fifo|     B_streams_1_14|       pointer|
+|B_streams_1_14_read     |  out|    1|     ap_fifo|     B_streams_1_14|       pointer|
+|B_streams_1_15_dout     |   in|   32|     ap_fifo|     B_streams_1_15|       pointer|
+|B_streams_1_15_empty_n  |   in|    1|     ap_fifo|     B_streams_1_15|       pointer|
+|B_streams_1_15_read     |  out|    1|     ap_fifo|     B_streams_1_15|       pointer|
+|B_streams_1_16_dout     |   in|   32|     ap_fifo|     B_streams_1_16|       pointer|
+|B_streams_1_16_empty_n  |   in|    1|     ap_fifo|     B_streams_1_16|       pointer|
+|B_streams_1_16_read     |  out|    1|     ap_fifo|     B_streams_1_16|       pointer|
+|B_streams_1_17_dout     |   in|   32|     ap_fifo|     B_streams_1_17|       pointer|
+|B_streams_1_17_empty_n  |   in|    1|     ap_fifo|     B_streams_1_17|       pointer|
+|B_streams_1_17_read     |  out|    1|     ap_fifo|     B_streams_1_17|       pointer|
+|B_streams_1_18_dout     |   in|   32|     ap_fifo|     B_streams_1_18|       pointer|
+|B_streams_1_18_empty_n  |   in|    1|     ap_fifo|     B_streams_1_18|       pointer|
+|B_streams_1_18_read     |  out|    1|     ap_fifo|     B_streams_1_18|       pointer|
+|B_streams_1_19_dout     |   in|   32|     ap_fifo|     B_streams_1_19|       pointer|
+|B_streams_1_19_empty_n  |   in|    1|     ap_fifo|     B_streams_1_19|       pointer|
+|B_streams_1_19_read     |  out|    1|     ap_fifo|     B_streams_1_19|       pointer|
+|B_streams_1_20_dout     |   in|   32|     ap_fifo|     B_streams_1_20|       pointer|
+|B_streams_1_20_empty_n  |   in|    1|     ap_fifo|     B_streams_1_20|       pointer|
+|B_streams_1_20_read     |  out|    1|     ap_fifo|     B_streams_1_20|       pointer|
+|B_streams_1_21_dout     |   in|   32|     ap_fifo|     B_streams_1_21|       pointer|
+|B_streams_1_21_empty_n  |   in|    1|     ap_fifo|     B_streams_1_21|       pointer|
+|B_streams_1_21_read     |  out|    1|     ap_fifo|     B_streams_1_21|       pointer|
+|B_streams_1_22_dout     |   in|   32|     ap_fifo|     B_streams_1_22|       pointer|
+|B_streams_1_22_empty_n  |   in|    1|     ap_fifo|     B_streams_1_22|       pointer|
+|B_streams_1_22_read     |  out|    1|     ap_fifo|     B_streams_1_22|       pointer|
+|B_streams_1_23_dout     |   in|   32|     ap_fifo|     B_streams_1_23|       pointer|
+|B_streams_1_23_empty_n  |   in|    1|     ap_fifo|     B_streams_1_23|       pointer|
+|B_streams_1_23_read     |  out|    1|     ap_fifo|     B_streams_1_23|       pointer|
+|B_streams_1_24_dout     |   in|   32|     ap_fifo|     B_streams_1_24|       pointer|
+|B_streams_1_24_empty_n  |   in|    1|     ap_fifo|     B_streams_1_24|       pointer|
+|B_streams_1_24_read     |  out|    1|     ap_fifo|     B_streams_1_24|       pointer|
+|B_streams_1_25_dout     |   in|   32|     ap_fifo|     B_streams_1_25|       pointer|
+|B_streams_1_25_empty_n  |   in|    1|     ap_fifo|     B_streams_1_25|       pointer|
+|B_streams_1_25_read     |  out|    1|     ap_fifo|     B_streams_1_25|       pointer|
+|B_streams_1_26_dout     |   in|   32|     ap_fifo|     B_streams_1_26|       pointer|
+|B_streams_1_26_empty_n  |   in|    1|     ap_fifo|     B_streams_1_26|       pointer|
+|B_streams_1_26_read     |  out|    1|     ap_fifo|     B_streams_1_26|       pointer|
+|B_streams_1_27_dout     |   in|   32|     ap_fifo|     B_streams_1_27|       pointer|
+|B_streams_1_27_empty_n  |   in|    1|     ap_fifo|     B_streams_1_27|       pointer|
+|B_streams_1_27_read     |  out|    1|     ap_fifo|     B_streams_1_27|       pointer|
+|B_streams_1_28_dout     |   in|   32|     ap_fifo|     B_streams_1_28|       pointer|
+|B_streams_1_28_empty_n  |   in|    1|     ap_fifo|     B_streams_1_28|       pointer|
+|B_streams_1_28_read     |  out|    1|     ap_fifo|     B_streams_1_28|       pointer|
+|B_streams_1_29_dout     |   in|   32|     ap_fifo|     B_streams_1_29|       pointer|
+|B_streams_1_29_empty_n  |   in|    1|     ap_fifo|     B_streams_1_29|       pointer|
+|B_streams_1_29_read     |  out|    1|     ap_fifo|     B_streams_1_29|       pointer|
+|B_streams_1_30_dout     |   in|   32|     ap_fifo|     B_streams_1_30|       pointer|
+|B_streams_1_30_empty_n  |   in|    1|     ap_fifo|     B_streams_1_30|       pointer|
+|B_streams_1_30_read     |  out|    1|     ap_fifo|     B_streams_1_30|       pointer|
+|B_streams_1_31_dout     |   in|   32|     ap_fifo|     B_streams_1_31|       pointer|
+|B_streams_1_31_empty_n  |   in|    1|     ap_fifo|     B_streams_1_31|       pointer|
+|B_streams_1_31_read     |  out|    1|     ap_fifo|     B_streams_1_31|       pointer|
+|psum_0_out              |  out|   32|     ap_none|         psum_0_out|       pointer|
+|psum_0_out_ap_vld       |  out|    1|     ap_none|         psum_0_out|       pointer|
+|psum_1_out              |  out|   32|     ap_none|         psum_1_out|       pointer|
+|psum_1_out_ap_vld       |  out|    1|     ap_none|         psum_1_out|       pointer|
+|psum_2_out              |  out|   32|     ap_none|         psum_2_out|       pointer|
+|psum_2_out_ap_vld       |  out|    1|     ap_none|         psum_2_out|       pointer|
+|psum_3_out              |  out|   32|     ap_none|         psum_3_out|       pointer|
+|psum_3_out_ap_vld       |  out|    1|     ap_none|         psum_3_out|       pointer|
+|psum_4_out              |  out|   32|     ap_none|         psum_4_out|       pointer|
+|psum_4_out_ap_vld       |  out|    1|     ap_none|         psum_4_out|       pointer|
+|psum_5_out              |  out|   32|     ap_none|         psum_5_out|       pointer|
+|psum_5_out_ap_vld       |  out|    1|     ap_none|         psum_5_out|       pointer|
+|psum_6_out              |  out|   32|     ap_none|         psum_6_out|       pointer|
+|psum_6_out_ap_vld       |  out|    1|     ap_none|         psum_6_out|       pointer|
+|psum_7_out              |  out|   32|     ap_none|         psum_7_out|       pointer|
+|psum_7_out_ap_vld       |  out|    1|     ap_none|         psum_7_out|       pointer|
+|psum_8_out              |  out|   32|     ap_none|         psum_8_out|       pointer|
+|psum_8_out_ap_vld       |  out|    1|     ap_none|         psum_8_out|       pointer|
+|psum_9_out              |  out|   32|     ap_none|         psum_9_out|       pointer|
+|psum_9_out_ap_vld       |  out|    1|     ap_none|         psum_9_out|       pointer|
+|psum_10_out             |  out|   32|     ap_none|        psum_10_out|       pointer|
+|psum_10_out_ap_vld      |  out|    1|     ap_none|        psum_10_out|       pointer|
+|psum_11_out             |  out|   32|     ap_none|        psum_11_out|       pointer|
+|psum_11_out_ap_vld      |  out|    1|     ap_none|        psum_11_out|       pointer|
+|psum_12_out             |  out|   32|     ap_none|        psum_12_out|       pointer|
+|psum_12_out_ap_vld      |  out|    1|     ap_none|        psum_12_out|       pointer|
+|psum_13_out             |  out|   32|     ap_none|        psum_13_out|       pointer|
+|psum_13_out_ap_vld      |  out|    1|     ap_none|        psum_13_out|       pointer|
+|psum_14_out             |  out|   32|     ap_none|        psum_14_out|       pointer|
+|psum_14_out_ap_vld      |  out|    1|     ap_none|        psum_14_out|       pointer|
+|psum_15_out             |  out|   32|     ap_none|        psum_15_out|       pointer|
+|psum_15_out_ap_vld      |  out|    1|     ap_none|        psum_15_out|       pointer|
+|psum_16_out             |  out|   32|     ap_none|        psum_16_out|       pointer|
+|psum_16_out_ap_vld      |  out|    1|     ap_none|        psum_16_out|       pointer|
+|psum_17_out             |  out|   32|     ap_none|        psum_17_out|       pointer|
+|psum_17_out_ap_vld      |  out|    1|     ap_none|        psum_17_out|       pointer|
+|psum_18_out             |  out|   32|     ap_none|        psum_18_out|       pointer|
+|psum_18_out_ap_vld      |  out|    1|     ap_none|        psum_18_out|       pointer|
+|psum_19_out             |  out|   32|     ap_none|        psum_19_out|       pointer|
+|psum_19_out_ap_vld      |  out|    1|     ap_none|        psum_19_out|       pointer|
+|psum_20_out             |  out|   32|     ap_none|        psum_20_out|       pointer|
+|psum_20_out_ap_vld      |  out|    1|     ap_none|        psum_20_out|       pointer|
+|psum_21_out             |  out|   32|     ap_none|        psum_21_out|       pointer|
+|psum_21_out_ap_vld      |  out|    1|     ap_none|        psum_21_out|       pointer|
+|psum_22_out             |  out|   32|     ap_none|        psum_22_out|       pointer|
+|psum_22_out_ap_vld      |  out|    1|     ap_none|        psum_22_out|       pointer|
+|psum_23_out             |  out|   32|     ap_none|        psum_23_out|       pointer|
+|psum_23_out_ap_vld      |  out|    1|     ap_none|        psum_23_out|       pointer|
+|psum_24_out             |  out|   32|     ap_none|        psum_24_out|       pointer|
+|psum_24_out_ap_vld      |  out|    1|     ap_none|        psum_24_out|       pointer|
+|psum_25_out             |  out|   32|     ap_none|        psum_25_out|       pointer|
+|psum_25_out_ap_vld      |  out|    1|     ap_none|        psum_25_out|       pointer|
+|psum_26_out             |  out|   32|     ap_none|        psum_26_out|       pointer|
+|psum_26_out_ap_vld      |  out|    1|     ap_none|        psum_26_out|       pointer|
+|psum_27_out             |  out|   32|     ap_none|        psum_27_out|       pointer|
+|psum_27_out_ap_vld      |  out|    1|     ap_none|        psum_27_out|       pointer|
+|psum_28_out             |  out|   32|     ap_none|        psum_28_out|       pointer|
+|psum_28_out_ap_vld      |  out|    1|     ap_none|        psum_28_out|       pointer|
+|psum_29_out             |  out|   32|     ap_none|        psum_29_out|       pointer|
+|psum_29_out_ap_vld      |  out|    1|     ap_none|        psum_29_out|       pointer|
+|psum_30_out             |  out|   32|     ap_none|        psum_30_out|       pointer|
+|psum_30_out_ap_vld      |  out|    1|     ap_none|        psum_30_out|       pointer|
+|psum_31_out             |  out|   32|     ap_none|        psum_31_out|       pointer|
+|psum_31_out_ap_vld      |  out|    1|     ap_none|        psum_31_out|       pointer|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  calculatepsum.216|  return value|
++------------------------+-----+-----+------------+-------------------+--------------+
+

@@ -5,6 +5,7 @@ void loader_A_tiles(const fm_t A_BUF[I][K], hls::stream<fm_t> A_streams[NUM_OF_T
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
             #pragma HLS PIPELINE II=1
+            #pragma HLS LOOP_FLATTEN
             const fm_t temp = A_BUF[i + tileA*(I/NUM_OF_TILES)][k];
             for(int t=0; t<NUM_OF_TILES; t++){
                 #pragma HLS UNROLL
@@ -31,7 +32,8 @@ void loader_B_tile(const fm_t B_TILE[K][J/NUM_OF_TILES], hls::stream<fm_t> B_str
 void loader_C_tile(hls::stream<fm_t> C_streams[J/NUM_OF_TILES], fm_t C[I/NUM_OF_TILES][J/NUM_OF_TILES]){
     #pragma HLS INLINE off
     for(int i = 0; i < I/NUM_OF_TILES; i++) {
-        # pragma HLS PIPELINE II=1
+        #pragma HLS PIPELINE II=1
+        #pragma HLS LOOP_FLATTEN
 		for(int j = 0; j < J/NUM_OF_TILES; j++) {
             #pragma HLS UNROLL
             C[i][j] = C_streams[j].read();

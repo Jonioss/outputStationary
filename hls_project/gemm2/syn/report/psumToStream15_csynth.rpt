@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'psumToStream13'
+== Vitis HLS Report for 'psumToStream15'
 ================================================================
-* Date:           Thu Jul  2 13:27:42 2026
+* Date:           Fri Jul  3 13:55:38 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -145,45 +145,45 @@
 +-------------------------------+-----+-----+------------+----------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |  Source Object |    C Type    |
 +-------------------------------+-----+-----+------------+----------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream13|  return value|
-|p_read                         |   in|   32|     ap_none|          p_read|        scalar|
-|p_read1                        |   in|   32|     ap_none|         p_read1|        scalar|
-|p_read2                        |   in|   32|     ap_none|         p_read2|        scalar|
-|p_read3                        |   in|   32|     ap_none|         p_read3|        scalar|
-|p_read4                        |   in|   32|     ap_none|         p_read4|        scalar|
-|p_read5                        |   in|   32|     ap_none|         p_read5|        scalar|
-|p_read6                        |   in|   32|     ap_none|         p_read6|        scalar|
-|p_read7                        |   in|   32|     ap_none|         p_read7|        scalar|
-|p_read8                        |   in|   32|     ap_none|         p_read8|        scalar|
-|p_read9                        |   in|   32|     ap_none|         p_read9|        scalar|
-|p_read10                       |   in|   32|     ap_none|        p_read10|        scalar|
-|p_read11                       |   in|   32|     ap_none|        p_read11|        scalar|
-|p_read12                       |   in|   32|     ap_none|        p_read12|        scalar|
-|p_read13                       |   in|   32|     ap_none|        p_read13|        scalar|
-|p_read14                       |   in|   32|     ap_none|        p_read14|        scalar|
-|p_read15                       |   in|   32|     ap_none|        p_read15|        scalar|
-|p_read16                       |   in|   32|     ap_none|        p_read16|        scalar|
-|p_read17                       |   in|   32|     ap_none|        p_read17|        scalar|
-|p_read18                       |   in|   32|     ap_none|        p_read18|        scalar|
-|p_read19                       |   in|   32|     ap_none|        p_read19|        scalar|
-|p_read20                       |   in|   32|     ap_none|        p_read20|        scalar|
-|p_read21                       |   in|   32|     ap_none|        p_read21|        scalar|
-|p_read22                       |   in|   32|     ap_none|        p_read22|        scalar|
-|p_read23                       |   in|   32|     ap_none|        p_read23|        scalar|
-|p_read24                       |   in|   32|     ap_none|        p_read24|        scalar|
-|p_read25                       |   in|   32|     ap_none|        p_read25|        scalar|
-|p_read26                       |   in|   32|     ap_none|        p_read26|        scalar|
-|p_read27                       |   in|   32|     ap_none|        p_read27|        scalar|
-|p_read28                       |   in|   32|     ap_none|        p_read28|        scalar|
-|p_read29                       |   in|   32|     ap_none|        p_read29|        scalar|
-|p_read30                       |   in|   32|     ap_none|        p_read30|        scalar|
-|p_read31                       |   in|   32|     ap_none|        p_read31|        scalar|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream15|  return value|
+|psum_0                         |   in|   32|     ap_none|          psum_0|       pointer|
+|psum_1                         |   in|   32|     ap_none|          psum_1|       pointer|
+|psum_2                         |   in|   32|     ap_none|          psum_2|       pointer|
+|psum_3                         |   in|   32|     ap_none|          psum_3|       pointer|
+|psum_4                         |   in|   32|     ap_none|          psum_4|       pointer|
+|psum_5                         |   in|   32|     ap_none|          psum_5|       pointer|
+|psum_6                         |   in|   32|     ap_none|          psum_6|       pointer|
+|psum_7                         |   in|   32|     ap_none|          psum_7|       pointer|
+|psum_8                         |   in|   32|     ap_none|          psum_8|       pointer|
+|psum_9                         |   in|   32|     ap_none|          psum_9|       pointer|
+|psum_10                        |   in|   32|     ap_none|         psum_10|       pointer|
+|psum_11                        |   in|   32|     ap_none|         psum_11|       pointer|
+|psum_12                        |   in|   32|     ap_none|         psum_12|       pointer|
+|psum_13                        |   in|   32|     ap_none|         psum_13|       pointer|
+|psum_14                        |   in|   32|     ap_none|         psum_14|       pointer|
+|psum_15                        |   in|   32|     ap_none|         psum_15|       pointer|
+|psum_16                        |   in|   32|     ap_none|         psum_16|       pointer|
+|psum_17                        |   in|   32|     ap_none|         psum_17|       pointer|
+|psum_18                        |   in|   32|     ap_none|         psum_18|       pointer|
+|psum_19                        |   in|   32|     ap_none|         psum_19|       pointer|
+|psum_20                        |   in|   32|     ap_none|         psum_20|       pointer|
+|psum_21                        |   in|   32|     ap_none|         psum_21|       pointer|
+|psum_22                        |   in|   32|     ap_none|         psum_22|       pointer|
+|psum_23                        |   in|   32|     ap_none|         psum_23|       pointer|
+|psum_24                        |   in|   32|     ap_none|         psum_24|       pointer|
+|psum_25                        |   in|   32|     ap_none|         psum_25|       pointer|
+|psum_26                        |   in|   32|     ap_none|         psum_26|       pointer|
+|psum_27                        |   in|   32|     ap_none|         psum_27|       pointer|
+|psum_28                        |   in|   32|     ap_none|         psum_28|       pointer|
+|psum_29                        |   in|   32|     ap_none|         psum_29|       pointer|
+|psum_30                        |   in|   32|     ap_none|         psum_30|       pointer|
+|psum_31                        |   in|   32|     ap_none|         psum_31|       pointer|
 |C_streams_0_0_din              |  out|   32|     ap_fifo|   C_streams_0_0|       pointer|
 |C_streams_0_0_num_data_valid   |   in|    3|     ap_fifo|   C_streams_0_0|       pointer|
 |C_streams_0_0_fifo_cap         |   in|    3|     ap_fifo|   C_streams_0_0|       pointer|

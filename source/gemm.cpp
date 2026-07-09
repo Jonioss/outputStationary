@@ -6,11 +6,13 @@
 
 using namespace std;
 
-void gemm2(const hls::vector<fm_t, 16> A_DRAM[I][K/16],const hls::vector<fm_t, 16> B_DRAM[K/16][J], hls::vector<fm_t, 16> C_DRAM[I][J/16]) {
+void gemm2(const hls::burst_maxi<hls::vector<fm_t, 16>> A_DRAM, 
+    const hls::burst_maxi<hls::vector<fm_t, 16>> B_DRAM, 
+    hls::burst_maxi<hls::vector<fm_t, 16>> C_DRAM) {
 
-	#pragma HLS INTERFACE m_axi offset=slave port=A_DRAM bundle=gmem0
-	#pragma HLS INTERFACE m_axi offset=slave port=B_DRAM bundle=gmem1
-	#pragma HLS INTERFACE m_axi offset=slave port=C_DRAM bundle=gmem2
+	#pragma HLS INTERFACE m_axi offset=slave port=A_DRAM bundle=gmem0 depth=I*K/16 max_read_burst_length=16
+	#pragma HLS INTERFACE m_axi offset=slave port=B_DRAM bundle=gmem1 depth=K*J/16 max_read_burst_length=16
+	#pragma HLS INTERFACE m_axi offset=slave port=C_DRAM bundle=gmem2 depth=I*J/16 max_write_burst_length=16
 
 	fm_t A_BUF[I][K];
 	#pragma HLS bind_storage variable=A_BUF type=RAM_1WNR impl=BRAM

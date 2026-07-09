@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2'
+== Vitis HLS Report for 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2'
 ================================================================
-* Date:           Thu Jul  9 16:01:34 2026
+* Date:           Thu Jul  9 18:30:55 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -41,7 +41,7 @@
         |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_47_1_VITIS_LOOP_48_2  |       64|       64|         2|          1|          1|    64|       yes|
+        |- VITIS_LOOP_51_1_VITIS_LOOP_52_2  |       64|       64|         2|          1|          1|    64|       yes|
         +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -85,14 +85,14 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln47_1_fu_9551_p2      |         +|   0|  0|   5|           2|           1|
-    |add_ln47_fu_9513_p2        |         +|   0|  0|   7|           7|           1|
-    |add_ln48_fu_9573_p2        |         +|   0|  0|   6|           6|           1|
+    |add_ln51_1_fu_9538_p2      |         +|   0|  0|   5|           2|           1|
+    |add_ln51_fu_9500_p2        |         +|   0|  0|   7|           7|           1|
+    |add_ln52_fu_9560_p2        |         +|   0|  0|   6|           6|           1|
     |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln47_fu_9519_p2       |      icmp|   0|  0|   8|           7|           8|
-    |icmp_ln48_fu_9537_p2       |      icmp|   0|  0|   7|           6|           7|
-    |select_ln47_1_fu_9557_p3   |    select|   0|  0|   2|           1|           2|
-    |select_ln47_fu_9543_p3     |    select|   0|  0|   6|           1|           1|
+    |icmp_ln51_fu_9506_p2       |      icmp|   0|  0|   8|           7|           8|
+    |icmp_ln52_fu_9524_p2       |      icmp|   0|  0|   7|           6|           7|
+    |select_ln51_1_fu_9544_p3   |    select|   0|  0|   2|           1|           2|
+    |select_ln51_fu_9530_p3     |    select|   0|  0|   6|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  45|          32|          24|
@@ -108,9 +108,9 @@
     |ap_sig_allocacmp_j_load               |   5|          2|    6|         12|
     |ap_sig_allocacmp_t_load               |   2|          2|    2|          4|
     |gmem1_blk_n_R                         |   2|          2|    1|          2|
-    |indvar_flatten_fu_2234                |   7|          2|    7|         14|
-    |j_fu_2226                             |   5|          2|    6|         12|
-    |t_fu_2230                             |   2|          2|    2|          4|
+    |indvar_flatten_fu_2232                |   7|          2|    7|         14|
+    |j_fu_2224                             |   5|          2|    6|         12|
+    |t_fu_2228                             |   2|          2|    2|          4|
     +--------------------------------------+----+-----------+-----+-----------+
     |Total                                 |  34|         18|   33|         66|
     +--------------------------------------+----+-----------+-----+-----------+
@@ -122,11 +122,11 @@
     |ap_CS_fsm                |  1|   0|    1|          0|
     |ap_done_reg              |  1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
-    |indvar_flatten_fu_2234   |  7|   0|    7|          0|
-    |j_fu_2226                |  6|   0|    6|          0|
-    |t_fu_2230                |  2|   0|    2|          0|
-    |trunc_ln47_reg_10919     |  1|   0|    1|          0|
-    |trunc_ln48_reg_10923     |  5|   0|    5|          0|
+    |indvar_flatten_fu_2232   |  7|   0|    7|          0|
+    |j_fu_2224                |  6|   0|    6|          0|
+    |t_fu_2228                |  2|   0|    2|          0|
+    |trunc_ln51_reg_10895     |  1|   0|    1|          0|
+    |trunc_ln52_reg_10899     |  5|   0|    5|          0|
     +-------------------------+---+----+-----+-----------+
     |Total                    | 24|   0|   24|          0|
     +-------------------------+---+----+-----+-----------+
@@ -140,12 +140,12 @@
 +----------------------+-----+-----+------------+--------------------------------------------------------+--------------+
 |       RTL Ports      | Dir | Bits|  Protocol  |                      Source Object                     |    C Type    |
 +----------------------+-----+-----+------------+--------------------------------------------------------+--------------+
-|ap_clk                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
-|ap_rst                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
-|ap_start              |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
-|ap_done               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
-|ap_idle               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
-|ap_ready              |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2|  return value|
+|ap_clk                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2|  return value|
 |m_axi_gmem1_AWVALID   |  out|    1|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_AWREADY   |   in|    1|       m_axi|                                                   gmem1|       pointer|
 |m_axi_gmem1_AWADDR    |  out|   64|       m_axi|                                                   gmem1|       pointer|
@@ -224,7 +224,6 @@
 |B_BUF_0_14_0_ap_vld   |  out|    1|      ap_vld|                                            B_BUF_0_14_0|       pointer|
 |B_BUF_0_15_0          |  out|   32|      ap_vld|                                            B_BUF_0_15_0|       pointer|
 |B_BUF_0_15_0_ap_vld   |  out|    1|      ap_vld|                                            B_BUF_0_15_0|       pointer|
-|sext_ln47             |   in|   58|     ap_none|                                               sext_ln47|        scalar|
 |B_BUF_1_15_31         |  out|   32|      ap_vld|                                           B_BUF_1_15_31|       pointer|
 |B_BUF_1_15_31_ap_vld  |  out|    1|      ap_vld|                                           B_BUF_1_15_31|       pointer|
 |B_BUF_1_15_30         |  out|   32|      ap_vld|                                           B_BUF_1_15_30|       pointer|

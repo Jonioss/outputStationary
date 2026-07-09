@@ -1,7 +1,8 @@
 #include "constants.h"
 
-void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], hls::vector<fm_t, 16> C_DRAM[I][J/16]) {
+void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], hls::burst_maxi<hls::vector<fm_t, 16>> C_DRAM) {
 	#pragma HLS INLINE off
+	C_DRAM.write_request(0, I*J/16);
 	store_C_ti:
 	for(int ti=0; ti<NUM_OF_TILES; ti++){
 		store_C_ik:
@@ -17,21 +18,23 @@ void storeOutputToDRAM(const fm_t C_BUF[NUM_OF_TILES][NUM_OF_TILES][I/NUM_OF_TIL
 						#pragma HLS UNROLL
 						c_vec[v] = C_BUF[ti][tj][ik][jv*16 + v];
 					}
-					C_DRAM[ti*I/NUM_OF_TILES + ik][tj*J/(NUM_OF_TILES*16) + jv] = c_vec;
+					C_DRAM.write(c_vec);
 				}
 			}
 		}
 	}
+	C_DRAM.write_response();
 }
 
-void loadAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_BUF[I][K]) {
+void loadAFromDRAM(hls::burst_maxi<hls::vector<fm_t, 16>> A_DRAM, fm_t A_BUF[I][K]) {
 	#pragma HLS INLINE off
+	A_DRAM.read_request(0, I*K/16);
 	load_A:
 	for(int i = 0; i < I; i++) {
 		for(int k = 0; k < K/16; k++) {
 			#pragma HLS PIPELINE II=1
 			#pragma HLS LOOP_FLATTEN
-			const hls::vector<fm_t, 16> a_vec = A_DRAM[i][k];
+			const hls::vector<fm_t, 16> a_vec = A_DRAM.read();
 			for(int v = 0; v < 16; v++) {
 				#pragma HLS UNROLL
 				A_BUF[i][k*16 + v] = a_vec[v];
@@ -40,15 +43,16 @@ void loadAFromDRAM(const hls::vector<fm_t, 16> A_DRAM[I][K/16], fm_t A_BUF[I][K]
 	}
 }
 
-void loadBFromDRAM(const hls::vector<fm_t, 16> B_DRAM[K/16][J], fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES]) {
+void loadBFromDRAM(hls::burst_maxi<hls::vector<fm_t, 16>> B_DRAM, fm_t B_BUF[NUM_OF_TILES][K][J/NUM_OF_TILES]) {
 	#pragma HLS INLINE off
+	B_DRAM.read_request(0, K*J/16);
 	load_B:
 	for(int k = 0; k < K/16; k++) {
 		for(int t=0; t<NUM_OF_TILES; t++){
 			for(int j = 0; j < J/NUM_OF_TILES; j++) {
 				#pragma HLS PIPELINE II=1
 				#pragma HLS LOOP_FLATTEN
-				const hls::vector<fm_t, 16> b_vec = B_DRAM[k][j + t*J/NUM_OF_TILES];
+				const hls::vector<fm_t, 16> b_vec = B_DRAM.read();
 				for(int v = 0; v < 16; v++) {
 					#pragma HLS UNROLL
 					B_BUF[t][k*16+v][j] = b_vec[v];

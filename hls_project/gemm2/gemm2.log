@@ -32,9 +32,9 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.32 seconds. CPU system time: 0.37 seconds. Elapsed time: 2.69 seconds; current allocated memory: 0.543 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.69 seconds. CPU system time: 0.44 seconds. Elapsed time: 3.11 seconds; current allocated memory: 0.543 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 236.363 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 236.359 MB.
 INFO: [HLS 200-10] Analyzing design file 'source/gemm.cpp' ... 
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/load_tiles.hpp:16:9)
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/load_tiles.hpp:29:9)
@@ -42,35 +42,35 @@ WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical 
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/usefulFunctions.hpp:44:9)
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/loader.hpp:46:9)
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (source/loader.hpp:55:9)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:43:17)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:44:18)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:46:29)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:45:17)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:46:18)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (source/gemm.cpp:48:29)
 WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file source/gemm.cpp
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.38 seconds. CPU system time: 0.49 seconds. Elapsed time: 3.87 seconds; current allocated memory: 240.504 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.66 seconds. CPU system time: 0.52 seconds. Elapsed time: 4.19 seconds; current allocated memory: 240.480 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
-INFO: [HLS 200-1995] There were 648 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 2,274 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 2,128 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 1,911 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 1,668 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 17,923 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,012 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 9,951 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,160 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,422 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,172 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,100 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,100 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,714 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 10,955 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_16_1' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:16:23)
+INFO: [HLS 200-1995] There were 713 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,260 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,117 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,903 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,663 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17,915 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,004 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,940 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,936 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,192 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,938 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,872 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,872 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,508 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,741 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/jonivar/Documents/Uni/DIPLOMA_THESIS/HLSProjects/outputStationary/hls_project/gemm2/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_17_1' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:17:23)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_37_2' is marked as complete unroll implied by the pipeline pragma (source/loader.hpp:37:19)
 INFO: [HLS 214-291] Loop 'mat_mul_j' is marked as complete unroll implied by the pipeline pragma (source/usefulFunctions.hpp:14:3)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_24_3' is marked as complete unroll implied by the pipeline pragma (source/loader.hpp:24:19)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_10_3' is marked as complete unroll implied by the pipeline pragma (source/loader.hpp:10:30)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_35_2' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:35:21)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_52_3' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:52:22)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_1' (source/dram.hpp:16:23) in function 'storeOutputToDRAM' completely with a factor of 16 (source/dram.hpp:3:0)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_38_2' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:38:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_56_3' is marked as complete unroll implied by the pipeline pragma (source/dram.hpp:56:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_17_1' (source/dram.hpp:17:23) in function 'storeOutputToDRAM' completely with a factor of 16 (source/dram.hpp:3:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_56_1' (source/loader.hpp:56:19) in function 'loader_C_tiles' completely with a factor of 2 (source/loader.hpp:53:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_37_2' (source/loader.hpp:37:19) in function 'loader_C_tile' completely with a factor of 32 (source/loader.hpp:32:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_45_1' (source/usefulFunctions.hpp:45:19) in function 'matMulTiles' completely with a factor of 2 (source/usefulFunctions.hpp:42:0)
@@ -79,67 +79,64 @@ INFO: [HLS 214-186] Unrolling loop 'mat_mul_j' (source/usefulFunctions.hpp:14:3)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_47_1' (source/loader.hpp:47:19) in function 'loader_B_tiles' completely with a factor of 2 (source/loader.hpp:44:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_24_3' (source/loader.hpp:24:19) in function 'loader_B_tile' completely with a factor of 32 (source/loader.hpp:18:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_10_3' (source/loader.hpp:10:30) in function 'loader_A_tiles' completely with a factor of 2 (source/loader.hpp:3:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_35_2' (source/dram.hpp:35:21) in function 'loadAFromDRAM' completely with a factor of 16 (source/dram.hpp:27:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_52_3' (source/dram.hpp:52:22) in function 'loadBFromDRAM' completely with a factor of 16 (source/dram.hpp:43:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_38_2' (source/dram.hpp:38:21) in function 'loadAFromDRAM' completely with a factor of 16 (source/dram.hpp:29:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_56_3' (source/dram.hpp:56:22) in function 'loadBFromDRAM' completely with a factor of 16 (source/dram.hpp:46:0)
 INFO: [HLS 214-178] Inlining function 'std::__array_traits<float, 16ul>::_S_ref(float const (&) [16], unsigned long)' into 'std::array<float, 16ul>::operator[](unsigned long) const' (/home/jonivar/Documents/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:190:0)
-INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long) const' into 'loadBFromDRAM(hls::vector<float, 16ul> const (*) [64], float (*) [16][32])' (source/dram.hpp:43:0)
-INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long) const' into 'loadAFromDRAM(hls::vector<float, 16ul> const (*) [1], float (*) [16])' (source/dram.hpp:27:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long) const' into 'loadBFromDRAM(hls::burst_maxi<hls::vector<float, 16ul> >, float (*) [16][32])' (source/dram.hpp:46:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long) const' into 'loadAFromDRAM(hls::burst_maxi<hls::vector<float, 16ul> >, float (*) [16])' (source/dram.hpp:29:0)
 INFO: [HLS 214-178] Inlining function 'std::__array_traits<float, 16ul>::_S_ref(float const (&) [16], unsigned long)' into 'std::array<float, 16ul>::operator[](unsigned long)' (/home/jonivar/Documents/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0)
-INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long)' into 'storeOutputToDRAM(float const (*) [2][16][32], hls::vector<float, 16ul> (*) [4])' (source/dram.hpp:3:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 16ul>::operator[](unsigned long)' into 'storeOutputToDRAM(float const (*) [2][16][32], hls::burst_maxi<hls::vector<float, 16ul> >)' (source/dram.hpp:3:0)
 INFO: [HLS 214-248] Applying array_partition to 'psum': Complete partitioning on dimension 1. (source/usefulFunctions.hpp:34:7)
-INFO: [HLS 214-248] Applying array_partition to 'A_BUF': Block partitioning with factor 2 on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:15:7)
-INFO: [HLS 214-248] Applying array_partition to 'B_BUF': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 3. (source/gemm.cpp:19:7)
-INFO: [HLS 214-248] Applying array_partition to 'C_BUF': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 4. (source/gemm.cpp:23:7)
-INFO: [HLS 214-248] Applying array_partition to 'A_streams': Complete partitioning on dimension 1. (source/gemm.cpp:37:20)
-INFO: [HLS 214-248] Applying array_partition to 'C_streams': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:39:20)
-INFO: [HLS 214-248] Applying array_partition to 'B_streams': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:41:20)
+INFO: [HLS 214-248] Applying array_partition to 'A_BUF': Block partitioning with factor 2 on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:17:7)
+INFO: [HLS 214-248] Applying array_partition to 'B_BUF': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 3. (source/gemm.cpp:21:7)
+INFO: [HLS 214-248] Applying array_partition to 'C_BUF': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 4. (source/gemm.cpp:25:7)
+INFO: [HLS 214-248] Applying array_partition to 'A_streams': Complete partitioning on dimension 1. (source/gemm.cpp:39:20)
+INFO: [HLS 214-248] Applying array_partition to 'C_streams': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:41:20)
+INFO: [HLS 214-248] Applying array_partition to 'B_streams': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (source/gemm.cpp:43:20)
 WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Stream', ignore it. (source/usefulFunctions.hpp:35:9)
-INFO: [HLS 214-241] Aggregating maxi variable 'C_DRAM' with compact=none mode in 512-bits
-INFO: [HLS 214-241] Aggregating maxi variable 'B_DRAM' with compact=none mode in 512-bits
-INFO: [HLS 214-241] Aggregating maxi variable 'A_DRAM' with compact=none mode in 512-bits (source/gemm.cpp:9:0)
-INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 512 in loop 'VITIS_LOOP_47_1'(source/dram.hpp:47:20) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:47:20)
-INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 512 in loop 'load_A'(source/dram.hpp:30:2) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:30:2)
-INFO: [HLS 214-115] Multiple burst writes of length 128 and bit width 512 in loop 'store_C_ti'(source/dram.hpp:6:2) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:6:2)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.77 seconds. CPU system time: 0.51 seconds. Elapsed time: 12.63 seconds; current allocated memory: 243.059 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 243.059 MB.
+INFO: [HLS 214-306] Performing burst_maxi read of length 64 and bit width 512 on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:48:9)
+INFO: [HLS 214-306] Performing burst_maxi read of length 32 and bit width 512 on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:31:9)
+INFO: [HLS 214-306] Performing burst_maxi write of length 128 and bit width 512 on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (source/dram.hpp:5:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.72 seconds. CPU system time: 0.57 seconds. Elapsed time: 7.94 seconds; current allocated memory: 242.852 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 242.852 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.92 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.92 seconds; current allocated memory: 253.141 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.3 seconds. CPU system time: 0 seconds. Elapsed time: 3.3 seconds; current allocated memory: 252.852 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 5.84 seconds. CPU system time: 0.01 seconds. Elapsed time: 5.86 seconds; current allocated memory: 281.410 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 4.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.09 seconds; current allocated memory: 280.566 MB.
 INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_10_1_proc' (source/usefulFunctions.hpp:10) to a process function for dataflow in function 'calculatepsum'.
 INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_10_1_proc' (source/usefulFunctions.hpp:10) to a process function for dataflow in function 'calculatepsum.4'.
-INFO: [HLS 200-988] Store statement on variable  'psum.1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.16' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.16' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [HLS 200-988] Store statement on variable  'psum.17' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [HLS 200-988] Store statement on variable  'psum.18' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [HLS 200-988] Store statement on variable  'psum.19' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
@@ -204,38 +201,38 @@ INFO: [HLS 200-988] Store statement on variable  'psum_2' (source/usefulFunction
 INFO: [HLS 200-988] Store statement on variable  'psum_1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1204' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [HLS 200-988] Store statement on variable  'psum.24' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1204' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [HLS 200-988] Store statement on variable  'psum' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.1204' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum_1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum.16' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
-INFO: [HLS 200-988] Store statement on variable  'psum' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_15' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_14' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_13' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_12' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_11' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_10' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_9' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_8' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_7' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_6' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_5' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_4' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_3' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_2' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum_1' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum.16' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
+INFO: [HLS 200-988] Store statement on variable  'psum' (source/usefulFunctions.hpp:34) in a dataflow region ( 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3)) will infer a separate dataflow process. Consider placing this store inside a function.
 INFO: [XFORM 203-712] Applying dataflow to function 'loader_B_tiles197' (source/loader.hpp:45:1), detected/extracted 2 process function(s): 
 	 'loader_B_tile200'
 	 'loader_B_tile.1201'.
@@ -278,7 +275,7 @@ INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_mat_mul_i.
 	 'psumToStream207'.
 INFO: [XFORM 203-712] Applying dataflow to function 'calculatepsum.4208' (source/usefulFunctions.hpp:8:1), detected/extracted 1 process function(s): 
 	 'calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211'.
-INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_mat_mul_i.135.1205' (source/usefulFunctions.hpp:34:3), detected/extracted 34 process function(s): 
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_mat_mul_i.79.1205' (source/usefulFunctions.hpp:34:3), detected/extracted 34 process function(s): 
 	 'Block_newFuncRoot_proc_proc243'
 	 'Block_newFuncRoot_proc_proc244'
 	 'Block_newFuncRoot_proc_proc245'
@@ -319,44 +316,44 @@ INFO: [XFORM 203-712] Applying dataflow to function 'matMulTiles198' (source/use
 INFO: [XFORM 203-712] Applying dataflow to function 'loader_C_tiles' (source/loader.hpp:54:1), detected/extracted 2 process function(s): 
 	 'loader_C_tile6668707274767880828486889092949698100102104106108110112114116118120122124126128'
 	 'loader_C_tile.3246810121416182022242628303234363840424446485052545658606264'.
-INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_loop_for_tile_a' (source/gemm.cpp:34:9), detected/extracted 4 process function(s): 
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_loop_for_tile_a' (source/gemm.cpp:36:9), detected/extracted 4 process function(s): 
 	 'loader_A_tiles196'
 	 'loader_B_tiles197'
 	 'matMulTiles198'
 	 'dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199'.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 26.04 seconds. CPU system time: 0.03 seconds. Elapsed time: 26.08 seconds; current allocated memory: 318.363 MB.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc243' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc244' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc245' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc246' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc247' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc248' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc249' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc250' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc251' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc252' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc253' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc254' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc255' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc256' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc257' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc258' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc259' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc260' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc261' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc262' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc263' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc264' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc265' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc266' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc267' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc268' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc269' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc270' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc271' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc272' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc273' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc274' in function 'dataflow_in_loop_mat_mul_i.135.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 19.31 seconds. CPU system time: 0.18 seconds. Elapsed time: 19.51 seconds; current allocated memory: 316.488 MB.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc243' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc244' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc245' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc246' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc247' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc248' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc249' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc250' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc251' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc252' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc253' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc254' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc255' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc256' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc257' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc258' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc259' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc260' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc261' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc262' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc263' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc264' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc265' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc266' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc267' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc268' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc269' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc270' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc271' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc272' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc273' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc274' in function 'dataflow_in_loop_mat_mul_i.79.1205' and propagating its result(s) since all actual argument(s) to the function are constants.
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc212' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc213' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
@@ -389,24 +386,24 @@ INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newF
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc240' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc241' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
 INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'Block_newFuncRoot_proc_proc242' in function 'dataflow_in_loop_mat_mul_i.1204' and propagating its result(s) since all actual argument(s) to the function are constants.
-INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_tj'(source/dram.hpp:10:4) and 'store_C_jv'(source/dram.hpp:12:5) in function 'storeOutputToDRAM' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_ik'(source/dram.hpp:8:3) and 'store_C_tj'(source/dram.hpp:10:4) in function 'storeOutputToDRAM' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_ti'(source/dram.hpp:6:2) and 'store_C_ik'(source/dram.hpp:8:3) in function 'storeOutputToDRAM' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_tj'(source/dram.hpp:11:4) and 'store_C_jv'(source/dram.hpp:13:5) in function 'storeOutputToDRAM' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_ik'(source/dram.hpp:9:3) and 'store_C_tj'(source/dram.hpp:11:4) in function 'storeOutputToDRAM' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'store_C_ti'(source/dram.hpp:7:2) and 'store_C_ik'(source/dram.hpp:9:3) in function 'storeOutputToDRAM' into perfectly nested loops.
 INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_5_1'(source/loader.hpp:5:18) and 'VITIS_LOOP_6_2'(source/loader.hpp:6:19) in function 'loader_A_tiles196' into perfectly nested loops.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_47_1'(source/dram.hpp:47:20) and 'VITIS_LOOP_48_2'(source/dram.hpp:48:21) in function 'loadBFromDRAM' into perfectly nested loops.
-INFO: [XFORM 203-541] Flattening a loop nest 'store_C_tj' (source/dram.hpp:10:4) in function 'storeOutputToDRAM'.
-INFO: [XFORM 203-541] Flattening a loop nest 'store_C_ik' (source/dram.hpp:8:3) in function 'storeOutputToDRAM'.
-INFO: [XFORM 203-541] Flattening a loop nest 'store_C_ti' (source/dram.hpp:6:2) in function 'storeOutputToDRAM'.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_51_1'(source/dram.hpp:51:20) and 'VITIS_LOOP_52_2'(source/dram.hpp:52:21) in function 'loadBFromDRAM' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'store_C_tj' (source/dram.hpp:11:4) in function 'storeOutputToDRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'store_C_ik' (source/dram.hpp:9:3) in function 'storeOutputToDRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'store_C_ti' (source/dram.hpp:7:2) in function 'storeOutputToDRAM'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_20_1' (source/loader.hpp:20:19) in function 'loader_B_tile200'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_20_1' (source/loader.hpp:20:19) in function 'loader_B_tile.1201'.
 INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_5_1' (source/loader.hpp:5:18) in function 'loader_A_tiles196'.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_47_1' (source/dram.hpp:47:20) in function 'loadBFromDRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_1' (source/dram.hpp:51:20) in function 'loadBFromDRAM'.
 INFO: [HLS 200-1856] Using 'standard' precision for all 'fmac' operations
 INFO: [XFORM 203-531] Rewinding loop 'VITIS_LOOP_10_1' (source/usefulFunctions.hpp:10) in function 'calculatepsum_Loop_VITIS_LOOP_10_1_proc193210'.
 INFO: [XFORM 203-531] Rewinding loop 'VITIS_LOOP_10_1' (source/usefulFunctions.hpp:10) in function 'calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211'.
 INFO: [HLS 200-2039] Inferred 'occurrence' pragma with cycle 2 in function dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199'.
 INFO: [HLS 200-2039] Inferred 'occurrence' pragma with cycle 2 in function dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199'.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 10.74 seconds. CPU system time: 0.13 seconds. Elapsed time: 10.89 seconds; current allocated memory: 637.770 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 8.11 seconds. CPU system time: 0.1 seconds. Elapsed time: 8.23 seconds; current allocated memory: 638.113 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'gemm2' ...
 WARNING: [SYN 201-103] Legalizing function name 'loader_B_tile.1201' to 'loader_B_tile_1201'.
@@ -414,57 +411,57 @@ WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop_mat_mul_i.1204
 WARNING: [SYN 201-103] Legalizing function name 'calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211' to 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211'.
 WARNING: [SYN 201-103] Legalizing function name 'calculatepsum.4208' to 'calculatepsum_4208'.
 WARNING: [SYN 201-103] Legalizing function name 'psumToStream.5209' to 'psumToStream_5209'.
-WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop_mat_mul_i.135.1205' to 'dataflow_in_loop_mat_mul_i_135_1205'.
+WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop_mat_mul_i.79.1205' to 'dataflow_in_loop_mat_mul_i_79_1205'.
 WARNING: [SYN 201-103] Legalizing function name 'matMulTile.2203' to 'matMulTile_2203'.
 WARNING: [SYN 201-103] Legalizing function name 'loader_C_tile.3246810121416182022242628303234363840424446485052545658606264' to 'loader_C_tile_3246810121416182022242628303234363840424446485052545658606264'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2' 
+INFO: [HLS 200-42] -- Implementing module 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_47_1_VITIS_LOOP_48_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_47_1_VITIS_LOOP_48_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1_VITIS_LOOP_52_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_51_1_VITIS_LOOP_52_2'
 WARNING: [HLS 200-871] Estimated clock period (2.612 ns) exceeds the target (target clock period: 3.333 ns, clock uncertainty: 0.900 ns, effective delay budget: 2.433 ns).
-WARNING: [HLS 200-1016] The critical path in module 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2' consists of the following:
-	'store' operation 0 bit ('j_write_ln48', source/dram.hpp:48) of constant 0 on local variable 'j', source/dram.hpp:48 [1042]  (0.397 ns)
-	'load' operation 6 bit ('j_load', source/dram.hpp:48) on local variable 'j', source/dram.hpp:48 [1052]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln48', source/dram.hpp:48) [1058]  (0.711 ns)
-	'select' operation 6 bit ('select_ln47', source/dram.hpp:47) [1059]  (0.396 ns)
-	'add' operation 6 bit ('add_ln48', source/dram.hpp:48) [3285]  (0.711 ns)
-	'muxlogic' operation 0 bit ('muxLogicData_to_store_ln48') [3292]  (0.000 ns)
-	'store' operation 0 bit ('j_write_ln48', source/dram.hpp:48) of variable 'add_ln48', source/dram.hpp:48 on local variable 'j', source/dram.hpp:48 [3294]  (0.397 ns)
+WARNING: [HLS 200-1016] The critical path in module 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2' consists of the following:
+	'store' operation 0 bit ('j_write_ln52', source/dram.hpp:52) of constant 0 on local variable 'j', source/dram.hpp:52 [1038]  (0.397 ns)
+	'load' operation 6 bit ('j_load', source/dram.hpp:52) on local variable 'j', source/dram.hpp:52 [1048]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln52', source/dram.hpp:52) [1053]  (0.711 ns)
+	'select' operation 6 bit ('select_ln51', source/dram.hpp:51) [1054]  (0.396 ns)
+	'add' operation 6 bit ('add_ln52', source/dram.hpp:52) [3280]  (0.711 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_store_ln52') [3287]  (0.000 ns)
+	'store' operation 0 bit ('j_write_ln52', source/dram.hpp:52) of variable 'add_ln52', source/dram.hpp:52 on local variable 'j', source/dram.hpp:52 [3289]  (0.397 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.9 seconds. CPU system time: 0.06 seconds. Elapsed time: 6.97 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.49 seconds. CPU system time: 0.06 seconds. Elapsed time: 5.56 seconds; current allocated memory: 669.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.67 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.68 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.33 seconds. CPU system time: 0 seconds. Elapsed time: 1.33 seconds; current allocated memory: 669.867 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loadBFromDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 669.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 669.867 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loadAFromDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 669.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 669.867 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -473,35 +470,35 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_5_1_VITIS_LOOP_6_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_5_1_VITIS_LOOP_6_2'
 WARNING: [HLS 200-871] Estimated clock period (2.615 ns) exceeds the target (target clock period: 3.333 ns, clock uncertainty: 0.900 ns, effective delay budget: 2.433 ns).
 WARNING: [HLS 200-1016] The critical path in module 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2' consists of the following:
-	'store' operation 0 bit ('i_write_ln5', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) of constant 0 on local variable 'i', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41 [144]  (0.392 ns)
-	'load' operation 5 bit ('i_load', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) on local variable 'i', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41 [160]  (0.000 ns)
-	'add' operation 5 bit ('add_ln5_1', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) [166]  (0.655 ns)
-	'select' operation 5 bit ('select_ln5_1', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) [167]  (0.410 ns)
-	'add' operation 5 bit ('empty', source/loader.hpp:5->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) [168]  (0.655 ns)
-	'getelementptr' operation 4 bit ('A_BUF_addr', source/loader.hpp:6->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) [171]  (0.000 ns)
+	'store' operation 0 bit ('i_write_ln5', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) of constant 0 on local variable 'i', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43 [144]  (0.392 ns)
+	'load' operation 5 bit ('i_load', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) on local variable 'i', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43 [160]  (0.000 ns)
+	'add' operation 5 bit ('add_ln5_1', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) [166]  (0.655 ns)
+	'select' operation 5 bit ('select_ln5_1', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) [167]  (0.410 ns)
+	'add' operation 5 bit ('empty', source/loader.hpp:5->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) [168]  (0.655 ns)
+	'getelementptr' operation 4 bit ('A_BUF_addr', source/loader.hpp:6->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) [171]  (0.000 ns)
 	'muxlogic' operation 32 bit ('MuxLogicAddr_to_A_BUF_load') [205]  (0.000 ns)
-	'load' operation 32 bit ('A_BUF_load', source/loader.hpp:6->source/gemm.cpp:43->source/gemm.cpp:41->source/gemm.cpp:43->source/gemm.cpp:41) on array 'A_BUF' [206]  (0.503 ns)
+	'load' operation 32 bit ('A_BUF_load', source/loader.hpp:6->source/gemm.cpp:45->source/gemm.cpp:43->source/gemm.cpp:45->source/gemm.cpp:43) on array 'A_BUF' [206]  (0.503 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 669.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 669.867 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_A_tiles196' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 669.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 669.809 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 669.867 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_B_tile200' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -517,13 +514,13 @@ WARNING: [HLS 200-1016] The critical path in module 'loader_B_tile200' consists 
 	'sparsemux' operation 32 bit ('tmp', source/loader.hpp:26) [2137]  (1.102 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.03 seconds; current allocated memory: 681.043 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.67 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.68 seconds; current allocated memory: 681.391 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 681.043 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 681.391 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_B_tile_1201' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -539,25 +536,25 @@ WARNING: [HLS 200-1016] The critical path in module 'loader_B_tile_1201' consist
 	'sparsemux' operation 32 bit ('tmp', source/loader.hpp:26) [2137]  (1.102 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.04 seconds; current allocated memory: 689.852 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.42 seconds; current allocated memory: 688.273 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 689.852 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 688.273 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_B_tiles197' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 696.418 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 696.418 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'calculatepsum_Loop_VITIS_LOOP_10_1_proc193210' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -565,61 +562,61 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_10_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_10_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 696.418 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 696.418 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'calculatepsum206' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 696.418 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 696.418 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'psumToStream207' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 696.418 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 696.418 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_mat_mul_i_1204' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 696.117 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 696.418 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 696.598 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 696.965 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matMulTile202' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 697.348 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 697.637 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 697.762 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 698.059 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -627,73 +624,73 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_10_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_10_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 699.770 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 700.250 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 699.770 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 700.250 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'calculatepsum_4208' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 699.848 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 700.250 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 700.414 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 700.746 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'psumToStream_5209' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 701.312 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 701.684 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 701.645 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 701.969 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_mat_mul_i_135_1205' 
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_mat_mul_i_79_1205' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 702.148 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 702.508 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 702.785 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 703.086 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matMulTile_2203' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 703.562 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 703.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 703.902 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 704.270 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'matMulTiles198' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 704.465 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 704.777 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 705.543 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 705.840 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_C_tile6668707274767880828486889092949698100102104106108110112114116118120' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -710,13 +707,13 @@ WARNING: [HLS 200-1016] The critical path in module 'loader_C_tile66687072747678
 	'store' operation 0 bit ('C_0_addr_write_ln39', source/loader.hpp:39) of variable 'bitcast_ln39', source/loader.hpp:39 on array 'C_0' [214]  (0.503 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 707.758 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 707.957 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 707.758 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 707.957 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_C_tile_3246810121416182022242628303234363840424446485052545658606264' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -733,67 +730,67 @@ WARNING: [HLS 200-1016] The critical path in module 'loader_C_tile_3246810121416
 	'store' operation 0 bit ('C_0_addr_write_ln39', source/loader.hpp:39) of variable 'bitcast_ln39', source/loader.hpp:39 on array 'C_0' [214]  (0.503 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 709.535 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 709.809 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 709.648 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 709.809 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'loader_C_tiles' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 710.273 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 710.621 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 710.961 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 711.168 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 712.395 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 712.695 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 713.184 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 713.352 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_loop_for_tile_a' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [HLS 200-871] Estimated clock period (2.937 ns) exceeds the target (target clock period: 3.333 ns, clock uncertainty: 0.900 ns, effective delay budget: 2.433 ns).
 WARNING: [HLS 200-1016] The critical path in module 'dataflow_in_loop_loop_for_tile_a' consists of the following:
-	'alloca' operation 32 bit ('A_streams', source/gemm.cpp:37->source/gemm.cpp:41) [1321]  (1.070 ns)
-	'call' operation 0 bit ('_ln43', source/gemm.cpp:43->source/gemm.cpp:41) to 'loader_A_tiles196' [2927]  (1.867 ns)
+	'alloca' operation 32 bit ('A_streams', source/gemm.cpp:39->source/gemm.cpp:43) [1321]  (1.070 ns)
+	'call' operation 0 bit ('_ln45', source/gemm.cpp:45->source/gemm.cpp:43) to 'loader_A_tiles196' [2927]  (1.867 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
 WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0 (from loader_A_tiles196_U0 to dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0) to 3 to improve performance and/or avoid deadlocks.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.69 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.71 seconds; current allocated memory: 729.980 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 730.320 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 729.980 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 730.320 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_parent_loop_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 729.980 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 730.320 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 729.980 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 730.320 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -801,77 +798,77 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'store_C_ti_store_C_ik_store_C_tj_store_C_jv'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'store_C_ti_store_C_ik_store_C_tj_store_C_jv'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.16 seconds; current allocated memory: 746.723 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.85 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.87 seconds; current allocated memory: 746.715 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 746.723 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 746.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'storeOutputToDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 746.723 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 746.715 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 746.723 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 746.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'gemm2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.8 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.81 seconds; current allocated memory: 748.520 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.61 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 748.844 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 751.320 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 751.637 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2' pipeline 'VITIS_LOOP_47_1_VITIS_LOOP_48_2' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2/m_axi_gmem1_ARUSER' to 0.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'loadBFromDRAM_Pipeline_VITIS_LOOP_47_1_VITIS_LOOP_48_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.5 seconds; current allocated memory: 761.656 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2' pipeline 'VITIS_LOOP_51_1_VITIS_LOOP_52_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'loadBFromDRAM_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_52_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 762.059 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loadBFromDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loadBFromDRAM'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.71 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.77 seconds; current allocated memory: 814.375 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.62 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.67 seconds; current allocated memory: 806.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loadAFromDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loadAFromDRAM'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 824.316 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 816.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2' pipeline 'VITIS_LOOP_5_1_VITIS_LOOP_6_2' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 828.969 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 821.164 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_A_tiles196' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_A_tiles196'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 834.988 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 827.117 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_B_tile200' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -879,7 +876,7 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'loader_B_tile200'
 INFO: [HLS 200-1553] Disabling free running pipeline (frp) architecture on pipeline 'VITIS_LOOP_20_1_VITIS_LOOP_21_2' in module 'loader_B_tile200', because the estimated Stream Port Number is 120, which is bigger than the frp_stream_port_number threshold of 20.
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_B_tile200'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.86 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.87 seconds; current allocated memory: 842.926 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.74 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.75 seconds; current allocated memory: 835.199 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_B_tile_1201' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -887,30 +884,30 @@ INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'loader_B_tile_120
 INFO: [HLS 200-1553] Disabling free running pipeline (frp) architecture on pipeline 'VITIS_LOOP_20_1_VITIS_LOOP_21_2' in module 'loader_B_tile_1201', because the estimated Stream Port Number is 120, which is bigger than the frp_stream_port_number threshold of 20.
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 32 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_B_tile_1201'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.15 seconds; current allocated memory: 866.844 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.92 seconds; current allocated memory: 859.168 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_B_tiles197' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process loader_B_tile200 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
 WARNING: [HLS 200-656] Deadlocks can occur since process loader_B_tile.1201 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_B_tiles197'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.4 seconds; current allocated memory: 892.969 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.32 seconds; current allocated memory: 885.008 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'calculatepsum_Loop_VITIS_LOOP_10_1_proc193210' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'calculatepsum_Loop_VITIS_LOOP_10_1_proc193210'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 907.684 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 899.969 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'calculatepsum206' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum_Loop_VITIS_LOOP_10_1_proc193210 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'calculatepsum206'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 912.547 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 904.797 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'psumToStream207' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'psumToStream207'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 914.391 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 906.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_mat_mul_i_1204' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -948,35 +945,35 @@ INFO: [RTMG 210-285] Implementing FIFO 'psum_34_U(gemm2_fifo_w32_d2_A)' using Vi
 INFO: [RTMG 210-285] Implementing FIFO 'psum_33_U(gemm2_fifo_w32_d2_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_32_U(gemm2_fifo_w32_d2_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_U(gemm2_fifo_w32_d2_A)' using Vivado Default RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.28 seconds; current allocated memory: 919.824 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 912.133 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matMulTile202' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum_Loop_VITIS_LOOP_10_1_proc193210 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matMulTile202'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 923.324 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 915.590 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 926.516 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 918.809 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'calculatepsum_4208' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'calculatepsum_4208'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 931.473 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 923.707 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'psumToStream_5209' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'psumToStream_5209'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 933.285 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 925.547 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_mat_mul_i_135_1205' 
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_mat_mul_i_79_1205' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 WARNING: [RTGEN 206-101] RTL name 'fifo_w32_d2_A' is changed to 'fifo_w32_d2_A_x' due to conflict.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_mat_mul_i_135_1205'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_mat_mul_i_79_1205'.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_31_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_30_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_29_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
@@ -1009,42 +1006,42 @@ INFO: [RTMG 210-285] Implementing FIFO 'psum_3_U(gemm2_fifo_w32_d2_A_x)' using V
 INFO: [RTMG 210-285] Implementing FIFO 'psum_2_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_1_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'psum_U(gemm2_fifo_w32_d2_A_x)' using Vivado Default RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.3 seconds; current allocated memory: 938.754 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.3 seconds; current allocated memory: 931.062 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matMulTile_2203' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matMulTile_2203'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 942.305 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 934.539 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matMulTiles198' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum_Loop_VITIS_LOOP_10_1_proc193210 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 WARNING: [HLS 200-656] Deadlocks can occur since process calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matMulTiles198'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 945.719 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 937.980 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_C_tile6668707274767880828486889092949698100102104106108110112114116118120' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_C_tile6668707274767880828486889092949698100102104106108110112114116118120'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 949.137 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 941.418 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_C_tile_3246810121416182022242628303234363840424446485052545658606264' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_C_tile_3246810121416182022242628303234363840424446485052545658606264'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 954.402 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 946.680 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'loader_C_tiles' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process loader_C_tile6668707274767880828486889092949698100102104106108110112114116118120 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
 WARNING: [HLS 200-656] Deadlocks can occur since process loader_C_tile.3246810121416182022242628303234363840424446485052545658606264 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'loader_C_tiles'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 970.902 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 963.184 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1008.355 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1000.641 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_loop_for_tile_a' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1184,13 +1181,13 @@ INFO: [RTMG 210-285] Implementing FIFO 'C_streams_1_U(gemm2_fifo_w32_d2_A_x0)' u
 INFO: [RTMG 210-285] Implementing FIFO 'C_streams_U(gemm2_fifo_w32_d2_A_x0)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_matMulTiles198_U0_U(gemm2_start_for_matMulTiles198_U0)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0_U(gemm2_start_for_dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0)' using Vivado Default RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.71 seconds. CPU system time: 0.08 seconds. Elapsed time: 1.79 seconds; current allocated memory: 1.035 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.4 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.48 seconds; current allocated memory: 1.027 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_parent_loop_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [HLS 200-656] Deadlocks can occur since process loader_B_tile200 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains an auto-rewind pipeline.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_parent_loop_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.56 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.62 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.47 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.53 seconds; current allocated memory: 1.129 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1209,12 +1206,12 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'storeOutputToDRAM_Pipeline_s
 WARNING: [RTGEN 206-101] Setting dangling out port 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv/m_axi_gmem2_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv/m_axi_gmem2_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.19 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.24 seconds; current allocated memory: 1.169 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.03 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.07 seconds; current allocated memory: 1.161 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'storeOutputToDRAM' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'storeOutputToDRAM'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.49 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.182 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.175 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'gemm2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1229,15 +1226,14 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'gemm2' to 's_axilite &
 INFO: [RTGEN 206-100] Bundling port 'A_DRAM', 'B_DRAM', 'C_DRAM' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm2'.
 INFO: [RTMG 210-278] Implementing memory 'gemm2_A_BUF_RAM_1WNR_BRAM_1R1W' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.74 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.79 seconds; current allocated memory: 1.256 GB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 9.32 seconds. CPU system time: 0.14 seconds. Elapsed time: 9.49 seconds; current allocated memory: 1.346 GB.
-INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.22 seconds; current allocated memory: 1.374 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.248 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7.15 seconds. CPU system time: 0.13 seconds. Elapsed time: 7.29 seconds; current allocated memory: 1.338 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.95 seconds; current allocated memory: 1.366 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for gemm2.
 INFO: [VLOG 209-307] Generating Verilog RTL for gemm2.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 340.48 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 105.04 seconds. CPU system time: 2.34 seconds. Elapsed time: 111.87 seconds; current allocated memory: 1.143 GB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 84.72 seconds. CPU system time: 2.43 seconds. Elapsed time: 87.95 seconds; current allocated memory: 1.137 GB.
 INFO: [HLS 200-1510] Running: cosim_design -trace_level all -enable_dataflow_profiling 
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
@@ -1250,4 +1246,4 @@ INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 399.7 seconds. CPU system time: 10.36 seconds. Elapsed time: 234.94 seconds; current allocated memory: 46.160 MB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 374.51 seconds. CPU system time: 12.37 seconds. Elapsed time: 224.8 seconds; current allocated memory: 52.016 MB.

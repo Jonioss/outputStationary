@@ -82,7 +82,8 @@ int main() {
 	initVectors();
 
 	// Calculate GeMM
-	gemm2(A_vec, B_vec, C_vec);
+	//gemm2(A_vec, B_vec, C_vec);
+	gemm2(&A_vec[0][0], &B_vec[0][0], &C_vec[0][0]);
 
 	// Unpack results
 	for(int i = 0; i < I; i++) {

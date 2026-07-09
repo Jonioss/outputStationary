@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'psumToStream_5209'
+== Vitis HLS Report for 'psumToStream_5211'
 ================================================================
-* Date:           Thu Jul  9 18:31:00 2026
+* Date:           Thu Jul  9 23:14:37 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -145,13 +145,13 @@
 +-------------------------------+-----+-----+------------+-------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
 +-------------------------------+-----+-----+------------+-------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream.5209|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  psumToStream.5211|  return value|
 |psum_0                         |   in|   32|     ap_none|             psum_0|       pointer|
 |psum_1                         |   in|   32|     ap_none|             psum_1|       pointer|
 |psum_2                         |   in|   32|     ap_none|             psum_2|       pointer|

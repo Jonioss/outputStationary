@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'calculatepsum_4208'
+== Vitis HLS Report for 'calculatepsum_4210'
 ================================================================
-* Date:           Thu Jul  9 18:31:00 2026
+* Date:           Thu Jul  9 23:14:37 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,7 +38,7 @@
         |                                                    |                                                 |  Latency (cycles) |   Latency (absolute)  |  Interval |                 Pipeline                 |
         |                      Instance                      |                      Module                     |   min   |   max   |    min    |    max    | min | max |                   Type                   |
         +----------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------+
-        |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211_U0  |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211  |       18|       19|  59.994 ns|  63.327 ns|   16|   16|  loop rewind stp(delay=0 clock cycles(s))|
+        |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194213_U0  |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194213  |       18|       19|  59.994 ns|  63.327 ns|   16|   16|  loop rewind stp(delay=0 clock cycles(s))|
         +----------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------+
 
         * Loop: 
@@ -73,7 +73,7 @@
     +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
     |                      Instance                      |                      Module                     | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
-    |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211_U0  |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211  |        0|  32|  2259|  1192|    0|
+    |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194213_U0  |calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194213  |        0|  32|  2259|  1192|    0|
     +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
     |Total                                               |                                                 |        0|  32|  2259|  1192|    0|
     +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
@@ -268,12 +268,12 @@
 |psum_30_out_ap_vld      |  out|    1|     ap_none|         psum_30_out|       pointer|
 |psum_31_out             |  out|   32|     ap_none|         psum_31_out|       pointer|
 |psum_31_out_ap_vld      |  out|    1|     ap_none|         psum_31_out|       pointer|
-|ap_clk                  |   in|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_rst                  |   in|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_start                |   in|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_done                 |  out|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_ready                |  out|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_idle                 |  out|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
-|ap_continue             |   in|    1|  ap_ctrl_hs|  calculatepsum.4208|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  calculatepsum.4210|  return value|
 +------------------------+-----+-----+------------+--------------------+--------------+
 

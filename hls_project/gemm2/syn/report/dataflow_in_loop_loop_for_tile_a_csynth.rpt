@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_loop_for_tile_a'
 ================================================================
-* Date:           Thu Jul  9 18:31:03 2026
+* Date:           Thu Jul  9 23:14:40 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,10 +38,10 @@
         |                                                                 |                                                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
         |                             Instance                            |                            Module                            |   min   |   max   |    min    |    max    | min | max |   Type   |
         +-----------------------------------------------------------------+--------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
-        |loader_A_tiles196_U0                                             |loader_A_tiles196                                             |      262|      262|   0.873 us|   0.873 us|  262|  262|        no|
-        |loader_B_tiles197_U0                                             |loader_B_tiles197                                             |      258|      258|   0.860 us|   0.860 us|  259|  259|  dataflow|
-        |matMulTiles198_U0                                                |matMulTiles198                                                |      261|      261|   0.870 us|   0.870 us|  262|  262|  dataflow|
-        |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199  |       19|       19|  63.327 ns|  63.327 ns|   19|   19|        no|
+        |loader_A_tiles198_U0                                             |loader_A_tiles198                                             |      262|      262|   0.873 us|   0.873 us|  262|  262|        no|
+        |loader_B_tiles199_U0                                             |loader_B_tiles199                                             |      258|      258|   0.860 us|   0.860 us|  259|  259|  dataflow|
+        |matMulTiles200_U0                                                |matMulTiles200                                                |      261|      261|   0.870 us|   0.870 us|  262|  262|  dataflow|
+        |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc201_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc201  |       19|       19|  63.327 ns|  63.327 ns|   19|   19|        no|
         +-----------------------------------------------------------------+--------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+----------+
 
         * Loop: 
@@ -76,10 +76,10 @@
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-------+-------+-----+
     |                             Instance                            |                            Module                            | BRAM_18K| DSP|   FF  |  LUT  | URAM|
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-------+-------+-----+
-    |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc199  |        0|   0|     42|    542|    0|
-    |loader_A_tiles196_U0                                             |loader_A_tiles196                                             |        0|   0|   1105|    466|    0|
-    |loader_B_tiles197_U0                                             |loader_B_tiles197                                             |        0|   0|   2084|  10534|    0|
-    |matMulTiles198_U0                                                |matMulTiles198                                                |        0|  64|  11348|   7252|    0|
+    |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc201_U0  |dataflow_in_loop_loop_for_tile_a_Block_newFuncRoot19_proc201  |        0|   0|     42|    542|    0|
+    |loader_A_tiles198_U0                                             |loader_A_tiles198                                             |        0|   0|   1105|    466|    0|
+    |loader_B_tiles199_U0                                             |loader_B_tiles199                                             |        0|   0|   2084|  10534|    0|
+    |matMulTiles200_U0                                                |matMulTiles200                                                |        0|  64|  11348|   7252|    0|
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-------+-------+-----+
     |Total                                                            |                                                              |        0|  64|  14579|  18794|    0|
     +-----------------------------------------------------------------+--------------------------------------------------------------+---------+----+-------+-------+-----+
@@ -235,11 +235,11 @@
     +---------------------------------------+----------+----+---+----+------------+------------+
     |ap_idle                                |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                          |       and|   0|  0|   2|           1|           1|
-    |loader_A_tiles196_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |loader_A_tiles196_U0_start_full_n      |       and|   0|  0|   2|           1|           1|
-    |loader_B_tiles197_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |ap_sync_loader_A_tiles196_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loader_B_tiles197_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |loader_A_tiles198_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |loader_A_tiles198_U0_start_full_n      |       and|   0|  0|   2|           1|           1|
+    |loader_B_tiles199_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_loader_A_tiles198_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loader_B_tiles199_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
     +---------------------------------------+----------+----+---+----+------------+------------+
     |Total                                  |          |   0|  0|  14|           7|           7|
     +---------------------------------------+----------+----+---+----+------------+------------+
@@ -248,8 +248,8 @@
     +-------------------------------------------+----+-----------+-----+-----------+
     |                    Name                   | LUT| Input Size| Bits| Total Bits|
     +-------------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_loader_A_tiles196_U0_ap_ready  |   2|          2|    1|          2|
-    |ap_sync_reg_loader_B_tiles197_U0_ap_ready  |   2|          2|    1|          2|
+    |ap_sync_reg_loader_A_tiles198_U0_ap_ready  |   2|          2|    1|          2|
+    |ap_sync_reg_loader_B_tiles199_U0_ap_ready  |   2|          2|    1|          2|
     +-------------------------------------------+----+-----------+-----+-----------+
     |Total                                      |   4|          4|    2|          4|
     +-------------------------------------------+----+-----------+-----+-----------+
@@ -258,8 +258,8 @@
     +-------------------------------------------+---+----+-----+-----------+
     |                    Name                   | FF| LUT| Bits| Const Bits|
     +-------------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_loader_A_tiles196_U0_ap_ready  |  1|   0|    1|          0|
-    |ap_sync_reg_loader_B_tiles197_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_loader_A_tiles198_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_loader_B_tiles199_U0_ap_ready  |  1|   0|    1|          0|
     +-------------------------------------------+---+----+-----+-----------+
     |Total                                      |  2|   0|    2|          0|
     +-------------------------------------------+---+----+-----+-----------+

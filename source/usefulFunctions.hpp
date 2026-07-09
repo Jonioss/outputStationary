@@ -32,7 +32,6 @@ void matMulTile(hls::stream<fm_t> &A_stream, hls::stream<fm_t> B_streams[J/NUM_O
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		#pragma HLS DATAFLOW
 		fm_t psum[J/NUM_OF_TILES] = {0};
-		#pragma HLS STREAM variable=psum type=pipo depth=2
 		#pragma HLS ARRAY_PARTITION variable=psum type=complete dim=1
 		calculatepsum(A_stream, B_streams, psum);
 		psumToStream(psum, C_streams);

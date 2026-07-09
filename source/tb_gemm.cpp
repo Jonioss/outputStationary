@@ -15,9 +15,9 @@ fm_t A[I][K];
 fm_t B[K][J];
 fm_t C[I][J] = {0};
 
-hls::vector<fm_t, 16> A_vec[I][K/16];
-hls::vector<fm_t, 16> B_vec[K/16][J];
-hls::vector<fm_t, 16> C_vec[I][J/16];
+hls::vector<fm_t, VEC_SIZE> A_vec[I][K/VEC_SIZE];
+hls::vector<fm_t, VEC_SIZE> B_vec[K/VEC_SIZE][J];
+hls::vector<fm_t, VEC_SIZE> C_vec[I][J/VEC_SIZE];
 
 void generateMats() {
 
@@ -51,22 +51,22 @@ void generateMats() {
 
 void initVectors() {
 	for(int i = 0; i < I; i++) {
-		for(int k = 0; k < K/16; k++) {
-			for(int v = 0; v < 16; v++) {
-				A_vec[i][k][v] = A[i][k*16 + v];
+		for(int k = 0; k < K/VEC_SIZE; k++) {
+			for(int v = 0; v < VEC_SIZE; v++) {
+				A_vec[i][k][v] = A[i][k*VEC_SIZE + v];
 			}
 		}
 	}
-	for(int k = 0; k < K/16; k++) {
+	for(int k = 0; k < K/VEC_SIZE; k++) {
 		for(int j = 0; j < J; j++) {
-			for(int v = 0; v < 16; v++) {
-				B_vec[k][j][v] = B[k*16+v][j];
+			for(int v = 0; v < VEC_SIZE; v++) {
+				B_vec[k][j][v] = B[k*VEC_SIZE+v][j];
 			}
 		}
 	}
 	for(int i = 0; i < I; i++) {
-		for(int j = 0; j < J/16; j++) {
-			for(int v = 0; v < 16; v++) {
+		for(int j = 0; j < J/VEC_SIZE; j++) {
+			for(int v = 0; v < VEC_SIZE; v++) {
 				C_vec[i][j][v] = (fm_t) 0.0;
 			}
 		}
@@ -87,9 +87,9 @@ int main() {
 
 	// Unpack results
 	for(int i = 0; i < I; i++) {
-		for(int j = 0; j < J/16; j++) {
-			for(int v = 0; v < 16; v++) {
-				C[i][j*16 + v] = C_vec[i][j][v];
+		for(int j = 0; j < J/VEC_SIZE; j++) {
+			for(int v = 0; v < VEC_SIZE; v++) {
+				C[i][j*VEC_SIZE + v] = C_vec[i][j][v];
 			}
 		}
 	}

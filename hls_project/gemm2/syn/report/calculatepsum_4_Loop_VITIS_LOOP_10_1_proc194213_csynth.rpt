@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194211'
+== Vitis HLS Report for 'calculatepsum_4_Loop_VITIS_LOOP_10_1_proc194213'
 ================================================================
-* Date:           Thu Jul  9 18:30:59 2026
+* Date:           Thu Jul  9 23:14:37 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -73,38 +73,38 @@
     +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
     |                       Instance                      |                     Module                    | BRAM_18K| DSP| FF| LUT| URAM|
     +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4789  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4790  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4791  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4792  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4793  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4794  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4795  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4796  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4797  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4798  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4799  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4800  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4801  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4802  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4803  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4804  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4805  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4806  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4807  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4808  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4809  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4810  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4811  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4812  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4813  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4814  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4815  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4816  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4817  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4818  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4819  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
-    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4820  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4857  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4858  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4859  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4860  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4861  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4862  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4863  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4864  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4865  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4866  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4867  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4868  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4869  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4870  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4871  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4872  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4873  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4874  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4875  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4876  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4877  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4878  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4879  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4880  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4881  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4882  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4883  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4884  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4885  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4886  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4887  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4888  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
     +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
     |Total                                                |                                               |        0|  32|160|  64|    0|
     +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
@@ -303,13 +303,13 @@
 +-------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
 +-------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
-|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
-|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194211|  return value|
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_10_1_proc194213|  return value|
 |A_streams_1_dout               |   in|   32|     ap_fifo|                                      A_streams_1|       pointer|
 |A_streams_1_num_data_valid     |   in|    3|     ap_fifo|                                      A_streams_1|       pointer|
 |A_streams_1_fifo_cap           |   in|    3|     ap_fifo|                                      A_streams_1|       pointer|

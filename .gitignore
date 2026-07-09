@@ -42,6 +42,8 @@ vectors_test/*
 
 .vscode/*
 
+vitis_c++/*
+
 _x*
 build_dir*
 gemm_host.exe

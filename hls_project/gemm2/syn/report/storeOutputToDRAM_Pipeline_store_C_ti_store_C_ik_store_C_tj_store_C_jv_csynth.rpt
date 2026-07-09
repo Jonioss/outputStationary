@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'storeOutputToDRAM_Pipeline_store_C_ti_store_C_ik_store_C_tj_store_C_jv'
 ================================================================
-* Date:           Fri Jul  3 13:55:44 2026
+* Date:           Thu Jul  9 16:01:45 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -394,8 +394,8 @@
     |C_BUF_1_1_7_load262_fu_622         |  32|   0|   32|          0|
     |C_BUF_1_1_8_load230_fu_590         |  32|   0|   32|          0|
     |C_BUF_1_1_9_load198_fu_558         |  32|   0|   32|          0|
-    |and_ln10_reg_7944                  |   1|   0|    1|          0|
-    |and_ln8_reg_7935                   |   1|   0|    1|          0|
+    |and_ln10_reg_8008                  |   1|   0|    1|          0|
+    |and_ln8_reg_7999                   |   1|   0|    1|          0|
     |ap_CS_fsm                          |   1|   0|    1|          0|
     |ap_done_reg                        |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
@@ -405,22 +405,22 @@
     |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
     |first_iter_0_reg_2563              |   1|   0|    1|          0|
     |first_iter_1_reg_2552              |   1|   0|    1|          0|
-    |icmp_ln6_reg_7914                  |   1|   0|    1|          0|
-    |icmp_ln8_reg_7918                  |   1|   0|    1|          0|
+    |icmp_ln6_reg_7978                  |   1|   0|    1|          0|
+    |icmp_ln8_reg_7982                  |   1|   0|    1|          0|
     |ik_fu_346                          |   5|   0|    5|          0|
     |indvar_flatten1058_fu_358          |   8|   0|    8|          0|
     |indvar_flatten780_fu_350           |   8|   0|    8|          0|
     |indvar_flatten_fu_342              |   4|   0|    4|          0|
     |jv_fu_334                          |   2|   0|    2|          0|
-    |or_ln10_reg_7940                   |   1|   0|    1|          0|
-    |or_ln8_1_reg_7930                  |   1|   0|    1|          0|
+    |or_ln10_reg_8004                   |   1|   0|    1|          0|
+    |or_ln8_1_reg_7994                  |   1|   0|    1|          0|
     |ti_fu_354                          |   2|   0|    2|          0|
     |tj_fu_338                          |   2|   0|    2|          0|
-    |trunc_ln10_reg_8657                |   1|   0|    1|          0|
-    |trunc_ln12_reg_8589                |   1|   0|    1|          0|
-    |trunc_ln12_reg_8589_pp0_iter2_reg  |   1|   0|    1|          0|
-    |icmp_ln6_reg_7914                  |   4|   2|    1|          0|
-    |icmp_ln8_reg_7918                  |   4|   2|    1|          0|
+    |trunc_ln10_reg_8721                |   1|   0|    1|          0|
+    |trunc_ln12_reg_8653                |   1|   0|    1|          0|
+    |trunc_ln12_reg_8653_pp0_iter2_reg  |   1|   0|    1|          0|
+    |icmp_ln6_reg_7978                  |   4|   2|    1|          0|
+    |icmp_ln8_reg_7982                  |   4|   2|    1|          0|
     +-----------------------------------+----+----+-----+-----------+
     |Total                              |4153|   4| 4147|          0|
     +-----------------------------------+----+----+-----+-----------+

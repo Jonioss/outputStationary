@@ -1,6 +1,6 @@
 #include "constants.h"
  
-void loadTileAFromBUF(const fm_t A_BUF[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], const int tileA) {
+void loadTileAFromBUF(const float A_BUF[I][K], float A_TILE[I/NUM_OF_TILES][K], const int tileA) {
     #pragma HLS INLINE off
 	load_tile_A_buf:
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
@@ -11,7 +11,7 @@ void loadTileAFromBUF(const fm_t A_BUF[I][K], fm_t A_TILE[I/NUM_OF_TILES][K], co
 	}
 }
  
-void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
+void storeTileToDRAM(const float C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], float C_DRAM[I/NUM_OF_TILES][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
 	#pragma HLS DATAFLOW
 	store_C_tile:
@@ -24,7 +24,7 @@ void storeTileToDRAM(const fm_t C_TILE[I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_D
 	}
 }
  
-void storeTilesToDRAM(const fm_t C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], fm_t C_DRAM[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES]) {
+void storeTilesToDRAM(const float C_TILES[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES], float C_DRAM[NUM_OF_TILES][I/NUM_OF_TILES][J/NUM_OF_TILES]) {
     #pragma HLS INLINE off
 	#pragma HLS DATAFLOW
 	for(int t=0; t<NUM_OF_TILES; t++){

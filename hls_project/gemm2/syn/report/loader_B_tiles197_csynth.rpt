@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_B_tiles199'
+== Vitis HLS Report for 'loader_B_tiles197'
 ================================================================
-* Date:           Thu Jul  9 23:14:36 2026
+* Date:           Fri Jul 10 15:30:56 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -38,8 +38,8 @@
         |                       |                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |        Instance       |       Module       |   min   |   max   |    min   |    max   | min | max |   Type  |
         +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
-        |loader_B_tile202_U0    |loader_B_tile202    |      258|      258|  0.860 us|  0.860 us|  258|  258|       no|
-        |loader_B_tile_1203_U0  |loader_B_tile_1203  |      258|      258|  0.860 us|  0.860 us|  258|  258|       no|
+        |loader_B_tile200_U0    |loader_B_tile200    |      258|      258|  0.860 us|  0.860 us|  258|  258|       no|
+        |loader_B_tile_1201_U0  |loader_B_tile_1201  |      258|      258|  0.860 us|  0.860 us|  258|  258|       no|
         +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +-----------------------+--------------------+---------+----+------+------+-----+
     |        Instance       |       Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +-----------------------+--------------------+---------+----+------+------+-----+
-    |loader_B_tile202_U0    |loader_B_tile202    |        0|   0|  1041|  5257|    0|
-    |loader_B_tile_1203_U0  |loader_B_tile_1203  |        0|   0|  1041|  5257|    0|
+    |loader_B_tile200_U0    |loader_B_tile200    |        0|   0|  1041|  5257|    0|
+    |loader_B_tile_1201_U0  |loader_B_tile_1201  |        0|   0|  1041|  5257|    0|
     +-----------------------+--------------------+---------+----+------+------+-----+
     |Total                  |                    |        0|   0|  2082| 10514|    0|
     +-----------------------+--------------------+---------+----+------+------+-----+
@@ -97,10 +97,10 @@
     |ap_sync_continue                        |       and|   0|  0|   2|           1|           1|
     |ap_sync_done                            |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                           |       and|   0|  0|   2|           1|           1|
-    |loader_B_tile202_U0_ap_start            |       and|   0|  0|   2|           1|           1|
-    |loader_B_tile_1203_U0_ap_start          |       and|   0|  0|   2|           1|           1|
-    |ap_sync_loader_B_tile202_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
-    |ap_sync_loader_B_tile_1203_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |loader_B_tile200_U0_ap_start            |       and|   0|  0|   2|           1|           1|
+    |loader_B_tile_1201_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_loader_B_tile200_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
+    |ap_sync_loader_B_tile_1201_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
     +----------------------------------------+----------+----+---+----+------------+------------+
     |Total                                   |          |   0|  0|  16|           8|           8|
     +----------------------------------------+----------+----+---+----+------------+------------+
@@ -109,8 +109,8 @@
     +--------------------------------------------+----+-----------+-----+-----------+
     |                    Name                    | LUT| Input Size| Bits| Total Bits|
     +--------------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_loader_B_tile202_U0_ap_ready    |   2|          2|    1|          2|
-    |ap_sync_reg_loader_B_tile_1203_U0_ap_ready  |   2|          2|    1|          2|
+    |ap_sync_reg_loader_B_tile200_U0_ap_ready    |   2|          2|    1|          2|
+    |ap_sync_reg_loader_B_tile_1201_U0_ap_ready  |   2|          2|    1|          2|
     +--------------------------------------------+----+-----------+-----+-----------+
     |Total                                       |   4|          4|    2|          4|
     +--------------------------------------------+----+-----------+-----+-----------+
@@ -119,8 +119,8 @@
     +--------------------------------------------+---+----+-----+-----------+
     |                    Name                    | FF| LUT| Bits| Const Bits|
     +--------------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_loader_B_tile202_U0_ap_ready    |  1|   0|    1|          0|
-    |ap_sync_reg_loader_B_tile_1203_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_loader_B_tile200_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_loader_B_tile_1201_U0_ap_ready  |  1|   0|    1|          0|
     +--------------------------------------------+---+----+-----+-----------+
     |Total                                       |  2|   0|    2|          0|
     +--------------------------------------------+---+----+-----+-----------+
@@ -2374,12 +2374,12 @@
 |B_streams_1_31_din     |  out|   32|     ap_fifo|     B_streams_1_31|       pointer|
 |B_streams_1_31_full_n  |   in|    1|     ap_fifo|     B_streams_1_31|       pointer|
 |B_streams_1_31_write   |  out|    1|     ap_fifo|     B_streams_1_31|       pointer|
-|ap_clk                 |   in|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_rst                 |   in|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_start               |   in|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_done                |  out|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_ready               |  out|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_idle                |  out|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
-|ap_continue            |   in|    1|  ap_ctrl_hs|  loader_B_tiles199|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
+|ap_continue            |   in|    1|  ap_ctrl_hs|  loader_B_tiles197|  return value|
 +-----------------------+-----+-----+------------+-------------------+--------------+
 

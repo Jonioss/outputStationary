@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vitis HLS Report for 'loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2'
+== Vitis HLS Report for 'loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2'
 ================================================================
-* Date:           Thu Jul  9 23:14:34 2026
+* Date:           Fri Jul 10 15:30:54 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -73,8 +73,8 @@
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
     |           Instance          |         Module        | BRAM_18K| DSP| FF| LUT | URAM|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
-    |sparsemux_33_4_32_1_1_U2154  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
-    |sparsemux_33_4_32_1_1_U2155  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U2086  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
+    |sparsemux_33_4_32_1_1_U2087  |sparsemux_33_4_32_1_1  |        0|   0|  0|  160|    0|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
     |Total                        |                       |        0|   0|  0|  320|    0|
     +-----------------------------+-----------------------+---------+----+---+-----+-----+
@@ -195,12 +195,12 @@
 +----------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
 |          RTL Ports         | Dir | Bits|  Protocol  |                       Source Object                      |    C Type    |
 +----------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
-|ap_clk                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
-|ap_rst                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
-|ap_start                    |   in|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
-|ap_done                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
-|ap_idle                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
-|ap_ready                    |  out|    1|  ap_ctrl_hs|  loader_A_tiles198_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  loader_A_tiles196_Pipeline_VITIS_LOOP_5_1_VITIS_LOOP_6_2|  return value|
 |A_streams_1_din             |  out|   32|     ap_fifo|                                               A_streams_1|       pointer|
 |A_streams_1_num_data_valid  |   in|    3|     ap_fifo|                                               A_streams_1|       pointer|
 |A_streams_1_fifo_cap        |   in|    3|     ap_fifo|                                               A_streams_1|       pointer|

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gemm2'
 ================================================================
-* Date:           Thu Jul  9 23:14:47 2026
+* Date:           Fri Jul 10 15:31:08 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        hls_project
@@ -57,14 +57,14 @@
 |       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
 +-----------------+---------+------+---------+--------+-----+
 |DSP              |        -|     -|        -|       -|    -|
-|Expression       |        -|     -|        0|      12|    -|
+|Expression       |        -|     -|        0|       8|    -|
 |FIFO             |        -|     -|        -|       -|    -|
-|Instance         |       90|    64|    43472|   40000|    0|
+|Instance         |       90|    64|    43448|   40057|    0|
 |Memory           |      160|     -|        0|       0|    -|
 |Multiplexer      |        -|     -|        -|    1302|    -|
-|Register         |        -|     -|    32978|       -|    -|
+|Register         |        -|     -|    32976|       -|    -|
 +-----------------+---------+------+---------+--------+-----+
-|Total            |      250|    64|    76450|   41314|    0|
+|Total            |      250|    64|    76424|   41367|    0|
 +-----------------+---------+------+---------+--------+-----+
 |Available        |     1934|  1968|  1799680|  899840|  463|
 +-----------------+---------+------+---------+--------+-----+
@@ -81,11 +81,11 @@
     |gmem0_m_axi_U                          |gmem0_m_axi                |       30|   0|   3519|   2711|    0|
     |gmem1_m_axi_U                          |gmem1_m_axi                |       30|   0|   3519|   2711|    0|
     |gmem2_m_axi_U                          |gmem2_m_axi                |       30|   0|   3519|   2711|    0|
-    |grp_loadAFromDRAM_fu_5864              |loadAFromDRAM              |        0|   0|    102|     53|    0|
+    |grp_loadAFromDRAM_fu_5864              |loadAFromDRAM              |        0|   0|     78|    110|    0|
     |grp_loadBFromDRAM_fu_4832              |loadBFromDRAM              |        0|   0|     98|    293|    0|
     |grp_storeOutputToDRAM_fu_7124          |storeOutputToDRAM          |        0|   0|   4223|   3327|    0|
     +---------------------------------------+---------------------------+---------+----+-------+-------+-----+
-    |Total                                  |                           |       90|  64|  43472|  40000|    0|
+    |Total                                  |                           |       90|  64|  43448|  40057|    0|
     +---------------------------------------+---------------------------+---------+----+-------+-------+-----+
 
     * DSP: 
@@ -270,10 +270,8 @@
     |ap_block_state2_on_subcall_done                         |        or|   0|  0|   2|           1|           1|
     |ap_sync_grp_dataflow_parent_loop_proc_fu_5936_ap_done   |        or|   0|  0|   2|           1|           1|
     |ap_sync_grp_dataflow_parent_loop_proc_fu_5936_ap_ready  |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_loadAFromDRAM_fu_5864_ap_done               |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_loadAFromDRAM_fu_5864_ap_ready              |        or|   0|  0|   2|           1|           1|
     +--------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                   |          |   0|  0|  12|           6|           6|
+    |Total                                                   |          |   0|  0|   8|           4|           4|
     +--------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -1811,14 +1809,12 @@
     |ap_rst_reg_2                                                |    1|   0|    1|          0|
     |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_5936_ap_done   |    1|   0|    1|          0|
     |ap_sync_reg_grp_dataflow_parent_loop_proc_fu_5936_ap_ready  |    1|   0|    1|          0|
-    |ap_sync_reg_grp_loadAFromDRAM_fu_5864_ap_done               |    1|   0|    1|          0|
-    |ap_sync_reg_grp_loadAFromDRAM_fu_5864_ap_ready              |    1|   0|    1|          0|
     |grp_dataflow_parent_loop_proc_fu_5936_ap_start_reg          |    1|   0|    1|          0|
     |grp_loadAFromDRAM_fu_5864_ap_start_reg                      |    1|   0|    1|          0|
     |grp_loadBFromDRAM_fu_4832_ap_start_reg                      |    1|   0|    1|          0|
     |grp_storeOutputToDRAM_fu_7124_ap_start_reg                  |    1|   0|    1|          0|
     +------------------------------------------------------------+-----+----+-----+-----------+
-    |Total                                                       |32978|   0|32978|          0|
+    |Total                                                       |32976|   0|32976|          0|
     +------------------------------------------------------------+-----+----+-----+-----------+
 
 

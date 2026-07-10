@@ -35,19 +35,19 @@
 +----------------------+------------------------+--------------+----------------+-----------------+-----------------+---------------+
 | Function             | Location               | Compile/Link | Unroll/Inline  | Array/Struct    | Performance     | HW Transforms |
 +----------------------+------------------------+--------------+----------------+-----------------+-----------------+---------------+
-| + gemm2              | gemm.cpp:9             | 712          | 1,661          | 10,192          | 9,872           | 10,741        |
-|    loadBFromDRAM     | dram.hpp:46            |  77          |   66           | 3,174           | 3,174           | 3,201         |
-|    loadAFromDRAM     | dram.hpp:29            |  66          |   61           |   128           |  128            |   150         |
-|    loader_A_tiles    | loader.hpp:3           |  48          |   19           |    87           |   87            |               |
-|  + loader_B_tiles    | loader.hpp:44          |  58          |  285           | 1,179           | 1,179           |               |
-|     loader_B_tile    | loader.hpp:18          |  39          |  276 (2 calls) | 1,176 (2 calls) | 1,176 (2 calls) |               |
+| + gemm2              | gemm.cpp:10            | 712          | 1,661          | 10,192          | 9,872           | 10,741        |
+|    loadBFromDRAM     | dram.hpp:49            |  77          |   66           | 3,174           | 3,174           | 3,201         |
+|    loadAFromDRAM     | dram.hpp:31            |  66          |   61           |   128           |  128            |   150         |
+|    loader_A_tiles    | loader.hpp:4           |  48          |   19           |    87           |   87            |               |
+|  + loader_B_tiles    | loader.hpp:45          |  58          |  285           | 1,179           | 1,179           |               |
+|     loader_B_tile    | loader.hpp:19          |  39          |  276 (2 calls) | 1,176 (2 calls) | 1,176 (2 calls) |               |
 |  + matMulTiles       | usefulFunctions.hpp:41 | 123          |  784           | 1,141           |  817            |               |
 |   + matMulTile       | usefulFunctions.hpp:29 | 102          |  774 (2 calls) | 1,138 (2 calls) |  814 (2 calls)  |               |
 |      calculatepsum   | usefulFunctions.hpp:7  |  55          |  464 (2 calls) |   336 (2 calls) |  336 (2 calls)  |               |
 |      psumToStream    | usefulFunctions.hpp:21 |  19          |  254 (2 calls) |   130 (2 calls) |  130 (2 calls)  |               |
-|  + loader_C_tiles    | loader.hpp:53          |  58          |  275           |   542 (2 calls) |  542 (2 calls)  |               |
-|     loader_C_tile    | loader.hpp:32          |  39          |  266 (2 calls) |   536 (4 calls) |  536 (4 calls)  |               |
-|    storeOutputToDRAM | dram.hpp:3             | 114          |   93           |   411           |  411            |   474         |
+|  + loader_C_tiles    | loader.hpp:54          |  58          |  275           |   542 (2 calls) |  542 (2 calls)  |               |
+|     loader_C_tile    | loader.hpp:33          |  39          |  266 (2 calls) |   536 (4 calls) |  536 (4 calls)  |               |
+|    storeOutputToDRAM | dram.hpp:4             | 114          |   93           |   411           |  411            |   474         |
 +----------------------+------------------------+--------------+----------------+-----------------+-----------------+---------------+
 
 * Design Size Message Settings

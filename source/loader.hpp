@@ -1,29 +1,30 @@
 #include "constants.h"
 
+// Functions to stream A's values from the buffer to the matmultile functions
 void loader_A_tiles(const float A_BUF[I][K], hls::stream<float> A_streams[NUM_OF_TILES], const int tileA){
-    #pragma HLS INLINE off
+    #pragma HLS INLINE off // Pragma to turn off inlining for this function
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
-            #pragma HLS PIPELINE II=1
-            #pragma HLS LOOP_FLATTEN
+            #pragma HLS PIPELINE II=1 // Enable pipelining
+            #pragma HLS LOOP_FLATTEN // Flatten the loop hierarchy for better performance
             const float temp = A_BUF[i + tileA*(I/NUM_OF_TILES)][k];
             for(int t=0; t<NUM_OF_TILES; t++){
-                #pragma HLS UNROLL
-                A_streams[t].write(temp);
+                #pragma HLS UNROLL // Unroll the loop to allow parallel execution of iterations
+                A_streams[t].write(temp); // put A's values in a stream
             }
 		}
 	}
 }
  
 void loader_B_tile(const float B_TILE[K][J/NUM_OF_TILES], hls::stream<float> B_streams[J/NUM_OF_TILES]){
-    #pragma HLS INLINE off
+    #pragma HLS INLINE off // Pragma to turn off inlining for this function
 	for(int i = 0; i < I/NUM_OF_TILES; i++) {
 		for(int k = 0; k < K; k++) {
             #pragma HLS PIPELINE II=1
             #pragma HLS LOOP_FLATTEN
 			for(int j = 0; j < J/NUM_OF_TILES; j++) {
                 #pragma HLS UNROLL
-                B_streams[j].write(B_TILE[k][j]);
+                B_streams[j].write(B_TILE[k][j]); // put B's values in a stream
 			}
 		}
 	}

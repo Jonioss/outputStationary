@@ -1,0 +1,258 @@
+
+
+================================================================
+== Vitis HLS Report for 'loader_A_tiles196'
+================================================================
+* Date:           Sat Jul 11 12:32:32 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_project
+* Solution:       gemm2 (Vitis Kernel Flow Target)
+* Product family: versalaicore
+* Target device:  xcvc1902-vsva2197-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.615 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      262|      262|  0.873 us|  0.873 us|  262|  262|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                     |                                                          |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                               Instance                              |                          Module                          |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_loader_A_tiles196_Pipeline_VITIS_LOOP_6_1_VITIS_LOOP_7_2_fu_130  |loader_A_tiles196_Pipeline_VITIS_LOOP_6_1_VITIS_LOOP_7_2  |      260|      260|  0.867 us|  0.867 us|  260|  260|       no|
+        +---------------------------------------------------------------------+----------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|       2|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|     -|     1098|     452|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|      12|    -|
+|Register         |        -|     -|        7|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|     0|     1105|     466|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     0|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+-----+-----+
+    |                               Instance                              |                          Module                          | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +---------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+-----+-----+
+    |grp_loader_A_tiles196_Pipeline_VITIS_LOOP_6_1_VITIS_LOOP_7_2_fu_130  |loader_A_tiles196_Pipeline_VITIS_LOOP_6_1_VITIS_LOOP_7_2  |        0|   0|  1098|  452|    0|
+    +---------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+-----+-----+
+    |Total                                                                |                                                          |        0|   0|  1098|  452|    0|
+    +---------------------------------------------------------------------+----------------------------------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |A_streams_1_write  |   2|          2|    1|          2|
+    |A_streams_write    |   2|          2|    1|          2|
+    |ap_NS_fsm          |   2|          4|    1|          4|
+    |ap_done            |   2|          2|    1|          2|
+    |real_start         |   2|          2|    1|          2|
+    |tileA_c_blk_n      |   2|          2|    1|          2|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              |  12|         14|    6|         14|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                       Name                                       | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                         |  3|   0|    3|          0|
+    |ap_done_reg                                                                       |  1|   0|    1|          0|
+    |grp_loader_A_tiles196_Pipeline_VITIS_LOOP_6_1_VITIS_LOOP_7_2_fu_130_ap_start_reg  |  1|   0|    1|          0|
+    |mul_i_i_reg_222                                                                   |  1|   0|    5|          4|
+    |start_once_reg                                                                    |  1|   0|    1|          0|
+    +----------------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                             |  7|   0|   11|          4|
+    +----------------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+-------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++----------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|start_full_n                |   in|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|start_out                   |  out|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|start_write                 |  out|    1|  ap_ctrl_hs|  loader_A_tiles196|  return value|
+|A_BUF_address0              |  out|    4|   ap_stable|              A_BUF|         array|
+|A_BUF_ce0                   |  out|    1|   ap_stable|              A_BUF|         array|
+|A_BUF_q0                    |   in|   32|   ap_stable|              A_BUF|         array|
+|A_BUF_1_address0            |  out|    4|   ap_stable|            A_BUF_1|         array|
+|A_BUF_1_ce0                 |  out|    1|   ap_stable|            A_BUF_1|         array|
+|A_BUF_1_q0                  |   in|   32|   ap_stable|            A_BUF_1|         array|
+|A_BUF_2_address0            |  out|    4|   ap_stable|            A_BUF_2|         array|
+|A_BUF_2_ce0                 |  out|    1|   ap_stable|            A_BUF_2|         array|
+|A_BUF_2_q0                  |   in|   32|   ap_stable|            A_BUF_2|         array|
+|A_BUF_3_address0            |  out|    4|   ap_stable|            A_BUF_3|         array|
+|A_BUF_3_ce0                 |  out|    1|   ap_stable|            A_BUF_3|         array|
+|A_BUF_3_q0                  |   in|   32|   ap_stable|            A_BUF_3|         array|
+|A_BUF_4_address0            |  out|    4|   ap_stable|            A_BUF_4|         array|
+|A_BUF_4_ce0                 |  out|    1|   ap_stable|            A_BUF_4|         array|
+|A_BUF_4_q0                  |   in|   32|   ap_stable|            A_BUF_4|         array|
+|A_BUF_5_address0            |  out|    4|   ap_stable|            A_BUF_5|         array|
+|A_BUF_5_ce0                 |  out|    1|   ap_stable|            A_BUF_5|         array|
+|A_BUF_5_q0                  |   in|   32|   ap_stable|            A_BUF_5|         array|
+|A_BUF_6_address0            |  out|    4|   ap_stable|            A_BUF_6|         array|
+|A_BUF_6_ce0                 |  out|    1|   ap_stable|            A_BUF_6|         array|
+|A_BUF_6_q0                  |   in|   32|   ap_stable|            A_BUF_6|         array|
+|A_BUF_7_address0            |  out|    4|   ap_stable|            A_BUF_7|         array|
+|A_BUF_7_ce0                 |  out|    1|   ap_stable|            A_BUF_7|         array|
+|A_BUF_7_q0                  |   in|   32|   ap_stable|            A_BUF_7|         array|
+|A_BUF_8_address0            |  out|    4|   ap_stable|            A_BUF_8|         array|
+|A_BUF_8_ce0                 |  out|    1|   ap_stable|            A_BUF_8|         array|
+|A_BUF_8_q0                  |   in|   32|   ap_stable|            A_BUF_8|         array|
+|A_BUF_9_address0            |  out|    4|   ap_stable|            A_BUF_9|         array|
+|A_BUF_9_ce0                 |  out|    1|   ap_stable|            A_BUF_9|         array|
+|A_BUF_9_q0                  |   in|   32|   ap_stable|            A_BUF_9|         array|
+|A_BUF_10_address0           |  out|    4|   ap_stable|           A_BUF_10|         array|
+|A_BUF_10_ce0                |  out|    1|   ap_stable|           A_BUF_10|         array|
+|A_BUF_10_q0                 |   in|   32|   ap_stable|           A_BUF_10|         array|
+|A_BUF_11_address0           |  out|    4|   ap_stable|           A_BUF_11|         array|
+|A_BUF_11_ce0                |  out|    1|   ap_stable|           A_BUF_11|         array|
+|A_BUF_11_q0                 |   in|   32|   ap_stable|           A_BUF_11|         array|
+|A_BUF_12_address0           |  out|    4|   ap_stable|           A_BUF_12|         array|
+|A_BUF_12_ce0                |  out|    1|   ap_stable|           A_BUF_12|         array|
+|A_BUF_12_q0                 |   in|   32|   ap_stable|           A_BUF_12|         array|
+|A_BUF_13_address0           |  out|    4|   ap_stable|           A_BUF_13|         array|
+|A_BUF_13_ce0                |  out|    1|   ap_stable|           A_BUF_13|         array|
+|A_BUF_13_q0                 |   in|   32|   ap_stable|           A_BUF_13|         array|
+|A_BUF_14_address0           |  out|    4|   ap_stable|           A_BUF_14|         array|
+|A_BUF_14_ce0                |  out|    1|   ap_stable|           A_BUF_14|         array|
+|A_BUF_14_q0                 |   in|   32|   ap_stable|           A_BUF_14|         array|
+|A_BUF_15_address0           |  out|    4|   ap_stable|           A_BUF_15|         array|
+|A_BUF_15_ce0                |  out|    1|   ap_stable|           A_BUF_15|         array|
+|A_BUF_15_q0                 |   in|   32|   ap_stable|           A_BUF_15|         array|
+|A_BUF_16_address0           |  out|    4|   ap_stable|           A_BUF_16|         array|
+|A_BUF_16_ce0                |  out|    1|   ap_stable|           A_BUF_16|         array|
+|A_BUF_16_q0                 |   in|   32|   ap_stable|           A_BUF_16|         array|
+|A_BUF_17_address0           |  out|    4|   ap_stable|           A_BUF_17|         array|
+|A_BUF_17_ce0                |  out|    1|   ap_stable|           A_BUF_17|         array|
+|A_BUF_17_q0                 |   in|   32|   ap_stable|           A_BUF_17|         array|
+|A_BUF_18_address0           |  out|    4|   ap_stable|           A_BUF_18|         array|
+|A_BUF_18_ce0                |  out|    1|   ap_stable|           A_BUF_18|         array|
+|A_BUF_18_q0                 |   in|   32|   ap_stable|           A_BUF_18|         array|
+|A_BUF_19_address0           |  out|    4|   ap_stable|           A_BUF_19|         array|
+|A_BUF_19_ce0                |  out|    1|   ap_stable|           A_BUF_19|         array|
+|A_BUF_19_q0                 |   in|   32|   ap_stable|           A_BUF_19|         array|
+|A_BUF_20_address0           |  out|    4|   ap_stable|           A_BUF_20|         array|
+|A_BUF_20_ce0                |  out|    1|   ap_stable|           A_BUF_20|         array|
+|A_BUF_20_q0                 |   in|   32|   ap_stable|           A_BUF_20|         array|
+|A_BUF_21_address0           |  out|    4|   ap_stable|           A_BUF_21|         array|
+|A_BUF_21_ce0                |  out|    1|   ap_stable|           A_BUF_21|         array|
+|A_BUF_21_q0                 |   in|   32|   ap_stable|           A_BUF_21|         array|
+|A_BUF_22_address0           |  out|    4|   ap_stable|           A_BUF_22|         array|
+|A_BUF_22_ce0                |  out|    1|   ap_stable|           A_BUF_22|         array|
+|A_BUF_22_q0                 |   in|   32|   ap_stable|           A_BUF_22|         array|
+|A_BUF_23_address0           |  out|    4|   ap_stable|           A_BUF_23|         array|
+|A_BUF_23_ce0                |  out|    1|   ap_stable|           A_BUF_23|         array|
+|A_BUF_23_q0                 |   in|   32|   ap_stable|           A_BUF_23|         array|
+|A_BUF_24_address0           |  out|    4|   ap_stable|           A_BUF_24|         array|
+|A_BUF_24_ce0                |  out|    1|   ap_stable|           A_BUF_24|         array|
+|A_BUF_24_q0                 |   in|   32|   ap_stable|           A_BUF_24|         array|
+|A_BUF_25_address0           |  out|    4|   ap_stable|           A_BUF_25|         array|
+|A_BUF_25_ce0                |  out|    1|   ap_stable|           A_BUF_25|         array|
+|A_BUF_25_q0                 |   in|   32|   ap_stable|           A_BUF_25|         array|
+|A_BUF_26_address0           |  out|    4|   ap_stable|           A_BUF_26|         array|
+|A_BUF_26_ce0                |  out|    1|   ap_stable|           A_BUF_26|         array|
+|A_BUF_26_q0                 |   in|   32|   ap_stable|           A_BUF_26|         array|
+|A_BUF_27_address0           |  out|    4|   ap_stable|           A_BUF_27|         array|
+|A_BUF_27_ce0                |  out|    1|   ap_stable|           A_BUF_27|         array|
+|A_BUF_27_q0                 |   in|   32|   ap_stable|           A_BUF_27|         array|
+|A_BUF_28_address0           |  out|    4|   ap_stable|           A_BUF_28|         array|
+|A_BUF_28_ce0                |  out|    1|   ap_stable|           A_BUF_28|         array|
+|A_BUF_28_q0                 |   in|   32|   ap_stable|           A_BUF_28|         array|
+|A_BUF_29_address0           |  out|    4|   ap_stable|           A_BUF_29|         array|
+|A_BUF_29_ce0                |  out|    1|   ap_stable|           A_BUF_29|         array|
+|A_BUF_29_q0                 |   in|   32|   ap_stable|           A_BUF_29|         array|
+|A_BUF_30_address0           |  out|    4|   ap_stable|           A_BUF_30|         array|
+|A_BUF_30_ce0                |  out|    1|   ap_stable|           A_BUF_30|         array|
+|A_BUF_30_q0                 |   in|   32|   ap_stable|           A_BUF_30|         array|
+|A_BUF_31_address0           |  out|    4|   ap_stable|           A_BUF_31|         array|
+|A_BUF_31_ce0                |  out|    1|   ap_stable|           A_BUF_31|         array|
+|A_BUF_31_q0                 |   in|   32|   ap_stable|           A_BUF_31|         array|
+|A_streams_1_din             |  out|   32|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_num_data_valid  |   in|    3|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_fifo_cap        |   in|    3|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_full_n          |   in|    1|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_1_write           |  out|    1|     ap_fifo|        A_streams_1|       pointer|
+|A_streams_din               |  out|   32|     ap_fifo|          A_streams|       pointer|
+|A_streams_num_data_valid    |   in|    3|     ap_fifo|          A_streams|       pointer|
+|A_streams_fifo_cap          |   in|    3|     ap_fifo|          A_streams|       pointer|
+|A_streams_full_n            |   in|    1|     ap_fifo|          A_streams|       pointer|
+|A_streams_write             |  out|    1|     ap_fifo|          A_streams|       pointer|
+|tileA                       |   in|    1|     ap_none|              tileA|        scalar|
+|tileA_c_din                 |  out|    1|     ap_fifo|            tileA_c|       pointer|
+|tileA_c_num_data_valid      |   in|    3|     ap_fifo|            tileA_c|       pointer|
+|tileA_c_fifo_cap            |   in|    3|     ap_fifo|            tileA_c|       pointer|
+|tileA_c_full_n              |   in|    1|     ap_fifo|            tileA_c|       pointer|
+|tileA_c_write               |  out|    1|     ap_fifo|            tileA_c|       pointer|
++----------------------------+-----+-----+------------+-------------------+--------------+
+

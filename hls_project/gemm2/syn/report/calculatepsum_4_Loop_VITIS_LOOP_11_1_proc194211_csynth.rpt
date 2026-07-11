@@ -1,0 +1,511 @@
+
+
+================================================================
+== Vitis HLS Report for 'calculatepsum_4_Loop_VITIS_LOOP_11_1_proc194211'
+================================================================
+* Date:           Sat Jul 11 12:32:35 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_project
+* Solution:       gemm2 (Vitis Kernel Flow Target)
+* Product family: versalaicore
+* Target device:  xcvc1902-vsva2197-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.759 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                 Pipeline                 |
+    |   min   |   max   |    min    |    max    | min | max |                   Type                   |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+    |       18|       19|  59.994 ns|  63.327 ns|   16|   16|  loop rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_11_1  |       18|       18|         4|          1|          1|    16|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|      20|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        -|    32|      160|      64|    -|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|    1106|    -|
+|Register         |        -|     -|     2099|       2|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|    32|     2259|    1192|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     1|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
+    |                       Instance                      |                     Module                    | BRAM_18K| DSP| FF| LUT| URAM|
+    +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4789  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4790  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4791  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4792  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4793  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4794  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4795  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4796  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4797  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4798  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4799  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4800  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4801  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4802  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4803  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4804  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4805  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4806  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4807  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4808  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4809  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4810  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4811  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4812  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4813  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4814  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4815  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4816  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4817  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4818  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4819  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1_U4820  |fmacc_32ns_32ns_32ns_1ns_32_3_primitive_dsp_1  |        0|   1|  5|   2|    0|
+    +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
+    |Total                                                |                                               |        0|  32|160|  64|    0|
+    +-----------------------------------------------------+-----------------------------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |k_fu_600_p2                       |         +|   0|  0|   5|           4|           1|
+    |ap_condition_611                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln11_fu_606_p2               |      icmp|   0|  0|   5|           4|           2|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  20|          13|           9|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |A_streams_1_blk_n             |   2|          2|    1|          2|
+    |B_streams_1_0_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_10_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_11_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_12_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_13_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_14_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_15_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_16_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_17_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_18_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_19_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_1_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_20_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_21_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_22_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_23_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_24_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_25_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_26_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_27_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_28_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_29_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_2_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_30_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_31_blk_n          |   2|          2|    1|          2|
+    |B_streams_1_3_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_4_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_5_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_6_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_7_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_8_blk_n           |   2|          2|    1|          2|
+    |B_streams_1_9_blk_n           |   2|          2|    1|          2|
+    |ap_NS_fsm                     |   2|          3|    1|          3|
+    |ap_done                       |   2|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1       |   2|          2|    1|          2|
+    |ap_enable_reg_pp0_iter3       |   2|          2|    1|          2|
+    |ap_phi_mux_k65_phi_fu_590_p6  |   4|          3|    4|         12|
+    |k65_reg_586                   |   4|          2|    4|          8|
+    |psum_0_out                    |  32|          2|   32|         64|
+    |psum_10_out                   |  32|          2|   32|         64|
+    |psum_11_out                   |  32|          2|   32|         64|
+    |psum_12_out                   |  32|          2|   32|         64|
+    |psum_13_out                   |  32|          2|   32|         64|
+    |psum_14_out                   |  32|          2|   32|         64|
+    |psum_15_out                   |  32|          2|   32|         64|
+    |psum_16_out                   |  32|          2|   32|         64|
+    |psum_17_out                   |  32|          2|   32|         64|
+    |psum_18_out                   |  32|          2|   32|         64|
+    |psum_19_out                   |  32|          2|   32|         64|
+    |psum_1_out                    |  32|          2|   32|         64|
+    |psum_20_out                   |  32|          2|   32|         64|
+    |psum_21_out                   |  32|          2|   32|         64|
+    |psum_22_out                   |  32|          2|   32|         64|
+    |psum_23_out                   |  32|          2|   32|         64|
+    |psum_24_out                   |  32|          2|   32|         64|
+    |psum_25_out                   |  32|          2|   32|         64|
+    |psum_26_out                   |  32|          2|   32|         64|
+    |psum_27_out                   |  32|          2|   32|         64|
+    |psum_28_out                   |  32|          2|   32|         64|
+    |psum_29_out                   |  32|          2|   32|         64|
+    |psum_2_out                    |  32|          2|   32|         64|
+    |psum_30_out                   |  32|          2|   32|         64|
+    |psum_31_out                   |  32|          2|   32|         64|
+    |psum_3_out                    |  32|          2|   32|         64|
+    |psum_4_out                    |  32|          2|   32|         64|
+    |psum_5_out                    |  32|          2|   32|         64|
+    |psum_6_out                    |  32|          2|   32|         64|
+    |psum_7_out                    |  32|          2|   32|         64|
+    |psum_8_out                    |  32|          2|   32|         64|
+    |psum_9_out                    |  32|          2|   32|         64|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |1106|        144| 1069|       2143|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |A_streams_1_read_reg_1268     |  32|   0|   32|          0|
+    |B_streams_1_0_read_reg_1273   |  32|   0|   32|          0|
+    |B_streams_1_10_read_reg_1323  |  32|   0|   32|          0|
+    |B_streams_1_11_read_reg_1328  |  32|   0|   32|          0|
+    |B_streams_1_12_read_reg_1333  |  32|   0|   32|          0|
+    |B_streams_1_13_read_reg_1338  |  32|   0|   32|          0|
+    |B_streams_1_14_read_reg_1343  |  32|   0|   32|          0|
+    |B_streams_1_15_read_reg_1348  |  32|   0|   32|          0|
+    |B_streams_1_16_read_reg_1353  |  32|   0|   32|          0|
+    |B_streams_1_17_read_reg_1358  |  32|   0|   32|          0|
+    |B_streams_1_18_read_reg_1363  |  32|   0|   32|          0|
+    |B_streams_1_19_read_reg_1368  |  32|   0|   32|          0|
+    |B_streams_1_1_read_reg_1278   |  32|   0|   32|          0|
+    |B_streams_1_20_read_reg_1373  |  32|   0|   32|          0|
+    |B_streams_1_21_read_reg_1378  |  32|   0|   32|          0|
+    |B_streams_1_22_read_reg_1383  |  32|   0|   32|          0|
+    |B_streams_1_23_read_reg_1388  |  32|   0|   32|          0|
+    |B_streams_1_24_read_reg_1393  |  32|   0|   32|          0|
+    |B_streams_1_25_read_reg_1398  |  32|   0|   32|          0|
+    |B_streams_1_26_read_reg_1403  |  32|   0|   32|          0|
+    |B_streams_1_27_read_reg_1408  |  32|   0|   32|          0|
+    |B_streams_1_28_read_reg_1413  |  32|   0|   32|          0|
+    |B_streams_1_29_read_reg_1418  |  32|   0|   32|          0|
+    |B_streams_1_2_read_reg_1283   |  32|   0|   32|          0|
+    |B_streams_1_30_read_reg_1423  |  32|   0|   32|          0|
+    |B_streams_1_31_read_reg_1428  |  32|   0|   32|          0|
+    |B_streams_1_3_read_reg_1288   |  32|   0|   32|          0|
+    |B_streams_1_4_read_reg_1293   |  32|   0|   32|          0|
+    |B_streams_1_5_read_reg_1298   |  32|   0|   32|          0|
+    |B_streams_1_6_read_reg_1303   |  32|   0|   32|          0|
+    |B_streams_1_7_read_reg_1308   |  32|   0|   32|          0|
+    |B_streams_1_8_read_reg_1313   |  32|   0|   32|          0|
+    |B_streams_1_9_read_reg_1318   |  32|   0|   32|          0|
+    |ap_CS_fsm                     |   2|   0|    2|          0|
+    |ap_done_reg                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3       |   1|   0|    1|          0|
+    |icmp_ln11_reg_1232            |   1|   0|    1|          0|
+    |k65_reg_586                   |   4|   0|    4|          0|
+    |k_reg_1227                    |   4|   0|    4|          0|
+    |psum_0_out_preg               |  32|   0|   32|          0|
+    |psum_10_out_preg              |  32|   0|   32|          0|
+    |psum_11_out_preg              |  32|   0|   32|          0|
+    |psum_12_out_preg              |  32|   0|   32|          0|
+    |psum_13_out_preg              |  32|   0|   32|          0|
+    |psum_14_out_preg              |  32|   0|   32|          0|
+    |psum_15_out_preg              |  32|   0|   32|          0|
+    |psum_16_out_preg              |  32|   0|   32|          0|
+    |psum_17_out_preg              |  32|   0|   32|          0|
+    |psum_18_out_preg              |  32|   0|   32|          0|
+    |psum_19_out_preg              |  32|   0|   32|          0|
+    |psum_1_out_preg               |  32|   0|   32|          0|
+    |psum_20_out_preg              |  32|   0|   32|          0|
+    |psum_21_out_preg              |  32|   0|   32|          0|
+    |psum_22_out_preg              |  32|   0|   32|          0|
+    |psum_23_out_preg              |  32|   0|   32|          0|
+    |psum_24_out_preg              |  32|   0|   32|          0|
+    |psum_25_out_preg              |  32|   0|   32|          0|
+    |psum_26_out_preg              |  32|   0|   32|          0|
+    |psum_27_out_preg              |  32|   0|   32|          0|
+    |psum_28_out_preg              |  32|   0|   32|          0|
+    |psum_29_out_preg              |  32|   0|   32|          0|
+    |psum_2_out_preg               |  32|   0|   32|          0|
+    |psum_30_out_preg              |  32|   0|   32|          0|
+    |psum_31_out_preg              |  32|   0|   32|          0|
+    |psum_3_out_preg               |  32|   0|   32|          0|
+    |psum_4_out_preg               |  32|   0|   32|          0|
+    |psum_5_out_preg               |  32|   0|   32|          0|
+    |psum_6_out_preg               |  32|   0|   32|          0|
+    |psum_7_out_preg               |  32|   0|   32|          0|
+    |psum_8_out_preg               |  32|   0|   32|          0|
+    |psum_9_out_preg               |  32|   0|   32|          0|
+    |icmp_ln11_reg_1232            |   4|   2|    1|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         |2099|   2| 2096|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++-------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  calculatepsum.4_Loop_VITIS_LOOP_11_1_proc194211|  return value|
+|A_streams_1_dout               |   in|   32|     ap_fifo|                                      A_streams_1|       pointer|
+|A_streams_1_num_data_valid     |   in|    3|     ap_fifo|                                      A_streams_1|       pointer|
+|A_streams_1_fifo_cap           |   in|    3|     ap_fifo|                                      A_streams_1|       pointer|
+|A_streams_1_empty_n            |   in|    1|     ap_fifo|                                      A_streams_1|       pointer|
+|A_streams_1_read               |  out|    1|     ap_fifo|                                      A_streams_1|       pointer|
+|B_streams_1_0_dout             |   in|   32|     ap_fifo|                                    B_streams_1_0|       pointer|
+|B_streams_1_0_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_0|       pointer|
+|B_streams_1_0_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_0|       pointer|
+|B_streams_1_0_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_0|       pointer|
+|B_streams_1_0_read             |  out|    1|     ap_fifo|                                    B_streams_1_0|       pointer|
+|B_streams_1_1_dout             |   in|   32|     ap_fifo|                                    B_streams_1_1|       pointer|
+|B_streams_1_1_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_1|       pointer|
+|B_streams_1_1_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_1|       pointer|
+|B_streams_1_1_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_1|       pointer|
+|B_streams_1_1_read             |  out|    1|     ap_fifo|                                    B_streams_1_1|       pointer|
+|B_streams_1_2_dout             |   in|   32|     ap_fifo|                                    B_streams_1_2|       pointer|
+|B_streams_1_2_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_2|       pointer|
+|B_streams_1_2_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_2|       pointer|
+|B_streams_1_2_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_2|       pointer|
+|B_streams_1_2_read             |  out|    1|     ap_fifo|                                    B_streams_1_2|       pointer|
+|B_streams_1_3_dout             |   in|   32|     ap_fifo|                                    B_streams_1_3|       pointer|
+|B_streams_1_3_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_3|       pointer|
+|B_streams_1_3_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_3|       pointer|
+|B_streams_1_3_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_3|       pointer|
+|B_streams_1_3_read             |  out|    1|     ap_fifo|                                    B_streams_1_3|       pointer|
+|B_streams_1_4_dout             |   in|   32|     ap_fifo|                                    B_streams_1_4|       pointer|
+|B_streams_1_4_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_4|       pointer|
+|B_streams_1_4_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_4|       pointer|
+|B_streams_1_4_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_4|       pointer|
+|B_streams_1_4_read             |  out|    1|     ap_fifo|                                    B_streams_1_4|       pointer|
+|B_streams_1_5_dout             |   in|   32|     ap_fifo|                                    B_streams_1_5|       pointer|
+|B_streams_1_5_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_5|       pointer|
+|B_streams_1_5_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_5|       pointer|
+|B_streams_1_5_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_5|       pointer|
+|B_streams_1_5_read             |  out|    1|     ap_fifo|                                    B_streams_1_5|       pointer|
+|B_streams_1_6_dout             |   in|   32|     ap_fifo|                                    B_streams_1_6|       pointer|
+|B_streams_1_6_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_6|       pointer|
+|B_streams_1_6_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_6|       pointer|
+|B_streams_1_6_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_6|       pointer|
+|B_streams_1_6_read             |  out|    1|     ap_fifo|                                    B_streams_1_6|       pointer|
+|B_streams_1_7_dout             |   in|   32|     ap_fifo|                                    B_streams_1_7|       pointer|
+|B_streams_1_7_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_7|       pointer|
+|B_streams_1_7_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_7|       pointer|
+|B_streams_1_7_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_7|       pointer|
+|B_streams_1_7_read             |  out|    1|     ap_fifo|                                    B_streams_1_7|       pointer|
+|B_streams_1_8_dout             |   in|   32|     ap_fifo|                                    B_streams_1_8|       pointer|
+|B_streams_1_8_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_8|       pointer|
+|B_streams_1_8_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_8|       pointer|
+|B_streams_1_8_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_8|       pointer|
+|B_streams_1_8_read             |  out|    1|     ap_fifo|                                    B_streams_1_8|       pointer|
+|B_streams_1_9_dout             |   in|   32|     ap_fifo|                                    B_streams_1_9|       pointer|
+|B_streams_1_9_num_data_valid   |   in|    3|     ap_fifo|                                    B_streams_1_9|       pointer|
+|B_streams_1_9_fifo_cap         |   in|    3|     ap_fifo|                                    B_streams_1_9|       pointer|
+|B_streams_1_9_empty_n          |   in|    1|     ap_fifo|                                    B_streams_1_9|       pointer|
+|B_streams_1_9_read             |  out|    1|     ap_fifo|                                    B_streams_1_9|       pointer|
+|B_streams_1_10_dout            |   in|   32|     ap_fifo|                                   B_streams_1_10|       pointer|
+|B_streams_1_10_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_10|       pointer|
+|B_streams_1_10_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_10|       pointer|
+|B_streams_1_10_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_10|       pointer|
+|B_streams_1_10_read            |  out|    1|     ap_fifo|                                   B_streams_1_10|       pointer|
+|B_streams_1_11_dout            |   in|   32|     ap_fifo|                                   B_streams_1_11|       pointer|
+|B_streams_1_11_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_11|       pointer|
+|B_streams_1_11_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_11|       pointer|
+|B_streams_1_11_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_11|       pointer|
+|B_streams_1_11_read            |  out|    1|     ap_fifo|                                   B_streams_1_11|       pointer|
+|B_streams_1_12_dout            |   in|   32|     ap_fifo|                                   B_streams_1_12|       pointer|
+|B_streams_1_12_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_12|       pointer|
+|B_streams_1_12_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_12|       pointer|
+|B_streams_1_12_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_12|       pointer|
+|B_streams_1_12_read            |  out|    1|     ap_fifo|                                   B_streams_1_12|       pointer|
+|B_streams_1_13_dout            |   in|   32|     ap_fifo|                                   B_streams_1_13|       pointer|
+|B_streams_1_13_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_13|       pointer|
+|B_streams_1_13_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_13|       pointer|
+|B_streams_1_13_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_13|       pointer|
+|B_streams_1_13_read            |  out|    1|     ap_fifo|                                   B_streams_1_13|       pointer|
+|B_streams_1_14_dout            |   in|   32|     ap_fifo|                                   B_streams_1_14|       pointer|
+|B_streams_1_14_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_14|       pointer|
+|B_streams_1_14_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_14|       pointer|
+|B_streams_1_14_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_14|       pointer|
+|B_streams_1_14_read            |  out|    1|     ap_fifo|                                   B_streams_1_14|       pointer|
+|B_streams_1_15_dout            |   in|   32|     ap_fifo|                                   B_streams_1_15|       pointer|
+|B_streams_1_15_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_15|       pointer|
+|B_streams_1_15_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_15|       pointer|
+|B_streams_1_15_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_15|       pointer|
+|B_streams_1_15_read            |  out|    1|     ap_fifo|                                   B_streams_1_15|       pointer|
+|B_streams_1_16_dout            |   in|   32|     ap_fifo|                                   B_streams_1_16|       pointer|
+|B_streams_1_16_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_16|       pointer|
+|B_streams_1_16_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_16|       pointer|
+|B_streams_1_16_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_16|       pointer|
+|B_streams_1_16_read            |  out|    1|     ap_fifo|                                   B_streams_1_16|       pointer|
+|B_streams_1_17_dout            |   in|   32|     ap_fifo|                                   B_streams_1_17|       pointer|
+|B_streams_1_17_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_17|       pointer|
+|B_streams_1_17_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_17|       pointer|
+|B_streams_1_17_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_17|       pointer|
+|B_streams_1_17_read            |  out|    1|     ap_fifo|                                   B_streams_1_17|       pointer|
+|B_streams_1_18_dout            |   in|   32|     ap_fifo|                                   B_streams_1_18|       pointer|
+|B_streams_1_18_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_18|       pointer|
+|B_streams_1_18_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_18|       pointer|
+|B_streams_1_18_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_18|       pointer|
+|B_streams_1_18_read            |  out|    1|     ap_fifo|                                   B_streams_1_18|       pointer|
+|B_streams_1_19_dout            |   in|   32|     ap_fifo|                                   B_streams_1_19|       pointer|
+|B_streams_1_19_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_19|       pointer|
+|B_streams_1_19_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_19|       pointer|
+|B_streams_1_19_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_19|       pointer|
+|B_streams_1_19_read            |  out|    1|     ap_fifo|                                   B_streams_1_19|       pointer|
+|B_streams_1_20_dout            |   in|   32|     ap_fifo|                                   B_streams_1_20|       pointer|
+|B_streams_1_20_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_20|       pointer|
+|B_streams_1_20_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_20|       pointer|
+|B_streams_1_20_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_20|       pointer|
+|B_streams_1_20_read            |  out|    1|     ap_fifo|                                   B_streams_1_20|       pointer|
+|B_streams_1_21_dout            |   in|   32|     ap_fifo|                                   B_streams_1_21|       pointer|
+|B_streams_1_21_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_21|       pointer|
+|B_streams_1_21_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_21|       pointer|
+|B_streams_1_21_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_21|       pointer|
+|B_streams_1_21_read            |  out|    1|     ap_fifo|                                   B_streams_1_21|       pointer|
+|B_streams_1_22_dout            |   in|   32|     ap_fifo|                                   B_streams_1_22|       pointer|
+|B_streams_1_22_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_22|       pointer|
+|B_streams_1_22_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_22|       pointer|
+|B_streams_1_22_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_22|       pointer|
+|B_streams_1_22_read            |  out|    1|     ap_fifo|                                   B_streams_1_22|       pointer|
+|B_streams_1_23_dout            |   in|   32|     ap_fifo|                                   B_streams_1_23|       pointer|
+|B_streams_1_23_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_23|       pointer|
+|B_streams_1_23_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_23|       pointer|
+|B_streams_1_23_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_23|       pointer|
+|B_streams_1_23_read            |  out|    1|     ap_fifo|                                   B_streams_1_23|       pointer|
+|B_streams_1_24_dout            |   in|   32|     ap_fifo|                                   B_streams_1_24|       pointer|
+|B_streams_1_24_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_24|       pointer|
+|B_streams_1_24_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_24|       pointer|
+|B_streams_1_24_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_24|       pointer|
+|B_streams_1_24_read            |  out|    1|     ap_fifo|                                   B_streams_1_24|       pointer|
+|B_streams_1_25_dout            |   in|   32|     ap_fifo|                                   B_streams_1_25|       pointer|
+|B_streams_1_25_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_25|       pointer|
+|B_streams_1_25_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_25|       pointer|
+|B_streams_1_25_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_25|       pointer|
+|B_streams_1_25_read            |  out|    1|     ap_fifo|                                   B_streams_1_25|       pointer|
+|B_streams_1_26_dout            |   in|   32|     ap_fifo|                                   B_streams_1_26|       pointer|
+|B_streams_1_26_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_26|       pointer|
+|B_streams_1_26_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_26|       pointer|
+|B_streams_1_26_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_26|       pointer|
+|B_streams_1_26_read            |  out|    1|     ap_fifo|                                   B_streams_1_26|       pointer|
+|B_streams_1_27_dout            |   in|   32|     ap_fifo|                                   B_streams_1_27|       pointer|
+|B_streams_1_27_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_27|       pointer|
+|B_streams_1_27_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_27|       pointer|
+|B_streams_1_27_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_27|       pointer|
+|B_streams_1_27_read            |  out|    1|     ap_fifo|                                   B_streams_1_27|       pointer|
+|B_streams_1_28_dout            |   in|   32|     ap_fifo|                                   B_streams_1_28|       pointer|
+|B_streams_1_28_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_28|       pointer|
+|B_streams_1_28_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_28|       pointer|
+|B_streams_1_28_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_28|       pointer|
+|B_streams_1_28_read            |  out|    1|     ap_fifo|                                   B_streams_1_28|       pointer|
+|B_streams_1_29_dout            |   in|   32|     ap_fifo|                                   B_streams_1_29|       pointer|
+|B_streams_1_29_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_29|       pointer|
+|B_streams_1_29_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_29|       pointer|
+|B_streams_1_29_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_29|       pointer|
+|B_streams_1_29_read            |  out|    1|     ap_fifo|                                   B_streams_1_29|       pointer|
+|B_streams_1_30_dout            |   in|   32|     ap_fifo|                                   B_streams_1_30|       pointer|
+|B_streams_1_30_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_30|       pointer|
+|B_streams_1_30_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_30|       pointer|
+|B_streams_1_30_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_30|       pointer|
+|B_streams_1_30_read            |  out|    1|     ap_fifo|                                   B_streams_1_30|       pointer|
+|B_streams_1_31_dout            |   in|   32|     ap_fifo|                                   B_streams_1_31|       pointer|
+|B_streams_1_31_num_data_valid  |   in|    3|     ap_fifo|                                   B_streams_1_31|       pointer|
+|B_streams_1_31_fifo_cap        |   in|    3|     ap_fifo|                                   B_streams_1_31|       pointer|
+|B_streams_1_31_empty_n         |   in|    1|     ap_fifo|                                   B_streams_1_31|       pointer|
+|B_streams_1_31_read            |  out|    1|     ap_fifo|                                   B_streams_1_31|       pointer|
+|psum_0_out                     |  out|   32|     ap_none|                                       psum_0_out|       pointer|
+|psum_1_out                     |  out|   32|     ap_none|                                       psum_1_out|       pointer|
+|psum_2_out                     |  out|   32|     ap_none|                                       psum_2_out|       pointer|
+|psum_3_out                     |  out|   32|     ap_none|                                       psum_3_out|       pointer|
+|psum_4_out                     |  out|   32|     ap_none|                                       psum_4_out|       pointer|
+|psum_5_out                     |  out|   32|     ap_none|                                       psum_5_out|       pointer|
+|psum_6_out                     |  out|   32|     ap_none|                                       psum_6_out|       pointer|
+|psum_7_out                     |  out|   32|     ap_none|                                       psum_7_out|       pointer|
+|psum_8_out                     |  out|   32|     ap_none|                                       psum_8_out|       pointer|
+|psum_9_out                     |  out|   32|     ap_none|                                       psum_9_out|       pointer|
+|psum_10_out                    |  out|   32|     ap_none|                                      psum_10_out|       pointer|
+|psum_11_out                    |  out|   32|     ap_none|                                      psum_11_out|       pointer|
+|psum_12_out                    |  out|   32|     ap_none|                                      psum_12_out|       pointer|
+|psum_13_out                    |  out|   32|     ap_none|                                      psum_13_out|       pointer|
+|psum_14_out                    |  out|   32|     ap_none|                                      psum_14_out|       pointer|
+|psum_15_out                    |  out|   32|     ap_none|                                      psum_15_out|       pointer|
+|psum_16_out                    |  out|   32|     ap_none|                                      psum_16_out|       pointer|
+|psum_17_out                    |  out|   32|     ap_none|                                      psum_17_out|       pointer|
+|psum_18_out                    |  out|   32|     ap_none|                                      psum_18_out|       pointer|
+|psum_19_out                    |  out|   32|     ap_none|                                      psum_19_out|       pointer|
+|psum_20_out                    |  out|   32|     ap_none|                                      psum_20_out|       pointer|
+|psum_21_out                    |  out|   32|     ap_none|                                      psum_21_out|       pointer|
+|psum_22_out                    |  out|   32|     ap_none|                                      psum_22_out|       pointer|
+|psum_23_out                    |  out|   32|     ap_none|                                      psum_23_out|       pointer|
+|psum_24_out                    |  out|   32|     ap_none|                                      psum_24_out|       pointer|
+|psum_25_out                    |  out|   32|     ap_none|                                      psum_25_out|       pointer|
+|psum_26_out                    |  out|   32|     ap_none|                                      psum_26_out|       pointer|
+|psum_27_out                    |  out|   32|     ap_none|                                      psum_27_out|       pointer|
+|psum_28_out                    |  out|   32|     ap_none|                                      psum_28_out|       pointer|
+|psum_29_out                    |  out|   32|     ap_none|                                      psum_29_out|       pointer|
+|psum_30_out                    |  out|   32|     ap_none|                                      psum_30_out|       pointer|
+|psum_31_out                    |  out|   32|     ap_none|                                      psum_31_out|       pointer|
++-------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+

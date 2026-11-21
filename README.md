@@ -185,5 +185,4 @@ The ~8% gap between the synthesis estimate (875 cycles) and the measured co-simu
 **Done**
 - Functionally correct — validated against a floating-point golden model (MSE = 0).
 **To do**
-- Parallelize `A`'s tiles as well (currently only `B`'s column-tiles run in parallel; `A`'s row-tiles are processed sequentially — see [Architecture](#architecture)).
 - Explore other GEMM strategies: systolic arrays, more elaborate algorithms (e.g. Strassen/Winograd-style reduction), and AI Engine-based implementations — the broader comparison this repository's parent thesis is built around.
